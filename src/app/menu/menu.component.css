@@ -16,6 +16,7 @@ height: 84px;
 -o-object-fit: contain;
 object-fit: contain;
 position: fixed;
+padding-top: 10px;
 opacity: 0.9;
 top: 0;
 display: flex;
