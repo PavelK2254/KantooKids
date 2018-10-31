@@ -2,11 +2,19 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { TestFrameComponent } from './test-frame/test-frame.component'
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 
 const routes: Routes = [
-  { path: '', redirectTo: '/test-frame', pathMatch: 'full' }
-  { path: 'test-frame', component: TestFrameComponent }
-  ,
+
+  { path: '', component: TestFrameComponent },
+  { path: 'our-app', component: TestFrameComponent },
+  { path: 'learning-with-disney', component: TestFrameComponent },
+  { path: 'kantoo-blog', component: TestFrameComponent },
+  { path: 'reviews', component: TestFrameComponent },
+  { path: 'our-legacy', component: TestFrameComponent },
+  { path: 'contact', component: TestFrameComponent },
+  { path: '**', component: PageNotFoundComponent }
+  
 ];
 
 @NgModule({

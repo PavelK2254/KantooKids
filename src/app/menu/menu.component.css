@@ -3,6 +3,11 @@
   height: 66px;
   object-fit: contain;
   margin: 10px 0px 8px 62px;
+  transition: transform .2s; /* Animation */
+}
+
+.Kantoo-Icon:hover {
+   transform: scale(1.2);
 }
 
 .navmenu {
@@ -52,6 +57,10 @@ background-color: #ffffff;
   font-weight: 600;
 }
 
+.menuActive{
+  font-weight: 600;
+}
+
 .expandable{
 
 }
@@ -61,26 +70,89 @@ background-color: #ffffff;
   pointer-events: all;
 }
 
-
-/*.menuItem::after {
+.menuActiveOurApp::after{
   content: '';
   display: block;
   width: 30px;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   height: 4px;
-  margin-left: 2.5%;
+  margin-left: 2%;
   top: 60px;
   border-radius: 30px;
   background-image: linear-gradient(to top, #02aab0, #00cdac), linear-gradient(to bottom, #ffffff, #ffffff);
   transition: opacity.3s;
-}*/
+}
 
-/*.menuItem:active::after {
-    opacity: 1
+.menuActiveLearning::after{
+  content: '';
+  display: block;
+  width: 30px;
+  opacity: 1;
+  position: absolute;
+  height: 4px;
+  margin-left: 3.5%;
+  top: 60px;
+  border-radius: 30px;
+  background-image: linear-gradient(to top, #02aab0, #00cdac), linear-gradient(to bottom, #ffffff, #ffffff);
+  transition: opacity.3s;
+}
 
-}*/
+.menuActiveBlog::after{
+  content: '';
+  display: block;
+  width: 30px;
+  opacity: 1;
+  position: absolute;
+  height: 4px;
+  margin-left: 2%;
+  top: 60px;
+  border-radius: 30px;
+  background-image: linear-gradient(to top, #02aab0, #00cdac), linear-gradient(to bottom, #ffffff, #ffffff);
+  transition: opacity.3s;
+}
 
+.menuActiveReviews::after{
+  content: '';
+  display: block;
+  width: 30px;
+  opacity: 1;
+  position: absolute;
+  height: 4px;
+  margin-left: 1.8%;;
+  top: 60px;
+  border-radius: 30px;
+  background-image: linear-gradient(to top, #02aab0, #00cdac), linear-gradient(to bottom, #ffffff, #ffffff);
+  transition: opacity.3s;
+}
+
+.menuActiveLegacy::after{
+  content: '';
+  display: block;
+  width: 30px;
+  opacity: 1;
+  position: absolute;
+  height: 4px;
+  margin-left: 1.7%;
+  top: 60px;
+  border-radius: 30px;
+  background-image: linear-gradient(to top, #02aab0, #00cdac), linear-gradient(to bottom, #ffffff, #ffffff);
+  transition: opacity.3s;
+}
+
+.menuActiveContact::after{
+  content: '';
+  display: block;
+  width: 30px;
+  opacity: 1;
+  position: absolute;
+  height: 4px;
+  margin-left: 1.8%;
+  top: 60px;
+  border-radius: 30px;
+  background-image: linear-gradient(to top, #02aab0, #00cdac), linear-gradient(to bottom, #ffffff, #ffffff);
+  transition: opacity.3s;
+}
 
 .lang {
 

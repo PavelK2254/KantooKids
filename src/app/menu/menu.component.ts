@@ -9,39 +9,39 @@ import { MenuTextItem } from '../menuTextItem'
 export class MenuComponent implements OnInit {
 
   ourAppLoc: MenuTextItem = {
-    engText: 'our app';
-    prText: '';
-    spText: '';
+    engText: 'our app',
+    prText: '',
+    spText: ''
   };
 
   learningDisneyLoc: MenuTextItem = {
-    engText: 'learing with disney';
-    prText: '';
-    spText: '';
+    engText: 'learing with disney',
+    prText: '',
+    spText: ''
   };
 
   kantooBlogLoc: MenuTextItem = {
-    engText: 'kantoo blog';
-    prText: '';
-    spText: '';
+    engText: 'kantoo blog',
+    prText: '',
+    spText: ''
   };
 
   reviewsLoc: MenuTextItem = {
-    engText: 'reviews';
-    prText: '';
-    spText: '';
+    engText: 'reviews',
+    prText: '',
+    spText: ''
   };
 
   legacyLoc: MenuTextItem = {
-    engText: 'our legacy';
-    prText: '';
-    spText: '';
+    engText: 'our legacy',
+    prText: '',
+    spText: ''
   };
 
   contactLoc: MenuTextItem = {
-    engText: 'contact';
-    prText: '';
-    spText: '';
+    engText: 'contact',
+    prText: '',
+    spText: ''
   };
 
 

@@ -11,15 +11,17 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
  import {MatMenuModule} from '@angular/material/menu';
  import {MatToolbarModule} from '@angular/material/toolbar';
  import {MatIconModule} from '@angular/material';
- import {MatButtonModule} from '@angular/material/button';
+
 import { TestFrameComponent } from './test-frame/test-frame.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     FooterComponent,
-    TestFrameComponent
+    TestFrameComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
