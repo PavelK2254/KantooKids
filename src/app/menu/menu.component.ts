@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuTextItem } from '../menuTextItem'
+import { SubMenuComponent } from '../sub-menu/sub-menu.component'
 
 @Component({
   selector: 'app-menu',

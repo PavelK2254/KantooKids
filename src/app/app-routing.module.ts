@@ -10,11 +10,10 @@ const routes: Routes = [
   { path: 'our-app', component: TestFrameComponent },
   { path: 'learning-with-disney', component: TestFrameComponent },
   { path: 'kantoo-blog', component: TestFrameComponent },
-  { path: 'reviews', component: TestFrameComponent },
   { path: 'our-legacy', component: TestFrameComponent },
   { path: 'contact', component: TestFrameComponent },
   { path: '**', component: PageNotFoundComponent }
-  
+
 ];
 
 @NgModule({
