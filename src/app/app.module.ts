@@ -15,6 +15,7 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { TestFrameComponent } from './test-frame/test-frame.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SubMenuComponent } from './sub-menu/sub-menu.component';
+import { MovieItemComponent } from './movie-item/movie-item.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SubMenuComponent } from './sub-menu/sub-menu.component';
     FooterComponent,
     TestFrameComponent,
     PageNotFoundComponent,
-    SubMenuComponent
+    SubMenuComponent,
+    MovieItemComponent
   ],
   imports: [
     BrowserModule,

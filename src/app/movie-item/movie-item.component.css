@@ -1,0 +1,25 @@
+.movieImage {
+  width: fit-content;
+  height: 85px;
+  object-fit: contain;
+  margin-left: 5%; 
+}
+
+.movieText {
+  width: 32px;
+  height: 11px;
+  object-fit: contain;
+  background-image: linear-gradient(to top, #5a2b95, #1b236e), linear-gradient(to bottom, #ffffff, #ffffff);
+  font-family: OpenSans;
+  font-size: 12.7px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
