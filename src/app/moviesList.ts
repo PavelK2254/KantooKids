@@ -4,48 +4,93 @@ export const MOVIES: Movie[] = [
 
 
   {
-    id: 1,
+    id: 0,
     name: 'cars'
   },
 
   {
-    id: 2,
+    id: 1,
     name: 'coco'
   },
 
   {
-    id: 3,
+    id: 2,
     name: 'dory'
   },
 
   {
-    id: 4,
+    id: 3,
     name: 'frozen'
   },
 
   {
-    id: 5,
+    id: 4,
     name: 'lion_king'
   },
 
   {
-    id:6,
+    id:5,
     name: 'moana'
   },
 
   {
-    id: 7,
+    id: 6,
     name: 'mulan'
   },
 
   {
-    id:8,
+    id:7,
     name: 'toy_story'
   },
 
   {
-    id: 9,
+    id: 8,
     name: 'zootopia'
   },
+  {
+    id: 9,
+    name: 'cars'
+  },
+
+  {
+    id: 10,
+    name: 'coco'
+  },
+
+  {
+    id: 11,
+    name: 'dory'
+  },
+
+  {
+    id: 12,
+    name: 'frozen'
+  },
+
+  {
+    id: 13,
+    name: 'lion_king'
+  },
+
+  {
+    id:14,
+    name: 'moana'
+  },
+
+  {
+    id: 15,
+    name: 'mulan'
+  },
+
+  {
+    id:16,
+    name: 'toy_story'
+  },
+
+  {
+    id: 17,
+    name: 'zootopia'
+  }
+
 
 ];

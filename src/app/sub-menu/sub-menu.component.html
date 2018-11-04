@@ -6,8 +6,9 @@
            (mouseout)="imgSrcLeft = 'assets/menu/arrow_left.png'">
      </a>
 
+        <div class="movie-section">
         <app-movie-item *ngFor="let movie of movies; index as i" [movie]="movies[i]"></app-movie-item>
-
+        </div>
        <a style="float:right;margin-right: 62px;">
          <img class="arrow" src="assets/menu/arrow_right.png"
      srcset="assets/menu/arrow_right@2x.png 2x,

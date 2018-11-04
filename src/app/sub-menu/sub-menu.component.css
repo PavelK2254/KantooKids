@@ -11,3 +11,10 @@
  height: 29px;
  object-fit: contain;
 }
+
+.movie-section{
+  width: 80%;
+margin-left: 100px;
+float: left;
+overflow: -webkit-paged-x;
+}
