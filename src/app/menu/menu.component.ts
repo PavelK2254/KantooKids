@@ -9,7 +9,7 @@ import { SubMenuComponent } from '../sub-menu/sub-menu.component'
 })
 export class MenuComponent implements OnInit {
 
-  showMenu: false;
+  showMenu: boolean = false;
 
   ourAppLoc: MenuTextItem = {
     engText: 'our app',
