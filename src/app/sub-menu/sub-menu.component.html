@@ -1,5 +1,5 @@
 <div class="sub-menu">
-  <a style="float:left;margin-left: 62px;">
+  <a style="float:left;margin-left: 62px;margin-top: 5%">
     <img class="arrow" src="assets/menu/arrow_left.png"
        srcset="assets/menu/arrow_left@2x.png 2x,
                assets/menu/arrow_left@3x.png 3x" [src]="imgSrcLeft"  (mouseover)="imgSrcLeft = 'assets/menu/arrow_left_on_hover.png'"
@@ -9,7 +9,7 @@
         <div class="movie-section">
         <app-movie-item *ngFor="let movie of movies; index as i" [movie]="movies[i]"></app-movie-item>
         </div>
-       <a style="float:right;margin-right: 62px;">
+       <a style="float:right;margin-right: 62px;margin-top: 5%">
          <img class="arrow" src="assets/menu/arrow_right.png"
      srcset="assets/menu/arrow_right@2x.png 2x,
              assets/menu/arrow_right@3x.png 3x"
