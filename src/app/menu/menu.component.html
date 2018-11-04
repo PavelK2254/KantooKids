@@ -1,7 +1,7 @@
 <!--<div class="navmenu">-->
 <mat-toolbar class="navmenu">
   <mat-toolbar-row>
-  <a routerLink="" style="margin-right: 336px;">
+  <a routerLink="" style="margin-right: 24%;">
   <img src="assets\menu\kantoo-icon.jpg"
      srcset="assets\menu\kantoo-icon@2x.png 2x,
              assets\menu\kantoo-icon@3x.png 3x"
@@ -9,10 +9,10 @@
 
 
 <a class="menuItem" routerLink="/our-app" routerLinkActive="menuActiveOurApp menuActive" style="margin-left: 0px;">{{ourAppLoc.engText | uppercase}}</a>
-<a class="menuItem expandable" style="width: fit-content" routerLink="/learning-with-disney" routerLinkActive="menuActiveLearning menuActive">{{learningDisneyLoc.engText | uppercase}}
+<a class="menuItem expandable" style="width: fit-content" routerLink="/learning-with-disney" routerLinkActive="menuActiveLearning menuActive" (mouseover)="showMenu=true" (mouseout)="showMenu=false">{{learningDisneyLoc.engText | uppercase}}
   <img src="assets\menu\drop-down.svg"
      class="Drop-Down">
-     <app-sub-menu></app-sub-menu>
+
    </a>
 <a class="menuItem expandable" style="width: fit-content" routerLink="/kantoo-blog" routerLinkActive="menuActiveBlog menuActive">{{kantooBlogLoc.engText | uppercase}}<img src="assets\menu\drop-down.svg"
           class="Drop-Down">
@@ -21,13 +21,15 @@
 <a class="menuItem" routerLink="/our-legacy" routerLinkActive="menuActiveLegacy menuActive">{{legacyLoc.engText | uppercase}}</a>
 <a class="menuItem" routerLink="/contact" routerLinkActive="menuActiveContact menuActive">{{contactLoc.engText | uppercase}}</a>
 
-
-<a class="lang" style="margin-left: 18%;" routerLinkActive="langActive ">EN</a>
+<div class="language-section" style="margin-left: 20%">
+<a class="lang"  routerLinkActive="langActive ">EN</a>
 <a class="lang" style="margin-left: 17px">|</a>
 <a class="lang" style="margin-left: 17px" routerLinkActive="langActive">PT</a>
 <a class="lang" style="margin-left: 17px">|</a>
 <a class="lang" style="margin-left: 17px" routerLinkActive="langActive">SP</a>
+</div>
 </mat-toolbar-row>
 </mat-toolbar>
+<app-sub-menu [className]="showMenu ? 'shown' : 'hidden'" (mouseover)="showMenu=true" (mouseout)="showMenu=false"></app-sub-menu>
 
 <!--</div>-->

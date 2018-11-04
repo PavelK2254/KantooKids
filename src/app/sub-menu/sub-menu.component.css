@@ -9,12 +9,15 @@
 .arrow{
   width: 29px;
  height: 29px;
+ margin-top: 25px;
  object-fit: contain;
 }
 
 .movie-section{
   width: 80%;
-margin-left: 100px;
-float: left;
-overflow: -webkit-paged-x;
+  height: 85px;
+  margin-left: 100px;
+  float: left;
+  overflow: hidden;
+  display: flex;
 }
