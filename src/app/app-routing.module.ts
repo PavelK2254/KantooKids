@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: 'kantoo-blog', component: TestFrameComponent },
   { path: 'our-legacy', component: TestFrameComponent },
   { path: 'contact', component: TestFrameComponent },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent },
+  { path: 'franchise/:id', component: PageNotFoundComponent }
 
 ];
 

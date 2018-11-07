@@ -11,15 +11,21 @@
  height: 29px;
  margin-top: 25px;
  object-fit: contain;
- 
+ cursor: pointer;
+
 }
 
 .movie-section{
-  width: 80%;
-  height: 85px;
-  margin-left: 100px;
+  width: 85%;
+  height: 120px;
+  margin-left: 50px;
   float: left;
   overflow: hidden;
   display: flex;
-  margin-top: 5%;
+  margin-top: 90px;
+}
+
+app-movie-item{
+  cursor: pointer;
+  margin-top: 10px;
 }

@@ -1,19 +1,21 @@
-<div class="sub-menu">
-  <a style="float:left;margin-left: 62px;margin-top: 5%">
+<div class="sub-menu" >
+  <a style="float:left;margin-left: 62px;margin-top: 95px" (click)="incrementIndex()">
     <img class="arrow" src="assets/menu/arrow_left.png"
        srcset="assets/menu/arrow_left@2x.png 2x,
                assets/menu/arrow_left@3x.png 3x" [src]="imgSrcLeft"  (mouseover)="imgSrcLeft = 'assets/menu/arrow_left_on_hover.png'"
-           (mouseout)="imgSrcLeft = 'assets/menu/arrow_left.png'">
+           (mouseout)="imgSrcLeft = 'assets/menu/arrow_left.png'" >
      </a>
 
-        <div class="movie-section">
-        <app-movie-item *ngFor="let movie of movies; index as i" [movie]="movies[i]"></app-movie-item>
+         <div class="movie-section" [@.disabled]="isDisabled">
+       <app-movie-item *ngFor="let movie of movies; index as i" [movie]="movies[i]" [@move]="{value: viewIndex, params: {moveOffset: moveOffset, moveOffsetAnim: moveOffsetAnim }}"  
+></app-movie-item>
+
         </div>
-       <a style="float:right;margin-right: 62px;margin-top: 5%">
+       <a style="float:right;margin-right: 62px;margin-top: 95px">
          <img class="arrow" src="assets/menu/arrow_right.png"
      srcset="assets/menu/arrow_right@2x.png 2x,
              assets/menu/arrow_right@3x.png 3x"
              [src]="imgSrcRight"  (mouseover)="imgSrcRight = 'assets/menu/arrow_right_on_hover.png'"
-         (mouseout)="imgSrcRight = 'assets/menu/arrow_right.png'"></a>
+         (mouseout)="imgSrcRight = 'assets/menu/arrow_right.png'" (click)="decrementIndex()"></a>
 
 </div>
