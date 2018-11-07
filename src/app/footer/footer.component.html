@@ -1,3 +1,43 @@
-<p>
-  footer works!
-</p>
+<mat-toolbar class="Footer-BG">
+  <mat-toolbar-row>
+    <a class="Tearms-conditionsHolder">
+      <span class="Terms-conditions"> {{terms.engText | uppercase}}</span>
+      </a>
+      <label class="limiter"> |</label>
+      <a class="Faq-conditionsHolder">
+        <span class="Terms-conditions"> {{faq.engText | uppercase}}</span>
+        </a>
+      <label class="limiter"> |</label>
+      <a class="Privacy-conditionsHolder">
+        <span class="Terms-conditions"> {{privacy.engText | uppercase}}</span>
+        </a>
+        <label class="limiter"> |</label>
+        <a class="Privacy-conditionsHolder">
+          <span style="margin-top: 3px;float:left" class="Terms-conditions"> {{follow.engText | uppercase}}</span>
+          <span>
+            <a class="imageHolder">
+              <img src="assets/footer/linkedin_logo.png"
+     srcset="assets/footer/linkedin_logo@2x.png 2x,
+             assets/footer/linkedin_logo@3x.png 3x"
+     class="linkedin-logo">
+             </a>
+             <a class="imageHolder">
+               <img src="assets/footer/facebook_letter_logo.png"
+      srcset="assets/footer/facebook_letter_logo@2x.png 2x,
+              assets/footer/facebook_letter_logo@3x.png 3x"
+      class="facebook-letter-logo">
+              </a>
+              <a class="imageHolder">
+                <img src="assets/footer/twitter_logo.png"
+       srcset="assets/footer/twitter_logo@2x.png 2x,
+               assets/footer/twitter_logo@3x.png 3x"
+       class="twitter-logo">
+               </a>
+            </span>
+          </a>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+    <p class="LaMark2018Disney2018DisneyPixar">©2018 La Mark | ©2018 Disney | ©2018 Disney/Pixar</p>
+  </mat-toolbar-row>
+</mat-toolbar>

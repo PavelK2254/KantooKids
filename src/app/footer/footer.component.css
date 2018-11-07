@@ -1,0 +1,101 @@
+a{
+  cursor: pointer;
+}
+
+.Footer-BG {
+  width: 100%;
+  height: 204px;
+  object-fit: contain;
+  background-color: #000000;
+}
+
+
+.Terms-conditions {
+  width: 220px;
+  height: 15px;
+  object-fit: contain;
+    font-size: 19.5px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.Tearms-conditionsHolder {
+  width: 260px;
+  height: 41px;
+  object-fit: contain;
+  margin-left: 25%;
+  text-align: center;
+  margin-top: 58px;
+}
+
+.Faq-conditionsHolder{
+  width: 111px;
+ height: 41px;
+ object-fit: contain;
+ text-align: center;
+ margin-top: 58px;
+}
+
+.Privacy-conditionsHolder{
+  width: 237px;
+ height: 41px;
+ object-fit: contain;
+ text-align: center;
+ margin-top: 58px;
+}
+
+.linkedin-logo {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+
+}
+
+.facebook-letter-logo {
+  width: 21px;
+  height: 23px;
+  object-fit: contain;
+
+}
+
+.twitter-logo {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+
+}
+
+.imageHolder{
+  margin: 10px
+}
+
+.LaMark2018Disney2018DisneyPixar {
+  width: 349px;
+  height: 15px;
+  object-fit: contain;
+  opacity: 0.75;
+  font-size: 14.3px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin: 5% auto 0px auto;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.limiter {
+
+ height: 41px;
+ object-fit: contain;
+ border-radius: 1.5px;
+ background-color: #ffffff;
+ color: white;
+ margin-top: 46px;
+}
