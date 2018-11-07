@@ -49,7 +49,7 @@ export class SubMenuComponent implements OnInit {
   viewIndex = 0;
   maxOffsetIndex:number = -5;
   minOffsetIndex:number = 2;
-  offsetModifier = 100;
+  offsetModifier = 110;
   movies: Movie[];
 
 
