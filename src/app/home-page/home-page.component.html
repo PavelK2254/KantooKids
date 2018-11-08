@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="Fold1">
+    <iframe [style.z-index]="fold1PlayerZIndexActual" id="player" width="100%" height="100%" src="https://www.youtube.com/embed/3f6EHA5-GBA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+    style="position: absolute;"></iframe>
+    <img [style.z-index]="fold1BackgroundZIndexActual" src="./assets/homepage/fold_1.png"
+         srcset="./assets/homepage/fold_1@2x.png,
+                 ./assets/homepage/fold_1@3x.png"
+         class="Fold1BackgroundImg">
+    <a class="playBtnCont" (click)="runPlayer()">
+      <img src="./assets/homepage/play_btn.png"
+     srcset="./assets/homepage/play_btn@2x.png 2x,
+             ./assets/homepage/play_btn@3x.png 3x"
+     class="playBtn">
+    </a>
+    <img src="./assets/homepage/kanto_disney_logo.png"
+     srcset="./assets/homepage/kanto_disney_logo@2x.png 2x,
+             ./assets/homepage/kanto_disney_logo@3x.png 3x"
+     class="KantoDisneyLogo">
+     <label class="AddEnglishToTheirStory">{{addEnglishText | uppercase}}</label>
+     <a class="CONVERSIONbtnCont">
+       <img src="./assets/homepage/conversion_btn.png"
+      srcset="./assets/homepage/conversion_btn@2x.png 2x,
+              ./assets/homepage/conversion_btn@3x.png 3x"
+      class="CONVERSIONbtn">
+     </a>
+  </div>
+
+  <div class="Fold2">
+    <div class="Fold2Left">
+      <img src="./assets/homepage/characters.png"
+           srcset="./assets/homepage/characters@2x.png 2x,
+                   ./assets/homepage/characters@3x.png 3x"
+           class="Characters">
+           <img src="./assets/homepage/gif.png"
+     srcset="./assets/homepage/gif@2x.png 2x,
+             ./assets/homepage/gif@3x.png 3x"
+     class="GIF">
+
+    </div>
+    <div class="Fold2Right">
+        <label class="WelcomeTo">{{welcomeToText | uppercase}}</label>
+
+        <img src="./assets/homepage/kanto_disney_logo.png"
+     srcset="./assets/homepage/kanto_disney_logo@2x.png 2x,
+             ./assets/homepage/kanto_disney_logo@3x.png 3x"
+     class="KantoDisneyLogo2">
+
+     <label class="TheUltimate">{{ultimate}}</label>
+
+     <a class="LearnMoreBtnCont"><img src="./assets/homepage/learn_more_btn.png"
+     srcset="./assets/homepage/learn_more_btn@2x.png 2x,
+             ./assets/homepage/learn_more_btn@3x.png 3x"
+     class="LearnMoreBtn"></a>
+
+     <a class="CONVERSIONbtnCont2">
+       <img src="./assets/homepage/conversion_btn.png"
+      srcset="./assets/homepage/conversion_btn@2x.png 2x,
+              ./assets/homepage/conversion_btn@3x.png 3x"
+      class="CONVERSIONbtn2">
+     </a>
+    </div>
+  </div>
+
+  <div class="Fold3">
+    <label class="LearnEnglish">{{learnEnglish | uppercase}}</label>
+  </div>
+</div>

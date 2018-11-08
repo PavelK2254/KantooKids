@@ -1,0 +1,203 @@
+.container{
+  width:100%;
+  height:fit-content;
+}
+
+.Fold1BackgroundImg{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.mat-dialog-container{
+  box-shadow: 0 !important;
+background: 0 !important;
+color: 0 !important;
+}
+
+.Fold1 {
+  width: 100%;
+  height: 1056.910px;;
+  object-fit: contain;
+  position: relative;
+}
+
+.Fold2 {
+  width: 100%;
+  /*height: 1056.910px;*/
+  position: relative;
+  object-fit: contain;
+}
+
+.Fold2Left{
+  float: left;
+  display: grid;
+  padding-left: 16%;
+padding-top: 2%;
+padding-bottom: 2%;
+/*
+add 180px to padding top and bottom to make the folder same size as Fold1
+*/
+}
+
+
+
+.Fold2Right{
+  width: 703px;
+float: right;
+display: grid;
+height: 581px;
+padding-right: 8%;
+padding-bottom: 2%;
+padding-top: 2%;
+    grid-auto-rows: max-content;
+}
+
+.Fold3 {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  position: relative;
+}
+
+.playBtn{
+  width: 122px;
+height: 85px;
+object-fit: contain;
+opacity: 0.9;
+}
+
+.playBtnCont{
+  z-index: 1;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+    position: absolute;
+}
+
+.KantoDisneyLogo{
+  width: 412px;
+  height: 99px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  /* background-color: #592c82; */
+  position: absolute;
+  top: 250px;
+  left: 170px;
+}
+
+.AddEnglishToTheirStory {
+  height: 23px;
+  object-fit: contain;
+  font-size: 30px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+
+  line-height: normal;
+  letter-spacing: -1.2px;
+  text-align: left;
+  color: #592c82;
+  position: absolute;
+  top: 360px;
+  left: 160px;
+}
+
+.CONVERSIONbtn {
+
+  object-fit: contain;
+}
+
+.CONVERSIONbtnCont {
+  position: absolute;
+  top: 430px;
+  left: 180px;
+  cursor: pointer;
+}
+
+.Characters {
+  width: 287px;
+  height: 154px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.GIF {
+  width: 703px;
+  height: 427px;
+  object-fit: contain;
+}
+
+.WelcomeTo {
+  height: 27px;
+  object-fit: contain;
+  font-size: 35.8px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #592c82;
+      margin-top: 20%;
+}
+
+.KantoDisneyLogo2 {
+  width: 275px;
+  height: 66px;
+  object-fit: contain;
+  margin-top: 5%;
+
+}
+
+.TheUltimate {
+  width: 352px;
+  height: 55px;
+  object-fit: contain;
+  font-size: 25px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #592c82;
+}
+
+.LearnMoreBtn {
+  width: 113px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.LearnMoreBtnCont{
+  margin-top: 3%;
+  cursor: pointer;
+}
+
+.CONVERSIONbtn2 {
+  margin-top: 5%;
+  object-fit: contain;
+}
+
+.CONVERSIONbtnCont2 {
+  top: 430px;
+  left: 180px;
+  cursor: pointer;
+}
+
+.LearnEnglish {
+  width: 692px;
+  height: 27px;
+  object-fit: contain;
+  font-size: 35.8px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #592c82;
+}

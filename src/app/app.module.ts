@@ -19,6 +19,9 @@ import { SubMenuComponent } from './sub-menu/sub-menu.component';
 import { MovieItemComponent } from './movie-item/movie-item.component';
 import { PromoPopupComponent } from './promo-popup/promo-popup.component';
 
+ import { DeviceDetectorModule } from 'ngx-device-detector';
+import { HomePageComponent } from './home-page/home-page.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +31,8 @@ import { PromoPopupComponent } from './promo-popup/promo-popup.component';
     PageNotFoundComponent,
     SubMenuComponent,
     MovieItemComponent,
-    PromoPopupComponent
+    PromoPopupComponent,
+    HomePageComponent
   ],
   imports: [
     NgbModule,
@@ -41,7 +45,8 @@ import { PromoPopupComponent } from './promo-popup/promo-popup.component';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    DeviceDetectorModule.forRoot()
   ],
   entryComponents: [PromoPopupComponent],
   providers: [],

@@ -3,10 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { TestFrameComponent } from './test-frame/test-frame.component'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
+import { HomePageComponent } from './home-page/home-page.component'
 
 const routes: Routes = [
 
-  { path: '', component: TestFrameComponent },
+  { path: '', component: HomePageComponent },
   { path: 'our-app', component: TestFrameComponent },
   { path: 'learning-with-disney', component: TestFrameComponent },
   { path: 'kantoo-blog', component: TestFrameComponent },
