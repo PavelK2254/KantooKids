@@ -8,7 +8,7 @@ import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule,MatDialogModule} from '@angular/material';
  import {MatMenuModule} from '@angular/material/menu';
  import {MatToolbarModule} from '@angular/material/toolbar';
  import {MatIconModule} from '@angular/material';
@@ -17,6 +17,7 @@ import { TestFrameComponent } from './test-frame/test-frame.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SubMenuComponent } from './sub-menu/sub-menu.component';
 import { MovieItemComponent } from './movie-item/movie-item.component';
+import { PromoPopupComponent } from './promo-popup/promo-popup.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MovieItemComponent } from './movie-item/movie-item.component';
     TestFrameComponent,
     PageNotFoundComponent,
     SubMenuComponent,
-    MovieItemComponent
+    MovieItemComponent,
+    PromoPopupComponent
   ],
   imports: [
     NgbModule,
@@ -38,8 +40,10 @@ import { MovieItemComponent } from './movie-item/movie-item.component';
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
+  entryComponents: [PromoPopupComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
