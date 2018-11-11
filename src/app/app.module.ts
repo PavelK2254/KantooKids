@@ -22,6 +22,9 @@ import { PromoPopupComponent } from './promo-popup/promo-popup.component';
  import { DeviceDetectorModule } from 'ngx-device-detector';
 import { HomePageComponent } from './home-page/home-page.component';
 
+import { YoutubePlayerModule } from 'ngx-youtube-player';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +49,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
-    DeviceDetectorModule.forRoot()
+    DeviceDetectorModule.forRoot(),
+    YoutubePlayerModule
   ],
   entryComponents: [PromoPopupComponent],
   providers: [],
