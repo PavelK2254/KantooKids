@@ -131,4 +131,45 @@
        class="CONVERSIONbtn2" style="margin-top: 2.5%;">
       </a>
   </div>
+
+  <div class="Fold5">
+    <div class="Fold5Left">
+    <p class="OurLegacy">{{ourLegacy | uppercase}}</p>
+    <img src="./assets/homepage/expanding.png" >
+    <p style="margin-top: 50px;cursor:pointer"><a class="CONVERSIONbtnCont3">
+      <img src="./assets/homepage/conversion_btn.png"
+     srcset="./assets/homepage/conversion_btn@2x.png 2x,
+         ./assets/homepage/conversion_btn@3x.png 3x">
+    </a>
+    </p>
+  </div>
+    <div class="Fold5Right">
+      <div style="display:flex;">
+     <a style="float:left;margin-top: 300px" (click)="incrementIndex2()">
+       <img class="arrow" src="./assets/homepage/left_arrow.png"
+          srcset="./assets/menu/arrow_left@2x.png 2x,
+                  ./assets/menu/arrow_left@3x.png 3x" [src]="imgSrcLeft"  (mouseover)="imgSrcLeft = 'assets/homepage/Arrow_Hover_Left.png'"
+              (mouseout)="imgSrcLeft = 'assets/homepage/left_arrow.png'" >
+        </a>
+     <div class="movie-section" [@.disabled]="isDisabled">
+        <div class="productItemHolder" >
+          <img *ngFor="let product of products; index as i" [src]="products[i].name" [@move]="{value: viewIndex2, params: {moveOffset: moveOffset, moveOffsetAnim: moveOffsetAnim }}">
+        </div>
+
+     </div>
+     <a style="float:right;margin-top: 300px;margin-right: 100px" (click)="decrementIndex2()">
+       <img class="arrow" src="./assets/homepage/right_arrow.png"
+          srcset="./assets/menu/arrow_right@2x.png 2x,
+                  ./assets/menu/arrow_right@3x.png 3x" [src]="imgSrcRight"  (mouseover)="imgSrcRight = 'assets/homepage/Arrow_Hover_Right.png'"
+              (mouseout)="imgSrcRight = 'assets/homepage/right_arrow.png'" >
+        </a>
+        </div>
+      </div>
+      </div>
+
+    <div class="strip">
+      <p class="BGStrip" style="margin: 0;"></p>
+    </div>
+
+  <app-contactus></app-contactus>
 </div>

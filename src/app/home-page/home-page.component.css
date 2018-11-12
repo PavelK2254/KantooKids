@@ -276,6 +276,15 @@ opacity: 0.9;
   z-index: -5;
 }
 
+.productItemHolder{
+  width: 600px;
+  height: fit-content;
+  display: flex;
+  object-fit: contain;
+  overflow: hidden;
+  z-index: -5;
+}
+
 .Fold4{
   position: relative;
 }
@@ -329,4 +338,49 @@ pointer-events: none;
   position: absolute;
 right: 350px;
 top: 660px;
+}
+
+
+.Fold5{
+  width: 100vw;
+  height: 630px;
+  position: relative;
+  margin-top: 107px;
+}
+
+.Fold5Left{
+  width: fit-content;
+  height: 100%;
+  float: left;
+  padding-left: 15%;
+}
+
+.Fold5Right{
+  width: 50%;
+  height: 100%;
+  float: right;
+}
+
+.OurLegacy {
+  height: 27px;
+  object-fit: contain;
+  font-size: 35.8px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #592c82;
+}
+
+.CONVERSIONbtnCont3{
+
+}
+
+.BGStrip {
+  width: 100vw;
+  height: 27px;
+  object-fit: contain;
+  background-image: linear-gradient(to top, #5a2b95, #1b236e);
 }

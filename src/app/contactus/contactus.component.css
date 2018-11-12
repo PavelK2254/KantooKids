@@ -1,0 +1,129 @@
+.contactUsContainer{
+  position: relative;
+  width: 100%;
+}
+
+.backgroundImg{
+  width: 100%;
+height: 100%;
+z-index: -1;
+}
+
+.contactUsContainerInnerTitle{
+  top: 203px;
+  left: 44%;
+  position: absolute;
+}
+
+.contactUsContainerInnerInput{
+  top: 400px;
+  left: 40%;
+  position: absolute;
+  width: 502px;
+  height: 381px;
+  object-fit: contain;
+}
+
+.contactUsContainerInnerInputName{
+  display: flex;
+  position: relative;
+}
+
+.ContactUsNameText {
+  width: 213px;
+  height: 20px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  border-radius: 17px;
+  background-color: #ffffff;
+  font-size: 14.3px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  position: absolute;
+  padding: 7px;
+}
+
+.GetInTouch {
+  /*width: 253px;*/
+  height: 27px;
+  object-fit: contain;
+  font-size: 35.8px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+
+
+}
+
+.NeedHelpline {
+  /*width: 313px;*/
+  height: 25px;
+  object-fit: contain;
+  font-size: 25.1px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+.sendBtnContact{
+  z-index: 1;
+position: absolute;
+bottom: 10px;
+margin: 0 auto;
+left: 32%;
+cursor: pointer;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-control-placeholder {
+  position: absolute;
+  width: 213px;
+  top: 0;
+  padding: 12px 0 0 13px;
+  transition: all 200ms;
+  opacity: 0.5;
+  font-size: 14.3px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.form-control:focus + .form-control-placeholder {
+  font-size: 75%;
+  color: #ffffff;
+  transform: translate3d(0, -105%, 0);
+  opacity: 1;
+}
+
+.form-control:focus + .form-control-placeholder,
+.form-control:valid + .form-control-placeholder {
+  font-size: 75%;
+  color: #ffffff;
+  transform: translate3d(0, -100%, 0);
+  opacity: 1;
+}
+
+.sideImg{
+  position: absolute;
+z-index: 1;
+bottom: 100px;
+right: 100px;
+}

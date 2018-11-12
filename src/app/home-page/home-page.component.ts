@@ -36,13 +36,14 @@ export class HomePageComponent implements OnInit {
 
   imageBaseUri = "./assets/homepage";
   player: YT.Player;
-  private id: string = 'qDuKsiwS5xw';
+  id: string = 'qDuKsiwS5xw';
   addEnglishText = "add english to their story";
   welcomeToText = "Welcome to";
   ultimate = "The ultimate English learning experience loved by children."
   learnEnglish = "Learn English with your Favorite";
   movieWord = "movie";
   playing = "Playing = Learning";
+  ourLegacy = "Our legacy"
   imgSrcLeft: string;
   imgSrcRight: string;
   fold1BackgroundZIndexActual = -1
@@ -52,6 +53,7 @@ export class HomePageComponent implements OnInit {
   screenWidth = window.screen.width;
   screenHeight = window.screen.height;
   franchises: Movie[];
+  products: Movie[];
   translate: number = 100;
   @HostBinding('@.disabled')
   public isDisabled = false;
@@ -61,6 +63,9 @@ export class HomePageComponent implements OnInit {
   maxOffsetIndex:number = -4;
   minOffsetIndex:number = 0;
   offsetModifier = 1110;
+  offsetModifier2 = 620;
+  viewIndex2 = 0;
+
 
   constructor(private movieFetcher : MovieFetcherService) {
     this.imgSrcLeft = "assets/homepage/left_arrow.png";
@@ -82,6 +87,7 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit() {
     this.getFranchises();
+    this.getProducts();
   }
 
   savePlayer(player) {
@@ -122,16 +128,16 @@ export class HomePageComponent implements OnInit {
   }
   decrementIndex(){
 
-    if(this.viewIndex >= this.minOffsetIndex ){
+    if(this.viewIndex2 >= this.minOffsetIndex ){
       this.isDisabled = true;
       return;
     }else{
       this.isDisabled = false;
     }
-    this.viewIndex += 1;
+    this.viewIndex2 += 1;
     this.translate = this.offsetModifier;
-    console.log("menu index at: " + this.viewIndex);
-    this.translate = this.translate * this.viewIndex;
+    console.log("menu index at: " + this.viewIndex2);
+    this.translate = this.translate * this.viewIndex2;
     this.moveOffset = 'translateX( ' +this.translate + 'px)';
    // if((this.translate + this.offsetModifier) > 0 ){
     this.moveOffsetAnim = 'translateX( ' +(this.translate - this.offsetModifier) + 'px)';
@@ -142,6 +148,60 @@ export class HomePageComponent implements OnInit {
     console.log("menu translae at: " + this.translate);
     console.log("offset translae at: " + this.moveOffset);
     console.log("offsetAnim translae at: " + this.moveOffsetAnim);
+  }
+
+  incrementIndex2(){
+
+    if(this.viewIndex2 <= this.maxOffsetIndex ){
+      this.isDisabled = true;
+      return;
+    }else{
+      this.isDisabled = false;
+    }
+    this.viewIndex2 -= 1;
+    this.translate = this.offsetModifier2;
+    console.log("menu index at: " + this.viewIndex2);
+    this.translate = this.translate * this.viewIndex2;
+    this.moveOffset = 'translateX( ' +this.translate + 'px)';
+
+ //   if((this.translate + this.offsetModifier) < 0 ){
+    this.moveOffsetAnim = 'translateX( ' +(this.translate + this.offsetModifier2) +'px)';
+//   }else{
+ //   this.moveOffsetAnim = 'translateX( 0px)';
+//   }
+    console.log("menu translae at: " + this.translate);
+    console.log("offset translae at: " + this.offsetModifier2);
+    console.log("offsetAnim translae at: " + this.moveOffsetAnim);
+
+  }
+  decrementIndex2(){
+
+    if(this.viewIndex2 >= this.minOffsetIndex ){
+      this.isDisabled = true;
+      return;
+    }else{
+      this.isDisabled = false;
+    }
+    this.viewIndex2 += 1;
+    this.translate = this.offsetModifier2;
+    console.log("menu index at: " + this.viewIndex);
+    this.translate = this.translate * this.viewIndex;
+    this.moveOffset = 'translateX( ' +this.translate + 'px)';
+   // if((this.translate + this.offsetModifier) > 0 ){
+    this.moveOffsetAnim = 'translateX( ' +(this.translate - this.offsetModifier2) + 'px)';
+//   }else{
+ //   this.moveOffsetAnim = 'translateX(0px)';
+//   }
+
+    console.log("menu translae at: " + this.translate);
+    console.log("offset translae at: " + this.offsetModifier2);
+    console.log("offsetAnim translae at: " + this.moveOffsetAnim);
+  }
+
+  getProducts(){
+    this.movieFetcher.getProducts().subscribe(
+      products => this.products = products);
+      console.log('products: ', this.products);
   }
 
 }

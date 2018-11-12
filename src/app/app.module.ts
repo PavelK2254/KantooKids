@@ -12,6 +12,8 @@ import {MatButtonModule, MatCheckboxModule,MatDialogModule} from '@angular/mater
  import {MatMenuModule} from '@angular/material/menu';
  import {MatToolbarModule} from '@angular/material/toolbar';
  import {MatIconModule} from '@angular/material';
+ import {MatFormFieldModule} from '@angular/material/form-field';
+ import {MatInputModule} from '@angular/material';
 
 import { TestFrameComponent } from './test-frame/test-frame.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -23,6 +25,7 @@ import { PromoPopupComponent } from './promo-popup/promo-popup.component';
 import { HomePageComponent } from './home-page/home-page.component';
 
 import { YoutubePlayerModule } from 'ngx-youtube-player';
+import { ContactusComponent } from './contactus/contactus.component';
 
 
 @NgModule({
@@ -35,7 +38,8 @@ import { YoutubePlayerModule } from 'ngx-youtube-player';
     SubMenuComponent,
     MovieItemComponent,
     PromoPopupComponent,
-    HomePageComponent
+    HomePageComponent,
+    ContactusComponent
   ],
   imports: [
     NgbModule,
@@ -50,7 +54,9 @@ import { YoutubePlayerModule } from 'ngx-youtube-player';
     MatButtonModule,
     MatDialogModule,
     DeviceDetectorModule.forRoot(),
-    YoutubePlayerModule
+    YoutubePlayerModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   entryComponents: [PromoPopupComponent],
   providers: [],

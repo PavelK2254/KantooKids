@@ -3,6 +3,7 @@ import { Observable, of } from 'rxjs';
 import { Movie } from './movie';
 import { MOVIES } from './moviesList'
 import { FRANCHISES } from './franchiseList'
+import { PRODUCTS } from './productList'
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,10 @@ public getMovies(): Observable <Movie[]> {
 public getFranchises(): Observable <Movie[]> {
       return of(FRANCHISES);
     }
+
+public getProducts(): Observable <Movie[]>{
+  return of(PRODUCTS);
+}
 
   constructor() { }
 }
