@@ -14,7 +14,11 @@ export class AppComponent {
   constructor(private deviceService: DeviceDetectorService, private loc: Location) {
     this.epicFunction();
   }
-  
+
+  isViewMobile = false;
+
+
+
   epicFunction() {
     console.log('hello `Home` component');
     this.deviceInfo = this.deviceService.getDeviceInfo();
@@ -27,6 +31,7 @@ export class AppComponent {
     console.log("Desktop: " +isDesktopDevice); // returns if the app is running on a Desktop browser.
     if(isMobile){
        this.loc.go("/m");
+       this.isViewMobile = isMobile;
     }
 
   }

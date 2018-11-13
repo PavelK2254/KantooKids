@@ -1,0 +1,24 @@
+<div class="mMainMenu">
+  <a class="MenuCloseBtn" (click)="toggleMenu()">
+  <img [src]="isMenuOpen? './assets/menu/mobile/menu_close.png' : './assets/menu/mobile/menu.png'"
+       class="MenuClose"></a>
+       <a routerLink="" class="Kantoo-IconBtn">
+       <img src="assets\menu\kantoo-icon.jpg"
+          srcset="assets\menu\kantoo-icon@2x.jpg,
+                  assets\menu\kantoo-icon@3x.jpg"
+          class="Kantoo-Icon"></a>
+
+          <mat-expansion-panel [@toggleMenu]="isMenuOpen? 'menuOpen' : 'menuClosed'">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                This is the expansion title
+              </mat-panel-title>
+
+            </mat-expansion-panel-header>
+
+            <p>This is the primary content of the panel.</p>
+
+          </mat-expansion-panel>
+
+
+</div>

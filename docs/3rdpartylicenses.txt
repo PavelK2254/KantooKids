@@ -410,6 +410,8 @@ THE SOFTWARE.
 
 @angular/material/toolbar
 
+@angular/material/expansion
+
 @angular/core
 MIT
 

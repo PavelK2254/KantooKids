@@ -14,18 +14,20 @@ import {MatButtonModule, MatCheckboxModule,MatDialogModule} from '@angular/mater
  import {MatIconModule} from '@angular/material';
  import {MatFormFieldModule} from '@angular/material/form-field';
  import {MatInputModule} from '@angular/material';
-
+import {MatSidenavModule} from '@angular/material/sidenav';
 import { TestFrameComponent } from './test-frame/test-frame.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SubMenuComponent } from './sub-menu/sub-menu.component';
 import { MovieItemComponent } from './movie-item/movie-item.component';
 import { PromoPopupComponent } from './promo-popup/promo-popup.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
  import { DeviceDetectorModule } from 'ngx-device-detector';
 import { HomePageComponent } from './home-page/home-page.component';
 
 import { YoutubePlayerModule } from 'ngx-youtube-player';
 import { ContactusComponent } from './contactus/contactus.component';
+import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 
 
 @NgModule({
@@ -39,7 +41,8 @@ import { ContactusComponent } from './contactus/contactus.component';
     MovieItemComponent,
     PromoPopupComponent,
     HomePageComponent,
-    ContactusComponent
+    ContactusComponent,
+    MobileMenuComponent
   ],
   imports: [
     NgbModule,
@@ -56,7 +59,9 @@ import { ContactusComponent } from './contactus/contactus.component';
     DeviceDetectorModule.forRoot(),
     YoutubePlayerModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSidenavModule,
+    MatExpansionModule
   ],
   entryComponents: [PromoPopupComponent],
   providers: [],
