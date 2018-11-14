@@ -72,6 +72,7 @@ export class MobileMenuComponent implements OnInit {
   }
 
   scroll = (): void => {
+    if(!this.isMenuOpen)
     this.menuAlpha = 1 - window.pageYOffset / 250;
     console.log(this.menuAlpha);
       //handle your scroll here
