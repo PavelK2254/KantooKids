@@ -1,0 +1,2 @@
+ng s --o
+PAUSE
