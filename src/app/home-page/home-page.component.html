@@ -85,7 +85,7 @@
         </a>
      <div class="movie-section" [@.disabled]="isDisabled">
         <div class="franchiseItemHolder" >
-          <img  *ngFor="let franchise of franchises; index as i" [src]="franchises[i].name" [@move]="{value: viewIndex, params: {moveOffset: moveOffset, moveOffsetAnim: moveOffsetAnim }}">
+          <img class="franchisesItem"  *ngFor="let franchise of franchises; index as i" [src]="franchises[i].name" [@move]="{value: viewIndex, params: {moveOffset: moveOffset, moveOffsetAnim: moveOffsetAnim }}">
         </div>
 
      </div>

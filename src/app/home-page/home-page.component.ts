@@ -12,9 +12,9 @@ import { useAnimation,trigger,state,style,animate,transition} from '@angular/ani
   styleUrls: ['./home-page.component.css'],
   animations: [
     trigger('move',[
-      state('0', style({ transform:'translateX(-160px)'})),
+      state('0', style({ transform:'translateX(0px)'})),
       state('*', style({ transform:'{{moveOffset}}'}),{
-        params: {moveOffset: 'translateX(-160px)'}
+        params: {moveOffset: 'translateX(0px)'}
       }),
 
       transition(':increment',[
@@ -63,7 +63,7 @@ export class HomePageComponent implements OnInit {
   viewIndex = 0;
   maxOffsetIndex:number = -11;
   minOffsetIndex:number = 0;
-  offsetModifier = 1650;
+  offsetModifier = 1383;
   offsetModifier2 = 620;
   viewIndex2 = 0;
 

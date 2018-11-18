@@ -105,6 +105,10 @@ opacity: 0.9;
     cursor: pointer;
     position: absolute;
     pointer-events: all;
+}
+
+.franchisesItem{
+  width: 1383px;
 
 }
 
@@ -267,12 +271,11 @@ opacity: 0.9;
 }
 
 .movie-section{
-  display: flex;
   margin: 0 auto;
 }
 
 .franchiseItemHolder{
-  width: 1112px;
+  width: 1383px;
   height: fit-content;
   display: flex;
   object-fit: contain;
