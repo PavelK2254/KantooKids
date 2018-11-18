@@ -284,7 +284,7 @@ opacity: 0.9;
 }
 
 .productItemHolder{
-  width: 600px;
+  width: 700px;
   height: fit-content;
   display: flex;
   object-fit: contain;

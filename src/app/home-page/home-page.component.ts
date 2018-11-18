@@ -30,6 +30,25 @@ import { useAnimation,trigger,state,style,animate,transition} from '@angular/ani
         animate('0.5s ease-out')
       ])
     ]),
+    trigger('move2',[
+      state('0', style({ transform:'translateX(0px)'})),
+      state('*', style({ transform:'{{moveOffset2}}'}),{
+        params: {moveOffset2: 'translateX(0px)'}
+      }),
+
+      transition(':increment',[
+        style({transform: '{{moveOffsetAnim2}}'}/*,{
+          params: {moveOffsetAnim: 'translateX(-300px)'}
+        }*/),
+        animate('0.5s ease-out')
+      ]),
+      transition(':decrement',[
+        style({transform: '{{moveOffsetAnim2}}'}/*,{
+          params: {moveOffsetAnim: 'translateX(300px)'}
+        }*/),
+        animate('0.5s ease-out')
+      ])
+    ])
 
 
 ]
@@ -56,15 +75,20 @@ export class HomePageComponent implements OnInit {
   franchises: Movie[];
   products: Movie[];
   translate: number = 100;
+  translate2: number = 100;
   @HostBinding('@.disabled')
   public isDisabled = false;
   moveOffset = 'translateX( ' +this.translate + 'px)';
   moveOffsetAnim = 'translateX( ' +this.translate + 'px)';
+  moveOffset2 = 'translateX( ' +this.translate + 'px)';
+  moveOffsetAnim2 = 'translateX( ' +this.translate + 'px)';
   viewIndex = 0;
   maxOffsetIndex:number = -11;
   minOffsetIndex:number = 0;
+  maxOffsetIndex2:number = -3;
+  minOffsetIndex2:number = 0;
   offsetModifier = 1383;
-  offsetModifier2 = 620;
+  offsetModifier2 = 680;
   viewIndex2 = 0;
 
 
@@ -152,20 +176,20 @@ export class HomePageComponent implements OnInit {
 
   incrementIndex2(){
 
-    if(this.viewIndex2 <= this.maxOffsetIndex ){
+    if(this.viewIndex2 <= this.maxOffsetIndex2 ){
       this.isDisabled = true;
       return;
     }else{
       this.isDisabled = false;
     }
     this.viewIndex2 -= 1;
-    this.translate = this.offsetModifier2;
+    this.translate2 = this.offsetModifier2;
     console.log("menu index at: " + this.viewIndex2);
-    this.translate = this.translate * this.viewIndex2;
-    this.moveOffset = 'translateX( ' +this.translate + 'px)';
+    this.translate2 = this.translate2 * this.viewIndex2;
+    this.moveOffset2 = 'translateX( ' +this.translate2 + 'px)';
 
  //   if((this.translate + this.offsetModifier) < 0 ){
-    this.moveOffsetAnim = 'translateX( ' +(this.translate + this.offsetModifier2) +'px)';
+    this.moveOffsetAnim2 = 'translateX( ' +(this.translate2 + this.offsetModifier2) +'px)';
 //   }else{
  //   this.moveOffsetAnim = 'translateX( 0px)';
 //   }
@@ -176,26 +200,26 @@ export class HomePageComponent implements OnInit {
   }
   decrementIndex2(){
 
-    if(this.viewIndex2 >= this.minOffsetIndex ){
+    if(this.viewIndex2 >= this.minOffsetIndex2 ){
       this.isDisabled = true;
       return;
     }else{
       this.isDisabled = false;
     }
     this.viewIndex2 += 1;
-    this.translate = this.offsetModifier2;
-    console.log("menu index at: " + this.viewIndex);
-    this.translate = this.translate * this.viewIndex;
-    this.moveOffset = 'translateX( ' +this.translate + 'px)';
+    this.translate2 = this.offsetModifier2;
+    console.log("menu index at: " + this.viewIndex2);
+    this.translate2 = this.translate2 * this.viewIndex2;
+    this.moveOffset2 = 'translateX( ' +this.translate2 + 'px)';
    // if((this.translate + this.offsetModifier) > 0 ){
-    this.moveOffsetAnim = 'translateX( ' +(this.translate - this.offsetModifier2) + 'px)';
+    this.moveOffsetAnim2 = 'translateX( ' +(this.translate2 - this.offsetModifier2) + 'px)';
 //   }else{
  //   this.moveOffsetAnim = 'translateX(0px)';
 //   }
 
-    console.log("menu translae at: " + this.translate);
+    console.log("menu translae at: " + this.translate2);
     console.log("offset translae at: " + this.offsetModifier2);
-    console.log("offsetAnim translae at: " + this.moveOffsetAnim);
+    console.log("offsetAnim translae at: " + this.moveOffsetAnim2);
   }
 
   getProducts(){
