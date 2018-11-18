@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Movie } from '../movie';
 import { MovieFetcherService } from "../movie-fetcher.service";
 import {  HostBinding } from '@angular/core';
+import { YoutubePopupComponent } from '../youtube-popup/youtube-popup.component'
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 import { useAnimation,trigger,state,style,animate,transition} from '@angular/animations';
 
 @Component({
@@ -10,9 +12,9 @@ import { useAnimation,trigger,state,style,animate,transition} from '@angular/ani
   styleUrls: ['./home-page.component.css'],
   animations: [
     trigger('move',[
-      state('0', style({ transform:'translateX(0px)'})),
+      state('0', style({ transform:'translateX(-160px)'})),
       state('*', style({ transform:'{{moveOffset}}'}),{
-        params: {moveOffset: 'translateX(0px)'}
+        params: {moveOffset: 'translateX(-160px)'}
       }),
 
       transition(':increment',[
@@ -35,8 +37,7 @@ import { useAnimation,trigger,state,style,animate,transition} from '@angular/ani
 export class HomePageComponent implements OnInit {
 
   imageBaseUri = "./assets/homepage";
-  player: YT.Player;
-  id: string = 'qDuKsiwS5xw';
+
   addEnglishText = "add english to their story";
   welcomeToText = "Welcome to";
   ultimate = "The ultimate English learning experience loved by children."
@@ -60,24 +61,33 @@ export class HomePageComponent implements OnInit {
   moveOffset = 'translateX( ' +this.translate + 'px)';
   moveOffsetAnim = 'translateX( ' +this.translate + 'px)';
   viewIndex = 0;
-  maxOffsetIndex:number = -4;
+  maxOffsetIndex:number = -11;
   minOffsetIndex:number = 0;
-  offsetModifier = 1110;
+  offsetModifier = 1650;
   offsetModifier2 = 620;
   viewIndex2 = 0;
 
 
-  constructor(private movieFetcher : MovieFetcherService) {
+  constructor(private movieFetcher : MovieFetcherService; public dialog: MatDialog) {
     this.imgSrcLeft = "assets/homepage/left_arrow.png";
     this.imgSrcRight = "assets/homepage/right_arrow.png";
 
 
    }
 
-  runPlayer(){
-    this.fold1PlayerZIndexActual = 5;
-    this.player.playVideo();
-  }
+   openPlayer(): void {
+       const dialogRef = this.dialog.open(YoutubePopupComponent, {
+         width: 'fit-content',
+         height: 'fit-content'
+
+       });
+     }
+
+     public closeDialog() {
+      this.dialog.closeAll();
+    }
+
+
 
   getFranchises(): void {
     this.movieFetcher.getFranchises().subscribe(
@@ -90,17 +100,7 @@ export class HomePageComponent implements OnInit {
     this.getProducts();
   }
 
-  savePlayer(player) {
-    this.player = player;
-    console.log('player instance', player);
-  }
 
-  onStateChange(event) {
-    console.log('player state', event.data);
-    if(event.data == 2){
-      this.fold1PlayerZIndexActual = -5;
-    }
-  }
 
   incrementIndex(){
 
@@ -128,22 +128,22 @@ export class HomePageComponent implements OnInit {
   }
   decrementIndex(){
 
-    if(this.viewIndex2 >= this.minOffsetIndex ){
+    if(this.viewIndex >= this.minOffsetIndex ){
       this.isDisabled = true;
       return;
     }else{
       this.isDisabled = false;
     }
-    this.viewIndex2 += 1;
+    this.viewIndex += 1;
     this.translate = this.offsetModifier;
-    console.log("menu index at: " + this.viewIndex2);
-    this.translate = this.translate * this.viewIndex2;
+    console.log("menu index at: " + this.viewIndex);
+    this.translate = this.translate * this.viewIndex;
     this.moveOffset = 'translateX( ' +this.translate + 'px)';
    // if((this.translate + this.offsetModifier) > 0 ){
     this.moveOffsetAnim = 'translateX( ' +(this.translate - this.offsetModifier) + 'px)';
 //   }else{
  //   this.moveOffsetAnim = 'translateX(0px)';
-//   }
+   //}
 
     console.log("menu translae at: " + this.translate);
     console.log("offset translae at: " + this.moveOffset);

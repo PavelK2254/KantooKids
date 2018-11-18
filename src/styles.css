@@ -3,7 +3,7 @@
 html, body { height: 100%; }
 body {
    margin: 0;
-   font-family: "OpenSans", "Helvetica Neue", sans-serif;
+   font-family: 'OpenSans',  sans-serif;
      overflow: -webkit-paged-y;
  }
 *:focus {

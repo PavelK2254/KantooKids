@@ -1,0 +1,12 @@
+<a style="margin-left: 700px;cursor:pointer" (click)="closePopUp()">
+<img src="./assets/popup/cancel_pop_up_icon.png"
+   srcset="./assets/popup/cancel_pop_up_icon@2x.png,
+           ./assets/popup/cancel_pop_up_icon@3x.png"
+   class="Cancel-PopUp-icon"></a>
+<youtube-player
+[videoId]="id"
+[width] = 1200
+[height] = 700
+(ready)="savePlayer($event)"
+(change)="onStateChange($event)"
+></youtube-player>

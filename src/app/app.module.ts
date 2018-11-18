@@ -28,6 +28,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { YoutubePlayerModule } from 'ngx-youtube-player';
 import { ContactusComponent } from './contactus/contactus.component';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
+import { YoutubePopupComponent } from './youtube-popup/youtube-popup.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
     PromoPopupComponent,
     HomePageComponent,
     ContactusComponent,
-    MobileMenuComponent
+    MobileMenuComponent,
+    YoutubePopupComponent
   ],
   imports: [
     NgbModule,
@@ -63,7 +65,7 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
     MatSidenavModule,
     MatExpansionModule
   ],
-  entryComponents: [PromoPopupComponent],
+  entryComponents: [PromoPopupComponent,YoutubePopupComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

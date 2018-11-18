@@ -1,20 +1,13 @@
 <div class="container">
   <div class="Fold1">
-    <youtube-player
-    [style.z-index]="fold1PlayerZIndexActual"
-  [videoId]="id"
-  [width] = screenWidth
-  [height] = screenHeight
-  (ready)="savePlayer($event)"
-  (change)="onStateChange($event)"
-></youtube-player>
+
 
 
     <img [style.z-index]="fold1BackgroundZIndexActual" src="./assets/homepage/fold_1.png"
          srcset="./assets/homepage/fold_1@2x.png,
                  ./assets/homepage/fold_1@3x.png"
          class="Fold1BackgroundImg">
-    <a class="playBtnCont" (click)="runPlayer()">
+    <a class="playBtnCont" (click)="openPlayer()">
       <img src="./assets/homepage/play_btn.png"
      srcset="./assets/homepage/play_btn@2x.png 2x,
              ./assets/homepage/play_btn@3x.png 3x"
@@ -39,7 +32,7 @@
            srcset="./assets/homepage/characters@2x.png 2x,
                    ./assets/homepage/characters@3x.png 3x"
            class="Characters">
-           <img src="./assets/homepage/gif.png"
+           <img src="./assets/homepage/P2_Gif.gif"
      srcset="./assets/homepage/gif@2x.png 2x,
              ./assets/homepage/gif@3x.png 3x"
      class="GIF">
@@ -92,7 +85,7 @@
         </a>
      <div class="movie-section" [@.disabled]="isDisabled">
         <div class="franchiseItemHolder" >
-          <img *ngFor="let franchise of franchises; index as i" [src]="franchises[i].name" [@move]="{value: viewIndex, params: {moveOffset: moveOffset, moveOffsetAnim: moveOffsetAnim }}">
+          <img  *ngFor="let franchise of franchises; index as i" [src]="franchises[i].name" [@move]="{value: viewIndex, params: {moveOffset: moveOffset, moveOffsetAnim: moveOffsetAnim }}">
         </div>
 
      </div>
