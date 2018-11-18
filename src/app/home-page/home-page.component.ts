@@ -92,7 +92,7 @@ export class HomePageComponent implements OnInit {
   viewIndex2 = 0;
 
 
-  constructor(private movieFetcher : MovieFetcherService; public dialog: MatDialog) {
+  constructor(private movieFetcher : MovieFetcherService, public dialog: MatDialog) {
     this.imgSrcLeft = "assets/homepage/left_arrow.png";
     this.imgSrcRight = "assets/homepage/right_arrow.png";
 
