@@ -77,7 +77,7 @@
      class="LearnMoreBtn"></a>
 
       <div style="display:flex">
-     <a style="float:left;margin-left: 80px;margin-top: 230px" (click)="incrementIndex()">
+     <a style="float:left;margin-left: 80px;margin-top: 230px;margin-right: auto;" (click)="incrementIndex()">
        <img class="arrow" src="./assets/homepage/left_arrow.png"
           srcset="./assets/menu/arrow_left@2x.png 2x,
                   ./assets/menu/arrow_left@3x.png 3x" [src]="imgSrcLeft"  (mouseover)="imgSrcLeft = 'assets/homepage/Arrow_Hover_Left.png'"
@@ -89,7 +89,7 @@
         </div>
 
      </div>
-     <a style="float:right;margin-top: 230px;margin-right: 60px" (click)="decrementIndex()">
+     <a style="float:right;margin-top: 230px;margin-right: 60px;margin-left: auto;" (click)="decrementIndex()">
        <img class="arrow" src="./assets/homepage/right_arrow.png"
           srcset="./assets/menu/arrow_right@2x.png 2x,
                   ./assets/menu/arrow_right@3x.png 3x" [src]="imgSrcRight"  (mouseover)="imgSrcRight = 'assets/homepage/Arrow_Hover_Right.png'"

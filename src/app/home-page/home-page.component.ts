@@ -12,7 +12,7 @@ import { useAnimation,trigger,state,style,animate,transition} from '@angular/ani
   styleUrls: ['./home-page.component.css'],
   animations: [
     trigger('move',[
-      state('0', style({ transform:'translateX(0px)'})),
+      state('0', style({ transform:'translateX(-30px)'})),
       state('*', style({ transform:'{{moveOffset}}'}),{
         params: {moveOffset: 'translateX(0px)'}
       }),
@@ -87,7 +87,7 @@ export class HomePageComponent implements OnInit {
   minOffsetIndex:number = 0;
   maxOffsetIndex2:number = -3;
   minOffsetIndex2:number = 0;
-  offsetModifier = 1030;
+  offsetModifier = 1383;
   offsetModifier2 = 680;
   viewIndex2 = 0;
 

@@ -280,12 +280,10 @@ pointer-events: all;
   margin-left: 5px;
 }
 
-.movie-section{
-  margin: 0 auto;
-}
+
 
 .franchiseItemHolder{
-  width: 1083px;
+      width: 1383px;
 height: -webkit-fit-content;
 height: -moz-fit-content;
 height: fit-content;
@@ -294,6 +292,7 @@ display: flex;
 object-fit: contain;
 overflow: hidden;
 z-index: -5;
+    margin: 0 auto;
 }
 
 .productItemHolder{
@@ -306,7 +305,6 @@ display: flex;
 object-fit: contain;
 overflow: hidden;
 z-index: -5;
-position: absolute;
 top: 0px;
 left: 57%;
 /* margin-bottom: 50%; */
@@ -372,9 +370,9 @@ pointer-events: none;
 
 .Fold5{
 /*  width: 100vw; */
-  height: 630px;
+      height: 656px;
   position: relative;
-  margin-top: 107px;
+  /*margin-top: 107px;*/
 }
 
 .Fold5Left{
