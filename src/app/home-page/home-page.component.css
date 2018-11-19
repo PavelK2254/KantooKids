@@ -1,6 +1,7 @@
 .container{
   width: 100vw;
   height:fit-content;
+  display: contents;
 }
 
 .Fold1BackgroundImg{
@@ -25,10 +26,10 @@ youtube-player{
 }
 
 .Fold1 {
-  width: 100%;
-  height: 1056.910px;;
+  height: 100%;
+      width: 1903px;
   object-fit: contain;
-  position: relative;
+  /*position: relative;*/
   pointer-events: none;
   overflow: hidden;
 
@@ -39,18 +40,20 @@ youtube-player{
 }
 
 .Fold2 {
-  width: 100%;
-  height: 800px;
-  position: relative;
-  object-fit: contain;
+  max-width: 1903px;
+height: 1056.910px;
+position: relative;
+-o-object-fit: contain;
+margin: auto;
+object-fit: contain;
 }
 
 .Fold2Left{
   float: left;
   display: grid;
-  padding-left: 16%;
-padding-top: 2%;
-padding-bottom: 2%;
+  padding-left: 20%;
+  padding-top: 13%;
+  padding-bottom: 2%;
 /*
 add 180px to padding top and bottom to make the folder same size as Fold1
 */
@@ -60,13 +63,14 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
 .Fold2Right{
   width: 703px;
-float: right;
-display: grid;
-height: 581px;
-padding-right: 8%;
-padding-bottom: 2%;
-padding-top: 2%;
-    grid-auto-rows: max-content;
+  float: right;
+  display: grid;
+  height: 581px;
+  padding-right: 3%;
+  padding-bottom: 2%;
+  padding-top: 16%;
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content;
 }
 
 .Fold3 {
@@ -82,13 +86,15 @@ padding-top: 2%;
   text-align: -webkit-center;
 }
 
+
+
 .DisneyLogoVector {
   width: 164px;
   height: 66px;
   object-fit: contain;
   top: 15px;
   position: relative;
-
+  margin-right: 8px;
 }
 
 .playBtn{
@@ -108,30 +114,28 @@ opacity: 0.9;
 }
 
 .franchisesItem{
-  width: 1383px;
+  /*height: 533px*/
 
 }
 
 .KantoDisneyLogo{
   width: 412px;
-  height: 99px;
-  -o-object-fit: contain;
-  object-fit: contain;
-  /* background-color: #592c82; */
-  position: absolute;
-  top: 250px;
-  left: 170px;
+      height: 99px;
+      -o-object-fit: contain;
+      object-fit: contain;
+      position: absolute;
+      top: 250px;
+      left: 80px;
+
 }
 
 .KantoDisneyLogoF4{
   width: 412px;
   height: 99px;
-  -o-object-fit: contain;
   object-fit: contain;
-  /* background-color: #592c82; */
-  position: absolute;
-      top: 550px;
-      right: 200px;
+      position: absolute;
+      top: 650px;
+    right: 190px;
 
 }
 
@@ -139,24 +143,24 @@ opacity: 0.9;
   cursor: pointer;
     position: absolute;
     right: 210px;
-    top: 720px;
+  top: 800px;
 }
 
 .AddEnglishToTheirStory {
   height: 23px;
-  object-fit: contain;
-  font-size: 30px;
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-
-  line-height: normal;
-  letter-spacing: -1.2px;
-  text-align: left;
-  color: #592c82;
-  position: absolute;
-  top: 360px;
-  left: 160px;
+      -o-object-fit: contain;
+      object-fit: contain;
+      font-size: 30px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: -1.2px;
+      text-align: left;
+      color: #592c82;
+      position: absolute;
+      top: 360px;
+      left: 80px;
 }
 
 .CONVERSIONbtn {
@@ -166,10 +170,10 @@ opacity: 0.9;
 
 .CONVERSIONbtnCont {
   position: absolute;
-  top: 430px;
-  left: 180px;
-  cursor: pointer;
-  pointer-events: all;
+top: 420px;
+left: 80px;
+cursor: pointer;
+pointer-events: all;
 }
 
 .Characters {
@@ -187,6 +191,7 @@ opacity: 0.9;
 
 .WelcomeTo {
   height: 27px;
+  -o-object-fit: contain;
   object-fit: contain;
   font-size: 35.8px;
   font-weight: 800;
@@ -196,29 +201,32 @@ opacity: 0.9;
   letter-spacing: normal;
   text-align: left;
   color: #592c82;
-      margin-top: 20%;
+  margin-top: 20%;
 }
 
 .KantoDisneyLogo2 {
   width: 275px;
-  height: 66px;
-  object-fit: contain;
-  margin-top: 5%;
+      height: 66px;
+      object-fit: contain;
+      margin-top: 3.5%;
+      margin-left: 4px;
 
 }
 
 .TheUltimate {
   width: 352px;
-  height: 55px;
-  object-fit: contain;
-  font-size: 25px;
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #592c82;
+      height: 55px;
+      -o-object-fit: contain;
+      object-fit: contain;
+      font-size: 25px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      margin-top: 10px;
+      color: #592c82;
 }
 
 .LearnMoreBtn {
@@ -245,6 +253,7 @@ opacity: 0.9;
 
 .LearnEnglish {
   height: 27px;
+
   object-fit: contain;
   font-size: 35.8px;
   font-weight: 800;
@@ -254,6 +263,7 @@ opacity: 0.9;
   letter-spacing: normal;
   text-align: center;
   color: #592c82;
+  padding-top: 100px;
 }
 
 .MovieWord {
@@ -275,21 +285,31 @@ opacity: 0.9;
 }
 
 .franchiseItemHolder{
-  width: 1383px;
-  height: fit-content;
-  display: flex;
-  object-fit: contain;
-  overflow: hidden;
-  z-index: -5;
+  width: 1083px;
+height: -webkit-fit-content;
+height: -moz-fit-content;
+height: fit-content;
+display: flex;
+-o-object-fit: contain;
+object-fit: contain;
+overflow: hidden;
+z-index: -5;
 }
 
 .productItemHolder{
   width: 700px;
-  height: fit-content;
-  display: flex;
-  object-fit: contain;
-  overflow: hidden;
-  z-index: -5;
+/* height: -webkit-fit-content; */
+height: -moz-fit-content;
+/* height: fit-content; */
+display: flex;
+-o-object-fit: contain;
+object-fit: contain;
+overflow: hidden;
+z-index: -5;
+position: absolute;
+top: 0px;
+left: 57%;
+/* margin-bottom: 50%; */
 }
 
 .Fold4{
@@ -306,18 +326,19 @@ opacity: 0.9;
 
 .playingLearning {
   width: 472px;
-  height: 152px;
-  object-fit: contain;
-  font-size: 77.8px;
-  font-weight: 800;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #592c82;
-  position: absolute;
-  top: 150px;
+height: 152px;
+-o-object-fit: contain;
+object-fit: contain;
+font-size: 75.8px;
+font-weight: 800;
+font-style: normal;
+font-stretch: normal;
+line-height: 90px;
+letter-spacing: normal;
+text-align: left;
+color: #592c82;
+position: absolute;
+top: 280px;
 right: 152px;
 pointer-events: none;
 }
@@ -325,6 +346,7 @@ pointer-events: none;
 .With {
   width: 96px;
   height: 26px;
+  -o-object-fit: contain;
   object-fit: contain;
   font-size: 35.8px;
   font-weight: 800;
@@ -335,21 +357,21 @@ pointer-events: none;
   text-align: center;
   color: #592c82;
   position: absolute;
-  top: 430px;
+  top: 530px;
   right: 364.797px;
   pointer-events: none;
 }
 
 .LearnMoreBtnContF4{
   cursor: pointer;
-  position: absolute;
-right: 350px;
-top: 660px;
+      position: absolute;
+      right: 350px;
+      top: 760px;
 }
 
 
 .Fold5{
-  width: 100vw;
+/*  width: 100vw; */
   height: 630px;
   position: relative;
   margin-top: 107px;
@@ -359,7 +381,7 @@ top: 660px;
   width: fit-content;
   height: 100%;
   float: left;
-  padding-left: 15%;
+  padding-left: 80px;
 }
 
 .Fold5Right{
@@ -370,15 +392,17 @@ top: 660px;
 
 .OurLegacy {
   height: 27px;
-  object-fit: contain;
-  font-size: 35.8px;
-  font-weight: 800;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #592c82;
+-o-object-fit: contain;
+object-fit: contain;
+font-size: 35.8px;
+font-weight: 800;
+font-style: normal;
+font-stretch: normal;
+line-height: normal;
+letter-spacing: normal;
+text-align: left;
+color: #592c82;
+margin-top: 80px;
 }
 
 .CONVERSIONbtnCont3{
@@ -386,7 +410,7 @@ top: 660px;
 }
 
 .BGStrip {
-  width: 100vw;
+/*  width: 100vw; */
   height: 27px;
   object-fit: contain;
   background-image: linear-gradient(to top, #5a2b95, #1b236e);

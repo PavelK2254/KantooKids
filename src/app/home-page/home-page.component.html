@@ -63,7 +63,7 @@
   </div>
 
   <div class="Fold3">
-    <p class="LearnEnglish">{{learnEnglish | uppercase}}</p>
+    <p class="LearnEnglish" style="margin-bottom: 0px">{{learnEnglish | uppercase}}</p>
     <p class="Fold3_SecondRow">
     <img src="./assets/homepage/disney_logo_vector.png"
      srcset="./assets/homepage/disney_logo_vector@2x.png 2x,
@@ -76,8 +76,8 @@
              ./assets/homepage/learn_more_btn@3x.png 3x"
      class="LearnMoreBtn"></a>
 
-      <div style="display:flex;margin-top: 50px;">
-     <a style="float:left;margin-left: 100px;margin-top: 150px" (click)="incrementIndex()">
+      <div style="display:flex">
+     <a style="float:left;margin-left: 80px;margin-top: 230px" (click)="incrementIndex()">
        <img class="arrow" src="./assets/homepage/left_arrow.png"
           srcset="./assets/menu/arrow_left@2x.png 2x,
                   ./assets/menu/arrow_left@3x.png 3x" [src]="imgSrcLeft"  (mouseover)="imgSrcLeft = 'assets/homepage/Arrow_Hover_Left.png'"
@@ -89,7 +89,7 @@
         </div>
 
      </div>
-     <a style="float:right;margin-top: 150px;margin-right: 100px" (click)="decrementIndex()">
+     <a style="float:right;margin-top: 230px;margin-right: 60px" (click)="decrementIndex()">
        <img class="arrow" src="./assets/homepage/right_arrow.png"
           srcset="./assets/menu/arrow_right@2x.png 2x,
                   ./assets/menu/arrow_right@3x.png 3x" [src]="imgSrcRight"  (mouseover)="imgSrcRight = 'assets/homepage/Arrow_Hover_Right.png'"
@@ -100,7 +100,7 @@
           <img src="./assets/homepage/conversion_btn.png"
          srcset="./assets/homepage/conversion_btn@2x.png 2x,
                  ./assets/homepage/conversion_btn@3x.png 3x"
-         class="CONVERSIONbtn2" style="margin-top: 2.5%;">
+         class="CONVERSIONbtn2" style="margin-top: -1%;">
         </a>
   </div>
 
@@ -129,7 +129,7 @@
     <div class="Fold5Left">
     <p class="OurLegacy">{{ourLegacy | uppercase}}</p>
     <img src="./assets/homepage/expanding.png" >
-    <p style="margin-top: 50px;cursor:pointer"><a class="CONVERSIONbtnCont3">
+    <p style="margin-top: 40px;cursor:pointer"><a class="CONVERSIONbtnCont3">
       <img src="./assets/homepage/conversion_btn.png"
      srcset="./assets/homepage/conversion_btn@2x.png 2x,
          ./assets/homepage/conversion_btn@3x.png 3x">
@@ -138,7 +138,7 @@
   </div>
     <div class="Fold5Right">
       <div style="display:flex;">
-     <a style="float:left;margin-top: 300px" (click)="incrementIndex2()">
+     <a style="float:left;margin-top: 300px;margin-left: 70px;" (click)="incrementIndex2()">
        <img class="arrow" src="./assets/homepage/left_arrow.png"
           srcset="./assets/menu/arrow_left@2x.png 2x,
                   ./assets/menu/arrow_left@3x.png 3x" [src]="imgSrcLeft"  (mouseover)="imgSrcLeft = 'assets/homepage/Arrow_Hover_Left.png'"
@@ -150,7 +150,7 @@
         </div>
 
      </div>
-     <a style="float:right;margin-top: 300px;margin-right: 100px" (click)="decrementIndex2()">
+     <a style="float:right;margin-top: 300px;margin-right: 80px" (click)="decrementIndex2()">
        <img class="arrow" src="./assets/homepage/right_arrow.png"
           srcset="./assets/menu/arrow_right@2x.png 2x,
                   ./assets/menu/arrow_right@3x.png 3x" [src]="imgSrcRight"  (mouseover)="imgSrcRight = 'assets/homepage/Arrow_Hover_Right.png'"

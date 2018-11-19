@@ -1,6 +1,7 @@
 .contactUsContainer{
   position: relative;
   width: 100%;
+  background: black;
 }
 
 .backgroundImg{
@@ -10,17 +11,18 @@ z-index: -1;
 }
 
 .contactUsContainerInnerTitle{
-  top: 203px;
-  left: 44%;
-  position: absolute;
+  top: 315px;
+      left: 44%;
+      position: absolute;
 }
 
 .contactUsContainerInnerInput{
-  top: 400px;
+  top: 500px;
   left: 40%;
   position: absolute;
-  width: 502px;
-  height: 381px;
+  width: 500px;
+  height: 360px;
+  -o-object-fit: contain;
   object-fit: contain;
 }
 
@@ -48,17 +50,17 @@ z-index: -1;
 }
 
 .GetInTouch {
-  /*width: 253px;*/
   height: 27px;
-  object-fit: contain;
-  font-size: 35.8px;
-  font-weight: 800;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #ffffff;
+-o-object-fit: contain;
+object-fit: contain;
+font-size: 35.8px;
+font-weight: 800;
+font-style: normal;
+font-stretch: normal;
+line-height: normal;
+letter-spacing: normal;
+text-align: center;
+color: #ffffff;
 
 
 }

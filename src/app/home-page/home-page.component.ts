@@ -61,7 +61,7 @@ export class HomePageComponent implements OnInit {
   welcomeToText = "Welcome to";
   ultimate = "The ultimate English learning experience loved by children."
   learnEnglish = "Learn English with your Favorite";
-  movieWord = "movie";
+  movieWord = "movie!";
   playing = "Playing = Learning";
   ourLegacy = "Our legacy"
   imgSrcLeft: string;
@@ -87,7 +87,7 @@ export class HomePageComponent implements OnInit {
   minOffsetIndex:number = 0;
   maxOffsetIndex2:number = -3;
   minOffsetIndex2:number = 0;
-  offsetModifier = 1383;
+  offsetModifier = 1030;
   offsetModifier2 = 680;
   viewIndex2 = 0;
 
