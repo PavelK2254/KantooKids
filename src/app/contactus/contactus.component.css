@@ -1,7 +1,8 @@
 .contactUsContainer{
   position: relative;
-  width: 100%;
+  max-width: 1903px;
   background: black;
+  margin: 0 auto;
 }
 
 .backgroundImg{
@@ -47,6 +48,8 @@ z-index: -1;
   text-align: left;
   position: absolute;
   padding: 7px;
+  border: 0px;
+  resize: unset;
 }
 
 .GetInTouch {
@@ -84,7 +87,7 @@ color: #ffffff;
 position: absolute;
 bottom: 10px;
 margin: 0 auto;
-left: 32%;
+left: 30%;
 cursor: pointer;
 }
 

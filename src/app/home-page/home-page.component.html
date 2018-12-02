@@ -1,8 +1,6 @@
 <div class="container">
+
   <div class="Fold1">
-
-
-
     <img [style.z-index]="fold1BackgroundZIndexActual" src="./assets/homepage/fold_1.png"
          srcset="./assets/homepage/fold_1@2x.png,
                  ./assets/homepage/fold_1@3x.png"
@@ -13,6 +11,7 @@
              ./assets/homepage/play_btn@3x.png 3x"
      class="playBtn">
     </a>
+
     <img src="./assets/homepage/kanto_disney_logo.png"
      srcset="./assets/homepage/kanto_disney_logo@2x.png 2x,
              ./assets/homepage/kanto_disney_logo@3x.png 3x"
@@ -24,6 +23,7 @@
               ./assets/homepage/conversion_btn@3x.png 3x"
       class="CONVERSIONbtn">
      </a>
+    
   </div>
 
   <div class="Fold2">
@@ -79,8 +79,7 @@
       <div style="display:flex">
      <a style="float:left;margin-left: 80px;margin-top: 230px;margin-right: auto;" (click)="incrementIndex()">
        <img class="arrow" src="./assets/homepage/left_arrow.png"
-          srcset="./assets/menu/arrow_left@2x.png 2x,
-                  ./assets/menu/arrow_left@3x.png 3x" [src]="imgSrcLeft"  (mouseover)="imgSrcLeft = 'assets/homepage/Arrow_Hover_Left.png'"
+           [src]="imgSrcLeft"  (mouseover)="imgSrcLeft = 'assets/homepage/Arrow_Hover_Left.png'"
               (mouseout)="imgSrcLeft = 'assets/homepage/left_arrow.png'" >
         </a>
      <div class="movie-section" [@.disabled]="isDisabled">
@@ -91,8 +90,7 @@
      </div>
      <a style="float:right;margin-top: 230px;margin-right: 60px;margin-left: auto;" (click)="decrementIndex()">
        <img class="arrow" src="./assets/homepage/right_arrow.png"
-          srcset="./assets/menu/arrow_right@2x.png 2x,
-                  ./assets/menu/arrow_right@3x.png 3x" [src]="imgSrcRight"  (mouseover)="imgSrcRight = 'assets/homepage/Arrow_Hover_Right.png'"
+         [src]="imgSrcRight"  (mouseover)="imgSrcRight = 'assets/homepage/Arrow_Hover_Right.png'"
               (mouseout)="imgSrcRight = 'assets/homepage/right_arrow.png'" >
         </a>
         </div>
@@ -140,8 +138,7 @@
       <div style="display:flex;">
      <a style="float:left;margin-top: 300px;margin-left: 70px;" (click)="incrementIndex2()">
        <img class="arrow" src="./assets/homepage/left_arrow.png"
-          srcset="./assets/menu/arrow_left@2x.png 2x,
-                  ./assets/menu/arrow_left@3x.png 3x" [src]="imgSrcLeft"  (mouseover)="imgSrcLeft = 'assets/homepage/Arrow_Hover_Left.png'"
+           [src]="imgSrcLeft"  (mouseover)="imgSrcLeft = 'assets/homepage/Arrow_Hover_Left.png'"
               (mouseout)="imgSrcLeft = 'assets/homepage/left_arrow.png'" >
         </a>
      <div class="movie-section" [@.disabled]="isDisabled">
@@ -152,8 +149,7 @@
      </div>
      <a style="float:right;margin-top: 300px;margin-right: 80px" (click)="decrementIndex2()">
        <img class="arrow" src="./assets/homepage/right_arrow.png"
-          srcset="./assets/menu/arrow_right@2x.png 2x,
-                  ./assets/menu/arrow_right@3x.png 3x" [src]="imgSrcRight"  (mouseover)="imgSrcRight = 'assets/homepage/Arrow_Hover_Right.png'"
+         [src]="imgSrcRight"  (mouseover)="imgSrcRight = 'assets/homepage/Arrow_Hover_Right.png'"
               (mouseout)="imgSrcRight = 'assets/homepage/right_arrow.png'" >
         </a>
         </div>
@@ -161,7 +157,7 @@
       </div>
 
     <div class="strip">
-      <p class="BGStrip" style="margin: 0;"></p>
+      <p class="BGStrip"></p>
     </div>
 
   <app-contactus></app-contactus>

@@ -1,6 +1,6 @@
 .Kantoo-Icon {
-  width: 59px;
-  height: 66px;
+  width: 3vw;
+      height: auto;
   object-fit: contain;
   margin: 10px 0px 8px 62px;
   transition: transform .2s; /* Animation */
@@ -11,18 +11,18 @@
 }
 
 .navmenu {
-  width: 100%;
-height: 84px;
--o-object-fit: contain;
-object-fit: contain;
-position: fixed;
-padding-top: 10px;
-opacity: 0.9;
-top: 0;
-display: flex;
-z-index: 999;
-box-shadow: 0px 1px 24px 3px rgba(0, 0, 0, 0.36);
-background-color: #ffffff;
+    height: 10vh;
+  -o-object-fit: contain;
+  object-fit: contain;
+  position: fixed;
+  padding-top: 10px;
+  opacity: 0.9;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+  box-shadow: 0px 1px 24px 3px rgba(0, 0, 0, 0.36);
+  background-color: #ffffff;
 }
 
 .textmenu {
@@ -34,13 +34,16 @@ background-color: #ffffff;
 
 
 .menuItem {
-  width: fit-content;
+  /* width: -webkit-fit-content; */
+  width: -moz-fit-content;
+  /* width: fit-content; */
+  -o-object-fit: contain;
+  max-width: 280px;
   object-fit: contain;
   background-image: linear-gradient(to top, #5a2b95, #1b236e), linear-gradient(to bottom, #ffffff, #ffffff);
-/*  font-family: OpenSans;*/
-  font-size: 15px;
+  font-size: 0.8vw;
   cursor: pointer;
-  margin-left: 3%;
+  /* margin-left: 3%; */
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -52,6 +55,8 @@ background-color: #ffffff;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  flex-shrink: 1;
+  flex-grow: 1;
 }
 
 .menuItem:hover{
@@ -184,8 +189,7 @@ height: 194px;
 
   object-fit: contain;
   background-image: linear-gradient(to top, #5a2b95, #1b236e), linear-gradient(to bottom, #ffffff, #ffffff);
-/*  font-family: OpenSans;*/
-  font-size: 15px;
+  font-size: 0.8vw;
   margin-left: 3%;
   font-weight: 500;
   font-style: normal;
@@ -205,33 +209,51 @@ height: 194px;
 
   object-fit: contain;
    background-image: linear-gradient(to top, #02aab0, #00cdac), linear-gradient(to bottom, #ffffff, #ffffff);
-/*  font-family: OpenSans;*/
-  font-size: 15px;
-  margin-left: 3%;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 84px;
-  letter-spacing: normal;
-  vertical-align: text-bottom;
-  text-align: center;
-  color: #ffffff;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+   font-size: 0.8em;
+   margin-left: 3%;
+   font-weight: 500;
+   font-style: normal;
+   font-stretch: normal;
+   line-height: 84px;
+   letter-spacing: normal;
+   vertical-align: text-bottom;
+   text-align: center;
+   cursor: pointer;
+   color: #ffffff;
+   -webkit-background-clip: text;
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
 }
 
 .lang:hover{
   font-weight: 600;
 }
 
+.language-section{
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
 
 
+mat-toolbar-row {
+  min-height: 64px;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 16px;
 
+  position: relative;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  white-space: nowrap;
+  flex-wrap: wrap;
+}
 
 
 
 .Drop-Down {
-  margin-bottom: 5px;
-    margin-left: 5px;
+  margin-bottom: 0.3vw;
+  margin-left: 0.3vw;
+  height: auto;
+  width: 0.5vw;
 }
