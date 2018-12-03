@@ -1,0 +1,246 @@
+.container {
+  width: 100vw;
+  height: fit-content;
+  display: contents;
+}
+
+
+.Fold1 {
+  /* max-width: 1903px; */
+  height: auto;
+  position: relative;
+  -o-object-fit: contain;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  object-fit: contain;
+  max-width: 1903px;
+}
+
+.Fold1Half {
+  width: 50%;
+  height: 100vh;
+  padding-top: 13%;
+  /*
+add 180px to padding top and bottom to make the folder same size as Fold1
+*/
+}
+
+.Fold1TabletImg{
+  width: 612px;
+  height: 434px;
+  object-fit: contain;
+  padding-top: 15%
+}
+
+.introducing {
+  object-fit: contain;
+  font-size: 36px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #592c82;
+  margin-bottom: 0px;
+}
+
+.Fold1TextsContainer{
+  padding-top: 15%;
+  margin-left: 3vw;
+}
+
+.Fold2TextContainer{
+    margin-left: 215px;
+    padding-top: 5%;
+}
+
+.KantoDisneyLogo2 {
+  max-width: 21.3vw;
+      height: auto;
+      -o-object-fit: contain;
+      object-fit: contain;
+      /* margin-top: 3.5%; */
+      margin-left: 4px;
+}
+
+.disneyText{
+  width: 461px;
+  object-fit: contain;
+  font-size: 19.3px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #592c82;
+}
+
+.Fold2{
+  max-height: 112.6vh;
+  position: relative;
+  -o-object-fit: contain;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  object-fit: contain;
+  max-width: 1500px;
+  background-position: right;
+background-repeat: no-repeat;
+/*background-image: url(/assets/ourApp/f2mobilemockup.png);*/
+}
+
+.Fold3{
+  height: 730px;
+  position: relative;
+  -o-object-fit: contain;
+  margin: auto;
+  object-fit: contain;
+  max-width: 1903px;
+  background-position: center;
+background-repeat: no-repeat;
+background-image: url(/assets/ourApp/f3KidMockup.png);
+}
+
+.Fastandeasy{
+  width: 500px;
+  height: 70px;
+  object-fit: contain;
+  font-size: 35.7px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #592c82;
+  margin-left: 10%;
+}
+
+
+
+.f2mobilemockup{
+  width: 801px;
+  height: 671px;
+  object-fit: contain;
+}
+
+.activeText{
+ height: 27px;
+ white-space: nowrap;
+ object-fit: contain;
+ font-size: 35.7px;
+ font-weight: 800;
+ font-style: normal;
+ font-stretch: normal;
+ line-height: normal;
+ letter-spacing: normal;
+ text-align: left;
+ color: #592c82;
+}
+
+.weTeach {
+  width: 473px;
+  height: 88px;
+  object-fit: contain;
+  font-size: 19.3px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #592c82;
+}
+
+.ourCambridge {
+  width: 461px;
+  height: 88px;
+  object-fit: contain;
+  font-size: 19.3px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #592c82;
+}
+
+.CONVERSIONbtn {
+  width: 368px;
+  height: 54px;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+.Fold3Texts{
+  width: 50%;
+  float: right;
+  padding-top: 10%;
+}
+
+.OurDisney {
+  width: 449px;
+  height: 89px;
+  object-fit: contain;
+  font-size: 19.3px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #592c82;
+  margin-left: 10%;
+}
+
+.Fold4{
+  height: 730px;
+  position: relative;
+  -o-object-fit: contain;
+  margin: auto;
+  object-fit: contain;
+  max-width: 1903px;
+  background-position: center;
+background-repeat: no-repeat;
+background-image: url(/assets/ourApp/fold4.png);
+}
+
+.Fold5 {
+  /* max-width: 1903px; */
+  height: auto;
+  position: relative;
+  -o-object-fit: contain;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  object-fit: contain;
+  max-width: 1903px;
+}
+
+.Fold6{
+  height: 730px;
+  position: relative;
+  -o-object-fit: contain;
+  margin: auto;
+  object-fit: contain;
+  max-width: 1903px;
+  background-position: center;
+background-repeat: no-repeat;
+background-image: url(/assets/ourApp/fold6.png);
+}
+
+.Fold7{
+  height: 730px;
+  position: relative;
+  -o-object-fit: contain;
+  margin: auto;
+  object-fit: contain;
+  max-width: 1903px;
+  background-position: center;
+background-repeat: no-repeat;
+background-image: url(/assets/ourApp/fold7.png);
+}

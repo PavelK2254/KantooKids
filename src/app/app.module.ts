@@ -29,6 +29,7 @@ import { YoutubePlayerModule } from 'ngx-youtube-player';
 import { ContactusComponent } from './contactus/contactus.component';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { YoutubePopupComponent } from './youtube-popup/youtube-popup.component';
+import { OurAppComponent } from './our-app/our-app.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { YoutubePopupComponent } from './youtube-popup/youtube-popup.component';
     HomePageComponent,
     ContactusComponent,
     MobileMenuComponent,
-    YoutubePopupComponent
+    YoutubePopupComponent,
+    OurAppComponent
   ],
   imports: [
     NgbModule,
