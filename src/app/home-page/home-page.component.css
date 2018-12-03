@@ -37,12 +37,15 @@ margin: 0 auto;
 }
 
 .Fold2 {
-  max-width: 1903px;
-  height: 1056.910px;
+  /* max-width: 1903px; */
+  height: 112.6vh;
   position: relative;
   -o-object-fit: contain;
   margin: auto;
+  display: flex;
+  justify-content: space-evenly;
   object-fit: contain;
+  max-width: 1903px;
 }
 
 .Fold2Left {
@@ -170,18 +173,18 @@ left: 4.2vw;
 }
 
 .Characters {
-  width: 287px;
-    height: 154px;
-    -o-object-fit: contain;
-    object-fit: contain;
-    position: absolute;
-    margin: 0 auto;
-    top: 19%;
-    left: 31%;
+  max-width: 15vw;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  position: absolute;
+  margin: 0 auto;
+  top: 200px;
+  margin-left: 30.7%;
 }
 
 .GIF {
-  width: 703px;
+  max-width: 36.7vw;
   height: 427px;
   -o-object-fit: contain;
   object-fit: contain;
@@ -204,11 +207,12 @@ left: 4.2vw;
 }
 
 .KantoDisneyLogo2 {
-  width: 275px;
-  height: 66px;
-  object-fit: contain;
-  margin-top: 3.5%;
-  margin-left: 4px;
+  width: 14.3vw;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    margin-top: 3.5%;
+    margin-left: 4px;
 }
 
 .TheUltimate {
@@ -241,6 +245,7 @@ left: 4.2vw;
 .CONVERSIONbtn2 {
   margin-top: 5%;
   object-fit: contain;
+  width: 20vw;
 }
 
 .CONVERSIONbtnCont2 {
