@@ -12,7 +12,7 @@ import { useAnimation,trigger,state,style,animate,transition} from '@angular/ani
   styleUrls: ['./home-page.component.css'],
   animations: [
     trigger('move',[
-      state('0', style({ transform:'translateX(-30px)'})),
+      state('0', style({ transform:'translateX(0px)'})),
       state('*', style({ transform:'{{moveOffset}}'}),{
         params: {moveOffset: 'translateX(0px)'}
       }),
@@ -83,21 +83,20 @@ export class HomePageComponent implements OnInit {
   moveOffset2 = 'translateX( ' +this.translate + 'px)';
   moveOffsetAnim2 = 'translateX( ' +this.translate + 'px)';
   viewIndex = 0;
-  maxOffsetIndex:number = -11;
-  minOffsetIndex:number = 0;
-  maxOffsetIndex2:number = -3;
-  minOffsetIndex2:number = 0;
-  offsetModifier = 1383;
-  offsetModifier2 = 680;
+  maxOffsetIndex:number = -6;
+  minOffsetIndex:number = 5;
+  maxOffsetIndex2:number = -2;
+  minOffsetIndex2:number = 1;
+  offsetModifier = 1158;
+  offsetModifier2 = 607;
   viewIndex2 = 0;
 
 
   constructor(private movieFetcher : MovieFetcherService, public dialog: MatDialog) {
     this.imgSrcLeft = "assets/homepage/left_arrow.png";
     this.imgSrcRight = "assets/homepage/right_arrow.png";
-
-
    }
+
 
    openPlayer(): void {
        const dialogRef = this.dialog.open(YoutubePopupComponent, {
@@ -133,6 +132,12 @@ export class HomePageComponent implements OnInit {
       return;
     }else{
       this.isDisabled = false;
+      if(this.viewIndex == (this.maxOffsetIndex + 1)){
+      document.getElementById('movie-leftArrow').style.visibility = "hidden"
+      }else{
+      document.getElementById('movie-leftArrow').style.visibility = "visible"
+    }
+    document.getElementById('movie-rightArrow').style.visibility = "visible"
     }
     this.viewIndex -= 1;
     this.translate = this.offsetModifier;
@@ -140,11 +145,9 @@ export class HomePageComponent implements OnInit {
     this.translate = this.translate * this.viewIndex;
     this.moveOffset = 'translateX( ' +this.translate + 'px)';
 
- //   if((this.translate + this.offsetModifier) < 0 ){
+
     this.moveOffsetAnim = 'translateX( ' +(this.translate + this.offsetModifier) +'px)';
-//   }else{
- //   this.moveOffsetAnim = 'translateX( 0px)';
-//   }
+
     console.log("menu translae at: " + this.translate);
     console.log("offset translae at: " + this.moveOffset);
     console.log("offsetAnim translae at: " + this.moveOffsetAnim);
@@ -157,17 +160,19 @@ export class HomePageComponent implements OnInit {
       return;
     }else{
       this.isDisabled = false;
+      if(this.viewIndex == (this.minOffsetIndex -1)){
+      document.getElementById('movie-rightArrow').style.visibility = "hidden"
+      }
+      document.getElementById('movie-leftArrow').style.visibility = "visible"
     }
     this.viewIndex += 1;
     this.translate = this.offsetModifier;
     console.log("menu index at: " + this.viewIndex);
     this.translate = this.translate * this.viewIndex;
     this.moveOffset = 'translateX( ' +this.translate + 'px)';
-   // if((this.translate + this.offsetModifier) > 0 ){
+
     this.moveOffsetAnim = 'translateX( ' +(this.translate - this.offsetModifier) + 'px)';
-//   }else{
- //   this.moveOffsetAnim = 'translateX(0px)';
-   //}
+
 
     console.log("menu translae at: " + this.translate);
     console.log("offset translae at: " + this.moveOffset);
@@ -180,6 +185,10 @@ export class HomePageComponent implements OnInit {
       this.isDisabled = true;
       return;
     }else{
+      if(this.viewIndex2 == (this.maxOffsetIndex2 +1)){
+        document.getElementById('product-arrowLeft').style.visibility = "hidden"
+      }
+      document.getElementById('product-arrowRight').style.visibility = "visible"
       this.isDisabled = false;
     }
     this.viewIndex2 -= 1;
@@ -204,6 +213,10 @@ export class HomePageComponent implements OnInit {
       this.isDisabled = true;
       return;
     }else{
+      if(this.viewIndex2 == (this.minOffsetIndex2 -1)){
+        document.getElementById('product-arrowRight').style.visibility = "hidden"
+      }
+      document.getElementById('product-arrowLeft').style.visibility = "visible"
       this.isDisabled = false;
     }
     this.viewIndex2 += 1;

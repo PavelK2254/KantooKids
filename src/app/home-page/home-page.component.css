@@ -245,7 +245,7 @@ left: 4.2vw;
 .CONVERSIONbtn2 {
   margin-top: 5%;
   object-fit: contain;
-  width: 20vw;
+/*  width: 20vw;*/
 }
 
 .CONVERSIONbtnCont2 {
@@ -282,7 +282,7 @@ left: 4.2vw;
 }
 
 .franchiseItemHolder {
-  width: 1383px;
+  width: 1158px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -290,8 +290,13 @@ left: 4.2vw;
   -o-object-fit: contain;
   object-fit: contain;
   overflow: hidden;
+  justify-content: center;
   z-index: -5;
   margin: 0 auto;
+}
+
+.franchisesItem:first-child{
+  margin-left: 1158px;
 }
 
 .productItemHolder {
@@ -302,11 +307,17 @@ left: 4.2vw;
   display: flex;
   -o-object-fit: contain;
   object-fit: contain;
+  justify-content: center;
   overflow: hidden;
   z-index: -5;
   top: 0px;
   left: 57%;
+  margin-top: 25px
   /* margin-bottom: 50%; */
+}
+
+.productItem:first-child{
+  margin-left: 607px;
 }
 
 .Fold4 {
@@ -403,7 +414,15 @@ margin: 0 auto;
   margin-top: 80px;
 }
 
-.CONVERSIONbtnCont3 {}
+.CONVERSIONbtnContFold3 {
+  top: 80%;
+right: 0;
+left: 0;
+cursor: pointer;
+/* margin-top: 20%; */
+position: absolute;
+margin: 0 auto;
+}
 
 .BGStrip {
   max-width: 1903px;

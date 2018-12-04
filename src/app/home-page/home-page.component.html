@@ -23,7 +23,7 @@
               ./assets/homepage/conversion_btn@3x.png 3x"
       class="CONVERSIONbtn">
      </a>
-    
+
   </div>
 
   <div class="Fold2">
@@ -77,7 +77,7 @@
      class="LearnMoreBtn"></a>
 
       <div style="display:flex">
-     <a style="float:left;margin-left: 80px;margin-top: 230px;margin-right: auto;" (click)="incrementIndex()">
+     <a id="movie-leftArrow" style="float:left;margin-left: 80px;margin-top: 230px;margin-right: auto;" (click)="incrementIndex()">
        <img class="arrow" src="./assets/homepage/left_arrow.png"
            [src]="imgSrcLeft"  (mouseover)="imgSrcLeft = 'assets/homepage/Arrow_Hover_Left.png'"
               (mouseout)="imgSrcLeft = 'assets/homepage/left_arrow.png'" >
@@ -88,13 +88,13 @@
         </div>
 
      </div>
-     <a style="float:right;margin-top: 230px;margin-right: 60px;margin-left: auto;" (click)="decrementIndex()">
+     <a id="movie-rightArrow" style="float:right;margin-top: 230px;margin-right: 60px;margin-left: auto;" (click)="decrementIndex()">
        <img class="arrow" src="./assets/homepage/right_arrow.png"
          [src]="imgSrcRight"  (mouseover)="imgSrcRight = 'assets/homepage/Arrow_Hover_Right.png'"
               (mouseout)="imgSrcRight = 'assets/homepage/right_arrow.png'" >
         </a>
         </div>
-        <a class="CONVERSIONbtnCont2">
+        <a class="CONVERSIONbtnContFold3">
           <img src="./assets/homepage/conversion_btn.png"
          srcset="./assets/homepage/conversion_btn@2x.png 2x,
                  ./assets/homepage/conversion_btn@3x.png 3x"
@@ -136,18 +136,18 @@
   </div>
     <div class="Fold5Right">
       <div style="display:flex;">
-     <a style="float:left;margin-top: 300px;margin-left: 70px;" (click)="incrementIndex2()">
+     <a id="product-arrowLeft" style="float:left;margin-top: 300px;margin-left: 70px;" (click)="incrementIndex2()">
        <img class="arrow" src="./assets/homepage/left_arrow.png"
            [src]="imgSrcLeft"  (mouseover)="imgSrcLeft = 'assets/homepage/Arrow_Hover_Left.png'"
               (mouseout)="imgSrcLeft = 'assets/homepage/left_arrow.png'" >
         </a>
      <div class="movie-section" [@.disabled]="isDisabled">
         <div class="productItemHolder" >
-          <img *ngFor="let product of products; index as i" [src]="products[i].name" [@move2]="{value: viewIndex2, params: {moveOffset2: moveOffset2, moveOffsetAnim2: moveOffsetAnim2 }}">
+          <img class="productItem" *ngFor="let product of products; index as i" [src]="products[i].name" [@move2]="{value: viewIndex2, params: {moveOffset2: moveOffset2, moveOffsetAnim2: moveOffsetAnim2 }}">
         </div>
 
      </div>
-     <a style="float:right;margin-top: 300px;margin-right: 80px" (click)="decrementIndex2()">
+     <a  id="product-arrowRight" style="float:right;margin-top: 300px;margin-right: 80px" (click)="decrementIndex2()">
        <img class="arrow" src="./assets/homepage/right_arrow.png"
          [src]="imgSrcRight"  (mouseover)="imgSrcRight = 'assets/homepage/Arrow_Hover_Right.png'"
               (mouseout)="imgSrcRight = 'assets/homepage/right_arrow.png'" >
