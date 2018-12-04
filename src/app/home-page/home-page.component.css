@@ -38,7 +38,7 @@ margin: 0 auto;
 
 .Fold2 {
   /* max-width: 1903px; */
-  height: 112.6vh;
+  height: 938px;
   position: relative;
   -o-object-fit: contain;
   margin: auto;
@@ -112,10 +112,11 @@ height: auto;
 
 .franchisesItem {
   /*height: 533px*/
+
 }
 
 .KantoDisneyLogo {
-  width: 22vw;
+  max-width: 22vw;
 height: auto;
 -o-object-fit: contain;
 object-fit: contain;
@@ -207,7 +208,7 @@ left: 4.2vw;
 }
 
 .KantoDisneyLogo2 {
-  width: 14.3vw;
+  max-width: 14.3vw;
     height: auto;
     -o-object-fit: contain;
     object-fit: contain;
@@ -281,11 +282,13 @@ left: 4.2vw;
   margin-left: 5px;
 }
 
-.franchiseItemHolder {
+.movie-section{
   width: 1158px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+}
+
+.franchiseItemHolder {
+  max-width: 60.35vw;
+  height: auto;
   display: flex;
   -o-object-fit: contain;
   object-fit: contain;
