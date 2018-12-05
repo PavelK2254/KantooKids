@@ -40,13 +40,13 @@ import { useAnimation,trigger,state,style,animate,transition} from '@angular/ani
         style({transform: '{{moveOffsetAnim2}}'}/*,{
           params: {moveOffsetAnim: 'translateX(-300px)'}
         }*/),
-        animate('0.5s ease-out')
+      //  animate('0.5s ease-out')
       ]),
       transition(':decrement',[
         style({transform: '{{moveOffsetAnim2}}'}/*,{
           params: {moveOffsetAnim: 'translateX(300px)'}
         }*/),
-        animate('0.5s ease-out')
+    //    animate('0.5s ease-out')
       ])
     ])
 
@@ -90,11 +90,20 @@ export class HomePageComponent implements OnInit {
   offsetModifier = 1158;
   offsetModifier2 = 607;
   viewIndex2 = 0;
+  reachedEnd = false;
 
 
   constructor(private movieFetcher : MovieFetcherService, public dialog: MatDialog) {
     this.imgSrcLeft = "assets/homepage/left_arrow.png";
     this.imgSrcRight = "assets/homepage/right_arrow.png";
+   }
+
+
+   startProductListRotation(): void {
+    setInterval(() => {
+
+      this.reachedEnd ?  this.decrementIndex2() : this.incrementIndex2()
+    } ,3000);
    }
 
 
@@ -116,11 +125,13 @@ export class HomePageComponent implements OnInit {
     this.movieFetcher.getFranchises().subscribe(
       franchises => this.franchises = franchises);
       console.log('franchises: ', this.franchises);
+    //  this.startProductListRotation();
   }
 
   ngOnInit() {
     this.getFranchises();
     this.getProducts();
+
   }
 
 
@@ -183,12 +194,14 @@ export class HomePageComponent implements OnInit {
 
     if(this.viewIndex2 <= this.maxOffsetIndex2 ){
       this.isDisabled = true;
+      this.reachedEnd = true;
+      console.log("reached end: " + this.reachedEnd);
       return;
     }else{
       if(this.viewIndex2 == (this.maxOffsetIndex2 +1)){
-        document.getElementById('product-arrowLeft').style.visibility = "hidden"
-      }
-      document.getElementById('product-arrowRight').style.visibility = "visible"
+      document.getElementById('product-arrowLeft').style.visibility = "hidden"
+    }
+    document.getElementById('product-arrowRight').style.visibility = "visible"
       this.isDisabled = false;
     }
     this.viewIndex2 -= 1;
@@ -197,11 +210,9 @@ export class HomePageComponent implements OnInit {
     this.translate2 = this.translate2 * this.viewIndex2;
     this.moveOffset2 = 'translateX( ' +this.translate2 + 'px)';
 
- //   if((this.translate + this.offsetModifier) < 0 ){
+
     this.moveOffsetAnim2 = 'translateX( ' +(this.translate2 + this.offsetModifier2) +'px)';
-//   }else{
- //   this.moveOffsetAnim = 'translateX( 0px)';
-//   }
+
     console.log("menu translae at: " + this.translate);
     console.log("offset translae at: " + this.offsetModifier2);
     console.log("offsetAnim translae at: " + this.moveOffsetAnim);
@@ -211,12 +222,14 @@ export class HomePageComponent implements OnInit {
 
     if(this.viewIndex2 >= this.minOffsetIndex2 ){
       this.isDisabled = true;
+      this.reachedEnd = false;
+      console.log("reached end: " + this.reachedEnd);
       return;
     }else{
       if(this.viewIndex2 == (this.minOffsetIndex2 -1)){
-        document.getElementById('product-arrowRight').style.visibility = "hidden"
-      }
-      document.getElementById('product-arrowLeft').style.visibility = "visible"
+      document.getElementById('product-arrowRight').style.visibility = "hidden"
+    }
+    document.getElementById('product-arrowLeft').style.visibility = "visible"
       this.isDisabled = false;
     }
     this.viewIndex2 += 1;
@@ -224,11 +237,9 @@ export class HomePageComponent implements OnInit {
     console.log("menu index at: " + this.viewIndex2);
     this.translate2 = this.translate2 * this.viewIndex2;
     this.moveOffset2 = 'translateX( ' +this.translate2 + 'px)';
-   // if((this.translate + this.offsetModifier) > 0 ){
+
     this.moveOffsetAnim2 = 'translateX( ' +(this.translate2 - this.offsetModifier2) + 'px)';
-//   }else{
- //   this.moveOffsetAnim = 'translateX(0px)';
-//   }
+
 
     console.log("menu translae at: " + this.translate2);
     console.log("offset translae at: " + this.offsetModifier2);
