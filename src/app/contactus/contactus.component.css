@@ -3,16 +3,20 @@
   max-width: 1903px;
   background: black;
   margin: 0 auto;
+  height: 1070.440px;
 }
 
 .backgroundImg{
   width: 100%;
-height: 100%;
-z-index: -1;
+  /* height: 100%; */
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
 }
 
 .contactUsContainerInnerTitle{
-  top: 315px;
+      top: 325px;
       left: 44%;
       position: absolute;
 }
@@ -22,7 +26,7 @@ z-index: -1;
   left: 40%;
   position: absolute;
   width: 500px;
-  height: 360px;
+  height: 350px;
   -o-object-fit: contain;
   object-fit: contain;
 }

@@ -51,10 +51,10 @@ width: 100vw;
 
 .Fold2Left {
   float: left;
-  display: grid;
-  padding-left: 20%;
-  padding-top: 13%;
-  padding-bottom: 2%;
+    display: grid;
+    padding-left: 15%;
+    padding-top: 13%;
+    padding-bottom: 2%;
   /*
 add 180px to padding top and bottom to make the folder same size as Fold1
 */
@@ -74,7 +74,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
 .Fold3 {
   max-width: 1903px;
-  height: 1056.910px;
+  height: 805.91px;
   object-fit: contain;
   position: relative;
   text-align: center;
@@ -182,7 +182,7 @@ left: 4.2vw;
   position: absolute;
   margin: 0 auto;
   top: 200px;
-  margin-left: 30.7%;
+  margin-left: 25.7%;
 }
 
 .GIF {
@@ -205,7 +205,7 @@ left: 4.2vw;
   letter-spacing: normal;
   text-align: left;
   color: #592c82;
-  margin-top: 20%;
+  margin-top: 15%;
 }
 
 .KantoDisneyLogo2 {
@@ -267,7 +267,7 @@ left: 4.2vw;
   letter-spacing: normal;
   text-align: center;
   color: #592c82;
-  padding-top: 100px;
+/*  padding-top: 100px;*/
 }
 
 .MovieWord {
@@ -394,7 +394,8 @@ margin: 0 auto;
   width: fit-content;
   height: 100%;
   float: left;
-  padding-left: 80px;
+  padding-left: 350px;
+  padding-top: 70px;
 }
 
 .Fold5Right {
@@ -419,7 +420,7 @@ margin: 0 auto;
 }
 
 .CONVERSIONbtnContFold3 {
-  top: 80%;
+  top: 90%;
 right: 0;
 left: 0;
 cursor: pointer;
