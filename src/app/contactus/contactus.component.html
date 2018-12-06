@@ -5,17 +5,17 @@
   <p class="NeedHelpline">Need help? Drop us a line</p>
 </div>
 
-<form class="contactUsContainerInnerInput"  >
+<form   id="contact-form" action="javascript:executeCaptcha()" class="contactUsContainerInnerInput"  >
   <div class="contactUsContainerInnerInputName">
     <div class="container my-5">
       <div class="row">
         <div class="col-md-6 mx-auto">
           <div class="form-group">
-            <input type="text" id="name" class="form-control ContactUsNameText" required style="top: -24px;" maxlength="48">
+            <input type="text" id="name" class="form-control ContactUs ContactUsNameText" required style="top: -24px;" maxlength="48">
             <label class="form-control-placeholder" for="name" style="    top: -24px;">Full Name</label>
           </div>
           <div class="form-group">
-            <input type="text" id="email" class="form-control ContactUsNameText" style="left: 255px;
+            <input type="text" id="email" class="form-control ContactUs ContactUsNameText" style="left: 255px;
     top: -24px;" required maxlength="48">
             <label class="form-control-placeholder" for="email" style="left: 255px;
     top: -24px;">Your Email Adress</label>
@@ -23,7 +23,7 @@
         </div>
         <div class="col-md-6 mx-auto">
           <div class="form-group">
-            <textarea type="text" id="message" class="form-control ContactUsNameText" style="top: 45px;
+            <textarea type="text" id="message" class="form-control ContactUs ContactUsNameText" style="top: 45px;
     width: 471px;
     height: 175.2px;" required maxlength="480"></textarea>
             <label class="form-control-placeholder" for="message" style="
@@ -38,8 +38,13 @@
 
 
 
-  <a class="sendBtnContact">
-    <input type="image" src="./assets/contactus/send_btn.png" >
+  <a class="sendBtnContact" >
+    <input type="image" src="./assets/contactus/send_btn.png">
+    <div class="g-recaptcha"
+        data-sitekey="6LcFPX8UAAAAANcwQfX_ezCdB9XvQLDoMDG_36v_"
+        data-callback="onSubmitMe"
+        data-size="invisible">
+  </div>
   </a>
 </form>
 <img class="sideImg" src="./assets/contactus/cowboy.png" >
