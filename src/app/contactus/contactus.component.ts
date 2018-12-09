@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
+declare var grecaptcha: any;
+declare global {
+    interface Window { onSubmitMe: any; }
+    interface Window { executeCaptcha: any; }
+}
 
 @Component({
   selector: 'app-contactus',
@@ -17,9 +21,11 @@ export class ContactusComponent implements OnInit {
      }
 
   executeCaptcha():void{
-    let inputList: Array<Any> = document.getElementsByClassName('ContactUs');
-    for(let input of inputList){
-    if(input.value.trim() == ""){
+    let inputList = document.getElementsByClassName('ContactUs');
+    //for(let input of inputList){
+      for(var i = 0; i < inputList.length; i++){
+    //if(input.value.trim() == ""){
+    if((<HTMLInputElement>inputList[i]).value.trim() == ""){
       return;
       }
     }
