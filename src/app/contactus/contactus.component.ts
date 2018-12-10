@@ -17,7 +17,7 @@ export class ContactusComponent implements OnInit {
   constructor() { }
 
   onSubmitMe(token):void {
-    alert('Ready to submit to server');
+    alert('Ready to submit to server with token: ' + token);
      }
 
   executeCaptcha():void{

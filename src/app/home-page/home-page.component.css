@@ -289,7 +289,7 @@ left: 4.2vw;
 
 .franchiseItemHolder {
   max-width: 60.35vw;
-  height: auto;
+  height: 100%;
   display: flex;
   -o-object-fit: contain;
   object-fit: contain;
@@ -435,4 +435,16 @@ margin: 0 auto;
   object-fit: contain;
   background-image: linear-gradient(to top, #5a2b95, #1b236e);
   margin: 0 auto;
+}
+
+@-moz-document url-prefix() {
+  .franchisesItem{
+    width: 1158px;
+    height: 554px;
+  }
+
+  .productItem{
+    width: 607px;
+    height: 633px;
+  }
 }
