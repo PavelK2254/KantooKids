@@ -52,8 +52,9 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 }
 
 .Fold2TextContainer{
-    margin-left: 215px;
+  margin-left: 20%;
     padding-top: 5%;
+    width: 21vw;
 }
 
 .KantoDisneyLogo2 {
@@ -80,16 +81,15 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
 .Fold2{
   max-height: 112.6vh;
-  position: relative;
-  -o-object-fit: contain;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  object-fit: contain;
-  max-width: 1500px;
-  background-position: right;
+position: relative;
+-o-object-fit: contain;
+margin: auto;
+display: flex;
+justify-content: space-between;
+object-fit: contain;
+max-width: 100vw;
+background-position: right;
 background-repeat: no-repeat;
-/*background-image: url(/assets/ourApp/f2mobilemockup.png);*/
 }
 
 .Fold3{
@@ -122,30 +122,30 @@ background-image: url(/assets/ourApp/f3KidMockup.png);
 
 
 .f2mobilemockup{
-  width: 801px;
-  height: 671px;
-  object-fit: contain;
+  width: 42vw;
+      height: 100%;
+
 }
 
 .activeText{
- height: 27px;
- white-space: nowrap;
- object-fit: contain;
- font-size: 35.7px;
- font-weight: 800;
- font-style: normal;
- font-stretch: normal;
- line-height: normal;
- letter-spacing: normal;
- text-align: left;
- color: #592c82;
+  white-space: nowrap;
+      -o-object-fit: contain;
+      object-fit: contain;
+      font-size: 1.5vw;
+      font-weight: 800;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #592c82;
 }
 
 .weTeach {
-  width: 473px;
-  height: 88px;
+
+  -o-object-fit: contain;
   object-fit: contain;
-  font-size: 19.3px;
+  font-size: 1vw;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -156,10 +156,9 @@ background-image: url(/assets/ourApp/f3KidMockup.png);
 }
 
 .ourCambridge {
-  width: 461px;
-  height: 88px;
+  -o-object-fit: contain;
   object-fit: contain;
-  font-size: 19.3px;
+  font-size: 1vw;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -170,10 +169,11 @@ background-image: url(/assets/ourApp/f3KidMockup.png);
 }
 
 .CONVERSIONbtn {
-  width: 368px;
-  height: 54px;
-  cursor: pointer;
-  object-fit: contain;
+  width: 20vw;
+      height: auto;
+      cursor: pointer;
+      -o-object-fit: contain;
+      object-fit: contain;
 }
 
 .Fold3Texts{

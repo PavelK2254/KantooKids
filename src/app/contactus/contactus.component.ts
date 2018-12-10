@@ -17,8 +17,12 @@ export class ContactusComponent implements OnInit {
   constructor() { }
 
   onSubmitMe(token):void {
-    alert('Ready to submit to server with token: ' + token);
+    alert('Ready to submit to server');
+    console.log("Token: " + token)
+
      }
+
+
 
   executeCaptcha():void{
     let inputList = document.getElementsByClassName('ContactUs');
