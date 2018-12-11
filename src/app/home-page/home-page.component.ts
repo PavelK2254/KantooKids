@@ -91,6 +91,7 @@ export class HomePageComponent implements OnInit {
   offsetModifier2 = 607;
   viewIndex2 = 0;
   reachedEnd = false;
+  isMobile = false;
 
 
   constructor(private movieFetcher : MovieFetcherService, public dialog: MatDialog) {
@@ -131,7 +132,29 @@ export class HomePageComponent implements OnInit {
   ngOnInit() {
     this.getFranchises();
     this.getProducts();
+    if(window.innerWidth < 600){
+      this.offsetModifier = window.innerWidth*0.9;
+      this.isMobile = true;
+    }
 
+  }
+
+  resetCarousel(x:number){
+    if(x == 0){
+      this.moveOffset = 'translateX( 0px)';
+      this.moveOffsetAnim = 'translateX( 0px)';
+    }
+  }
+
+  onResize(event){
+    this.resetCarousel(0);
+    if(event.target.innerWidth < 600){
+      this.offsetModifier = event.target.innerWidth*0.9;
+      this.isMobile = true;
+    }else{
+      this.offsetModifier = 1158;
+      this.isMobile = false;
+    }
   }
 
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { useAnimation,trigger,state,style,animate,transition} from '@angular/animations';
+import { useAnimation,trigger,state,style,animate,transition,keyframes} from '@angular/animations';
 import { MenuTextItem } from '../menuTextItem'
 
 @Component({
@@ -13,12 +13,23 @@ import { MenuTextItem } from '../menuTextItem'
       transition('menuClosed <=> menuOpen',[
         animate('0.5s')
       ])
+    ]),
+    trigger('iconFade',[
+      state('menuOpen',style({display:'block'})),
+      state('menuClosed',style({display:'block'})),
+      transition('menuClosed <=> menuOpen',[
+        animate('0.5s',keyframes([
+          style({opacity:0}),
+          style({opacity:1})
+        ]))
+      ])
     ])
   ]
 })
 export class MobileMenuComponent implements OnInit {
 
   isMenuOpen = false;
+
 
   ourAppLoc: MenuTextItem = {
     engText: 'our app',
@@ -62,7 +73,7 @@ export class MobileMenuComponent implements OnInit {
     spText: ''
   }
 
-  menuAlpha=1;
+  menuAlpha=0.9;
 
   constructor() { }
 
@@ -73,7 +84,7 @@ export class MobileMenuComponent implements OnInit {
 
   scroll = (): void => {
     if(!this.isMenuOpen)
-    this.menuAlpha = 1 - window.pageYOffset / 250;
+    this.menuAlpha = 0.9 - window.pageYOffset / 250;
     console.log(this.menuAlpha);
       //handle your scroll here
       //notice the 'odd' function assignment to a class field
@@ -84,5 +95,7 @@ export class MobileMenuComponent implements OnInit {
   toggleMenu(){
     this.isMenuOpen = !this.isMenuOpen;
   }
+
+
 
 }
