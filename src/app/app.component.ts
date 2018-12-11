@@ -30,7 +30,7 @@ export class AppComponent {
     console.log("Tablet: " +isTablet);  // returns if the device us a tablet (iPad etc)
     console.log("Desktop: " +isDesktopDevice); // returns if the app is running on a Desktop browser.
     if(isMobile){
-       this.loc.go("/m");
+      // this.loc.go("/m");
        this.isViewMobile = isMobile;
     }
 

@@ -1,9 +1,7 @@
 <div class="container">
 
   <div class="Fold1">
-    <img [style.z-index]="fold1BackgroundZIndexActual" src="./assets/homepage/fold_1.png"
-         srcset="./assets/homepage/fold_1@2x.png,
-                 ./assets/homepage/fold_1@3x.png"
+    <img [style.z-index]="fold1BackgroundZIndexActual"
          class="Fold1BackgroundImg">
     <a class="playBtnCont" (click)="openPlayer()">
       <img src="./assets/homepage/play_btn.png"
@@ -39,14 +37,14 @@
 
     </div>
     <div class="Fold2Right">
-        <label class="WelcomeTo">{{welcomeToText | uppercase}}</label>
+        <p class="WelcomeTo">{{welcomeToText | uppercase}}</p>
 
         <img src="./assets/homepage/kanto_disney_logo.png"
      srcset="./assets/homepage/kanto_disney_logo@2x.png 2x,
              ./assets/homepage/kanto_disney_logo@3x.png 3x"
      class="KantoDisneyLogo2">
 
-     <label class="TheUltimate">{{ultimate}}</label>
+     <p class="TheUltimate">{{ultimate}}</p>
 
      <a class="LearnMoreBtnCont"><img src="./assets/homepage/learn_more_btn.png"
      srcset="./assets/homepage/learn_more_btn@2x.png 2x,
@@ -82,11 +80,12 @@
            [src]="imgSrcLeft"  (mouseover)="imgSrcLeft = 'assets/homepage/Arrow_Hover_Left.png'"
               (mouseout)="imgSrcLeft = 'assets/homepage/left_arrow.png'" >
         </a>
-     <div class="movie-section" [@.disabled]="isDisabled">
-        <div class="franchiseItemHolder" >
+     <div (window:resize)="onResize($event)" class="movie-section" [@.disabled]="isDisabled">
+        <div (swipeleft)="incrementIndex()" (swiperight)="decrementIndex()" class="franchiseItemHolder" >
           <img class="franchisesItem"  *ngFor="let franchise of franchises; index as i" [src]="franchises[i].name" [@move]="{value: viewIndex, params: {moveOffset: moveOffset, moveOffsetAnim: moveOffsetAnim }}">
-        </div>
 
+        </div>
+      <img class="franchisesItemDots" *ngFor="let franchise of franchises" src="./assets/homepage/Mobile/dot_1.png">
      </div>
      <a id="movie-rightArrow" style="float:right;margin-top: 230px;margin-right: 60px;margin-left: auto;" (click)="decrementIndex()">
        <img class="arrow" src="./assets/homepage/right_arrow.png"
