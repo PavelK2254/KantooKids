@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Movie } from '../movie';
 import { MovieFetcherService } from "../movie-fetcher.service";
 import {  HostBinding } from '@angular/core';
@@ -53,7 +53,7 @@ import { useAnimation,trigger,state,style,animate,transition} from '@angular/ani
 
 ]
 })
-export class HomePageComponent implements OnInit {
+export class HomePageComponent implements OnInit,AfterViewInit  {
 
   imageBaseUri = "./assets/homepage";
 
@@ -83,6 +83,7 @@ export class HomePageComponent implements OnInit {
   moveOffset2 = 'translateX( ' +this.translate + 'px)';
   moveOffsetAnim2 = 'translateX( ' +this.translate + 'px)';
   viewIndex = 0;
+  viewIndexArr: number[] = [];
   maxOffsetIndex:number = -6;
   minOffsetIndex:number = 5;
   maxOffsetIndex2:number = -2;
@@ -98,6 +99,8 @@ export class HomePageComponent implements OnInit {
     this.imgSrcLeft = "assets/homepage/left_arrow.png";
     this.imgSrcRight = "assets/homepage/right_arrow.png";
    }
+
+
 
 
    startProductListRotation(): void {
@@ -136,8 +139,21 @@ export class HomePageComponent implements OnInit {
       this.offsetModifier = window.innerWidth*0.9;
       this.isMobile = true;
     }
-
   }
+
+  updateDotMenu(changeIndex:number):void{
+    for(var i = 0; i < document.getElementsByClassName('franchisesItem').length ; i++){
+      (<HTMLImageElement>document.getElementsByClassName('franchisesItemDots')[i]).src = './assets/homepage/Mobile/dot_2.png';
+    }
+      (<HTMLImageElement>document.getElementsByClassName('franchisesItemDots')[changeIndex]).src = './assets/homepage/Mobile/dot_1.png';
+  }
+
+   ngAfterViewInit(){
+     for(var i = 0; i < document.getElementsByClassName('franchisesItem').length ; i++){
+       this.viewIndexArr.push(this.maxOffsetIndex + i);
+     }
+     this.updateDotMenu(this.viewIndexArr.indexOf(this.viewIndex));
+   }
 
   resetCarousel(x:number){
     if(x == 0){
@@ -181,7 +197,7 @@ export class HomePageComponent implements OnInit {
 
 
     this.moveOffsetAnim = 'translateX( ' +(this.translate + this.offsetModifier) +'px)';
-
+    this.updateDotMenu(this.viewIndexArr.indexOf(this.viewIndex))
     console.log("menu translae at: " + this.translate);
     console.log("offset translae at: " + this.moveOffset);
     console.log("offsetAnim translae at: " + this.moveOffsetAnim);
@@ -207,7 +223,7 @@ export class HomePageComponent implements OnInit {
 
     this.moveOffsetAnim = 'translateX( ' +(this.translate - this.offsetModifier) + 'px)';
 
-
+    this.updateDotMenu(this.viewIndexArr.indexOf(this.viewIndex))
     console.log("menu translae at: " + this.translate);
     console.log("offset translae at: " + this.moveOffset);
     console.log("offsetAnim translae at: " + this.moveOffsetAnim);

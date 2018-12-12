@@ -85,7 +85,9 @@
           <img class="franchisesItem"  *ngFor="let franchise of franchises; index as i" [src]="franchises[i].name" [@move]="{value: viewIndex, params: {moveOffset: moveOffset, moveOffsetAnim: moveOffsetAnim }}">
 
         </div>
-      <img class="franchisesItemDots" *ngFor="let franchise of franchises" src="./assets/homepage/Mobile/dot_1.png">
+        <div class="franchisesItemDotsHolder">
+      <img class="franchisesItemDots" *ngFor="let franchise of franchises" src="./assets/homepage/Mobile/dot_2.png">
+      </div>
      </div>
      <a id="movie-rightArrow" style="float:right;margin-top: 230px;margin-right: 60px;margin-left: auto;" (click)="decrementIndex()">
        <img class="arrow" src="./assets/homepage/right_arrow.png"

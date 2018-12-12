@@ -87,7 +87,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   text-align: -webkit-center;
 }
 
-.franchisesItemDots{
+.franchisesItemDotsHolder{
   display: none;
 }
 
@@ -730,8 +730,14 @@ margin: 0 auto;
       height: 25vh;
 }
 
+.franchisesItemDotsHolder{
+  display: flex;
+    justify-content: space-evenly;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
 .franchisesItemDots{
-  display: contents;
   width: 10px;
   height: 10px;
 }
