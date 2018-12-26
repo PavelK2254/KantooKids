@@ -13,6 +13,7 @@
   left: 0px;
   top: 0px;
   z-index: 0;
+  content: url(/assets/contactus/bg_pic.jpg);
 }
 
 .contactUsContainerInnerTitle{
@@ -143,4 +144,155 @@ input[type=submit]{
    display: block;
    height: _the_image_height;
    width: _the_image_width;
+}
+
+/*----------------------------------------------MOBILE--------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+  .contactUsContainer{
+    position: relative;
+    max-width: 100vw;
+    background: black;
+    margin: 0 auto;
+    height: fit-content;
+  }
+
+  .backgroundImg{
+    content: url(/assets/contactus/Mobile/bg_pic.png);
+  }
+
+  .contactUsContainerInnerTitle{
+    position: relative;
+    top: 0;
+    left: 0;
+
+  }
+
+  .GetInTouch{
+    /* height: 27px; */
+-o-object-fit: contain;
+object-fit: contain;
+font-size: 35.8px;
+font-weight: 800;
+font-style: normal;
+font-stretch: normal;
+line-height: normal;
+letter-spacing: normal;
+text-align: center;
+color: #ffffff;
+padding-top: 35px;
+margin-top: 0px;
+  }
+
+
+.NeedHelpline{
+  height: 25px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    font-size: 25.1px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 0px;
+  }
+
+  .contactUsContainerInnerInput{
+    top: 0;
+      left: 0;
+      position: relative;
+      width: auto;
+      height: 350px;
+      -o-object-fit: contain;
+      object-fit: contain;
+      padding: 5%;
+  }
+
+  .ContactUsNameText{
+    width: 85vw;
+    height: 30px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    border-radius: 17px;
+    background-color: #ffffff;
+    font-size: 14.3px;
+    font-weight: bold;
+    font-style: normal;
+    opacity: 0.5;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    position: absolute;
+    padding: 7px;
+    left: 0;
+    right: 0;
+    top: 6.5vh;
+    border: 0px;
+    resize: unset;
+    margin: 0 auto;
+  }
+
+  .ContactUsNameText #name{
+    top: -24px;
+  }
+
+  .form-control-placeholder{
+    position: absolute;
+width: 213px;
+padding: 15px 0 0 20px;
+transition: all 200ms;
+opacity: 0.5;
+font-size: 14.3px;
+font-weight: bold;
+color: white;
+top: -24px;
+opacity: 1;
+z-index: 5;
+font-style: normal;
+font-stretch: normal;
+line-height: normal;
+letter-spacing: normal;
+  }
+
+  #email{
+    left: 0 !important;
+    top: 6.5vh !important;
+  }
+
+  #email + label{
+    left: 0px !important;
+    top: 6.5vh !important;
+  }
+
+  #message{
+    top: 17vh !important;
+    width: 85vw !important;
+    height: 20vh !important;
+  }
+
+  #message + .form-control-placeholder{
+    top: 17vh !important;
+  }
+
+  .g-recaptcha{
+    visibility: hidden;
+  }
+
+  .sendBtnContact{
+    z-index: 1;
+position: absolute;
+margin: 0 auto;
+left: 0px;
+width: 100vw;
+right: 0px;
+cursor: pointer;
+text-align: center;
+  }
+  .sideImg{
+    display: none;
+  }
+
 }

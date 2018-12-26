@@ -6,6 +6,7 @@ import { YoutubePopupComponent } from '../youtube-popup/youtube-popup.component'
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 import { useAnimation,trigger,state,style,animate,transition} from '@angular/animations';
 
+
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -129,16 +130,13 @@ export class HomePageComponent implements OnInit,AfterViewInit  {
     this.movieFetcher.getFranchises().subscribe(
       franchises => this.franchises = franchises);
       console.log('franchises: ', this.franchises);
-    //  this.startProductListRotation();
+      this.startProductListRotation();
   }
 
   ngOnInit() {
     this.getFranchises();
     this.getProducts();
-    if(window.innerWidth < 600){
-      this.offsetModifier = window.innerWidth*0.9;
-      this.isMobile = true;
-    }
+
   }
 
   updateDotMenu(changeIndex:number):void{
@@ -153,12 +151,21 @@ export class HomePageComponent implements OnInit,AfterViewInit  {
        this.viewIndexArr.push(this.maxOffsetIndex + i);
      }
      this.updateDotMenu(this.viewIndexArr.indexOf(this.viewIndex));
+     if(window.innerWidth < 600){
+       this.offsetModifier = window.innerWidth*0.9;
+       this.offsetModifier2 = window.innerWidth*0.9;
+       this.isMobile = true;
+     }
+
+
    }
 
   resetCarousel(x:number){
     if(x == 0){
       this.moveOffset = 'translateX( 0px)';
       this.moveOffsetAnim = 'translateX( 0px)';
+      this.moveOffset2 = 'translateX( 0px)';
+      this.moveOffsetAnim2 = 'translateX( 0px)';
     }
   }
 
@@ -166,9 +173,11 @@ export class HomePageComponent implements OnInit,AfterViewInit  {
     this.resetCarousel(0);
     if(event.target.innerWidth < 600){
       this.offsetModifier = event.target.innerWidth*0.9;
+      this.offsetModifier2 = event.target.innerWidth*0.9;
       this.isMobile = true;
     }else{
       this.offsetModifier = 1158;
+      this.offsetModifier2 = 607;
       this.isMobile = false;
     }
   }
@@ -240,7 +249,7 @@ export class HomePageComponent implements OnInit,AfterViewInit  {
       if(this.viewIndex2 == (this.maxOffsetIndex2 +1)){
       document.getElementById('product-arrowLeft').style.visibility = "hidden"
     }
-    document.getElementById('product-arrowRight').style.visibility = "visible"
+//    document.getElementById('product-arrowRight').style.visibility = "visible"
       this.isDisabled = false;
     }
     this.viewIndex2 -= 1;
@@ -268,7 +277,7 @@ export class HomePageComponent implements OnInit,AfterViewInit  {
       if(this.viewIndex2 == (this.minOffsetIndex2 -1)){
       document.getElementById('product-arrowRight').style.visibility = "hidden"
     }
-    document.getElementById('product-arrowLeft').style.visibility = "visible"
+  //  document.getElementById('product-arrowLeft').style.visibility = "visible"
       this.isDisabled = false;
     }
     this.viewIndex2 += 1;

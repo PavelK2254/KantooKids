@@ -29,7 +29,7 @@ a{
   width: 290px;
   height: 41px;
   object-fit: contain;
-  
+
   text-align: center;
   margin-top: 58px;
 }
@@ -99,4 +99,50 @@ a{
  background-color: #ffffff;
  color: white;
  margin-top: 46px;
+}
+
+
+/*----------------------------------------------MOBILE--------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+.Footer-BG{
+  width: 100vw;
+height: 50vh;
+-o-object-fit: contain;
+object-fit: contain;
+background-color: #000000;
+position: relative;
+  }
+
+  .mat-toolbar-row{
+    height: auto;
+    flex-direction: column;
+  }
+
+  .limiter{
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    border-radius: 1.5px;
+    background-color: #ffffff;
+    color: white;
+    margin-top: 0px;
+    transform: rotate(90deg);
+  }
+
+  .Tearms-conditionsHolder{
+    width: 100vw;
+height: 41px;
+-o-object-fit: contain;
+object-fit: contain;
+text-align: center;
+margin-top: 3vh;
+  }
+
+  .Faq-conditionsHolder{
+    margin-top: 0px;
+  }
+
+  .Privacy-conditionsHolder{
+    margin-top: 0px;
+  }
 }
