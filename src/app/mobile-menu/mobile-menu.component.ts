@@ -85,7 +85,6 @@ export class MobileMenuComponent implements OnInit {
   scroll = (): void => {
     if(!this.isMenuOpen)
     this.menuAlpha = 0.9 - window.pageYOffset / 250;
-    console.log(this.menuAlpha);
       //handle your scroll here
       //notice the 'odd' function assignment to a class field
       //this is used to be able to remove the event listener

@@ -1,4 +1,4 @@
-ng build --prod --output-path docs --base-href
+ng build --prod --output-path kantoo-kids --base-href
 ECHO building is done
 :END
 PAUSE

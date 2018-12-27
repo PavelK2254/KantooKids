@@ -185,8 +185,10 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   object-fit: contain;
   position: absolute;
   margin: 0 auto;
+  left: 0;
+    right: 30vw;
   top: 200px;
-  margin-left: 25.7%;
+  
 }
 
 .GIF {

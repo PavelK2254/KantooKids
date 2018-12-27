@@ -111,6 +111,7 @@ height: 50vh;
 object-fit: contain;
 background-color: #000000;
 position: relative;
+bottom: 0px;
   }
 
   .mat-toolbar-row{

@@ -60,8 +60,8 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 }
 
 .KantoDisneyLogo2 {
-  max-width: 21.3vw;
-      min-height: 100px;
+  width: 21.3vw;
+      height: 11vh;
       -o-object-fit: contain;
       object-fit: contain;
       margin-left: 4px;
@@ -93,30 +93,42 @@ background-repeat: no-repeat;
 }
 
 .Fold3{
-  height: 730px;
+  height: 100vh;
   position: relative;
   -o-object-fit: contain;
   margin: auto;
   object-fit: contain;
-  max-width: 1903px;
+  width: 100vw;
   background-position: center;
 background-repeat: no-repeat;
-background-image: url(/assets/ourApp/f3KidMockup.png);
+
+}
+
+.fold3BackgroundImage{
+  position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100vw;
+          z-index: -1;
+              object-fit: contain;
+      height: 100%;
+content:  url(/assets/ourApp/f3KidMockup.png);
 }
 
 .Fastandeasy{
-  width: 500px;
-  height: 70px;
-  object-fit: contain;
-  font-size: 35.7px;
-  font-weight: 800;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #592c82;
-  margin-left: 10%;
+width: 25vw;
+height: 7.5vh;
+-o-object-fit: contain;
+object-fit: contain;
+font-size: 1.5vw;
+font-weight: 800;
+font-style: normal;
+font-stretch: normal;
+line-height: normal;
+letter-spacing: normal;
+text-align: left;
+color: #592c82;
+margin-left: 10%;
 }
 
 
@@ -178,15 +190,14 @@ background-image: url(/assets/ourApp/f3KidMockup.png);
 
 .Fold3Texts{
   width: 50%;
-  float: right;
+  margin-left: auto;
   padding-top: 10%;
 }
 
 .OurDisney {
-  width: 449px;
-  height: 89px;
+      width: 25vw;
   object-fit: contain;
-  font-size: 19.3px;
+  font-size: 1vw;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -198,19 +209,68 @@ background-image: url(/assets/ourApp/f3KidMockup.png);
 }
 
 .Fold4{
-  height: 730px;
-  position: relative;
+  height: 100vh;
+      position: relative;
+      -o-object-fit: contain;
+      width: 100vw;
+
+}
+
+.fold4BackgroundImage{
+  content: url(/assets/ourApp/fold4.png);
+      width: 100vw;
+      height: auto;
+      -o-object-fit: contain;
+      object-fit: contain;
+      position: absolute;
+      z-index: -1;
+      left: 0px;
+      top: -1.5vw;
+}
+
+
+
+.fold4TextSection{
+  margin-left: 20%;
+    padding-top: 5%;
+    width: 21vw;
+}
+
+
+.safeLearningTitle{
+  width: 25vw;
+  height: 7.5vh;
   -o-object-fit: contain;
-  margin: auto;
   object-fit: contain;
-  max-width: 1903px;
-  background-position: center;
-background-repeat: no-repeat;
-background-image: url(/assets/ourApp/fold4.png);
+  font-size: 1.5vw;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  white-space: nowrap;
+  letter-spacing: normal;
+  text-align: left;
+  color: #592c82;
+  margin-bottom: 0px;
+  margin-top: 40%;
+}
+
+.safeLearningText{
+  width: 25vw;
+object-fit: contain;
+font-size: 1vw;
+font-weight: normal;
+font-style: normal;
+font-stretch: normal;
+line-height: normal;
+letter-spacing: normal;
+text-align: left;
+color: #592c82;
+margin-top: 0px;
+
 }
 
 .Fold5 {
-  /* max-width: 1903px; */
   height: auto;
   position: relative;
   -o-object-fit: contain;
@@ -218,29 +278,424 @@ background-image: url(/assets/ourApp/fold4.png);
   display: flex;
   justify-content: center;
   object-fit: contain;
-  max-width: 1903px;
+  max-width: 100vw;
 }
 
+
+
 .Fold6{
-  height: 730px;
+  height: 112.4vh;
   position: relative;
   -o-object-fit: contain;
   margin: auto;
   object-fit: contain;
-  max-width: 1903px;
-  background-position: center;
-background-repeat: no-repeat;
-background-image: url(/assets/ourApp/fold6.png);
+  max-width: 100vw;
+
+}
+
+.fold6BackgroundImage{
+  content: url(/assets/ourApp/fold6.png);
+  width: 100vw;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  position: absolute;
+  z-index: -1;
+  left: 0px;
+  top: -1.5vw;
+}
+
+.fold6TextSection{
+  margin-left: 10%;
+    padding-top: 5%;
+    width: 21vw;
 }
 
 .Fold7{
-  height: 730px;
+  height: 100vh;
   position: relative;
   -o-object-fit: contain;
   margin: auto;
   object-fit: contain;
-  max-width: 1903px;
-  background-position: center;
-background-repeat: no-repeat;
-background-image: url(/assets/ourApp/fold7.png);
+  max-width: 100vw;
+
+}
+
+.fold7BackgroundImage{
+  content: url(/assets/ourApp/fold7.png);
+  width: 100vw;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  position: absolute;
+  z-index: -1;
+  left: 0px;
+  top: -1.5vw;
+}
+
+/*----------------------------------------------MOBILE--------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+  .Fold1{
+    height: 100vh;
+    position: relative;
+    -o-object-fit: contain;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    object-fit: contain;
+    flex-direction: column-reverse;
+    width: 100vw;
+    box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17);
+}
+
+.Fold1TabletImg{
+    width: 100vw;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    padding-top: 5%;
+}
+
+.Fold1TextsContainer{
+  margin-left: 0px;
+width: 100vw;
+margin-top: 5vh;
+padding: 0px;
+}
+
+.introducing{
+    -o-object-fit: contain;
+    object-fit: contain;
+    font-size: 6vw;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    text-align: center;
+    color: #592c82;
+
+    margin: 0 auto;
+width: 80vw !important;
+}
+
+.KantoDisneyLogo2{
+    width: 50vw;
+    height: 11vh;
+    -o-object-fit: contain;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.disneyText{
+    -o-object-fit: contain;
+    object-fit: contain;
+    font-size: 4vw;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #592c82;
+    padding: 0 5vw;
+}
+
+.Fold2{
+    max-height: 112.6vh;
+    position: relative;
+    -o-object-fit: contain;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    object-fit: contain;
+    max-width: 100vw;
+    flex-direction: column;
+    box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17);
+}
+
+.Fold2TextContainer{
+    margin-left: 0px;
+    padding-top: 5%;
+    height: fit-content;
+    width: 100vw;
+}
+
+.activeText{
+    white-space: nowrap;
+    -o-object-fit: contain;
+    object-fit: contain;
+    font-size: 6vw;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #592c82;
+}
+
+.weTeach{
+    -o-object-fit: contain;
+    object-fit: contain;
+    font-size: 4vw;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #592c82;
+    padding: 0 5vw;
+}
+
+.ourCambridge{
+    -o-object-fit: contain;
+    object-fit: contain;
+    font-size: 4vw;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #592c82;
+    padding: 0 5vw;
+}
+
+.CONVERSIONbtnHolder{
+  display: none;
+}
+
+.f2mobilemockup{
+    width: 100vw;
+    height: auto;
+}
+
+.Fold3{
+    height: fit-content;
+    position: relative;
+    -o-object-fit: contain;
+    margin: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    object-fit: contain;
+    max-width: 100vw;
+    box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17);
+}
+
+.fold3BackgroundImage{
+    position: relative;
+    width: 100vw;
+    z-index: -1;
+    -o-object-fit: contain;
+    object-fit: contain;
+    height: auto;
+    content: url(/assets/ourApp/Mobile/f3KidMockup.png);
+}
+
+.Fold3Texts{
+    width: 100vw;
+    margin-left: 0px;
+    padding-top: 0px;
+}
+
+.Fastandeasy {
+    width: 80vw;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    font-size: 6vw;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #592c82;
+    margin: 5vh auto;
+}
+
+.OurDisney{
+    width: 80vw;
+    -o-object-fit: contain;
+    object-fit: contain;
+    font-size: 4vw;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #592c82;
+    padding: 0 5vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Fold4{
+    height: fit-content;
+    position: relative;
+    -o-object-fit: contain;
+    width: 100vw;
+    box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17);
+}
+
+.fold4BackgroundImage{
+    content: url(/assets/ourApp/Mobile/fold4.png);
+    width: 100vw;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+}
+
+.fold4TextSection{
+    padding-top: 1%;
+    height: 85vh;
+    width: 100vw;
+    position: relative;
+    margin: 0 auto;
+}
+
+.safeLearningTitle{
+   width: 80vw;
+   height: fit-content;
+   -o-object-fit: contain;
+   font-size: 5vw;
+   font-weight: 800;
+   font-style: normal;
+   font-stretch: normal;
+   line-height: normal;
+   white-space: normal;
+   letter-spacing: normal;
+   text-align: center;
+   color: #592c82;
+   margin: 5vw auto;
+}
+
+.safeLearningText{
+    width: 100vw;
+    -o-object-fit: contain;
+    object-fit: contain;
+    font-size: 4vw;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #592c82;
+    margin-top: 0px;
+    margin: 0 auto;
+    padding: 0 3vw;
+}
+
+.Fold4 .CONVERSIONbtn{
+  display: none;
+}
+
+.Fold5{
+    height: auto;
+    position: relative;
+    -o-object-fit: contain;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    object-fit: contain;
+    flex-direction: column-reverse;
+    max-width: 100vw;
+    box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17);
+}
+
+.Fold6{
+  height: 84.2vh;
+  box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17);
+}
+
+.Fold6 .safeLearningText{
+  width: 80vw;
+  margin: 2vh auto;
+}
+
+.fold6BackgroundImage{
+  content: url(/assets/ourApp/Mobile/fold6.png);
+}
+
+.fold6TextSection{
+  margin: 0px;
+    width: 100vw;
+    padding: 0px;
+}
+
+.Fold6 .CONVERSIONbtn{
+  display: none;
+}
+
+.Fold7{
+    height: 85vh;
+    position: relative;
+    -o-object-fit: contain;
+    margin: auto;
+    object-fit: contain;
+    max-width: 100vw;
+}
+
+.fold7BackgroundImage {
+    content: url(/assets/ourApp/Mobile/fold7.png);
+    width: 100vw;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    top: 0px;
+}
+
+.Fold7 .Fold3Texts{
+    width: 100vw;
+    margin-left: 0px;
+    padding-top: 4vh;
+}
+
+.Fold7 .Fastandeasy{
+    width: 100vw;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    font-size: 6vw;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #592c82;
+    margin: 0 auto;
+}
+
+.Fold7 .OurDisney{
+    width: 100vw;
+    -o-object-fit: contain;
+    object-fit: contain;
+    font-size: 4vw;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #592c82;
+    padding: 0 2vw;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+
 }
