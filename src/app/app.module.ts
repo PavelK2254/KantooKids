@@ -30,6 +30,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { YoutubePopupComponent } from './youtube-popup/youtube-popup.component';
 import { OurAppComponent } from './our-app/our-app.component';
+import { LearningWithDisneyComponent } from './learning-with-disney/learning-with-disney.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { OurAppComponent } from './our-app/our-app.component';
     ContactusComponent,
     MobileMenuComponent,
     YoutubePopupComponent,
-    OurAppComponent
+    OurAppComponent,
+    LearningWithDisneyComponent
   ],
   imports: [
     NgbModule,

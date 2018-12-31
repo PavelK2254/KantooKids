@@ -11,6 +11,8 @@ export class AppComponent {
   title = 'kantoo-kids';
   deviceInfo = null;
 
+
+
   constructor(private deviceService: DeviceDetectorService, private loc: Location) {
     this.epicFunction();
   }

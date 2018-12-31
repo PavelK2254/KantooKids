@@ -10,7 +10,7 @@ a{
  box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17);
  background-color: #ffffff;
  z-index: 5;
- position: absolute;
+ position: fixed;
  top: 0px;
 
 }
@@ -106,7 +106,7 @@ width: 13.9vw;
 }
 
 mat-accordion{
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 11.5vh;
   z-index: 5;

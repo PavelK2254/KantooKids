@@ -1,0 +1,24 @@
+a{
+  cursor: pointer;
+}
+
+.container {
+  width: 100vw;
+  height: auto;
+  display: block;
+  margin-bottom: 100vh;
+}
+
+.foldLeft:first-child{
+  background-image: url(/assets/learnDisney/frozen_bg_pattern.png);
+margin-top: 20vh;
+background-repeat: no-repeat;
+background-size: contain;
+}
+
+
+.foldLeft img{
+
+      margin-left: 5vw;
+margin-top: 15vh;
+}

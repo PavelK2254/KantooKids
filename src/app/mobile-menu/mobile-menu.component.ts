@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { useAnimation,trigger,state,style,animate,transition,keyframes} from '@angular/animations';
 import { MenuTextItem } from '../menuTextItem'
+import { Router,NavigationEnd } from '@angular/router';
+
 
 @Component({
   selector: 'app-mobile-menu',
@@ -29,7 +31,7 @@ import { MenuTextItem } from '../menuTextItem'
 export class MobileMenuComponent implements OnInit {
 
   isMenuOpen = false;
-
+  lastScrollYPosition = 0;
 
   ourAppLoc: MenuTextItem = {
     engText: 'our app',
@@ -75,16 +77,23 @@ export class MobileMenuComponent implements OnInit {
 
   menuAlpha=0.9;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     console.log("mobileMenu")
     window.addEventListener('scroll', this.scroll, true); //third parameter
+
+    this.router.events.subscribe((event) => {
+        if (event instanceof NavigationEnd) {
+          this.closeMenu();
+        }
+      });
   }
 
   scroll = (): void => {
-    if(!this.isMenuOpen)
-    this.menuAlpha = 0.9 - window.pageYOffset / 250;
+    //if(!this.isMenuOpen)
+  //  this.menuAlpha = 0.9 - window.pageYOffset / 250;
+
       //handle your scroll here
       //notice the 'odd' function assignment to a class field
       //this is used to be able to remove the event listener
@@ -95,8 +104,14 @@ export class MobileMenuComponent implements OnInit {
     this.isMenuOpen = !this.isMenuOpen;
     this.isMenuOpen? this.menuAlpha = 1 : this.menuAlpha = 0.9;
     document.getElementById("nav-icon3").classList.toggle("open");
+
   }
 
+closeMenu(){
+  this.isMenuOpen = false;
+  document.getElementById("nav-icon3").classList.remove('open');
+  this.menuAlpha = 0.9;
 
+}
 
 }

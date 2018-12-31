@@ -165,8 +165,16 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
 .CONVERSIONbtn {
   object-fit: contain;
+  content: url(/assets/homepage/conversion_btn.png);
   width: 20vw;
 }
+
+
+.CONVERSIONbtn:hover, .CONVERSIONbtn2:hover{
+  content: url(/assets/homepage/conversion_btn_hover.png);
+}
+
+
 
 .CONVERSIONbtnCont {
   position: absolute;
@@ -188,7 +196,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   left: 0;
     right: 30vw;
   top: 200px;
-  
+
 }
 
 .GIF {
@@ -490,53 +498,53 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
   .CONVERSIONbtnCont {
     bottom: 1vh;
-    width: 100vw;
-    left: 0;
-    right: 0;
-    /* padding: 30px; */
-    margin-left: auto;
-    margin-right: auto;
-    pointer-events: all;
-    text-align: center;
-    cursor: pointer;
-    position: absolute;
+  width: 100vw;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  margin-left: auto;
+  margin-right: auto;
+  pointer-events: all;
+  text-align: center;
+  cursor: pointer;
+  position: fixed;
   }
 
   .AddEnglishToTheirStory {
     object-fit: contain;
-    font-size: 4.55vw;
-    font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: -1.2px;
-    text-align: center;
-    color: #592c82;
-    position: absolute;
-    bottom: 7vh;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100vw;
+      font-size: 4vw;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: -1.2px;
+      text-align: center;
+      color: #592c82;
+      position: absolute;
+      bottom: 9vh;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100vw;
   }
 
   .CONVERSIONbtn {
     object-fit: contain;
-    width: 30vh;
+    width: 45vh;
   }
 
   .KantoDisneyLogo {
-    width: 45vw;
-    height: auto;
-    -o-object-fit: contain;
-    object-fit: contain;
-    position: absolute;
-    left: 0;
-    bottom: 10vh;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    width: 40vw;
+        height: auto;
+        -o-object-fit: contain;
+        object-fit: contain;
+        position: absolute;
+        left: 0;
+        bottom: 12vh;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
   }
 
   .Fold2 {
