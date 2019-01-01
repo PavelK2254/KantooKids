@@ -18,7 +18,7 @@ a{
 .menuText{
   object-fit: contain;
   background-image: linear-gradient(to top, #5a2b95, #1b236e), linear-gradient(to bottom, #ffffff, #ffffff);
-  font-size: 16.9px;
+      font-size: 1.2em;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -110,6 +110,8 @@ mat-accordion{
   width: 100%;
   top: 11.5vh;
   z-index: 5;
+  height: 100vh;
+  overflow-y: scroll;
   right: 0px;
   background-image: url(/assets/menu/mobile/big_bg.png);
   -webkit-background-size: cover;

@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
+import { DeviceDetectorService } from 'ngx-device-detector';
 import { Observable, of } from 'rxjs';
 import { Movie } from './movie';
 import { MOVIES } from './moviesList'
 import { FRANCHISES } from './franchiseList'
+import { FRANCHISESMOBILE } from './franchiseListMobile'
 import { PRODUCTS } from './productList'
 
 @Injectable({
@@ -10,17 +12,31 @@ import { PRODUCTS } from './productList'
 })
 export class MovieFetcherService {
 
-public getMovies(): Observable <Movie[]> {
-    return of(MOVIES);
-  }
+  isMobile = false;
 
-public getFranchises(): Observable <Movie[]> {
-      return of(FRANCHISES);
+
+
+  constructor(deviceService: DeviceDetectorService) {
+  this.isMobile =  deviceService.isMobile();
+   }
+
+
+
+
+  public getMovies(): Observable <Movie[]> {
+      return of(MOVIES);
     }
 
-public getProducts(): Observable <Movie[]>{
-  return of(PRODUCTS);
-}
+  public getFranchises(): Observable <Movie[]> {
+    if(this.isMobile){
+        return of(FRANCHISESMOBILE);
+    }else{
+        return of(FRANCHISES);
+    }
 
-  constructor() { }
+      }
+
+  public getProducts(): Observable <Movie[]>{
+    return of(PRODUCTS);
+  }
 }

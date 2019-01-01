@@ -94,7 +94,7 @@ app-sub-menu{
 position: fixed;
 left: 0px;
 transition: display.3s;
-height: 194px;
+height: auto;
   object-fit: contain;
   opacity: 0.9;
   z-index: 998;

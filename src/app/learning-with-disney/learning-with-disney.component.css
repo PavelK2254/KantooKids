@@ -1,4 +1,4 @@
-a{
+a {
   cursor: pointer;
 }
 
@@ -6,19 +6,184 @@ a{
   width: 100vw;
   height: auto;
   display: block;
-  margin-bottom: 100vh;
 }
 
-.foldLeft:first-child{
-  background-image: url(/assets/learnDisney/frozen_bg_pattern.png);
-margin-top: 20vh;
-background-repeat: no-repeat;
-background-size: contain;
+.Fold1 {
+/*  background-image: url(/assets/learnDisney/frozen_bg_pattern.png);*/
+  margin-top: 10vh;
+  background-repeat: no-repeat;
+  display: flex;
+  background-size: contain;
+}
+
+.Fold1 .overlayImageRight1 {
+/*  content: url(/assets/learnDisney/frozen_characters.png); */
+  right: 0;
+  bottom: 0;
+  position: absolute;
+/*  width: 25vw;*/
+  height: auto;
+}
+
+.Fold1 .overlayImageLeft1 {
+/*  content: url(/assets/learnDisney/frozen_characters.png); */
+  left: 0;
+  bottom: 0;
+  position: absolute;
+/*  width: 25vw;*/
+  height: auto;
+}
+
+.Fold1 .overlayImageLeft2, .Fold1 .overlayImageRight2{
+  display: none;
+}
+
+.Fold2 .overlayImageLeft1, .Fold2 .overlayImageRight1{
+  display: none;
+}
+
+.Fold1 .foldLeft {
+  position: relative;
+  width: 60vw;
+}
+
+.Fold1 .foldRight {
+  width: 50vw;
+  position: relative;
+}
+
+.Fold1 .foldLeft img {
+  margin-left: 10vw;
+  margin-top: 15vh;
+}
+
+.Fold1 .foldLeftImage {
+  width: 38vw;
+}
+
+.textHolder {
+  margin-top: 20vh;
+  margin-left: 5vw;
+  width: 25vw;
+}
+
+.textHolder img {
+  width: 12.5vw;
+}
+
+.textHolder p {
+  object-fit: contain;
+   font-size: 1.5em;
+   font-weight: normal;
+   font-style: normal;
+   font-stretch: normal;
+   line-height: normal;
+   letter-spacing: normal;
+   text-align: left;
+   color: #592c82;
+}
+
+.textHolder a {
+  object-fit: contain;
+      font-size: 1.5em;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #592c82;
+      text-decoration: underline;
+}
+
+.Fold2 {
+/*  background-image: url(/assets/learnDisney/toy_bg_pattern.png);*/
+  margin-top: 10vh;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row-reverse;
+  background-size: contain;
 }
 
 
-.foldLeft img{
+.Fold2 .foldLeft{
+  width: 60vw;
+    position: relative;
 
-      margin-left: 5vw;
-margin-top: 15vh;
+}
+
+.Fold2 .foldLeft .foldLeftImage{
+  width: 38vw;
+  margin-top: 15vh;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  display: block;
+  right: 0;
+}
+
+.Fold2 .foldRight{
+  width: 40vw;
+    left: 0;
+}
+
+.Fold2 .textHolder{
+  margin-top: 20vh;
+  margin-left: auto;
+  width: 25vw;
+  position: relative;
+
+}
+
+.Fold2 .overlayImage{
+  display: none;
+}
+
+.Fold2 .overlayImageLeft2{
+  position: absolute;
+left: 0;
+width: 20vw;
+bottom: -10vh;
+}
+
+.Fold2 .overlayImageRight2{
+  position: absolute;
+    bottom: 0;
+    right: 8vw;
+    width: 10vw;
+}
+
+#cars .overlayImageLeft2{
+  bottom: 0;
+}
+
+#cars .overlayImageRight2{
+  width: auto;
+}
+
+
+#dory .overlayImageLeft2{
+  bottom: 0;
+}
+
+#incradibles .overlayImageLeft2{
+  width: auto;
+  left: 10vw;
+  bottom: 0
+}
+
+#incradibles .overlayImageRight2{
+  width: auto;
+}
+
+#lion{
+  height: 80vh;
+}
+
+#lion .overlayImageLeft1{
+      left: -3vw;
+}
+
+#lion .overlayImageRight1{
+      right: -3vw;
 }

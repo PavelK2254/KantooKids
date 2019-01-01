@@ -7,7 +7,7 @@
      </a>
 
          <div class="movie-section" [@.disabled]="isDisabled">
-       <app-movie-item *ngFor="let movie of movies; index as i" [movie]="movies[i]" [@move]="{value: viewIndex, params: {moveOffset: moveOffset, moveOffsetAnim: moveOffsetAnim }}"  
+       <app-movie-item *ngFor="let movie of movies; index as i" [movie]="movies[i]" [@move]="{value: viewIndex, params: {moveOffset: moveOffset, moveOffsetAnim: moveOffsetAnim }}"
 ></app-movie-item>
 
         </div>

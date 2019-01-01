@@ -13,7 +13,7 @@
        <a routerLink="" class="Kantoo-IconBtn">
        <img src="assets\menu\mobile\kantoo-icon.png"
           class="Kantoo-Icon"></a></div>
-          <mat-accordion [@toggleMenu]="isMenuOpen? 'menuOpen' : 'menuClosed'">
+          <mat-accordion [multi]="true" [@toggleMenu]="isMenuOpen? 'menuOpen' : 'menuClosed'">
         <mat-expansion-panel [disabled]="true" style="    background-color: #efefef;">
           <mat-expansion-panel-header style="height:auto;background: #efefef;">
             <mat-panel-title >

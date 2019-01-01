@@ -1,11 +1,40 @@
 <div class="container">
-  <div class="foldLeft" >
-    <a><img src="./assets/learnDisney/frozen_pics.png" ></a>
-    <div class="textHolder">
-      <img src="./assets/learnDisney/frozen_logo.png">
+  <ng-container *ngFor="let asset of assetCollection; index as i">
+  <div [id]="assetCollection[i].id" [class]="i%2 == 0? 'Fold1': 'Fold2'" [style.background-image]="'url(/assets/learnDisney/' + assetCollection[i].background + '.png)'">
+    <div class="foldLeft">
+      <img class="overlayImageLeft1" [src]= "'./assets/learnDisney/' + assetCollection[i].fold1ImageLeft + '.png'" (error)="imageErrorHandler($event)">
+      <img class="overlayImageRight1" [src]= "'./assets/learnDisney/' + assetCollection[i].fold1ImageRight + '.png'" (error)="imageErrorHandler($event)">
+      <a><img class="foldLeftImage" [src]="'./assets/learnDisney/' + assetCollection[i].mainImage + '.png'"></a>
+      <img class="overlayImageLeft2" [src]= "'./assets/learnDisney/' + assetCollection[i].fold2ImageLeft + '.png'" (error)="imageErrorHandler($event)">
+      <img class="overlayImageRight2" [src]= "'./assets/learnDisney/' + assetCollection[i].fold2ImageRight + '.png'" (error)="imageErrorHandler($event)">
+
+    </div>
+    <div class="foldRight">
+      <div class="textHolder">
+        <img [src]="'./assets/learnDisney/' + assetCollection[i].logo + '.png'" (error)="imageErrorHandler($event)">
+        <p>{{assetCollection[i].text}}</p>
+        <a>{{learnMore}}</a>
+      </div>
     </div>
   </div>
-  <div class="foldRight">
+</ng-container>
+</div>
 
+
+
+<!--  <div class="Fold2" *ngIf="i%2 == 1" [style.background-image]="'url(/assets/learnDisney/' + assetCollection[i].background + '.png)'">
+    <div class="foldLeft">
+      <img class="frozenImage">
+      <a><img class="foldLeftImage" [src]="'./assets/learnDisney/' + assetCollection[i].mainImage + '.png'"></a>
+
+    </div>
+    <div class="foldRight">
+      <div class="textHolder">
+        <img [src]="'./assets/learnDisney/' + assetCollection[i].logo + '.png'">
+        <p>{{assetCollection[i].text}}</p>
+        <a>{{learnMore}}</a>
+      </div>
+    </div>
   </div>
-  </div>
+  </ng-container>
+</div>-->

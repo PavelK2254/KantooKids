@@ -37,4 +37,9 @@ export class AppComponent {
     }
 
   }
+
+  isMobile():boolean{
+    this.deviceInfo = this.deviceService.getDeviceInfo();
+    return this.deviceService.isMobile();
+  }
 }

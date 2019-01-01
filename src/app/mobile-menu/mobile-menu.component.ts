@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { useAnimation,trigger,state,style,animate,transition,keyframes} from '@angular/animations';
 import { MenuTextItem } from '../menuTextItem'
 import { Router,NavigationEnd } from '@angular/router';
+import {MatAccordion} from '@angular/material';
 
 
 @Component({
@@ -32,6 +33,7 @@ export class MobileMenuComponent implements OnInit {
 
   isMenuOpen = false;
   lastScrollYPosition = 0;
+   @ViewChild(MatAccordion) accordion: MatAccordion;
 
   ourAppLoc: MenuTextItem = {
     engText: 'our app',
@@ -111,6 +113,7 @@ closeMenu(){
   this.isMenuOpen = false;
   document.getElementById("nav-icon3").classList.remove('open');
   this.menuAlpha = 0.9;
+  this.accordion.closeAll();
 
 }
 

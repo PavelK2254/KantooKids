@@ -67,7 +67,7 @@ import { LearningWithDisneyComponent } from './learning-with-disney/learning-wit
     MatFormFieldModule,
     MatInputModule,
     MatSidenavModule,
-    MatExpansionModule
+    MatExpansionModule,
   ],
   entryComponents: [PromoPopupComponent,YoutubePopupComponent],
   providers: [],
