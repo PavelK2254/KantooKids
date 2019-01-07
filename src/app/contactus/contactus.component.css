@@ -8,7 +8,7 @@
 
 .backgroundImg{
   width: 100%;
-  /* height: 100%; */
+  height: 100vh;
   position: absolute;
   left: 0px;
   top: 0px;
@@ -17,13 +17,13 @@
 }
 
 .contactUsContainerInnerTitle{
-      top: 325px;
+      top: 215px;
       left: 44%;
       position: absolute;
 }
 
 .contactUsContainerInnerInput{
-  top: 500px;
+  top: 400px;
   left: 40%;
   position: absolute;
   width: 500px;

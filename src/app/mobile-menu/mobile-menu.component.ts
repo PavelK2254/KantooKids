@@ -106,7 +106,7 @@ export class MobileMenuComponent implements OnInit {
     this.isMenuOpen = !this.isMenuOpen;
     this.isMenuOpen? this.menuAlpha = 1 : this.menuAlpha = 0.9;
     document.getElementById("nav-icon3").classList.toggle("open");
-
+    this.accordion.closeAll();
   }
 
 closeMenu(){

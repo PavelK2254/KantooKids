@@ -61,10 +61,11 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   addEnglishText = "add english to their story";
   welcomeToText = "Welcome to";
   ultimate = "The ultimate English learning experience loved by children."
-  learnEnglish = "Learn English with your Favorite";
+  learnEnglish = "Learn English with your";
   movieWord = "movie!";
   playing = "Playing = Learning";
   ourLegacy = "Our legacy"
+  favorite = "favorite"
   imgSrcLeft: string;
   imgSrcRight: string;
   fold1BackgroundZIndexActual = -1
@@ -280,11 +281,11 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     } else {
       if (this.viewIndex2 == (this.minOffsetIndex2 - 1)) {
 
-          if(document.getElementById('product-arrowRight') != null)
+        if (document.getElementById('product-arrowRight') != null)
           document.getElementById('product-arrowRight').style.visibility = "hidden"
-        
 
-    }
+
+      }
       //  document.getElementById('product-arrowLeft').style.visibility = "visible"
       this.isDisabled = false;
     }

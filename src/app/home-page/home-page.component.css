@@ -133,17 +133,18 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 .KantoDisneyLogoF4 {
   width: 412px;
   height: 99px;
+  -o-object-fit: contain;
   object-fit: contain;
   position: absolute;
-  top: 650px;
-  right: 190px;
+  top: 630px;
+  right: 240px;
 }
 
 .CONVERSIONbtnF4 {
   cursor: pointer;
   position: absolute;
-  right: 210px;
-  top: 800px;
+  right: 295px;
+  top: 780px;
 }
 
 .AddEnglishToTheirStory {
@@ -166,21 +167,16 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 .CONVERSIONbtn {
   object-fit: contain;
   content: url(/assets/homepage/conversion_btn.png);
-  width: 20vw;
+  /*width: 20vw;*/
 }
 
-
-.CONVERSIONbtn:hover, .CONVERSIONbtn2:hover{
+.CONVERSIONbtn:hover, .CONVERSIONbtn2:hover {
   content: url(/assets/homepage/conversion_btn_hover.png);
 }
 
-
-
 .CONVERSIONbtnCont {
   position: absolute;
-  /* top: 420px; */
-  /* width: 50vw; */
-  left: 4.2vw;
+  left: 4vw;
   cursor: pointer;
   margin-top: 22.5%;
   pointer-events: all;
@@ -194,9 +190,8 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   position: absolute;
   margin: 0 auto;
   left: 0;
-    right: 30vw;
+  right: 30vw;
   top: 200px;
-
 }
 
 .GIF {
@@ -227,7 +222,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   height: auto;
   -o-object-fit: contain;
   object-fit: contain;
-  margin-top: 3.5%;
+  /*margin-top: 3.5%;*/
   margin-left: 4px;
 }
 
@@ -254,12 +249,12 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 }
 
 .LearnMoreBtnCont {
-  margin-top: 3%;
+  /*  margin-top: 3%;*/
   cursor: pointer;
 }
 
 .CONVERSIONbtn2 {
-  margin-top: 5%;
+  /*margin-top: 5%;*/
   object-fit: contain;
   /*  width: 20vw;*/
 }
@@ -368,7 +363,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   color: #592c82;
   position: absolute;
   top: 280px;
-  right: 152px;
+  right: 195px;
   pointer-events: none;
 }
 
@@ -386,16 +381,16 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   text-align: center;
   color: #592c82;
   position: absolute;
-  top: 530px;
-  right: 364.797px;
+  top: 520px;
+  right: 415.797px;
   pointer-events: none;
 }
 
 .LearnMoreBtnContF4 {
   cursor: pointer;
   position: absolute;
-  right: 350px;
-  top: 760px;
+  right: 390px;
+  top: 740px;
 }
 
 .Fold5 {
@@ -452,11 +447,11 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   margin: 0 auto;
 }
 
-#product-arrowLeft{
+#product-arrowLeft {
   display: none;
 }
 
-#product-arrowRight{
+#product-arrowRight {
   display: none;
 }
 
@@ -469,7 +464,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   .Fold1BackgroundImg {
     position: absolute;
     left: auto;
-    top: 0px;
+    top: -2vh;
     width: 100%;
     height: 110%;
     content: url(/assets/homepage/Mobile/fold_1.png);
@@ -497,37 +492,37 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   }
 
   .CONVERSIONbtnCont {
-    bottom: -4vh;
-      width: 80vw;
-  left: 0;
-  right: 0;
-  z-index: 4;
-  margin-left: auto;
-  margin-right: auto;
-  pointer-events: all;
-  text-align: center;
-  cursor: pointer;
-  position: fixed;
-  content: url(/assets/homepage/conversion_btn.png)
+    bottom: 3vh;
+    width: 80vw;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    margin-left: auto;
+    margin-right: auto;
+    pointer-events: all;
+    text-align: center;
+    cursor: pointer;
+    position: fixed;
+    content: url(/assets/homepage/Mobile/conversion_btn.png)
   }
 
   .AddEnglishToTheirStory {
     object-fit: contain;
-      font-size: 4vw;
-      font-weight: 600;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: -1.2px;
-      text-align: center;
-      color: #592c82;
-      position: absolute;
-      bottom: 9vh;
-      left: 0;
-      right: 0;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100vw;
+    font-size: 5vw;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -1.2px;
+    text-align: center;
+    color: #592c82;
+    position: absolute;
+    bottom: 9vh;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vw;
   }
 
   .CONVERSIONbtn {
@@ -537,19 +532,19 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
   .KantoDisneyLogo {
     width: 40vw;
-        height: auto;
-        -o-object-fit: contain;
-        object-fit: contain;
-        position: absolute;
-        left: 0;
-        bottom: 12vh;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    position: absolute;
+    left: 0;
+    bottom: 13vh;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .Fold2 {
-    height: 100vh;
+    height: 90vh;
     position: relative;
     -o-object-fit: contain;
     margin: auto;
@@ -558,6 +553,8 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     justify-content: space-evenly;
     object-fit: contain;
     max-width: 100vw;
+    margin-top: 2vh;
+    background: white;
     box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17);
   }
 
@@ -568,8 +565,8 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     padding: 0;
     padding-top: 5%;
     text-align: center;
-    grid-row-gap: 5vh;
-    grid-template-rows: 27px 61px 55px;
+    grid-row-gap: 2vh;
+    grid-template-rows: 50px 61px 55px;
   }
 
   .WelcomeTo {
@@ -599,11 +596,11 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   }
 
   .TheUltimate {
-    max-width: 352px;
+    max-width: 100vw;
     height: 55px;
     -o-object-fit: contain;
     object-fit: contain;
-    font-size: 25px;
+    font-size: 1.2em;
     font-weight: 600;
     font-style: normal;
     font-stretch: normal;
@@ -617,15 +614,20 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   }
 
   .LearnMoreBtnCont {
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 0px !important;
+    display: block;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    height: auto;
+    top: 0;
+    width: 100vw;
   }
 
   .CONVERSIONbtnCont2 {
@@ -640,7 +642,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   }
 
   .Characters {
-    max-width: 55vw;
+    max-width: 45vw;
     height: auto;
     -o-object-fit: contain;
     object-fit: contain;
@@ -651,7 +653,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   }
 
   .GIF {
-    max-width: 80vw;
+    max-width: 70vw;
     height: auto;
     -o-object-fit: contain;
     object-fit: contain;
@@ -660,12 +662,14 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
   .Fold3 {
     max-width: 100vw;
-    height: 60vh;
+    height: 90vh;
     -o-object-fit: contain;
     object-fit: contain;
     position: relative;
     text-align: center;
     margin: 0 auto;
+    margin-top: 2vh;
+    background: white;
     box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17)
   }
 
@@ -673,25 +677,27 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     height: 27px;
     -o-object-fit: contain;
     object-fit: contain;
-    font-size: 4vw;
+    font-size: 6vw;
     font-weight: 800;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
-    /* white-space: nowrap; */
     letter-spacing: normal;
     text-align: center;
     color: #592c82;
+    margin-top: 0;
+    padding-top: 17vh;
   }
 
   .Fold3_SecondRow {
     width: 100vw;
-    margin-top: 0px;
+    margin-top: 0;
     text-align: -webkit-center;
+    vertical-align: middle;
   }
 
   .DisneyLogoVector {
-    width: 20vw;
+    width: 30vw;
     height: auto;
     -o-object-fit: contain;
     object-fit: contain;
@@ -701,11 +707,12 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
   .MovieWord {
     object-fit: contain;
-    font-size: 4vw;
+    font-size: 6vw;
     font-weight: 800;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
+    vertical-align: super;
     letter-spacing: normal;
     text-align: center;
     color: #592c82;
@@ -718,7 +725,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
   .franchiseItemHolder {
     max-width: 90vw;
-    height: 30vh;
+    height: 40vh;
     display: flex;
     -o-object-fit: contain;
     object-fit: contain;
@@ -730,8 +737,8 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
   .franchisesItem {
     margin-left: 10vw;
-      margin-right: 10vw;
-    height: 25vh;
+    margin-right: 10vw;
+    height: 36vh;
   }
 
   #movie-leftArrow {
@@ -743,11 +750,9 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   }
 
   .franchisesItem:first-child {
-                margin-left: 90vw;
-
-    height: 25vh;
+    margin-left: 145vw;
+    height: 26.5vh;
   }
-
 
   .franchisesItemDotsHolder {
     display: flex;
@@ -785,7 +790,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     -o-object-fit: contain;
     object-fit: contain;
     height: auto;
-    font-size: 1.5em;
+    font-size: 2.7em;
     font-weight: 800;
     font-style: normal;
     font-stretch: normal;
@@ -796,11 +801,9 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     top: 0;
     position: relative;
     left: 0;
-    margin-left: auto;
-    /* margin-top: 0px; */
-    margin-right: auto;
-    margin-bottom: 0px;
+    margin: 0 auto;
     right: 0;
+    padding-top: 2vh;
     pointer-events: none;
   }
 
@@ -823,10 +826,11 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     left: 0;
     top: 0;
     pointer-events: none;
+    margin-bottom: 15px;
   }
 
   .KantoDisneyLogoF4 {
-    width: 70vw;
+    width: 65vw;
     height: auto;
     -o-object-fit: contain;
     object-fit: contain;
@@ -841,11 +845,20 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     margin-right: auto;
   }
 
-  .Fold4{
-    height: 85vh;
-    top: -10px;
+  .Fold4 {
+    height: 90vh;
+    top: 0px;
     max-width: 100vw;
-    box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17)
+    box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17);
+    margin-top: 2vh;
+    background-image: url(/assets/homepage/Mobile/holding_tablet.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .tabletMockup {
+    display: none;
   }
 
   .LearnMoreBtnCont {
@@ -876,18 +889,20 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     /* top: 760px; */
   }
 
-  .CONVERSIONbtnF4{
+  .CONVERSIONbtnF4 {
     display: none;
   }
 
-  .Fold5{
+  .Fold5 {
     height: fit-content;
     margin: 0 auto;
+    margin-top: 2vh;
     max-width: 100vw;
     position: relative;
+    background: white;
   }
 
-  .Fold5Left{
+  .Fold5Left {
     height: fit-content;
     width: 100vw;
     margin: 0 auto;
@@ -895,70 +910,69 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     float: none;
   }
 
-  .OurLegacy{
+  .OurLegacy {
     height: 27px;
--o-object-fit: contain;
-object-fit: contain;
-font-size: 35.8px;
-font-weight: 800;
-font-style: normal;
-font-stretch: normal;
-line-height: normal;
-letter-spacing: normal;
-text-align: center;
-color: #592c82;
+    -o-object-fit: contain;
+    object-fit: contain;
+    font-size: 35.8px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #592c82;
+    margin-top: 0;
   }
 
-  .expanding{
+  .expanding {
     width: 90vw;
     display: block;
     margin-right: auto;
     margin-left: auto;
   }
 
-  .CONVERSIONbtnCont3{
+  .CONVERSIONbtnCont3 {
     visibility: hidden;
   }
 
-.Fold5Right{
-  width: 100vw;
-position: relative;
-height: auto;
-float: none;
-}
+  .Fold5Right {
+    width: 100vw;
+    position: relative;
+    height: auto;
+    float: none;
+  }
 
-.productItemHolder{
-  width: 100vw;
-display: flex;
--o-object-fit: contain;
-object-fit: contain;
-justify-content: center;
-overflow: hidden;
-z-index: -5;
-top: 0px;
-}
+  .productItemHolder {
+    width: 100vw;
+    display: flex;
+    -o-object-fit: contain;
+    object-fit: contain;
+    justify-content: center;
+    overflow: hidden;
+    z-index: -5;
+    top: 0px;
+  }
 
-#product-arrowLeft{
-  display: none;
-}
+  #product-arrowLeft {
+    display: none;
+  }
 
-#product-arrowRight{
-  display: none;
-}
+  #product-arrowRight {
+    display: none;
+  }
 
-.conversionContatiner3{
-  display: none;
-}
+  .conversionContatiner3 {
+    display: none;
+  }
 
-.productItem {
+  .productItem {
+    height: 52.7vh;
+  }
 
-  height: 52.7vh;
-}
-
-.productItem:first-child{
+  .productItem:first-child {
     margin-left: 85vw;
-}
-
+  }
 }
 
 @-moz-document url-prefix() {

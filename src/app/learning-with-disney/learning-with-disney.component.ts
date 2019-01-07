@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 
 @Component({
@@ -19,6 +20,7 @@ export class LearningWithDisneyComponent implements OnInit {
   fold9Text  = "Explore the epic circle of life and join Simba in his journey to become the next King of the Savanna!"
 
   assetPath = "./assets/learnDisney/";
+  dynamicAssetPath = "./assets/learnDisney/";
   assetCollection = [
       {
       id: "frozen",
@@ -137,7 +139,11 @@ export class LearningWithDisneyComponent implements OnInit {
 
   learnMore = "Learn more"
 
-  constructor() { }
+  constructor(private deviceService: DeviceDetectorService) {
+  if(this.deviceService.isMobile()){
+    this.dynamicAssetPath += "Mobile/"
+  }
+   }
 
   ngOnInit() {
   }

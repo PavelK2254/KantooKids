@@ -9,6 +9,8 @@
     background-color: #efefef;
 }
 
+
+
 .arrow{
   width: 29px;
  height: 29px;
@@ -20,18 +22,18 @@
 
 .movie-section{
   width: 87%;
-      /* width: 1603px; */
       min-height: 120px;
-      /* margin-left: 50px; */
       float: left;
       overflow: hidden;
       display: flex;
-      /* position: absolute; */
-      margin-top: 90px;
+      margin-top: 0;
       flex-wrap: nowrap;
-      /* flex-grow: 1; */
       justify-content: space-around;
 }
+
+
+
+
 
 app-movie-item{
   cursor: pointer;

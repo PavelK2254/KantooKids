@@ -8,12 +8,23 @@ a {
   display: block;
 }
 
+.upperLogo{
+  display: none;
+}
+
 .Fold1 {
 /*  background-image: url(/assets/learnDisney/frozen_bg_pattern.png);*/
-  margin-top: 10vh;
+  margin-top: 2vh;
   background-repeat: no-repeat;
   display: flex;
   background-size: contain;
+  background-color: white;
+  box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17);
+}
+
+#frozen{
+  padding-top: 10vh;
+  margin-top: 0px;
 }
 
 .Fold1 .overlayImageRight1 {
@@ -50,6 +61,7 @@ a {
 .Fold1 .foldRight {
   width: 50vw;
   position: relative;
+  margin-bottom: 3vh;
 }
 
 .Fold1 .foldLeft img {
@@ -98,11 +110,13 @@ a {
 
 .Fold2 {
 /*  background-image: url(/assets/learnDisney/toy_bg_pattern.png);*/
-  margin-top: 10vh;
+  margin-top: 2vh;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: row-reverse;
   background-size: contain;
+  background-color: white;
+  box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17)
 }
 
 
@@ -125,6 +139,7 @@ a {
 .Fold2 .foldRight{
   width: 40vw;
     left: 0;
+    margin-bottom: 3vh;
 }
 
 .Fold2 .textHolder{
@@ -176,9 +191,7 @@ bottom: -10vh;
   width: auto;
 }
 
-#lion{
-  height: 80vh;
-}
+
 
 #lion .overlayImageLeft1{
       left: -3vw;
@@ -186,4 +199,93 @@ bottom: -10vh;
 
 #lion .overlayImageRight1{
       right: -3vw;
+}
+
+
+
+.learningSubmenu .movie-section{
+      margin-top: 30px !important;
+}
+
+.learningSubmenu .sub-menu a{
+  margin-top: 45px !important;
+}
+
+/*----------------------------------------------MOBILE--------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+
+  .bottomLogo{
+    display: none;
+  }
+
+  .upperLogo{
+    display: block;
+    max-width: 90vw;
+    margin-left: auto !important;
+    margin-right: auto;
+    margin-top: 10vh !important;
+  }
+
+
+.overlayImageLeft1, .overlayImageRight1, .overlayImageLeft2, .overlayImageRight2 {
+  display: none;
+}
+
+.Fold1{
+  width: 100vw;
+  flex-direction: column;
+  background-origin: content-box;
+background-size: contain;
+}
+
+.Fold1 .foldLeft {
+  position: relative;
+  width: 100vw;
+}
+
+.Fold1 .foldLeftImage {
+  width: 100vw;
+  margin-left: auto !important;
+  margin-right: auto;
+  display: block;
+  margin-top: 3vh !important;
+}
+
+.Fold2{
+  width: 100vw;
+  flex-direction: column;
+  background-origin: content-box;
+background-size: contain;
+}
+
+.Fold2 .foldLeft {
+  position: relative;
+  width: 100vw;
+}
+
+.Fold2 .foldLeftImage {
+  width: 100vw !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block;
+  margin-top: 3vh !important;
+}
+
+.textHolder{
+      padding: 0 5vw;
+      width: 100vw !important;
+      font-size: 1.2em;
+      margin: 0 !important;
+}
+
+.textHolder p {
+   font-size: 1em;
+   width: 90vw;
+}
+
+.learningSubmenu {
+  display: none;
+}
+
+
 }
