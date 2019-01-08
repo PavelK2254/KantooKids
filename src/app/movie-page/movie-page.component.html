@@ -1,4 +1,4 @@
-<div class="contaner">
+<div class="contaner" [style.background-image]="'url('+dynamicAssetPath + movieName + '/background.jpg)'">
   <div class="videoContaner">
     <youtube-player
          [videoId]="'qDuKsiwS5xw'"
@@ -7,7 +7,8 @@
        ></youtube-player>
   </div>
   <app-sub-menu ></app-sub-menu>
-  <div class="Fold1">
-
+  <div class="Fold1" >
+  <h1 class="title">{{fold1Title}}</h1>
+  <img class="mainimage" [src]="assetPath + movieName + '/logo.png'">
   </div>
 </div>

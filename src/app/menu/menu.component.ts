@@ -50,15 +50,11 @@ export class MenuComponent implements OnInit {
   };
 
 
-  constructor(private router: Router,private location: Location,private route: ActivatedRoute,) { }
+  constructor(private router: Router,private location: Location,private route: ActivatedRoute) { }
 
   ngOnInit() {
     console.log("Menu init")
-   this.router.events.subscribe((event) => {
-       if (event instanceof NavigationEnd) {
-         console.log("MenuFranchise: " + this.route.snapshot.paramMap.get('id'))
-       }
-     });
+
   }
 
 }

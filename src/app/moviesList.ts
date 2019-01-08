@@ -5,91 +5,75 @@ export const MOVIES: Movie[] = [
 
   {
     id: 0,
-    name: 'cars'
+    name: 'cars',
+    fold1Title: {
+      eng: 'Learn English with Cars!'
+    }
   },
 
   {
     id: 1,
-    name: 'coco'
+    name: 'coco',
+    fold1Title: {
+      eng: 'Learn English with Frozen!'
+    }
   },
 
   {
     id: 2,
-    name: 'dory'
+    name: 'dory',
+    fold1Title: {
+      eng: 'Learn English with Frozen!'
+    }
   },
 
   {
     id: 3,
-    name: 'frozen'
+    name: 'frozen',
+    fold1Title: {
+      eng: 'Learn English with Frozen!'
+    }
+
   },
 
   {
     id: 4,
-    name: 'lion_king'
+    name: 'lion_king',
+    fold1Title: {
+      eng: 'Learn English with Frozen!'
+    }
   },
 
   {
     id:5,
-    name: 'moana'
+    name: 'moana',
+    fold1Title: {
+      eng: 'Learn English with Frozen!'
+    }
   },
 
   {
     id: 6,
-    name: 'mulan'
+    name: 'mulan',
+    fold1Title: {
+      eng: 'Learn English with Frozen!'
+    }
   },
 
   {
     id:7,
-    name: 'toy_story'
+    name: 'toy_story',
+    fold1Title: {
+      eng: 'Learn English with Frozen!'
+    }
   },
 
   {
     id: 8,
-    name: 'zootopia'
-  },
-  {
-    id: 9,
-    name: 'cars'
-  },
-
-  {
-    id: 10,
-    name: 'coco'
-  },
-
-  {
-    id: 11,
-    name: 'dory'
-  },
-
-  {
-    id: 12,
-    name: 'frozen'
-  },
-
-  {
-    id: 13,
-    name: 'lion_king'
-  },
-
-  {
-    id:14,
-    name: 'moana'
-  },
-
-  {
-    id: 15,
-    name: 'mulan'
-  },
-
-  {
-    id:16,
-    name: 'toy_story'
-  },
-
-  {
-    id: 17,
-    name: 'zootopia'
+    name: 'zootopia',
+    fold1Title: {
+      eng: 'Learn English with Frozen!'
+    }
   }
 
 

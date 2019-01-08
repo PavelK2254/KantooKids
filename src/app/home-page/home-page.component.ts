@@ -154,7 +154,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     }
     this.updateDotMenu(this.viewIndexArr.indexOf(this.viewIndex));
     if (window.innerWidth < 600) {
-      this.offsetModifier = window.innerWidth / this.mobileDivideValue;
+    //  this.offsetModifier = document.getElementsByClassName('franchisesItem')[0].offsetWidth - window.innerWidth * 2;
       this.offsetModifier2 = window.innerWidth * 0.9;
       this.isMobile = true;
     }

@@ -11,4 +11,24 @@ height: auto;
 .Fold1{
   width: 100vw;
   height: 80vh;
+  background-size: contain;
+}
+
+.Fold1 img{
+  margin: 0 auto;
+    display: block;
+}
+
+.Fold1 h1 {
+  width: 100vw;
+height: auto;
+object-fit: contain;
+font-size: 2vw;
+font-weight: 800;
+font-style: normal;
+font-stretch: normal;
+line-height: normal;
+letter-spacing: normal;
+text-align: center;
+color: #592c82;
 }

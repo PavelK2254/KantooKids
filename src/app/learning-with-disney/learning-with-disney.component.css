@@ -19,7 +19,7 @@ a {
   display: flex;
   background-size: contain;
   background-color: white;
-  box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17);
+
 }
 
 #frozen{
@@ -74,7 +74,7 @@ a {
 }
 
 .textHolder {
-  margin-top: 20vh;
+  margin-top: 30vh;
   margin-left: 5vw;
   width: 25vw;
 }
@@ -85,7 +85,7 @@ a {
 
 .textHolder p {
   object-fit: contain;
-   font-size: 1.5em;
+   font-size: 1em;
    font-weight: normal;
    font-style: normal;
    font-stretch: normal;
@@ -97,7 +97,7 @@ a {
 
 .textHolder a {
   object-fit: contain;
-      font-size: 1.5em;
+      font-size: 1em;
       font-weight: normal;
       font-style: normal;
       font-stretch: normal;
@@ -116,7 +116,7 @@ a {
   flex-direction: row-reverse;
   background-size: contain;
   background-color: white;
-  box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17)
+
 }
 
 
@@ -223,7 +223,7 @@ bottom: -10vh;
     max-width: 90vw;
     margin-left: auto !important;
     margin-right: auto;
-    margin-top: 10vh !important;
+    margin-top: 6vh !important;
   }
 
 
@@ -236,6 +236,7 @@ bottom: -10vh;
   flex-direction: column;
   background-origin: content-box;
 background-size: contain;
+box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17);
 }
 
 .Fold1 .foldLeft {
@@ -256,6 +257,7 @@ background-size: contain;
   flex-direction: column;
   background-origin: content-box;
 background-size: contain;
+box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17)
 }
 
 .Fold2 .foldLeft {

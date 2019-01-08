@@ -72,7 +72,7 @@ a{
 }
 
 .imageHolder{
-  margin: 10px
+      margin: 1vw;
 }
 
 .LaMark2018Disney2018DisneyPixar {
@@ -106,12 +106,27 @@ a{
 @media only screen and (max-width: 600px) {
 .Footer-BG{
   width: 100vw;
-height: 50vh;
+  height: 60vh;
+  -o-object-fit: contain;
+  object-fit: contain;
+  background-color: #000000;
+  position: relative;
+  bottom: 0px;
+  }
+
+  .Terms-conditions{
+    width: 220px;
+height: 15px;
 -o-object-fit: contain;
 object-fit: contain;
-background-color: #000000;
-position: relative;
-bottom: 0px;
+font-size: 0.8em;
+font-weight: bold;
+font-style: normal;
+font-stretch: normal;
+line-height: normal;
+letter-spacing: 1px;
+text-align: center;
+color: #ffffff;
   }
 
   .mat-toolbar-row{
@@ -141,6 +156,10 @@ margin-top: 3vh;
 
   .Faq-conditionsHolder{
     margin-top: 0px;
+  }
+
+  .imageHolder{
+        margin: 2vw;
   }
 
   .Privacy-conditionsHolder{

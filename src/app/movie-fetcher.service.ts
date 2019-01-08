@@ -27,6 +27,10 @@ export class MovieFetcherService {
       return of(MOVIES);
     }
 
+  public getSingleMovie(id): Observable <Movie>{
+      return of(MOVIES[id]);
+  }
+
   public getFranchises(): Observable <Movie[]> {
     if(this.isMobile){
         return of(FRANCHISESMOBILE);
