@@ -1,0 +1,11 @@
+<div class="container">
+  <div (window:resize)="onResize($event)" class="movie-section" [@.disabled]="isDisabled">
+     <div (swipeleft)="incrementIndex()" (swiperight)="decrementIndex()" class="franchiseItemHolder" >
+       <img class="franchisesItem" [style.transform]="'translateX('+moveCounter+'px)'"  *ngFor="let franchise of franchises; index as i" [src]="dynamicAssetPath + franchiseName + '/' + franchises[i] + '.png'">
+
+     </div>
+     <div class="franchisesItemDotsHolder">
+  <a *ngFor="let franchise of franchises;index as i" (click)="moveToPosition($event)"> <img [src]="(moveCounter == 0 && i == 0)? './assets/homepage/Mobile/dot_1.png': './assets/homepage/Mobile/dot_2.png'" [id]="i" class="franchisesItemDots" ></a>
+   </div>
+  </div>
+</div>

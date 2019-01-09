@@ -32,6 +32,7 @@ import { YoutubePopupComponent } from './youtube-popup/youtube-popup.component';
 import { OurAppComponent } from './our-app/our-app.component';
 import { LearningWithDisneyComponent } from './learning-with-disney/learning-with-disney.component';
 import { MoviePageComponent } from './movie-page/movie-page.component';
+import { MoviePageCarouselComponent } from './movie-page-carousel/movie-page-carousel.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { MoviePageComponent } from './movie-page/movie-page.component';
     YoutubePopupComponent,
     OurAppComponent,
     LearningWithDisneyComponent,
-    MoviePageComponent
+    MoviePageComponent,
+    MoviePageCarouselComponent
   ],
   imports: [
     NgbModule,

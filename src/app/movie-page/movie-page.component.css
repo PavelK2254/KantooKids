@@ -1,6 +1,8 @@
 .contaner {
 width: 100vw;
 height: auto;
+background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .videoContaner{
@@ -31,4 +33,36 @@ line-height: normal;
 letter-spacing: normal;
 text-align: center;
 color: #592c82;
+}
+
+.Fold2{
+  width: 100vw;
+  height: auto;
+  display: flex;
+  padding: 0 16vw;
+  background-size: contain;
+}
+
+.Fold2 h1:first-child{
+  margin-top: 15vh;
+}
+
+.Fold2 h1 {
+  width: 100vw;
+  height: auto;
+  object-fit: contain;
+  font-size: 25px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #592c82;
+
+}
+
+.Fold2 .logoImg {
+  width: 5vw;
+margin: 0 0.5vw;
 }

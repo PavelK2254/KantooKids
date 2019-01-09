@@ -32,6 +32,16 @@ export const MOVIES: Movie[] = [
     name: 'frozen',
     fold1Title: {
       eng: 'Learn English with Frozen!'
+    },
+    fold2Title: {
+      eng: {
+      your: 'your',
+      friends:'friends',
+      willTeach: 'will teach you English!',
+      }
+  },
+    fold2Text: {
+      eng: 'In this Disney classic about sisterhood, love and sacrifice, we introduce children to words like MAGIC, ICE, PALACE and SISTER. The words are arranged in different learning categories, such as WEATHER ELEMENTS, CLOTHING ITEMS, and FAMILY MEMBERS. '
     }
 
   },
