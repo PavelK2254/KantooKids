@@ -1,6 +1,6 @@
 <div class="container">
-  <div (window:resize)="onResize($event)" class="movie-section" [@.disabled]="isDisabled">
-     <div (swipeleft)="incrementIndex()" (swiperight)="decrementIndex()" class="franchiseItemHolder" >
+  <div  class="movie-section" >
+     <div  class="franchiseItemHolder" >
        <img class="franchisesItem" [style.transform]="'translateX('+moveCounter+'px)'"  *ngFor="let franchise of franchises; index as i" [src]="dynamicAssetPath + franchiseName + '/' + franchises[i] + '.png'">
 
      </div>

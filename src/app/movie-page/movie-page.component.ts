@@ -18,15 +18,18 @@ export class MoviePageComponent implements OnInit {
   movie: Movie;
   currentMovieId:number;
   movieName: string;
+
   fold1Title: string;
   fold2Title: string;
   fold2TitleFriends: string;
   fold2Title2ndRow: string;
   fold2text:string;
+  fold3Title:string;
+  fold3Text:string;
 
 
   fold2Carousel: string[] = ["fold3_carousel_pic1","fold3_carousel_pic2","fold3_carousel_pic3","fold3_carousel_pic4"];
-  fold3Carousel: string["fold4_carousel_pic1","fold4_carousel_pic2","fold4_carousel_pic3","fold4_carousel_pic4"];
+  fold3Carousel: string[] = ["fold4_carousel_pic1","fold4_carousel_pic2","fold4_carousel_pic3","fold4_carousel_pic4"];
 
 
   constructor( private route: ActivatedRoute,private location: Location,private router: Router,private movieFetcher : MovieFetcherService) { }
@@ -51,7 +54,9 @@ export class MoviePageComponent implements OnInit {
       this.fold2TitleFriends = this.movie.fold2Title.eng.friends
       this.fold2Title2ndRow = this.movie.fold2Title.eng.willTeach
       this.fold2text = this.movie.fold2Text.eng
-      console.log("current movie: " + this.movie.name)
+      this.fold3Title = this.movie.fold3Title.eng
+      this.fold3Text = this.movie.fold3Text.eng
+      
     }
   }
 

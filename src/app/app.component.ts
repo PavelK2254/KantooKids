@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
 import { Location } from '@angular/common';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -13,13 +14,20 @@ export class AppComponent {
 
 
 
-  constructor(private deviceService: DeviceDetectorService, private loc: Location) {
+  constructor(private deviceService: DeviceDetectorService, private loc: Location,private router: Router) {
     this.epicFunction();
   }
 
   isViewMobile = false;
 
-
+  ngOnInit() {
+       this.router.events.subscribe((evt) => {
+           if (!(evt instanceof NavigationEnd)) {
+               return;
+           }
+           window.scrollTo(0, 0)
+       });
+   }
 
   epicFunction() {
     console.log('hello `Home` component');

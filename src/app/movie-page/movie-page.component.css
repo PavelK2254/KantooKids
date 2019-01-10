@@ -59,10 +59,77 @@ color: #592c82;
   letter-spacing: normal;
   text-align: left;
   color: #592c82;
-
+  margin: 0;
 }
 
 .Fold2 .logoImg {
   width: 5vw;
 margin: 0 0.5vw;
+}
+
+.Fold2 .contentText{
+  width: 25%;
+  height: auto;
+  object-fit: contain;
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #592c82;
+}
+
+.Fold3 {
+  width: 100vw;
+height: auto;
+display: flex;
+padding: 0 18vw;
+background-size: contain;
+}
+
+.Fold3 h1:first-child{
+  margin-top: 15vh;
+}
+
+.Fold3 h1 {
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  font-size: 25px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #592c82;
+  margin: 0;
+}
+
+.Fold3 .textSection {
+      width: 36vw;
+}
+
+.Fold3 .contentText{
+  width: 85%;
+  height: auto;
+  object-fit: contain;
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #592c82;
+}
+
+.Fold4 {
+  margin-top: 10vh;
+}
+
+.Fold4 img {
+  width: 100vw;
 }

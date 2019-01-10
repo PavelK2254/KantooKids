@@ -1,27 +1,24 @@
-<a style="margin-left: 700px;cursor:pointer" (click)="closePopUp()">
+<a class="closeBtn" style="margin-left: 700px;cursor:pointer" (click)="closePopUp()">
 <img src="./assets/popup/cancel_pop_up_icon.png"
-   srcset="./assets/popup/cancel_pop_up_icon@2x.png,
-           ./assets/popup/cancel_pop_up_icon@3x.png"
+
    class="Cancel-PopUp-icon"></a>
 <div class="PopUpBox">
 
   <div>
     <img src="./assets/popup/disney_characters.png"
-     srcset="./assets/popup/disney_characters@2x.png 2x,
-             ./assets/popup/disney_characters@3x.png 3x"
+
      class="PopUp-Box">
   </div>
   <div>
     <p ><label class="availableNow">{{available.engText | uppercase}}</label></p>
     <div class="buttonContainer">
-      <a style="height: 55px;margin-left: 25%;padding-top: 10px;cursor:pointer">
+      <a class="apple" style="height: 55px;margin-left: 25%;padding-top: 10px;cursor:pointer">
       <img src="./assets/popup/App_Store_Badge.svg"
-         class="Buy-Buttons" style="height: 55px;">
+         class="Buy-Buttons " style="height: 55px;">
          </a>
-         <a style="cursor:pointer">
+         <a style="cursor:pointer" class="google">
          <img src="./assets/popup/google_play_badge.png"
-            srcset="./assets/popup/google_play_badges@2x.png 2x,
-                    ./assets/popup/google_play_badge@3x.png 3x"
+
             class="Buy-Buttons"></a>
     </div>
 

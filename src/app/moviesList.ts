@@ -8,6 +8,22 @@ export const MOVIES: Movie[] = [
     name: 'cars',
     fold1Title: {
       eng: 'Learn English with Cars!'
+    },
+    fold2Title: {
+      eng: {
+      your: 'your',
+      friends:'friends',
+      willTeach: 'will teach you English!',
+      }
+  },
+    fold2Text: {
+      eng: 'In this Disney classic about sisterhood, love and sacrifice, we introduce children to words like MAGIC, ICE, PALACE and SISTER. The words are arranged in different learning categories, such as WEATHER ELEMENTS, CLOTHING ITEMS, and FAMILY MEMBERS.'
+    },
+    fold3Title: {
+      eng: 'An Inspiring English Education!'
+    },
+    fold3Text: {
+      eng: 'With Kantoo Disney you can easily learn English with Frozen. Your children’s favorite movie transforms seamlessly into an inspiring English class with our lovely host that tells the children an engaging story while teaching them words and phrases in English. Learning English with Frozen has never been more fun!'
     }
   },
 
@@ -15,7 +31,23 @@ export const MOVIES: Movie[] = [
     id: 1,
     name: 'coco',
     fold1Title: {
-      eng: 'Learn English with Frozen!'
+      eng: ''
+    },
+    fold2Title: {
+      eng: {
+      your: '',
+      friends:'',
+      willTeach: '',
+      }
+  },
+    fold2Text: {
+      eng: ''
+    },
+    fold3Title: {
+      eng: ''
+    },
+    fold3Text: {
+      eng: ''
     }
   },
 
@@ -23,7 +55,23 @@ export const MOVIES: Movie[] = [
     id: 2,
     name: 'dory',
     fold1Title: {
-      eng: 'Learn English with Frozen!'
+      eng: ''
+    },
+    fold2Title: {
+      eng: {
+      your: '',
+      friends:'',
+      willTeach: '',
+      }
+  },
+    fold2Text: {
+      eng: ''
+    },
+    fold3Title: {
+      eng: ''
+    },
+    fold3Text: {
+      eng: ''
     }
   },
 
@@ -41,7 +89,13 @@ export const MOVIES: Movie[] = [
       }
   },
     fold2Text: {
-      eng: 'In this Disney classic about sisterhood, love and sacrifice, we introduce children to words like MAGIC, ICE, PALACE and SISTER. The words are arranged in different learning categories, such as WEATHER ELEMENTS, CLOTHING ITEMS, and FAMILY MEMBERS. '
+      eng: 'In this Disney classic about sisterhood, love and sacrifice, we introduce children to words like MAGIC, ICE, PALACE and SISTER. The words are arranged in different learning categories, such as WEATHER ELEMENTS, CLOTHING ITEMS, and FAMILY MEMBERS.'
+    },
+    fold3Title: {
+      eng: 'An Inspiring English Education!'
+    },
+    fold3Text: {
+      eng: 'With Kantoo Disney you can easily learn English with Frozen. Your children’s favorite movie transforms seamlessly into an inspiring English class with our lovely host that tells the children an engaging story while teaching them words and phrases in English. Learning English with Frozen has never been more fun!'
     }
 
   },
@@ -51,6 +105,22 @@ export const MOVIES: Movie[] = [
     name: 'lion_king',
     fold1Title: {
       eng: 'Learn English with Frozen!'
+    },
+    fold2Title: {
+      eng: {
+      your: '',
+      friends:'',
+      willTeach: '',
+      }
+  },
+    fold2Text: {
+      eng: ''
+    },
+    fold3Title: {
+      eng: ''
+    },
+    fold3Text: {
+      eng: ''
     }
   },
 
@@ -59,6 +129,22 @@ export const MOVIES: Movie[] = [
     name: 'moana',
     fold1Title: {
       eng: 'Learn English with Frozen!'
+    },
+    fold2Title: {
+      eng: {
+      your: '',
+      friends:'',
+      willTeach: '',
+      }
+  },
+    fold2Text: {
+      eng: ''
+    },
+    fold3Title: {
+      eng: ''
+    },
+    fold3Text: {
+      eng: ''
     }
   },
 
@@ -67,6 +153,22 @@ export const MOVIES: Movie[] = [
     name: 'mulan',
     fold1Title: {
       eng: 'Learn English with Frozen!'
+    },
+    fold2Title: {
+      eng: {
+      your: '',
+      friends:'',
+      willTeach: '',
+      }
+  },
+    fold2Text: {
+      eng: ''
+    },
+    fold3Title: {
+      eng: ''
+    },
+    fold3Text: {
+      eng: ''
     }
   },
 
@@ -75,6 +177,22 @@ export const MOVIES: Movie[] = [
     name: 'toy_story',
     fold1Title: {
       eng: 'Learn English with Frozen!'
+    },
+    fold2Title: {
+      eng: {
+      your: '',
+      friends:'',
+      willTeach: '',
+      }
+  },
+    fold2Text: {
+      eng: ''
+    },
+    fold3Title: {
+      eng: ''
+    },
+    fold3Text: {
+      eng: ''
     }
   },
 
@@ -83,6 +201,22 @@ export const MOVIES: Movie[] = [
     name: 'zootopia',
     fold1Title: {
       eng: 'Learn English with Frozen!'
+    },
+    fold2Title: {
+      eng: {
+      your: '',
+      friends:'',
+      willTeach: '',
+      }
+  },
+    fold2Text: {
+      eng: ''
+    },
+    fold3Title: {
+      eng: ''
+    },
+    fold3Text: {
+      eng: ''
     }
   }
 
