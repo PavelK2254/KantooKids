@@ -1,4 +1,4 @@
-<div class="contaner" [style.background-image]="'url('+dynamicAssetPath + movieName + '/background.jpg)'">
+<div class="contaner">
   <div class="videoContaner">
     <youtube-player
          [videoId]="'qDuKsiwS5xw'"
@@ -7,24 +7,25 @@
        ></youtube-player>
   </div>
   <app-sub-menu ></app-sub-menu>
-  <div class="Fold1" >
+  <div class="Fold1" [style.background-image]="'url('+dynamicAssetPath + movieName + '/fold1BG.png)'" >
   <h1 class="title">{{fold1Title | uppercase}}</h1>
-  <img class="mainimage" [src]="assetPath + movieName + '/logo.png'">
+  <img class="mainimage" [src]="dynamicAssetPath + movieName + '/logo.png'">
+  <img class="mainimageBottom" [src]="dynamicAssetPath + movieName + '/logo_bottom.png'" (error)="imageErrorHandler($event)">
   </div>
-  <div class="Fold2">
-    <app-movie-page-carousel [franchises]="fold2Carousel" [franchiseName]="movieName" [foldName]="'Fold2'"></app-movie-page-carousel>
+  <div class="Fold2" [style.background-image]="'url('+dynamicAssetPath + movieName + '/fold2BG.png)'">
+    <app-movie-page-carousel [franchises]="fold2Carousel" [dynamicAssetPath]="dynamicAssetPath" [franchiseName]="movieName" [foldName]="'Fold2'"></app-movie-page-carousel>
     <div class="textSection">
-      <h1 class="title"><span>{{fold2Title | uppercase}}<img class="logoImg" [src]="dynamicAssetPath + movieName + '/' + movieName + '_logo.png'"/>{{fold2TitleFriends | uppercase}}</span></h1>
+      <h1 class="title"><span>{{fold2Title | uppercase}}<img class="logoImg" (error)="imageErrorHandler($event)" [src]="dynamicAssetPath + movieName + '/' + movieName + '_logo.png'"/>{{fold2TitleFriends | uppercase}}</span></h1>
       <h1 class="title">{{fold2Title2ndRow | uppercase}}</h1>
       <p class="contentText">{{fold2text}}</p>
     </div>
   </div>
-<div class="Fold3">
+<div class="Fold3" [style.background-image]="'url('+dynamicAssetPath + movieName + '/fold3BG.png)'">
   <div class="textSection">
     <h1 class="title">{{fold3Title | uppercase}}</h1>
     <p class="contentText">{{fold3Text}}</p>
   </div>
-  <app-movie-page-carousel [franchises]="fold3Carousel" [franchiseName]="movieName" [foldName]="'Fold3'"></app-movie-page-carousel>
+  <app-movie-page-carousel [franchises]="fold3Carousel" [dynamicAssetPath]="dynamicAssetPath" [franchiseName]="movieName" [foldName]="'Fold3'"></app-movie-page-carousel>
 </div>
 <div class="Fold4">
   <img [src]="dynamicAssetPath + movieName + '/' + movieName + '_endpage.png'">

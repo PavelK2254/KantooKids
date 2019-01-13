@@ -298,7 +298,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
 .franchiseItemHolder {
   max-width: 60.35vw;
-  height: 100%;
+  height: auto;
   display: flex;
   -o-object-fit: contain;
   object-fit: contain;

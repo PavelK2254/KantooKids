@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "kantoo-kids",
+    "public": "kantoo-kids-dist",
     "ignore": [
       "firebase.json",
       "**/.*",

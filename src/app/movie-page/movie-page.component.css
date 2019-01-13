@@ -1,49 +1,55 @@
-.contaner {
-width: 100vw;
-height: auto;
-background-repeat: no-repeat;
-    background-size: cover;
+div {
+  background-repeat: no-repeat;
 }
 
-.videoContaner{
+.contaner {
+  width: 100vw;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.videoContaner {
   width: 100vw;
   height: 80vh;
 }
 
-.Fold1{
+.Fold1 {
   width: 100vw;
   height: 80vh;
   background-size: contain;
+  background-color: white;
 }
 
-.Fold1 img{
+.Fold1 .mainimage {
   margin: 0 auto;
-    display: block;
+  display: block;
 }
 
 .Fold1 h1 {
   width: 100vw;
-height: auto;
-object-fit: contain;
-font-size: 2vw;
-font-weight: 800;
-font-style: normal;
-font-stretch: normal;
-line-height: normal;
-letter-spacing: normal;
-text-align: center;
-color: #592c82;
+  height: auto;
+  object-fit: contain;
+  font-size: 2vw;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #592c82;
 }
 
-.Fold2{
+.Fold2 {
   width: 100vw;
   height: auto;
   display: flex;
   padding: 0 16vw;
+  background-color: white;
   background-size: contain;
 }
 
-.Fold2 h1:first-child{
+.Fold2 h1:first-child {
   margin-top: 15vh;
 }
 
@@ -64,10 +70,10 @@ color: #592c82;
 
 .Fold2 .logoImg {
   width: 5vw;
-margin: 0 0.5vw;
+  margin: 0 0.5vw;
 }
 
-.Fold2 .contentText{
+.Fold2 .contentText {
   width: 25%;
   height: auto;
   object-fit: contain;
@@ -83,13 +89,14 @@ margin: 0 0.5vw;
 
 .Fold3 {
   width: 100vw;
-height: auto;
-display: flex;
-padding: 0 18vw;
-background-size: contain;
+  height: auto;
+  display: flex;
+  padding: 0 18vw;
+  background-size: contain;
+  background-color: white;
 }
 
-.Fold3 h1:first-child{
+.Fold3 h1:first-child {
   margin-top: 15vh;
 }
 
@@ -109,11 +116,11 @@ background-size: contain;
 }
 
 .Fold3 .textSection {
-      width: 36vw;
+  width: 36vw;
 }
 
-.Fold3 .contentText{
-  width: 85%;
+.Fold3 .contentText {
+  width: 75%;
   height: auto;
   object-fit: contain;
   font-size: 1em;
@@ -128,8 +135,129 @@ background-size: contain;
 
 .Fold4 {
   margin-top: 10vh;
+  background-color: white;
 }
 
 .Fold4 img {
   width: 100vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .Fold1 {
+    height: fit-content;
+    box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17);
+  }
+
+  .Fold1 .title {
+    font-size: 5vw;
+    padding-top: 3vh;
+  }
+
+  .Fold1 img {
+    width: 100vw;
+  }
+
+  .mainimageBottom {
+    margin: 5vh auto;
+  }
+
+  .Fold2 {
+    flex-direction: column-reverse;
+    padding: 0;
+    margin-top: 2vh;
+    box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17);
+  }
+
+  .Fold2 .textSection .title:first-child {
+    margin-top: 5vh;
+  }
+
+  .Fold2 .textSection .title {
+    width: auto;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    font-size: 5vw;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #592c82;
+    margin: 0;
+  }
+
+  .Fold2 .textSection .contentText {
+    width: auto;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    font-size: 1em;
+    font-weight: normal;
+    font-style: normal;
+    padding: 0px 3vw;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #592c82;
+  }
+
+  .Fold3 {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    background-size: contain;
+    background-color: white;
+    margin-top: 2vh;
+  }
+
+  .Fold3 .textSection {
+    width: 100vw;
+  }
+
+  .Fold3 .title:first-child {
+    margin-top: 5vh;
+    padding-top: 5vh;
+    width: auto;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    font-size: 25px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #592c82;
+    margin: 0;
+  }
+
+  .Fold3 .contentText {
+    width: auto;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    font-size: 1em;
+    font-weight: normal;
+    font-style: normal;
+    padding: 0px 3vw;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #592c82;
+  }
+
+  .Fold4 {
+    margin-top: 0;
+  }
+
+  .Fold4 img {
+    padding-top: 10vh;
+  }
 }

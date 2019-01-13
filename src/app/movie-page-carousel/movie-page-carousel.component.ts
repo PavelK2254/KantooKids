@@ -10,8 +10,8 @@ export class MoviePageCarouselComponent implements OnInit {
   @Input() franchises: string[];
   @Input() franchiseName: string;
   @Input() foldName: string;
-  assetPath = "./assets/movie-pages/";
-  dynamicAssetPath = "./assets/movie-pages/";
+  @Input() dynamicAssetPath : string;
+  assetPath = "./assets/moviePages/";
   moveCounter = 0;
 
 

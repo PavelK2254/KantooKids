@@ -31,11 +31,21 @@
       justify-content: space-around;
 }
 
-
-
-
-
 app-movie-item{
   cursor: pointer;
   margin-top: 10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .movie-section{
+    width: auto;
+  }
+
+  .sub-menu a {
+    display: none;
+  }
+
+
 }

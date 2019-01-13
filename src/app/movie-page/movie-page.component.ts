@@ -3,6 +3,7 @@ import { Router,NavigationEnd,ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Movie } from '../movie';
 import { MovieFetcherService } from "../movie-fetcher.service";
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-movie-page',
@@ -13,8 +14,8 @@ export class MoviePageComponent implements OnInit {
 
   width = window.screen.width;
   height = window.screen.height * 0.8;
-  assetPath = "./assets/movie-pages/";
-  dynamicAssetPath = "./assets/movie-pages/";
+  assetPath = "./assets/moviePages/";
+  dynamicAssetPath = "./assets/moviePages/";
   movie: Movie;
   currentMovieId:number;
   movieName: string;
@@ -32,12 +33,18 @@ export class MoviePageComponent implements OnInit {
   fold3Carousel: string[] = ["fold4_carousel_pic1","fold4_carousel_pic2","fold4_carousel_pic3","fold4_carousel_pic4"];
 
 
-  constructor( private route: ActivatedRoute,private location: Location,private router: Router,private movieFetcher : MovieFetcherService) { }
+  constructor( private route: ActivatedRoute,private location: Location,private router: Router,private movieFetcher : MovieFetcherService,private deviceService: DeviceDetectorService) {
+    if(this.deviceService.isMobile()){
+      console.log("movie mobile: " + this.deviceService.isMobile())
+      this.dynamicAssetPath += "Mobile/"
+    }
+   }
 
   ngOnInit() {
     this.currentMovieId = +this.route.snapshot.paramMap.get('id')
   this.loadMovieContent(this.currentMovieId);
     this.router.events.subscribe((event) => {
+          (<HTMLImageElement>document.getElementsByClassName('logoImg')[0]).style.display = "initial";
           this.currentMovieId = +this.route.snapshot.paramMap.get('id')
         this.loadMovieContent(this.currentMovieId);
       });
@@ -56,8 +63,12 @@ export class MoviePageComponent implements OnInit {
       this.fold2text = this.movie.fold2Text.eng
       this.fold3Title = this.movie.fold3Title.eng
       this.fold3Text = this.movie.fold3Text.eng
-      
+
     }
+  }
+
+  imageErrorHandler(event){
+    event.currentTarget.style.display = "none";
   }
 
 }

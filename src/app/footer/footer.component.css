@@ -72,11 +72,11 @@ a{
 }
 
 .imageHolder{
-      margin: 1vw;
+      margin: 0.5vw;
 }
 
 .LaMark2018Disney2018DisneyPixar {
-  width: 349px;
+  width: 100vw;
   height: 15px;
   object-fit: contain;
   opacity: 0.75;
