@@ -7,6 +7,7 @@ import { HomePageComponent } from './home-page/home-page.component'
 import { OurAppComponent } from './our-app/our-app.component'
 import { LearningWithDisneyComponent } from './learning-with-disney/learning-with-disney.component'
 import { MoviePageComponent } from './movie-page/movie-page.component'
+import { ContactusComponent } from './contactus/contactus.component'
 
 const routes: Routes = [
 
@@ -14,7 +15,7 @@ const routes: Routes = [
   { path: 'our-app', component: OurAppComponent },
   { path: 'learning-with-disney', component: LearningWithDisneyComponent },
   { path: 'kantoo-blog', component: TestFrameComponent },
-  { path: 'contact', component: TestFrameComponent },
+  { path: 'contact', component: ContactusComponent },
   { path: ':id', component: MoviePageComponent },
   { path: '**', component: PageNotFoundComponent }
 

@@ -1,6 +1,8 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
 import { useAnimation,trigger,state,style,animate,transition,keyframes} from '@angular/animations';
 import { MenuTextItem } from '../menuTextItem'
+import { Movie } from '../movie';
+import { MovieFetcherService } from "../movie-fetcher.service";
 import { Router,NavigationEnd } from '@angular/router';
 import {MatAccordion} from '@angular/material';
 
@@ -34,6 +36,7 @@ export class MobileMenuComponent implements OnInit {
   isMenuOpen = false;
   lastScrollYPosition = 0;
    @ViewChild(MatAccordion) accordion: MatAccordion;
+   movies: Movie[];
 
   ourAppLoc: MenuTextItem = {
     engText: 'our app',
@@ -79,7 +82,7 @@ export class MobileMenuComponent implements OnInit {
 
   menuAlpha=0.9;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,private movieFetcher : MovieFetcherService) { }
 
   ngOnInit() {
     console.log("mobileMenu")
@@ -90,6 +93,7 @@ export class MobileMenuComponent implements OnInit {
           this.closeMenu();
         }
       });
+    this.getMovies();
   }
 
   scroll = (): void => {
@@ -107,6 +111,16 @@ export class MobileMenuComponent implements OnInit {
     this.isMenuOpen? this.menuAlpha = 1 : this.menuAlpha = 0.9;
     document.getElementById("nav-icon3").classList.toggle("open");
     this.accordion.closeAll();
+  }
+
+  getMovies(): void {
+    this.movieFetcher.getMovies().subscribe(
+      movies => this.movies = movies);
+      console.log('movies: ', this.movies);
+  }
+
+  capitalize(name):string {
+    return name.charAt(0).toUpperCase() + name.slice(1).replace("_"," ");
   }
 
 closeMenu(){

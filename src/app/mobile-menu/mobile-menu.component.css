@@ -1,5 +1,10 @@
 a{
   text-decoration: none;
+
+}
+
+a:visited {
+  color: #333333
 }
 
 .mMainMenu{
