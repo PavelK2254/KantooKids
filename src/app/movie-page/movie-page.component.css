@@ -9,16 +9,70 @@ div {
   background-size: cover;
 }
 
+.pageBackground{
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 103vh;
+  left: 25vw;
+  z-index: 1;
+}
+
+
+.pageBackground2{
+  width: 15vw;
+  height: auto;
+  position: absolute;
+  top: 135vh;
+  right: 5vw;
+  z-index: 1;
+}
+
+.pageBackground3{
+  width: 15vw;
+    height: auto;
+    position: absolute;
+      top: 165vh;
+    left: 5vw;
+    z-index: 1;
+}
+
+.pageBackground4{
+  width: auto;
+      height: auto;
+      position: absolute;
+      top: 225vh;
+      right: 5vw;
+      z-index: 1;
+}
+
+.pageBackground5{
+  width: 9vw;
+  height: auto;
+  position: absolute;
+  top: 275vh;
+  left: 45vw;
+  z-index: 1;
+}
+
 .videoContaner {
   width: 100vw;
   height: 80vh;
+  z-index: 4;
+position: relative;
+}
+
+.textSection {
+  padding: 1vw;
 }
 
 .Fold1 {
   width: 100vw;
   height: 80vh;
+  z-index: 1;
+  position: relative;
   background-size: contain;
-  background-color: white;
+  background-color: transperent;
 }
 
 .Fold1 .mainimage {
@@ -44,8 +98,10 @@ div {
   width: 100vw;
   height: auto;
   display: flex;
+  z-index: 1;
+  position: relative;
   padding: 0 16vw;
-  background-color: white;
+  background-color: transperent;
   background-size: contain;
 }
 
@@ -90,10 +146,12 @@ div {
 .Fold3 {
   width: 100vw;
   height: auto;
+  z-index: 1;
+  position: relative;
   display: flex;
   padding: 0 18vw;
   background-size: contain;
-  background-color: white;
+  background-color: transperent;
 }
 
 .Fold3 h1:first-child {
@@ -128,6 +186,7 @@ div {
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
+
   letter-spacing: normal;
   text-align: left;
   color: #592c82;
@@ -135,7 +194,9 @@ div {
 
 .Fold4 {
   margin-top: 10vh;
-  background-color: white;
+  z-index: 1;
+  position: relative;
+  background-color: transperent;
 }
 
 .Fold4 img {
@@ -237,6 +298,8 @@ div {
     margin: 0;
   }
 
+
+
   .Fold3 .contentText {
     width: auto;
     height: auto;
@@ -255,6 +318,7 @@ div {
 
   .Fold4 {
     margin-top: 0;
+    background-color: white;
   }
 
   .Fold4 img {

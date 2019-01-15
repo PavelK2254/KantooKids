@@ -14,6 +14,7 @@ export class MoviePageComponent implements OnInit {
 
   width = window.screen.width;
   height = window.screen.height * 0.8;
+  youtubeID = "syrhiTl6FPg";
   assetPath = "./assets/moviePages/";
   dynamicAssetPath = "./assets/moviePages/";
   movie: Movie;

@@ -83,7 +83,7 @@ export const MOVIES: Movie[] = [
     },
     fold2Title: {
       eng: {
-      your: 'your',
+      your: 'your frozen ',
       friends:'friends',
       willTeach: 'will teach you English!',
       }
@@ -104,7 +104,7 @@ export const MOVIES: Movie[] = [
     id: 4,
     name: 'lion_king',
     fold1Title: {
-      eng: 'Learn English with Frozen!'
+      eng: 'Learn English with Lion King!'
     },
     fold2Title: {
       eng: {
@@ -128,7 +128,7 @@ export const MOVIES: Movie[] = [
     id:5,
     name: 'moana',
     fold1Title: {
-      eng: 'Learn English with moana!'
+      eng: 'Learn English with Moana!'
     },
     fold2Title: {
       eng: {
@@ -152,7 +152,7 @@ export const MOVIES: Movie[] = [
     id: 6,
     name: 'mulan',
     fold1Title: {
-      eng: 'Learn English with Frozen!'
+      eng: 'Learn English with Mulan!'
     },
     fold2Title: {
       eng: {
@@ -176,23 +176,23 @@ export const MOVIES: Movie[] = [
     id:7,
     name: 'toy_story',
     fold1Title: {
-      eng: 'Learn English with Frozen!'
+      eng: 'Learn English with Toy Story!'
     },
     fold2Title: {
       eng: {
-      your: '',
-      friends:'',
-      willTeach: '',
+      your: 'text',
+      friends:'text',
+      willTeach: 'text',
       }
   },
     fold2Text: {
-      eng: ''
+      eng: 'text'
     },
     fold3Title: {
-      eng: ''
+      eng: 'text'
     },
     fold3Text: {
-      eng: ''
+      eng: 'text'
     }
   },
 
@@ -200,23 +200,23 @@ export const MOVIES: Movie[] = [
     id: 8,
     name: 'zootopia',
     fold1Title: {
-      eng: 'Learn English with Frozen!'
+      eng: 'Learn English with Zootopia!'
     },
     fold2Title: {
       eng: {
-      your: '',
-      friends:'',
-      willTeach: '',
+      your: 'txt',
+      friends:'txt',
+      willTeach: 'txt',
       }
   },
     fold2Text: {
-      eng: ''
+      eng: 'txt'
     },
     fold3Title: {
-      eng: ''
+      eng: 'txt'
     },
     fold3Text: {
-      eng: ''
+      eng: 'txt'
     }
   }
 

@@ -48,8 +48,8 @@ export class SubMenuComponent implements OnInit {
   moveOffset = 'translateX( ' +this.translate + 'px)';
   moveOffsetAnim = 'translateX( ' +this.translate + 'px)';
   viewIndex = 0;
-  maxOffsetIndex:number = -5;
-  minOffsetIndex:number = 2;
+  maxOffsetIndex:number = -1;
+  minOffsetIndex:number = 1;
   offsetModifier = 110;
   movies: Movie[];
 

@@ -1,18 +1,23 @@
 <div class="contaner">
   <div class="videoContaner">
     <youtube-player
-         [videoId]="'qDuKsiwS5xw'"
+         [videoId]="youtubeID"
          [width] = "width"
          [height] = "height"
        ></youtube-player>
   </div>
   <app-sub-menu ></app-sub-menu>
-  <div class="Fold1" [style.background-image]="'url('+dynamicAssetPath + movieName + '/fold1BG.png)'" >
+<img class="pageBackground" [src]="dynamicAssetPath + movieName + '/BG_asset.png'">
+<img class="pageBackground2" [src]="dynamicAssetPath + movieName + '/BG_asset.png'">
+<img class="pageBackground3" [src]="dynamicAssetPath + movieName + '/BG_asset.png'">
+<img class="pageBackground4" [src]="dynamicAssetPath + movieName + '/BG_asset.png'">
+<img class="pageBackground5" [src]="dynamicAssetPath + movieName + '/BG_asset.png'">
+  <div class="Fold1"  >
   <h1 class="title">{{fold1Title | uppercase}}</h1>
   <img class="mainimage" [src]="dynamicAssetPath + movieName + '/logo.png'">
   <img class="mainimageBottom" [src]="dynamicAssetPath + movieName + '/logo_bottom.png'" (error)="imageErrorHandler($event)">
   </div>
-  <div class="Fold2" [style.background-image]="'url('+dynamicAssetPath + movieName + '/fold2BG.png)'">
+  <div class="Fold2" >
     <app-movie-page-carousel [franchises]="fold2Carousel" [dynamicAssetPath]="dynamicAssetPath" [franchiseName]="movieName" [foldName]="'Fold2'"></app-movie-page-carousel>
     <div class="textSection">
       <h1 class="title"><span>{{fold2Title | uppercase}}<img class="logoImg" (error)="imageErrorHandler($event)" [src]="dynamicAssetPath + movieName + '/' + movieName + '_logo.png'"/>{{fold2TitleFriends | uppercase}}</span></h1>
@@ -20,7 +25,7 @@
       <p class="contentText">{{fold2text}}</p>
     </div>
   </div>
-<div class="Fold3" [style.background-image]="'url('+dynamicAssetPath + movieName + '/fold3BG.png)'">
+<div class="Fold3" >
   <div class="textSection">
     <h1 class="title">{{fold3Title | uppercase}}</h1>
     <p class="contentText">{{fold3Text}}</p>
