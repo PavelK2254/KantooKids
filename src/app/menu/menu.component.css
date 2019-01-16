@@ -25,6 +25,25 @@
   background-color: #ffffff;
 }
 
+.pressedLangButton{
+  object-fit: contain;
+    background-image: linear-gradient(to top, #02aab0, #00cdac), linear-gradient(to bottom, #ffffff, #ffffff) !important;
+    font-size: 0.8em;
+    margin-left: 3%;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 84px;
+    letter-spacing: normal;
+    vertical-align: text-bottom;
+    text-align: center;
+    cursor: pointer;
+    color: #ffffff;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .textmenu {
   width: 1366px;
   height: 84px;

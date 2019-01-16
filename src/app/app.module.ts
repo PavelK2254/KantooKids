@@ -33,6 +33,9 @@ import { OurAppComponent } from './our-app/our-app.component';
 import { LearningWithDisneyComponent } from './learning-with-disney/learning-with-disney.component';
 import { MoviePageComponent } from './movie-page/movie-page.component';
 import { MoviePageCarouselComponent } from './movie-page-carousel/movie-page-carousel.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import {  TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
 @NgModule({
@@ -57,6 +60,7 @@ import { MoviePageCarouselComponent } from './movie-page-carousel/movie-page-car
   imports: [
     NgbModule,
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
@@ -72,9 +76,19 @@ import { MoviePageCarouselComponent } from './movie-page-carousel/movie-page-car
     MatInputModule,
     MatSidenavModule,
     MatExpansionModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   entryComponents: [PromoPopupComponent,YoutubePopupComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
+}

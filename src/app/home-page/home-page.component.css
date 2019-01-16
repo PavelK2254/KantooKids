@@ -34,6 +34,33 @@ youtube-player {
   width: 100vw;
 }
 
+.expanding {
+  height: 27px;
+object-fit: contain;
+font-size: 1.3em;
+font-weight: 800;
+font-style: normal;
+font-stretch: normal;
+line-height: normal;
+letter-spacing: normal;
+text-align: left;
+color: #592c82;
+margin-top: 0;
+}
+
+.leading {
+  width: 500px;
+  height: 185px;
+  font-size: 19.3px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #592c82;
+}
+
 .arrow {
   cursor: pointer;
 }
@@ -927,12 +954,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     margin-top: 0;
   }
 
-  .expanding {
-    width: 90vw;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-  }
+
 
   .CONVERSIONbtnCont3 {
     visibility: hidden;

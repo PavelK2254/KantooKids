@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
 import { Location } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -14,9 +15,11 @@ export class AppComponent {
 
 
 
-  constructor(private deviceService: DeviceDetectorService, private loc: Location,private router: Router) {
+  constructor(private deviceService: DeviceDetectorService, private loc: Location,private router: Router,private translate: TranslateService) {
     this.epicFunction();
+    translate.setDefaultLang('en');
   }
+
 
   isViewMobile = false;
 

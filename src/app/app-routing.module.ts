@@ -11,12 +11,13 @@ import { ContactusComponent } from './contactus/contactus.component'
 
 const routes: Routes = [
 
-  { path: '', component: HomePageComponent },
+
   { path: 'our-app', component: OurAppComponent },
   { path: 'learning-with-disney', component: LearningWithDisneyComponent },
   { path: 'kantoo-blog', component: TestFrameComponent },
   { path: 'contact', component: ContactusComponent },
   { path: ':id', component: MoviePageComponent },
+  { path: '', component: HomePageComponent },
   { path: '**', component: PageNotFoundComponent }
 
 

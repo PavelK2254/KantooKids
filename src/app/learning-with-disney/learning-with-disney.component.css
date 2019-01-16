@@ -85,7 +85,7 @@ a {
 
 .textHolder p {
   object-fit: contain;
-   font-size: 1em;
+   font-size: 1vw;
    font-weight: normal;
    font-style: normal;
    font-stretch: normal;

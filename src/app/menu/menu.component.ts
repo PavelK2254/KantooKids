@@ -3,6 +3,7 @@ import { MenuTextItem } from '../menuTextItem'
 import { SubMenuComponent } from '../sub-menu/sub-menu.component'
 import { Router,NavigationEnd,ActivatedRoute  } from '@angular/router';
 import { Location } from '@angular/common';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-menu',
@@ -50,11 +51,22 @@ export class MenuComponent implements OnInit {
   };
 
 
-  constructor(private router: Router,private location: Location,private route: ActivatedRoute) { }
+  constructor(private router: Router,private location: Location,private route: ActivatedRoute,private translate: TranslateService) {
+
+  }
 
   ngOnInit() {
     console.log("Menu init")
 
+  }
+
+  switchLanguage(language: string,event) {
+    this.translate.use(language);
+    var els = document.getElementsByClassName('lang')
+    Array.prototype.forEach.call(els, function(el) {
+    el.classList.remove("pressedLangButton");
+});  
+    event.target.classList.add("pressedLangButton");
   }
 
 }

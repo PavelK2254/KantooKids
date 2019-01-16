@@ -83,7 +83,7 @@ export const MOVIES: Movie[] = [
     },
     fold2Title: {
       eng: {
-      your: 'your frozen ',
+      your: 'your',
       friends:'friends',
       willTeach: 'will teach you English!',
       }

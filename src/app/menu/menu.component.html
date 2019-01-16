@@ -6,8 +6,8 @@
      class="Kantoo-Icon"></a>
 
 
-<a class="menuItem" routerLink="/our-app" routerLinkActive="menuActiveOurApp menuActive" style="margin-left: 0px;">{{ourAppLoc.engText | uppercase}}</a>
-<a class="menuItem expandable" style="width: fit-content" routerLink="/learning-with-disney" routerLinkActive="menuActiveLearning menuActive" (mouseover)="showMenu=true" (mouseout)="showMenu=false">{{learningDisneyLoc.engText | uppercase}}
+<a class="menuItem" routerLink="/our-app" routerLinkActive="menuActiveOurApp menuActive" style="margin-left: 0px;">{{'ourApp' | translate | uppercase}}</a>
+<a class="menuItem expandable" style="width: fit-content" routerLink="/learning-with-disney" routerLinkActive="menuActiveLearning menuActive" (mouseover)="showMenu=true" (mouseout)="showMenu=false">{{'learning' | translate | uppercase}}
   <img src="assets\menu\drop-down.svg"
      class="Drop-Down">
 
@@ -16,15 +16,15 @@
           class="Drop-Down">
 
         </a>-->
-<a class="menuItem"  href="http://www.kantoo.com/en/">{{legacyLoc.engText | uppercase}}</a>
-<a class="menuItem" routerLink="/contact" routerLinkActive="menuActiveContact menuActive">{{contactLoc.engText | uppercase}}</a>
+<a class="menuItem"  href="http://www.kantoo.com/en/">{{'ourLegacy' | translate | uppercase}}</a>
+<a class="menuItem" routerLink="/contact" routerLinkActive="menuActiveContact menuActive">{{'contact' | translate | uppercase}}</a>
 
 <div class="language-section">
-<a class="lang"  routerLinkActive="langActive ">EN</a>
+<a class="lang pressedLangButton"   (click)="switchLanguage('en',$event)" >EN</a>
 <a class="lang" style="margin-left: 17px; pointer-events: none">|</a>
-<a class="lang" style="margin-left: 17px" routerLinkActive="langActive">PT</a>
+<a class="lang" style="margin-left: 17px" (click)="switchLanguage('pt',$event)">PT</a>
 <a class="lang" style="margin-left: 17px; pointer-events: none">|</a>
-<a class="lang" style="margin-left: 17px" routerLinkActive="langActive">ES</a>
+<a class="lang" style="margin-left: 17px" >ES</a>
 </div>
 </mat-toolbar-row>
 </mat-toolbar>

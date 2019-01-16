@@ -5,6 +5,7 @@ import { HostBinding } from '@angular/core';
 import { YoutubePopupComponent } from '../youtube-popup/youtube-popup.component'
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { useAnimation, trigger, state, style, animate, transition } from '@angular/animations';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -58,14 +59,14 @@ export class HomePageComponent implements OnInit, AfterViewInit {
 
   imageBaseUri = "./assets/homepage";
 
-  addEnglishText = "add english to their story";
+/* addEnglishText = "add english to their story";
   welcomeToText = "Welcome to";
   ultimate = "The ultimate English learning experience loved by children."
   learnEnglish = "Learn English with your";
   movieWord = "movie!";
   playing = "Playing = Learning";
   ourLegacy = "Our legacy"
-  favorite = "favorite"
+  favorite = "favorite"*/
   imgSrcLeft: string;
   imgSrcRight: string;
   fold1BackgroundZIndexActual = -1
