@@ -55,23 +55,23 @@ export const MOVIES: Movie[] = [
     id: 2,
     name: 'dory',
     fold1Title: {
-      eng: ''
+      eng: 'Learn English with Finding Dory!'
     },
     fold2Title: {
       eng: {
-      your: '',
+      your: 'an English lesson you will',
       friends:'',
-      willTeach: '',
+      willTeach: 'never forget!',
       }
   },
     fold2Text: {
-      eng: ''
+      eng: 'Join the funniest fish in the ocean, Dory, in her unforgettable quest to find her parents, and learn English with Finding Dory while you watch the movie. Learn words like FISH, FRIEND, FATHER and SON, in this Disney smash hit about a forgetful blue fish! The words are arranged in different learning categories, such as the AQUATIC WORLD, COLORS and FAMILY MEMBERS.'
     },
     fold3Title: {
-      eng: ''
+      eng: 'Underwater English Adventure!'
     },
     fold3Text: {
-      eng: ''
+      eng: 'One of the most enjoyable movies in recent years, Finding Dory is now available to teach your kids English! Dive into a great underwater adventure with our lovely host as she guides your children through different words and phrases in English. Learning English with Finding Dory will definitely make your child’s English learning experience something to remember!'
     }
   },
 
@@ -176,23 +176,23 @@ export const MOVIES: Movie[] = [
     id:7,
     name: 'toy_story',
     fold1Title: {
-      eng: 'Learn English with Toy Story!'
+      eng: 'Learn English with Toy Story 3!'
     },
     fold2Title: {
       eng: {
-      your: 'text',
-      friends:'text',
-      willTeach: 'text',
+      your: 'to infinity',
+      friends:' and beyond!',
+      willTeach: '',
       }
   },
     fold2Text: {
-      eng: 'text'
+      eng: 'As kids root for Woody and Buzz, and follow the surprising twists of the story, they are also being exposed to words like TOY, HAT, HOME and GOODBYE. The words are arranged in different learning categories, such as PARTS OF THE HOUSE, FACIAL FEATURES and EMOTIONS.'
     },
     fold3Title: {
-      eng: 'text'
+      eng: 'An ever-growing English vocabulary!'
     },
     fold3Text: {
-      eng: 'text'
+      eng: 'With Kantoo Disney our friendly host will guide your kids through the story while teaching them English, making English learning with Toy Story 3 a fun and engaging activity! Enhance your kids’ English learning with Toy Story 3 by watching it several times so they can catch every word and add it to their ever-growing vocabulary. With interactive games in each video, your kids will advance the story using the English they have learned! English learning with Toy Story 3 is fun and compelling education!'
     }
   },
 
@@ -204,19 +204,19 @@ export const MOVIES: Movie[] = [
     },
     fold2Title: {
       eng: {
-      your: 'txt',
-      friends:'txt',
-      willTeach: 'txt',
+      your: 'Explore the great animal ',
+      friends:'',
+      willTeach: 'city of Zootopia!',
       }
   },
     fold2Text: {
-      eng: 'txt'
+      eng: 'Judy the BUNNY and Nick the FOX will teach your kids English! With words like LION, ELEPHANT, CARROTS and BIG, and learning categories, such as ANIMALS, VEGETABLES, and SIZES, Zootopia is a great learning adventure for the young ones!'
     },
     fold3Title: {
-      eng: 'txt'
+      eng: 'The Wildest English Adventure!'
     },
     fold3Text: {
-      eng: 'txt'
+      eng: 'Relive the magic of Zootopia one more time as Judy and Nick go on the wildest adventure! When your children learn English with Zootopia, they immerse themselves in a smart and funny story, while learning English words and phrases at the same time! Learn English with Zootopia, one animal at a time, and make the screen time of your kids a valuable English lesson!'
     }
   }
 
