@@ -1,8 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { MenuTextItem } from '../menuTextItem'
-import { SubMenuComponent } from '../sub-menu/sub-menu.component'
-import { Router,NavigationEnd,ActivatedRoute  } from '@angular/router';
-import { Location } from '@angular/common';
+import { Component, OnInit,AfterViewInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -10,48 +6,11 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent implements OnInit,AfterViewInit {
 
   showMenu: boolean = false;
 
-  ourAppLoc: MenuTextItem = {
-    engText: 'our app',
-    prText: '',
-    spText: ''
-  };
-
-  learningDisneyLoc: MenuTextItem = {
-    engText: 'learing with disney',
-    prText: '',
-    spText: ''
-  };
-
-  kantooBlogLoc: MenuTextItem = {
-    engText: 'kantoo blog',
-    prText: '',
-    spText: ''
-  };
-
-  reviewsLoc: MenuTextItem = {
-    engText: 'reviews',
-    prText: '',
-    spText: ''
-  };
-
-  legacyLoc: MenuTextItem = {
-    engText: 'our legacy',
-    prText: '',
-    spText: ''
-  };
-
-  contactLoc: MenuTextItem = {
-    engText: 'contact',
-    prText: '',
-    spText: ''
-  };
-
-
-  constructor(private router: Router,private location: Location,private route: ActivatedRoute,private translate: TranslateService) {
+  constructor(private translate: TranslateService) {
 
   }
 
@@ -60,13 +19,36 @@ export class MenuComponent implements OnInit {
 
   }
 
+  ngAfterViewInit(){
+    if(localStorage.getItem("lang") != undefined){
+      var els = document.getElementsByClassName('lang');
+      Array.prototype.forEach.call(els, function(el) {
+      el.classList.remove("pressedLangButton");
+  });
+      switch(localStorage.getItem('lang')){
+        case "pt": {
+          document.getElementsByClassName("lang")[2].classList.add("pressedLangButton");
+          break;
+        }
+        case "es": {
+          document.getElementsByClassName("lang")[4].classList.add("pressedLangButton");
+          break;
+        }
+        default: {
+          document.getElementsByClassName("lang")[0].classList.add("pressedLangButton");
+        }
+      }
+    }
+  }
+
   switchLanguage(language: string,event) {
     this.translate.use(language);
     var els = document.getElementsByClassName('lang')
     Array.prototype.forEach.call(els, function(el) {
     el.classList.remove("pressedLangButton");
-});  
+});
     event.target.classList.add("pressedLangButton");
+    localStorage.setItem("lang",language)
   }
 
 }

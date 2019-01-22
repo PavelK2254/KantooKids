@@ -5,6 +5,7 @@ import { Movie } from '../movie';
 import { MovieFetcherService } from "../movie-fetcher.service";
 import { Router,NavigationEnd } from '@angular/router';
 import {MatAccordion} from '@angular/material';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -38,54 +39,31 @@ export class MobileMenuComponent implements OnInit {
    @ViewChild(MatAccordion) accordion: MatAccordion;
    movies: Movie[];
 
-  ourAppLoc: MenuTextItem = {
-    engText: 'our app',
-    prText: '',
-    spText: ''
-  };
-
-  learningDisneyLoc: MenuTextItem = {
-    engText: 'learing with disney',
-    prText: '',
-    spText: ''
-  };
-
-  kantooBlogLoc: MenuTextItem = {
-    engText: 'kantoo blog',
-    prText: '',
-    spText: ''
-  };
-
-  reviewsLoc: MenuTextItem = {
-    engText: 'reviews',
-    prText: '',
-    spText: ''
-  };
-
-  legacyLoc: MenuTextItem = {
-    engText: 'our legacy',
-    prText: '',
-    spText: ''
-  };
-
-  contactLoc: MenuTextItem = {
-    engText: 'contact',
-    prText: '',
-    spText: ''
-  };
-
-  language: MenuTextItem = {
-    engText: 'language',
-    prText: '',
-    spText: ''
-  }
-
   menuAlpha=0.9;
 
-  constructor(private router: Router,private movieFetcher : MovieFetcherService) { }
+  constructor(private router: Router,private movieFetcher : MovieFetcherService,private translate: TranslateService) { }
 
   ngOnInit() {
     console.log("mobileMenu")
+    if( localStorage.getItem("lang") != undefined){
+      var els = document.getElementsByClassName('menuTextLang');
+      Array.prototype.forEach.call(els, function(el) {
+      el.classList.remove("menuTextLangPressed");
+  });
+      switch(localStorage.getItem('lang')){
+        case "pt": {
+          document.getElementsByClassName("menuTextLang")[2].classList.add("menuTextLangPressed");
+          break;
+        }
+        case "es": {
+          document.getElementsByClassName("menuTextLang")[4].classList.add("menuTextLangPressed");
+          break;
+        }
+        default: {
+          document.getElementsByClassName("menuTextLang")[0].classList.add("menuTextLangPressed");
+        }
+      }
+    }
     window.addEventListener('scroll', this.scroll, true); //third parameter
 
     this.router.events.subscribe((event) => {
@@ -94,6 +72,16 @@ export class MobileMenuComponent implements OnInit {
         }
       });
     this.getMovies();
+  }
+
+  switchLanguage(language: string,event) {
+    this.translate.use(language);
+    var els = document.getElementsByClassName('menuTextLang')
+    Array.prototype.forEach.call(els, function(el) {
+    el.classList.remove("menuTextLangPressed");
+});
+    event.target.classList.add("menuTextLangPressed");
+    localStorage.setItem("lang",language);
   }
 
   scroll = (): void => {

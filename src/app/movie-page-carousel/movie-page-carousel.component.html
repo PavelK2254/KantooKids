@@ -1,7 +1,7 @@
 <div class="container">
   <div  class="movie-section" >
      <div  class="franchiseItemHolder" >
-       <img class="franchisesItem" [style.transform]="'translateX('+moveCounter+'px)'"  *ngFor="let franchise of franchises; index as i" [src]="dynamicAssetPath + franchiseName + '/' + franchises[i] + '.png'">
+       <img class="franchisesItem" [style.transform]="'translateX('+moveCounter+'px)'"  *ngFor="let franchise of franchises; index as i" [src]="dynamicAssetPath + franchiseName + '/' + activeLanguage + '/' + franchises[i] + '.png'">
 
      </div>
      <div class="franchisesItemDotsHolder">

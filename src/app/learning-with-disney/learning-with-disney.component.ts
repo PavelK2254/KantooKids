@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateService,LangChangeEvent } from '@ngx-translate/core';
 
 
 @Component({
@@ -23,7 +23,7 @@ export class LearningWithDisneyComponent implements OnInit {
   assetPath = "./assets/learnDisney/";
   dynamicAssetPath = "./assets/learnDisney/";
   assetCollection = [];
-
+  activeLanguage = "en";
 
   learnMore = "Learn more"
 
@@ -31,12 +31,23 @@ export class LearningWithDisneyComponent implements OnInit {
     if (this.deviceService.isMobile()) {
       this.dynamicAssetPath += "Mobile/"
     }
+    this.changeLanguage(translate);
+    translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      this.activeLanguage = event.lang;
+        this.changeLanguage(translate);
+    });
 
+  }
+
+
+
+  changeLanguage(translate: TranslateService):void {
     translate.get(['fold1Text', 'fold2Text', 'fold3Text', 'fold4Text', 'fold5Text', 'fold6Text', 'fold7Text', 'fold8Text', 'fold9Text']).subscribe(translations => {
 
       this.assetCollection = [
         {
-          id: "frozen",
+          id: 2,
+          name: "frozen",
           background: "frozen_bg_pattern",
           mainImage: "frozen_pics",
           logo: "frozen_logo",
@@ -50,7 +61,8 @@ export class LearningWithDisneyComponent implements OnInit {
 
         },
         {
-          id: "toy",
+          id: 4,
+          name: "toy",
           background: "toy_bg_pattern",
           mainImage: "toy_pics",
           logo: "toy_logo",
@@ -62,7 +74,8 @@ export class LearningWithDisneyComponent implements OnInit {
           learnMoreUrl: "Learn more"
         },
         {
-          id: "moana",
+          id: 3,
+          name: "moana",
           background: "moana_bg_pattern",
           mainImage: "moana_pics",
           logo: "moana_logo",
@@ -74,7 +87,8 @@ export class LearningWithDisneyComponent implements OnInit {
           learnMoreUrl: "Learn more"
         },
         {
-          id: "cars",
+          id: 0,
+          name: "cars",
           background: "cars_bg_pattern",
           mainImage: "cars_pics",
           logo: "cars_logo",
@@ -86,7 +100,8 @@ export class LearningWithDisneyComponent implements OnInit {
           learnMoreUrl: "Learn more"
         },
         {
-          id: "zoo",
+          id: 5,
+          name: "zoo",
           background: "zoo_bg_pattern",
           mainImage: "zoo_pics",
           logo: "zoo_logo",
@@ -98,7 +113,8 @@ export class LearningWithDisneyComponent implements OnInit {
           learnMoreUrl: "Learn more"
         },
         {
-          id: "dory",
+          id: 1,
+          name: "dory",
           background: "dory_bg_pattern",
           mainImage: "dory_pics",
           logo: "dory_logo",
@@ -109,11 +125,11 @@ export class LearningWithDisneyComponent implements OnInit {
           fold2ImageRight: "dory_right_character",
           learnMoreUrl: "Learn more"
         },
-        {
-          id: "coco",
+      /*  {
+          name: "coco",
           background: "coco_bg_pattern",
-          mainImage: "coco_pics",
-          logo: "coco_logo",
+          mainImage: this.activeLanguage + "/coco_pics",
+          logo: this.activeLanguage + "/coco_logo",
           text: translations.fold7Text,
           fold1ImageLeft: "",
           fold1ImageRight: "coco_characters",
@@ -122,9 +138,9 @@ export class LearningWithDisneyComponent implements OnInit {
           learnMoreUrl: "Learn more"
         },
         {
-          id: "incradibles",
+          name: "incradibles",
           background: "incradibles_bg_pattern",
-          mainImage: "incradibles_pics",
+          mainImage: this.activeLanguage + "/incradibles_pics",
           logo: "incradibles_logo",
           text: translations.fold8Text,
           fold1ImageLeft: "",
@@ -134,9 +150,9 @@ export class LearningWithDisneyComponent implements OnInit {
           learnMoreUrl: "Learn more"
         },
         {
-          id: "lion",
+          name: "lion",
           background: "lion_king_bg_pattern",
-          mainImage: "lion_king_pics",
+          mainImage: this.activeLanguage + "/lion_king_pics",
           logo: "lion_king_logo",
           text: translations.fold9Text,
           fold1ImageLeft: "lion_king_left_character",
@@ -144,7 +160,7 @@ export class LearningWithDisneyComponent implements OnInit {
           fold2ImageLeft: "lion_king_left_character",
           fold2ImageRight: "lion_king_right_character",
           learnMoreUrl: "Learn more"
-        }
+        }*/
 
 
       ];

@@ -1,16 +1,15 @@
 {
+  "lang": "language",
   "ourApp":"our app",
   "learning": "learing with disney",
   "ourLegacy": "our legacy",
   "contact": "contact",
-
   "addEnglishText": "add english to their story",
   "welcomeToText" : "Welcome to",
   "ultimate" : "The ultimate English learning experience loved by children.",
   "learnEnglish" : "Learn English with your",
   "movieWord" : "movie!",
   "playing" : "Playing : Learning",
-  "ourLegacy" : "Our legacy",
   "favorite" : "favorite",
   "with":"with",
   "expanding": "Expanding the Boundaries of Language!",
@@ -42,6 +41,8 @@
   "fold7Text"  : "Experience the adventure of a lifetime with Miguel, a young aspiring musician, as he travels into the mysterious land of the dead!",
   "fold8Text"  : "They are strong, elastic, invisible and fast! They are the Incredibles!",
   "fold9Text"  : "Explore the epic circle of life and join Simba in his journey to become the next King of the Savanna!",
+
+  "learnMore": "Learn More",
 
   "GetInTouch": "GET IN TOUCH",
   "NeedHelpline": "Need help? Drop us a line",

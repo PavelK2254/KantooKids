@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 import { Movie } from '../movie';
 import { MovieFetcherService } from "../movie-fetcher.service";
 import { DeviceDetectorService } from 'ngx-device-detector';
+import { TranslateService,LangChangeEvent } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-movie-page',
@@ -28,33 +29,39 @@ export class MoviePageComponent implements OnInit {
   fold2text:string;
   fold3Title:string;
   fold3Text:string;
-
+  activeLanguage = "en";
 
   fold2Carousel: string[] = ["fold3_carousel_pic1","fold3_carousel_pic2","fold3_carousel_pic3","fold3_carousel_pic4"];
   fold3Carousel: string[] = ["fold4_carousel_pic1","fold4_carousel_pic2","fold4_carousel_pic3","fold4_carousel_pic4"];
 
 
-  constructor( private route: ActivatedRoute,private location: Location,private router: Router,private movieFetcher : MovieFetcherService,private deviceService: DeviceDetectorService) {
+  constructor( private route: ActivatedRoute,private translateLang:TranslateService,private router: Router,private movieFetcher : MovieFetcherService,private deviceService: DeviceDetectorService) {
     if(this.deviceService.isMobile()){
       console.log("movie mobile: " + this.deviceService.isMobile())
       this.dynamicAssetPath += "Mobile/"
     }
+    if( localStorage.getItem("lang") != undefined)this.activeLanguage = localStorage.getItem("lang");
+    translateLang.onLangChange.subscribe((event: LangChangeEvent) => {
+      console.log("laguage:" + event.lang);
+      this.activeLanguage = event.lang;
+    this.loadMovieContent(this.currentMovieId,this.activeLanguage);
+    });
    }
 
   ngOnInit() {
     this.currentMovieId = +this.route.snapshot.paramMap.get('id')
-  this.loadMovieContent(this.currentMovieId);
+  this.loadMovieContent(this.currentMovieId,this.activeLanguage);
     this.router.events.subscribe((event) => {
           (<HTMLImageElement>document.getElementsByClassName('logoImg')[0]).style.display = "initial";
           this.currentMovieId = +this.route.snapshot.paramMap.get('id')
-        this.loadMovieContent(this.currentMovieId);
+        this.loadMovieContent(this.currentMovieId,this.activeLanguage);
       });
   }
 
-  loadMovieContent(id):void {
+  loadMovieContent(id,lang):void {
     if(id != undefined){
     console.log("cerrent ID: " + id)
-    this.movieFetcher.getSingleMovie(id).subscribe(
+    this.movieFetcher.getSingleMovie(id,lang).subscribe(
       movie => this.movie = movie);
       this.movieName = this.movie.name;
       this.fold1Title = this.movie.fold1Title.eng

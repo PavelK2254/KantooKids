@@ -4,7 +4,7 @@ export const FRANCHISES: Movie[] = [
 
   {
     id: 0,
-    name: './assets/homepage/P3_Mockup_Aladdin.png',
+    name: 'P3_Mockup_Aladdin.png',
     fold1Title: {
       eng: ''
     },
@@ -28,7 +28,7 @@ export const FRANCHISES: Movie[] = [
 
   {
     id: 1,
-    name: './assets/homepage/P3_Mockup_Cars.png',
+    name: 'P3_Mockup_Cars.png',
     fold1Title: {
       eng: ''
     },
@@ -52,7 +52,7 @@ export const FRANCHISES: Movie[] = [
 
   {
     id: 2,
-    name: './assets/homepage/P3_Mockup_Coc.png',
+    name: 'P3_Mockup_Coco.png',
     fold1Title: {
       eng: ''
     },
@@ -76,7 +76,7 @@ export const FRANCHISES: Movie[] = [
 
   {
     id: 3,
-    name: './assets/homepage/P3_Mockup_Dory.png',
+    name: 'P3_Mockup_Dory.png',
     fold1Title: {
       eng: ''
     },
@@ -100,7 +100,7 @@ export const FRANCHISES: Movie[] = [
 
   {
     id: 4,
-    name: './assets/homepage/P3_Mockup_Frozen.png',
+    name: 'P3_Mockup_Frozen.png',
     fold1Title: {
       eng: ''
     },
@@ -123,7 +123,7 @@ export const FRANCHISES: Movie[] = [
   },
   {
     id: 5,
-    name: './assets/homepage/P3_Mockup_Incredibels1.png',
+    name: 'P3_Mockup_Incredibels1.png',
     fold1Title: {
       eng: ''
     },
@@ -146,7 +146,7 @@ export const FRANCHISES: Movie[] = [
   },
   {
     id: 6,
-    name: './assets/homepage/P3_Mockup_LionKing.png',
+    name: 'P3_Mockup_LionKing.png',
     fold1Title: {
       eng: ''
     },
@@ -169,7 +169,7 @@ export const FRANCHISES: Movie[] = [
   },
   {
     id: 7,
-    name: './assets/homepage/P3_Mockup_LM.png',
+    name: 'P3_Mockup_LM.png',
     fold1Title: {
       eng: ''
     },
@@ -192,7 +192,7 @@ export const FRANCHISES: Movie[] = [
   },
   {
     id: 8,
-    name: './assets/homepage/P3_Mockup_Moana.png',
+    name: 'P3_Mockup_Moana.png',
     fold1Title: {
       eng: ''
     },
@@ -215,7 +215,7 @@ export const FRANCHISES: Movie[] = [
   },
   {
     id: 9,
-    name: './assets/homepage/P3_Mockup_Mulan.png',
+    name: 'P3_Mockup_Mulan.png',
     fold1Title: {
       eng: ''
     },
@@ -238,7 +238,7 @@ export const FRANCHISES: Movie[] = [
   },
   {
     id: 10,
-    name: './assets/homepage/P3_Mockup_Toy.png',
+    name: 'P3_Mockup_Toy.png',
     fold1Title: {
       eng: ''
     },
@@ -261,7 +261,7 @@ export const FRANCHISES: Movie[] = [
   },
   {
     id: 11,
-    name: './assets/homepage/P3_Mockup_Zoo.png',
+    name: 'P3_Mockup_Zoo.png',
     fold1Title: {
       eng: ''
     },

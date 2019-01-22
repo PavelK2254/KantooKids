@@ -3,7 +3,9 @@
   max-width: 1903px;
   background: black;
   margin: 0 auto;
-  height: 1070.440px;
+  height: 100vh;
+  top: -4vh;
+height: 96vh;
 }
 
 .backgroundImg{
@@ -18,13 +20,12 @@
 
 .contactUsContainerInnerTitle{
       top: 215px;
-      left: 44%;
-      position: absolute;
+      position: relative;
 }
 
 .contactUsContainerInnerInput{
   top: 400px;
-  left: 40%;
+  left: 37.5vw;
   position: absolute;
   width: 500px;
   height: 350px;
@@ -83,7 +84,7 @@ color: #ffffff;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
-  text-align: left;
+  text-align: center;
   color: #ffffff;
 }
 
@@ -181,6 +182,7 @@ text-align: center;
 color: #ffffff;
 padding-top: 35px;
 margin-top: 0px;
+    height: auto;
   }
 
 

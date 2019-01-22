@@ -17,7 +17,7 @@
         <mat-expansion-panel [disabled]="true" style="    background-color: #efefef;">
           <mat-expansion-panel-header style="height:auto;background: #efefef;">
             <mat-panel-title >
-            <p class="menuText" style="margin-top: 25%;"><a routerLink="/our-app" routerLinkActive="menuActiveOurApp menuActive" style="text-decoration:none">  {{ourAppLoc.engText | uppercase}}</a></p>
+            <p class="menuText" style="margin-top: 25%;"><a routerLink="/our-app" routerLinkActive="menuActiveOurApp menuActive" style="text-decoration:none">  {{'ourApp' | translate  | uppercase}}</a></p>
             </mat-panel-title>
 
           </mat-expansion-panel-header>
@@ -29,40 +29,22 @@
         <mat-expansion-panel style="    background-color: #efefef;">
           <mat-expansion-panel-header>
             <mat-panel-title>
-              <p class="menuText" style="margin-top: 5%;text-decoration:none; "><a routerLink="/learning-with-disney" routerLinkActive="menuActiveLearning menuActive" >{{learningDisneyLoc.engText | uppercase}}</a></p>
+              <p class="menuText" style="margin-top: 5%;text-decoration:none; "><a routerLink="/learning-with-disney" routerLinkActive="menuActiveLearning menuActive" >{{'learning' | translate | uppercase}}</a></p>
             </mat-panel-title>
 
           </mat-expansion-panel-header>
 
           <p class="movieTitl" ><a routerLink="/learning-with-disney" style="text-decoration:none;font-weight: 800;-webkit-text-fill-color: #333333;">All Movies</a></p>
           <p *ngFor="let movie of movies; index as i" class="movieTitl" style="-webkit-text-fill-color: #333333;"><a routerLinkActive="menuActiveOurApp menuActive" routerLink="/{{movie.id}}">{{capitalize(movie.name)}}</a></p>
-        <!--  <p class="movieTitl" style="-webkit-text-fill-color: #333333;">Frozen</p>
-          <p class="movieTitl" style="-webkit-text-fill-color: #333333;">Moana</p>
-          <p class="movieTitl" style="-webkit-text-fill-color: #333333;">Toy Story 3</p>
-          <p class="movieTitl" style="-webkit-text-fill-color: #333333;">Zootopia</p>
-          <p class="movieTitl" style="-webkit-text-fill-color: #333333;">Cars</p>
-          <p class="movieTitl" style="-webkit-text-fill-color: #333333;">Finding Dory</p>-->
-
 
         </mat-expansion-panel>
 
-        <mat-expansion-panel [disabled]="true" style="background-color: #efefef;">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              <p class="menuText" style="margin-top: 5%;"><a routerLink="/kantoo-blog" routerLinkActive="menuActiveLearning menuActive" style="-webkit-text-fill-color: transparent;">{{kantooBlogLoc.engText | uppercase}}</a></p>
-            </mat-panel-title>
 
-          </mat-expansion-panel-header>
-
-
-
-
-        </mat-expansion-panel>
 
         <mat-expansion-panel [disabled]="true" style="    background-color: #efefef;">
           <mat-expansion-panel-header style="height:auto;background: #efefef;">
             <mat-panel-title >
-            <p class="menuText" ><a href="http://www.kantoo.com/en/" style="-webkit-text-fill-color: transparent;">  {{legacyLoc.engText | uppercase}}</a></p>
+            <p class="menuText" ><a href="http://www.kantoo.com/en/" style="-webkit-text-fill-color: transparent;">  {{'ourLegacy' | translate | uppercase}}</a></p>
             </mat-panel-title>
 
           </mat-expansion-panel-header>
@@ -74,7 +56,7 @@
         <mat-expansion-panel [disabled]="true" style="    background-color: #efefef;">
           <mat-expansion-panel-header style="height:auto;background: #efefef;">
             <mat-panel-title >
-            <p class="menuText" ><a routerLink="/contact" routerLinkActive="menuActiveLearning menuActive" style="-webkit-text-fill-color: transparent;">  {{contactLoc.engText | uppercase}}</a></p>
+            <p class="menuText" ><a routerLink="/contact" routerLinkActive="menuActiveLearning menuActive" style="-webkit-text-fill-color: transparent;">  {{'contact' | translate | uppercase}}</a></p>
             </mat-panel-title>
 
           </mat-expansion-panel-header>
@@ -86,16 +68,16 @@
         <mat-expansion-panel style="    background-color: #efefef;height: -webkit-fill-available;    text-align: -webkit-center; -webkit-text-fill-color: transparent;">
           <mat-expansion-panel-header>
             <mat-panel-title>
-              <p class="menuText" style="margin-top: 5%;margin-left: 2.5%;"><a>{{language.engText | uppercase}}</a></p>
+              <p class="menuText" style="margin-top: 5%;margin-left: 2.5%;"><a>{{'lang' | translate | uppercase}}</a></p>
             </mat-panel-title>
 
           </mat-expansion-panel-header>
 
-          <a class="menuTextLang"  routerLinkActive="langActive ">EN</a>
+          <a class="menuTextLang menuTextLangPressed"  (click)="switchLanguage('en',$event)">EN</a>
           <a class="menuTextLang" style="margin-left: 10px; pointer-events: none">|</a>
-          <a class="menuTextLang" style="margin-left: 10px" routerLinkActive="langActive">PT</a>
+          <a class="menuTextLang" style="margin-left: 10px" (click)="switchLanguage('pt',$event)">PT</a>
           <a class="menuTextLang" style="margin-left: 10px; pointer-events: none">|</a>
-          <a class="menuTextLang" style="margin-left: 10px;" routerLinkActive="langActive">ES</a>
+          <a class="menuTextLang" style="margin-left: 10px;" (click)="switchLanguage('es',$event)">ES</a>
 
 
         </mat-expansion-panel>

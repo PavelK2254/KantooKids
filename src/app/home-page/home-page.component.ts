@@ -3,9 +3,11 @@ import { Movie } from '../movie';
 import { MovieFetcherService } from "../movie-fetcher.service";
 import { HostBinding } from '@angular/core';
 import { YoutubePopupComponent } from '../youtube-popup/youtube-popup.component'
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { useAnimation, trigger, state, style, animate, transition } from '@angular/animations';
-import { TranslateService } from '@ngx-translate/core';
+import { PromoPopupComponent } from '../promo-popup/promo-popup.component'
+import {  trigger, state, style, animate, transition } from '@angular/animations';
+import { TranslateService,LangChangeEvent } from '@ngx-translate/core';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+
 
 
 @Component({
@@ -57,16 +59,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HomePageComponent implements OnInit, AfterViewInit {
 
-  imageBaseUri = "./assets/homepage";
-
-/* addEnglishText = "add english to their story";
-  welcomeToText = "Welcome to";
-  ultimate = "The ultimate English learning experience loved by children."
-  learnEnglish = "Learn English with your";
-  movieWord = "movie!";
-  playing = "Playing = Learning";
-  ourLegacy = "Our legacy"
-  favorite = "favorite"*/
+  imageBaseUri = "./assets/homepage/";
   imgSrcLeft: string;
   imgSrcRight: string;
   fold1BackgroundZIndexActual = -1
@@ -95,17 +88,34 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   offsetModifier2 = 607;
   viewIndex2 = 0;
   reachedEnd = false;
-  isMobile = false;
+  mobilePrefix = "";
   mobileDivideValue = 1.20;
+  activeLanguage = "en";
+  conversionButtonUri;
 
 
-  constructor(private movieFetcher: MovieFetcherService, public dialog: MatDialog) {
+
+  constructor(private movieFetcher: MovieFetcherService, public dialog: MatDialog,private translateLang:TranslateService) {
     this.imgSrcLeft = "assets/homepage/left_arrow.png";
     this.imgSrcRight = "assets/homepage/right_arrow.png";
+    if( localStorage.getItem("lang") != undefined)this.activeLanguage = localStorage.getItem("lang");
+    translateLang.onLangChange.subscribe((event: LangChangeEvent) => {
+      console.log("laguage:" + event.lang);
+      this.activeLanguage = event.lang;
+      this.conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn.png';
+    });
   }
 
+  openDialog(): void {
+      const dialogRef = this.dialog.open(PromoPopupComponent, {
+        width: 'fit-content',
+        height: 'fit-content'
 
-
+      });
+    }
+    public closeDialog() {
+      this.dialog.closeAll();
+    }
 
   startProductListRotation(): void {
     setInterval(() => {
@@ -123,9 +133,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     });
   }
 
-  public closeDialog() {
-    this.dialog.closeAll();
-  }
+
 
 
 
@@ -137,9 +145,17 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
+
+    if (window.innerWidth < 600) {
+      this.offsetModifier = window.innerWidth * 1.09;
+      this.offsetModifier2 = window.innerWidth * 0.9;
+      this.mobilePrefix = "/Mobile/"
+    }else{
+      this.mobilePrefix = ""
+    }
+    this.conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn.png';
     this.getFranchises();
     this.getProducts();
-
   }
 
   updateDotMenu(changeIndex: number): void {
@@ -154,11 +170,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       this.viewIndexArr.push(this.maxOffsetIndex + i);
     }
     this.updateDotMenu(this.viewIndexArr.indexOf(this.viewIndex));
-    if (window.innerWidth < 600) {
-    //  this.offsetModifier = document.getElementsByClassName('franchisesItem')[0].offsetWidth - window.innerWidth * 2;
-      this.offsetModifier2 = window.innerWidth * 0.9;
-      this.isMobile = true;
-    }
+
 
 
   }
@@ -177,12 +189,15 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     if (event.target.innerWidth < 600) {
       this.offsetModifier = event.target.innerWidth / this.mobileDivideValue;
       this.offsetModifier2 = event.target.innerWidth * 0.9;
-      this.isMobile = true;
+      this.mobilePrefix = "/Mobile/"
     } else {
       this.offsetModifier = 1158;
       this.offsetModifier2 = 607;
-      this.isMobile = false;
+      this.mobilePrefix = ""
     }
+
+    this.getFranchises();
+    this.getProducts();
   }
 
 
@@ -210,10 +225,6 @@ export class HomePageComponent implements OnInit, AfterViewInit {
 
     this.moveOffsetAnim = 'translateX( ' + (this.translate + this.offsetModifier) + 'px)';
     this.updateDotMenu(this.viewIndexArr.indexOf(this.viewIndex))
-    console.log("menu translae at: " + this.translate);
-    console.log("offset translae at: " + this.moveOffset);
-    console.log("offsetAnim translae at: " + this.moveOffsetAnim);
-
   }
   decrementIndex() {
 
@@ -236,9 +247,6 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     this.moveOffsetAnim = 'translateX( ' + (this.translate - this.offsetModifier) + 'px)';
 
     this.updateDotMenu(this.viewIndexArr.indexOf(this.viewIndex))
-    console.log("menu translae at: " + this.translate);
-    console.log("offset translae at: " + this.moveOffset);
-    console.log("offsetAnim translae at: " + this.moveOffsetAnim);
   }
 
   incrementIndex2() {
@@ -246,7 +254,6 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     if (this.viewIndex2 <= this.maxOffsetIndex2) {
       this.isDisabled = true;
       this.reachedEnd = true;
-      console.log("reached end: " + this.reachedEnd);
       return;
     } else {
       if (this.viewIndex2 == (this.maxOffsetIndex2 + 1)) {
@@ -260,24 +267,15 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     }
     this.viewIndex2 -= 1;
     this.translate2 = this.offsetModifier2;
-    console.log("menu index at: " + this.viewIndex2);
     this.translate2 = this.translate2 * this.viewIndex2;
     this.moveOffset2 = 'translateX( ' + this.translate2 + 'px)';
-
-
     this.moveOffsetAnim2 = 'translateX( ' + (this.translate2 + this.offsetModifier2) + 'px)';
-
-    console.log("menu translae at: " + this.translate);
-    console.log("offset translae at: " + this.offsetModifier2);
-    console.log("offsetAnim translae at: " + this.moveOffsetAnim);
-
   }
   decrementIndex2() {
 
     if (this.viewIndex2 >= this.minOffsetIndex2) {
       this.isDisabled = true;
       this.reachedEnd = false;
-      console.log("reached end: " + this.reachedEnd);
       return;
     } else {
       if (this.viewIndex2 == (this.minOffsetIndex2 - 1)) {
@@ -292,16 +290,10 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     }
     this.viewIndex2 += 1;
     this.translate2 = this.offsetModifier2;
-    console.log("menu index at: " + this.viewIndex2);
     this.translate2 = this.translate2 * this.viewIndex2;
     this.moveOffset2 = 'translateX( ' + this.translate2 + 'px)';
 
     this.moveOffsetAnim2 = 'translateX( ' + (this.translate2 - this.offsetModifier2) + 'px)';
-
-
-    console.log("menu translae at: " + this.translate2);
-    console.log("offset translae at: " + this.offsetModifier2);
-    console.log("offsetAnim translae at: " + this.moveOffsetAnim2);
   }
 
   getProducts() {

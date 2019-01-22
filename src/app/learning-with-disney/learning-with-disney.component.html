@@ -1,6 +1,6 @@
 <div class="container">
   <ng-container *ngFor="let asset of assetCollection; index as i">
-  <div [id]="assetCollection[i].id" [class]="i%2 == 0? 'Fold1': 'Fold2'" [style.background-image]="'url('+dynamicAssetPath + assetCollection[i].background + '.png)'">
+  <div [id]="assetCollection[i].name" [class]="i%2 == 0? 'Fold1': 'Fold2'" [style.background-image]="'url('+dynamicAssetPath + assetCollection[i].background + '.png)'">
     <div class="foldLeft">
       <img class="upperLogo" [src]="assetPath + assetCollection[i].logo + '.png'" (error)="imageErrorHandler($event)">
       <img class="overlayImageLeft1" [src]= "assetPath + assetCollection[i].fold1ImageLeft + '.png'" (error)="imageErrorHandler($event)">
@@ -14,7 +14,7 @@
       <div class="textHolder">
         <img class="bottomLogo" [src]="'./assets/learnDisney/' + assetCollection[i].logo + '.png'" (error)="imageErrorHandler($event)">
         <p>{{assetCollection[i].text}}</p>
-        <a>{{learnMore}}</a>
+        <a [routerLink]="'/' + assetCollection[i].id">{{'learnMore' | translate}}</a>
       </div>
     </div>
   </div>

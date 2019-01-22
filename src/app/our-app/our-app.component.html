@@ -8,8 +8,8 @@
        class="KantoDisneyLogo2">
        <p class="disneyText">{{'kntooDisneyText' | translate}}</p>
        <p class="CONVERSIONbtnHolder" style="margin-top: 2vh">
-       <a class="CONVERSIONbtn">
-         <img src="./assets/homepage/conversion_btn.png"
+       <a class="CONVERSIONbtn" (click)="openDialog()">
+         <img  [src]="imageBaseUri + activeLanguage + '/conversion_btn.png'"
 
         class="CONVERSIONbtn">
        </a>
@@ -21,8 +21,8 @@
       <p class="weTeach">{{'weTeach' | translate}}</p>
       <p class="ourCambridge">{{'ourCambridge' | translate}}</p>
       <p class="CONVERSIONbtnHolder" style="margin-top: 2vh">
-      <a class="CONVERSIONbtn">
-        <img src="./assets/homepage/conversion_btn.png"
+      <a class="CONVERSIONbtn" (click)="openDialog()">
+        <img  [src]="imageBaseUri + activeLanguage + '/conversion_btn.png'"
 
        class="CONVERSIONbtn">
       </a>
@@ -37,8 +37,8 @@
       <p class="Fastandeasy">{{'fastNeasy' | translate | uppercase}}</p>
       <p class="OurDisney">{{'disneyMovies' | translate}}</p>
       <p style="margin-left: 10%;" class="CONVERSIONbtnHolder">
-      <a class="CONVERSIONbtn">
-        <img src="./assets/homepage/conversion_btn.png"
+      <a class="CONVERSIONbtn" (click)="openDialog()">
+        <img  [src]="imageBaseUri + activeLanguage + '/conversion_btn.png'"
 
        class="CONVERSIONbtn">
       </a>
@@ -51,8 +51,8 @@
     <div class="fold4TextSection">
       <p class="safeLearningTitle">{{'safeLearningTitle' | translate | uppercase}}</p>
       <p class="safeLearningText">{{'safeLearningText' | translate}}</p>
-      <a class="CONVERSIONbtn">
-        <img src="./assets/homepage/conversion_btn.png"
+      <a class="CONVERSIONbtn" (click)="openDialog()">
+        <img  [src]="imageBaseUri + activeLanguage + '/conversion_btn.png'"
 
        class="CONVERSIONbtn">
       </a>
@@ -65,7 +65,11 @@
       <div class="Fold1TextsContainer">
           <p class="introducing" style="width:400px">{{'learnEnglish' | translate | uppercase}}</p>
            <p class="disneyText">{{'meetOur' | translate}}</p>
+           <a class="CONVERSIONbtn" (click)="openDialog()">
+             <img  [src]="imageBaseUri + activeLanguage + '/conversion_btn.png'"
 
+            class="CONVERSIONbtn">
+           </a>
       </div>
   </div>
 
@@ -75,8 +79,8 @@
   <p class="safeLearningTitle">{{'kantooWayTitle' | translate | uppercase}}</p>
   <p class="safeLearningText">{{'kantooWayText' | translate}}</p>
   <p class="safeLearningText">{{'kantooWayText2' | translate}}</p>
-  <a class="CONVERSIONbtn">
-    <img src="./assets/homepage/conversion_btn.png"
+  <a class="CONVERSIONbtn" (click)="openDialog()">
+    <img  [src]="imageBaseUri + activeLanguage + '/conversion_btn.png'"
 
    class="CONVERSIONbtn">
   </a>
@@ -88,8 +92,8 @@
       <p class="Fastandeasy">{{'futureReady' | translate | uppercase}}</p>
       <p class="OurDisney">{{'worldChanging' | translate}}</p>
       <p style="margin-left: 10%;" class="CONVERSIONbtnHolder">
-      <a class="CONVERSIONbtn" >
-        <img src="./assets/homepage/conversion_btn.png"
+      <a class="CONVERSIONbtn" (click)="openDialog()">
+        <img  [src]="imageBaseUri + activeLanguage + '/conversion_btn.png'"
 
        class="CONVERSIONbtn">
       </a>

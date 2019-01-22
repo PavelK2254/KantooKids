@@ -17,7 +17,12 @@ export class AppComponent {
 
   constructor(private deviceService: DeviceDetectorService, private loc: Location,private router: Router,private translate: TranslateService) {
     this.epicFunction();
-    translate.setDefaultLang('en');
+    if(localStorage.getItem("lang") != undefined){
+        translate.setDefaultLang(localStorage.getItem("lang"));
+    }else{
+        translate.setDefaultLang('en');
+    }
+  ;
   }
 
 

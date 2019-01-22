@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuTextItem } from '../menuTextItem'
+import { TranslateService,LangChangeEvent } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
@@ -8,31 +8,23 @@ import { MenuTextItem } from '../menuTextItem'
 })
 export class FooterComponent implements OnInit {
 
-  terms: MenuTextItem = {
-    engText: 'terms & conditions',
-    prText: '',
-    spText: ''
-  };
+dstBaseUrl = "http://dst.kantoo.com";
+activeLanguage = "en";
+languageMod:string
 
-  faq: MenuTextItem = {
-    engText: 'faq',
-    prText: '',
-    spText: ''
-  };
+termsExt = "/tos.html";
+privacyExt = "/privacy.html"
+aboutExt = "/about.html"
 
-  privacy: MenuTextItem = {
-    engText: 'privacy policy',
-    prText: '',
-    spText: ''
-  };
 
-  follow: MenuTextItem = {
-    engText: 'follow us',
-    prText: '',
-    spText: ''
-  };
-
-  constructor() { }
+  constructor(private translateLang:TranslateService) {
+    if( localStorage.getItem("lang") != undefined)this.activeLanguage = localStorage.getItem("lang");
+    this.languageMod = "/help-pages-" + this.activeLanguage;
+    translateLang.onLangChange.subscribe((event: LangChangeEvent) => {
+      this.activeLanguage = event.lang;
+      this.languageMod = "/help-pages-" + this.activeLanguage;
+    });
+  }
 
   ngOnInit() {
   }

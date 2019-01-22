@@ -56,10 +56,10 @@ a:visited {
   pointer-events: all;
 }
 
-.menuTextLang:active{
+.menuTextLangPressed{
 
   object-fit: contain;
-   background-image: linear-gradient(to top, #02aab0, #00cdac), linear-gradient(to bottom, #ffffff, #ffffff);
+   background-image: linear-gradient(to top, #02aab0, #00cdac), linear-gradient(to bottom, #ffffff, #ffffff) !important;
    font-size: 16.9px;
    font-weight: bold;
    font-style: normal;
@@ -114,7 +114,7 @@ mat-accordion{
   position: fixed;
   width: 100%;
   top: 11.5vh;
-  z-index: 5;
+  z-index: 10;
   height: 100vh;
   overflow-y: scroll;
   right: 0px;

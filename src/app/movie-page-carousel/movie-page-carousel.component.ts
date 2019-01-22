@@ -1,4 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
+import { TranslateService,LangChangeEvent } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-movie-page-carousel',
@@ -12,10 +13,15 @@ export class MoviePageCarouselComponent implements OnInit {
   @Input() foldName: string;
   @Input() dynamicAssetPath : string;
   assetPath = "./assets/moviePages/";
+  activeLanguage = "en";
   moveCounter = 0;
 
 
-  constructor() { }
+  constructor(private translate: TranslateService) {
+    translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      this.activeLanguage = event.lang;
+    });
+   }
 
   ngOnInit() {
     console.log("movie carosel init")

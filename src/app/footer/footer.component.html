@@ -1,14 +1,14 @@
 <mat-toolbar class="Footer-BG">
   <mat-toolbar-row style="justify-content: center;">
-    <a class="Tearms-conditionsHolder">
+    <a class="Tearms-conditionsHolder" [attr.href]="dstBaseUrl + languageMod + termsExt">
       <span class="Terms-conditions"> {{'terms' | translate | uppercase}}</span>
       </a>
       <label class="limiter"> |</label>
-      <a class="Faq-conditionsHolder">
+      <a class="Faq-conditionsHolder" [attr.href]="dstBaseUrl + languageMod">
         <span class="Terms-conditions"> {{'faq' | translate | uppercase}}</span>
         </a>
       <label class="limiter"> |</label>
-      <a class="Privacy-conditionsHolder">
+      <a class="Privacy-conditionsHolder" [attr.href]="dstBaseUrl + languageMod + privacyExt">
         <span class="Terms-conditions"> {{'privacy' | translate | uppercase}}</span>
         </a>
         <label class="limiter"> |</label>
