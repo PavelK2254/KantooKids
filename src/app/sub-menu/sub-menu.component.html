@@ -1,4 +1,5 @@
 <div class="sub-menu" >
+  <p>{{'chooseMovies' | translate}}</p>
   <a style="float:left;margin-left: 62px;margin-top: 10px" (click)="incrementIndex()">
     <img class="arrow" src="assets/menu/arrow_left.png"
        srcset="assets/menu/arrow_left@2x.png 2x,
@@ -7,6 +8,7 @@
      </a>
 
          <div class="movie-section" [@.disabled]="isDisabled"  (swipeleft)="incrementIndex()" (swiperight)="decrementIndex()">
+
        <app-movie-item *ngFor="let movie of movies; index as i" [movie]="movies[i]" [@move]="{value: viewIndex, params: {moveOffset: moveOffset, moveOffsetAnim: moveOffsetAnim }}"
 ></app-movie-item>
 

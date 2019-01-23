@@ -141,12 +141,12 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     this.movieFetcher.getFranchises().subscribe(
       franchises => this.franchises = franchises);
     console.log('franchises: ', this.franchises);
-    this.startProductListRotation();
+    //this.startProductListRotation();
   }
 
   ngOnInit() {
 
-    if (window.innerWidth < 600) {
+    if (window.innerWidth < 769) {
       this.offsetModifier = window.innerWidth * 1.09;
       this.offsetModifier2 = window.innerWidth * 0.9;
       this.mobilePrefix = "/Mobile/"
@@ -154,6 +154,22 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       this.mobilePrefix = ""
     }
     this.conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn.png';
+    this.getFranchises();
+    this.getProducts();
+  }
+
+  onResize(event) {
+    this.resetCarousel(0);
+    if (event.target.innerWidth < 769) {
+      this.offsetModifier = window.innerWidth * 1.09;
+      this.offsetModifier2 = event.target.innerWidth * 0.9;
+      this.mobilePrefix = "/Mobile/"
+    } else {
+      this.offsetModifier = 1158;
+      this.offsetModifier2 = 607;
+      this.mobilePrefix = ""
+    }
+
     this.getFranchises();
     this.getProducts();
   }
@@ -184,21 +200,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     }
   }
 
-  onResize(event) {
-    this.resetCarousel(0);
-    if (event.target.innerWidth < 600) {
-      this.offsetModifier = event.target.innerWidth / this.mobileDivideValue;
-      this.offsetModifier2 = event.target.innerWidth * 0.9;
-      this.mobilePrefix = "/Mobile/"
-    } else {
-      this.offsetModifier = 1158;
-      this.offsetModifier2 = 607;
-      this.mobilePrefix = ""
-    }
 
-    this.getFranchises();
-    this.getProducts();
-  }
 
 
 

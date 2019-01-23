@@ -11,10 +11,12 @@
   "learnEnglish" : "APRENDA INGLÊS COM SEU FILME FAVORITO DA DISNEY!",
   "movieWord" : "filme!",
   "playing" : "BRINCAR = APRENDER",
-  "favorite" : "favorito",
+  "favorite" : "favorito ",
   "with":"COM O",
   "expanding": "Expandindo as fronteiras da linguagem!",
   "leading":"Líder no mercado por mais de uma década, a marca KANTOO é uma das maiores fornecedoras de ensino de idiomas da América da Latina. Contando com mais de 50 milhões de assinantes e mais de 30 aplicativos e produtos diferentes, o KANTOO se tornou sinônimo de uma experiência de aprendizado de idiomas divertida, envolvente e intuitiva.",
+
+  "chooseMovies": "Escolha o seu filme favorito:",
 
   "introducing" : "APRESENTANDO O ",
   "kntooDisneyText" : "O Kantoo Disney oferece uma experiência completa de aprendizado de inglês para crianças. Elas podem estar no começo do aprendizado ou serem mais avançadas. As crianças escolhem seus filmes preferidos e aprendem inglês ao mesmo tempo em que se divertem com as histórias que mais gostam.",
@@ -54,5 +56,5 @@
   "terms": "terms & conditions",
   "faq": "faq",
   "privacy": "privacy policy",
-  "follow": "follow us"
+  "follow": "Siga-nos"
 }

@@ -3,6 +3,7 @@ import { DeviceDetectorService } from 'ngx-device-detector';
 import { Location } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { MovieFetcherService } from './movie-fetcher.service'
 
 @Component({
   selector: 'app-root',
@@ -15,26 +16,31 @@ export class AppComponent {
 
 
 
-  constructor(private deviceService: DeviceDetectorService, private loc: Location,private router: Router,private translate: TranslateService) {
+  constructor(private movieService :MovieFetcherService,private deviceService: DeviceDetectorService, private loc: Location,private router: Router,private translate: TranslateService) {
     this.epicFunction();
     if(localStorage.getItem("lang") != undefined){
         translate.setDefaultLang(localStorage.getItem("lang"));
     }else{
         translate.setDefaultLang('en');
     }
-  ;
+
+
   }
 
 
   isViewMobile = false;
 
   ngOnInit() {
-       this.router.events.subscribe((evt) => {
-           if (!(evt instanceof NavigationEnd)) {
-               return;
-           }
-           window.scrollTo(0, 0)
-       });
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        (<any>window).ga('set', 'page', "/" + this.movieService.getMovieNameById(event.urlAfterRedirects));
+        console.log("sent " + this.movieService.getMovieNameById(event.urlAfterRedirects));
+        (<any>window).ga('send', 'pageview');
+        window.scrollTo(0, 0)
+      }
+    });
+
+
    }
 
   epicFunction() {

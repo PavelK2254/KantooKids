@@ -35,6 +35,17 @@ export class MovieFetcherService {
 
   }
 
+  public getMovieNameById(id): String{
+    var currentID = id.replace("/","");
+    currentID = + currentID;
+    if(MOVIES[currentID] == undefined){
+      return id;
+    }else{
+    return MOVIES[currentID].name;
+    }
+
+  }
+
   public getFranchises(): Observable <Movie[]> {
     return of(FRANCHISES);
       }

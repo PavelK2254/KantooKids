@@ -7,6 +7,7 @@ div {
   height: auto;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: white;
 }
 
 .pageBackground{
@@ -60,6 +61,7 @@ div {
   height: 80vh;
   z-index: 4;
 position: relative;
+padding-top: 10vh;
 }
 
 .textSection {
@@ -91,7 +93,7 @@ position: relative;
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  color: #592c82;
+  color: #0f206c;
 }
 
 .Fold2 {
@@ -120,7 +122,7 @@ position: relative;
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: #592c82;
+  color: #0f206c;
   margin: 0;
 }
 
@@ -140,7 +142,7 @@ position: relative;
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: #592c82;
+  color: #0f206c;
 }
 
 .Fold3 {
@@ -169,7 +171,7 @@ position: relative;
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: #592c82;
+  color: #0f206c;
   margin: 0;
 }
 
@@ -189,7 +191,7 @@ position: relative;
 
   letter-spacing: normal;
   text-align: left;
-  color: #592c82;
+  color: #0f206c;
 }
 
 .Fold4 {
@@ -246,7 +248,7 @@ position: relative;
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-    color: #592c82;
+    color: #0f206c;
     margin: 0;
   }
 
@@ -263,7 +265,7 @@ position: relative;
     line-height: normal;
     letter-spacing: normal;
     text-align: left;
-    color: #592c82;
+    color: #0f206c;
   }
 
   .Fold3 {
@@ -295,7 +297,7 @@ position: relative;
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-    color: #592c82;
+    color: #0f206c;
     margin: 0;
   }
 
@@ -314,7 +316,7 @@ position: relative;
     line-height: normal;
     letter-spacing: normal;
     text-align: left;
-    color: #592c82;
+    color: #0f206c;
   }
 
   .Fold4 {

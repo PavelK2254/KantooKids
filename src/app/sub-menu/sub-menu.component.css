@@ -44,8 +44,45 @@ app-movie-item{
     width: auto;
   }
 
+  .sub-menu{
+    width: 100vw;
+height: fit-content;
+display: grid;
+position: relative;
+margin: 0 auto;
+box-shadow: 0px 1px 24px 3px rgba(0, 0, 0, 0.36);
+background-color: #efefef;
+  }
+
+.sub-menu p {
+  width: auto;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  font-size: 4vw;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  padding-left: 8vw;
+  text-align: left;
+  color: #0f206c;
+  }
+
   .sub-menu a {
     display: none;
+  }
+
+  .movie-section{
+    width: auto;
+    min-height: fit-content;
+    float: left;
+    overflow: hidden;
+    display: flex;
+    margin-top: 0;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
   }
 
 

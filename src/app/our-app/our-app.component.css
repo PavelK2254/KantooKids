@@ -45,7 +45,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
       line-height: normal;
       letter-spacing: normal;
       text-align: left;
-      color: #592c82;
+      color: #0f206c;
       margin-bottom: 0px;
 }
 
@@ -62,7 +62,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 }
 
 .KantoDisneyLogo2 {
-  width: 21.3vw;
+  width: auto;
       height: 11vh;
       -o-object-fit: contain;
       object-fit: contain;
@@ -78,7 +78,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
       line-height: normal;
       letter-spacing: normal;
       text-align: left;
-      color: #592c82;
+      color: #0f206c;
 }
 
 .Fold2{
@@ -95,7 +95,7 @@ background-repeat: no-repeat;
 }
 
 .Fold3{
-  height: 100vh;
+  height: 80vh;
   position: relative;
   -o-object-fit: contain;
   margin: auto;
@@ -129,7 +129,7 @@ font-stretch: normal;
 line-height: normal;
 letter-spacing: normal;
 text-align: left;
-color: #592c82;
+color: #0f206c;
 margin-left: 10%;
 }
 
@@ -152,7 +152,7 @@ margin-left: 10%;
       line-height: normal;
       letter-spacing: normal;
       text-align: left;
-      color: #592c82;
+      color: #0f206c;
 }
 
 .weTeach {
@@ -166,7 +166,7 @@ margin-left: 10%;
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: #592c82;
+  color: #0f206c;
 }
 
 .ourCambridge {
@@ -179,7 +179,7 @@ margin-left: 10%;
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: #592c82;
+  color: #0f206c;
   margin: 0 auto;
 }
 
@@ -211,7 +211,7 @@ margin-left: 10%;
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: #592c82;
+  color: #0f206c;
   margin-left: 10%;
 }
 
@@ -257,7 +257,7 @@ margin-left: 10%;
   white-space: nowrap;
   letter-spacing: normal;
   text-align: left;
-  color: #592c82;
+  color: #0f206c;
   margin-bottom: 0px;
   margin-top: 40%;
 }
@@ -272,7 +272,7 @@ font-stretch: normal;
 line-height: normal;
 letter-spacing: normal;
 text-align: left;
-color: #592c82;
+color: #0f206c;
 margin-top: 0px;
 
 }
@@ -388,7 +388,7 @@ padding: 0px;
   letter-spacing: normal;
   text-align: left;
   text-align: center;
-  color: #592c82;
+  color: #0f206c;
   margin: 0 auto;
   width: 80vw !important;
 }
@@ -412,7 +412,7 @@ padding: 0px;
     line-height: normal;
     letter-spacing: normal;
     text-align: left;
-    color: #592c82;
+    color: #0f206c;
     padding: 0 5vw;
         margin: 0 auto;
 }
@@ -449,7 +449,7 @@ padding: 0px;
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-    color: #592c82;
+    color: #0f206c;
 }
 
 .weTeach{
@@ -462,7 +462,7 @@ padding: 0px;
     line-height: normal;
     letter-spacing: normal;
     text-align: left;
-    color: #592c82;
+    color: #0f206c;
     padding: 0 5vw;
 }
 
@@ -476,7 +476,7 @@ padding: 0px;
     line-height: normal;
     letter-spacing: normal;
     text-align: left;
-    color: #592c82;
+    color: #0f206c;
     padding: 0 5vw;
 }
 
@@ -530,7 +530,7 @@ padding: 0px;
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  color: #592c82;
+  color: #0f206c;
   margin-top: 5vh;
   margin-bottom: 0;
 }
@@ -546,7 +546,7 @@ padding: 0px;
     line-height: normal;
     letter-spacing: normal;
     text-align: left;
-    color: #592c82;
+    color: #0f206c;
     padding: 0 5vw;
     margin-left: auto;
     margin-right: auto;
@@ -602,7 +602,7 @@ padding: 0px;
   white-space: normal;
   letter-spacing: normal;
   text-align: center;
-  color: #592c82;
+  color: #0f206c;
   margin: 5vw auto;
   margin-right: auto;
   margin-left: auto;
@@ -620,7 +620,7 @@ font-stretch: normal;
 line-height: normal;
 letter-spacing: normal;
 text-align: left;
-color: #592c82;
+color: #0f206c;
 margin-top: 0px;
 margin: 0 auto;
 padding: 0 3vw;
@@ -715,7 +715,7 @@ padding: 0 3vw;
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-    color: #592c82;
+    color: #0f206c;
     margin: 0 auto;
 }
 
@@ -730,7 +730,7 @@ padding: 0 3vw;
       line-height: normal;
       letter-spacing: normal;
       text-align: left;
-      color: #592c82;
+      color: #0f206c;
       padding: 0 2vw;
       margin-left: auto;
       margin-right: auto;

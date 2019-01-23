@@ -4,6 +4,18 @@
   display: contents;
 }
 
+a{
+  object-fit: contain;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #0f206c;
+    text-decoration: underline;
+}
+
 .Fold1BackgroundImg {
   position: absolute;
   left: auto;
@@ -21,6 +33,15 @@
 youtube-player {
   position: absolute;
   pointer-events: all;
+}
+
+.fold1LeftOveray{
+    width: 20vw;
+    height: auto;
+    position: absolute;
+    margin: 17vh;
+    display: grid;
+    grid-row-gap: 2vh;
 }
 
 .Fold1 {
@@ -44,7 +65,7 @@ font-stretch: normal;
 line-height: normal;
 letter-spacing: normal;
 text-align: left;
-color: #592c82;
+color: #0f206c;
 margin-top: 0;
 }
 
@@ -58,7 +79,7 @@ margin-top: 0;
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: #592c82;
+  color: #0f206c;
 }
 
 .arrow {
@@ -148,13 +169,12 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 }
 
 .KantoDisneyLogo {
-  width: 22vw;
-  height: auto;
-  -o-object-fit: contain;
-  object-fit: contain;
-  position: absolute;
-  margin-top: 13.5%;
-  left: 4.2vw;
+  width: 26vw;
+      height: auto;
+      -o-object-fit: contain;
+      object-fit: contain;
+      margin-top: 13.5%;
+      left: 4.2vw;
 }
 
 .KantoDisneyLogoF4 {
@@ -175,19 +195,18 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 }
 
 .AddEnglishToTheirStory {
-  height: 23px;
+  height: auto;
   -o-object-fit: contain;
   object-fit: contain;
   font-size: 1.55vw;
-  font-weight: 500;
+  font-weight: 800;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: -1.2px;
   text-align: left;
-  color: #592c82;
-  position: absolute;
-  margin-top: 19%;
+  color: #0f206c;
+  width: auto;
   left: 4.2vw;
 }
 
@@ -202,10 +221,9 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 }
 
 .CONVERSIONbtnCont {
-  position: absolute;
   left: 4vw;
   cursor: pointer;
-  margin-top: 22%;
+  margin: 0 auto;
   pointer-events: all;
 }
 
@@ -240,7 +258,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: #592c82;
+  color: #0f206c;
   margin-top: 15%;
 }
 
@@ -266,7 +284,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   letter-spacing: normal;
   text-align: left;
   margin-top: 10px;
-  color: #592c82;
+  color: #0f206c;
 }
 
 .LearnMoreBtn {
@@ -276,12 +294,23 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 }
 
 .LearnMoreBtnCont {
-  /*  margin-top: 3%;*/
+  width: auto;
+      height: auto;
+      -o-object-fit: contain;
+      object-fit: contain;
+      font-size: 1em;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #0f206c;
   cursor: pointer;
 }
 
 .CONVERSIONbtn2 {
-  /*margin-top: 5%;*/
+  margin-top: 0;
   object-fit: contain;
   /*  width: 20vw;*/
 }
@@ -302,7 +331,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  color: #592c82;
+  color: #0f206c;
   /*  padding-top: 100px;*/
 }
 
@@ -315,7 +344,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  color: #592c82;
+  color: #0f206c;
   margin-left: 5px;
 }
 
@@ -385,7 +414,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   line-height: 90px;
   letter-spacing: normal;
   text-align: left;
-  color: #592c82;
+  color: #0f206c;
   position: absolute;
   top: 280px;
   right: 195px;
@@ -404,7 +433,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  color: #592c82;
+  color: #0f206c;
   position: absolute;
   top: 520px;
   right: 415.797px;
@@ -450,7 +479,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: #592c82;
+  color: #0f206c;
   margin-top: 80px;
 }
 
@@ -460,7 +489,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   left: 0;
   cursor: pointer;
   /* margin-top: 20%; */
-  position: absolute;
+
   margin: 0 auto;
 }
 
@@ -481,7 +510,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 }
 
 /*----------------------------------------------MOBILE--------------------------------------------------*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 769px) {
   .Fold1 {
     box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17);
   }
@@ -506,6 +535,16 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     left: 0;
     position: absolute;
     pointer-events: all;
+  }
+
+  .fold1LeftOveray{
+    width: 20vw;
+height: auto;
+position: absolute;
+ margin: 0;
+bottom: 1vh;
+display: grid;
+grid-row-gap: 2vh;
   }
 
   .playBtn {
@@ -540,7 +579,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     line-height: normal;
     letter-spacing: -1.2px;
     text-align: center;
-    color: #592c82;
+    color: #0f206c;
     position: absolute;
     bottom: 9vh;
     left: 0;
@@ -557,15 +596,16 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
   .KantoDisneyLogo {
     width: 40vw;
-    height: auto;
-    -o-object-fit: contain;
-    object-fit: contain;
-    position: absolute;
-    left: 0;
-    bottom: 13vh;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  position: absolute;
+  left: 0;
+  bottom: 13vh;
+  display: block;
+  right: 0;
+  margin-left: 30vw;
+  margin-right: 30vw;
   }
 
   .Fold2 {
@@ -585,13 +625,13 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
   .Fold2Right {
     width: 100vw;
-    display: grid;
-    height: auto;
-    padding: 0;
-    padding-top: 5%;
-    text-align: center;
-    grid-row-gap: 2vh;
-    grid-template-rows: 13vh auto auto auto;
+        display: grid;
+        height: auto;
+        padding: 0;
+        padding-top: 5%;
+        text-align: center;
+        grid-row-gap: 0vh;
+        grid-template-rows: 10vh auto auto auto;
   }
 
   .WelcomeTo {
@@ -608,7 +648,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     letter-spacing: normal;
     text-align: center;
     position: relative;
-    color: #592c82;
+    color: #0f206c;
     margin: 0px;
   }
 
@@ -634,7 +674,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   letter-spacing: normal;
   text-align: center;
   margin-top: 10px;
-  color: #592c82;
+  color: #0f206c;
   margin-left: auto;
   margin-right: auto;
   }
@@ -712,7 +752,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-    color: #592c82;
+    color: #0f206c;
     margin-top: 0;
     padding-bottom: 6vh;
     padding-top: 10vh;
@@ -744,7 +784,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     vertical-align: super;
     letter-spacing: normal;
     text-align: center;
-    color: #592c82;
+    color: #0f206c;
     margin-left: 5px;
   }
 
@@ -826,7 +866,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   line-height: 7vh;
   letter-spacing: initial;
   text-align: center;
-  color: #592c82;
+  color: #0f206c;
   top: 0;
   position: relative;
   left: 0;
@@ -849,7 +889,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     letter-spacing: normal;
     margin-top: 0.5vh;
     text-align: center;
-    color: #592c82;
+    color: #0f206c;
     right: 0;
     position: relative;
     left: 0;
@@ -950,7 +990,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-    color: #592c82;
+    color: #0f206c;
     margin-top: 0;
         padding-top: 5vh;
   }
@@ -971,7 +1011,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  color: #592c82;
+  color: #0f206c;
   margin:  0;
   padding: 1vh;
   }
@@ -988,7 +1028,7 @@ letter-spacing: normal;
 text-align: left;
 padding: 5vw;
 margin-top: 0;
-color: #592c82;
+color: #0f206c;
   }
 
   .Fold5Right {

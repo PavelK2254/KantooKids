@@ -1,47 +1,42 @@
 <div class="container">
 
   <div class="Fold1">
-    <img [style.z-index]="fold1BackgroundZIndexActual" [style.content]="'url('+imageBaseUri  + mobilePrefix + '/fold_1.png)'" class="Fold1BackgroundImg">
+    <img [style.z-index]="fold1BackgroundZIndexActual" [style.content]="'url('+imageBaseUri  + mobilePrefix + '/fold_1.png)'" class="Fold1BackgroundImg" alt="kids with a tablet">
     <a class="playBtnCont" (click)="openPlayer()">
-      <img [src]="imageBaseUri + '/play_btn.png'"  class="playBtn">
+      <img [src]="imageBaseUri + '/play_btn.png'"  class="playBtn" alt="play button">
     </a>
-
-    <img src="./assets/homepage/kanto_disney_logo.png"
+    <div class="fold1LeftOveray">
+    <img src="./assets/homepage/kanto_disney_logo.png" alt="storytime logo"
      class="KantoDisneyLogo">
      <label class="AddEnglishToTheirStory">{{'addEnglishText' | translate | uppercase}}</label>
      <a class="CONVERSIONbtnCont" (click)="openDialog()">
-       <img [src]="conversionButtonUri" (mouseout)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn.png'"
+       <img alt="conversion button" [src]="conversionButtonUri" (mouseout)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn.png'"
           (mouseover)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn_hover.png'" class="CONVERSIONbtn">
      </a>
-
+</div>
   </div>
 
   <div class="Fold2">
     <div class="Fold2Left">
-      <img src="./assets/homepage/characters.png"
+      <img alt="moana characters" src="./assets/homepage/characters.png"
            srcset="./assets/homepage/characters@2x.png 2x,
                    ./assets/homepage/characters@3x.png 3x"
            class="Characters">
-           <img src="./assets/homepage/P2_Gif.gif" class="GIF">
+           <img alt="moana gif" src="./assets/homepage/P2_Gif.gif" class="GIF">
 
     </div>
     <div class="Fold2Right">
         <p class="WelcomeTo">{{'welcomeToText' | translate | uppercase}}</p>
 
-        <img src="./assets/homepage/kanto_disney_logo.png"
-     srcset="./assets/homepage/kanto_disney_logo@2x.png 2x,
-             ./assets/homepage/kanto_disney_logo@3x.png 3x"
+        <img alt="storytime logo" src="./assets/homepage/disney_logo_vector.png"
      class="KantoDisneyLogo2">
 
      <p class="TheUltimate">{{'ultimate' | translate}}</p>
 
-     <a class="LearnMoreBtnCont"><img src="./assets/homepage/learn_more_btn.png"
-     srcset="./assets/homepage/learn_more_btn@2x.png 2x,
-             ./assets/homepage/learn_more_btn@3x.png 3x"
-     class="LearnMoreBtn"></a>
+     <a class="LearnMoreBtnCont">{{'learnMore' | translate}}</a>
 
      <a class="CONVERSIONbtnCont2" (click)="openDialog()">
-       <img  [src]="conversionButtonUri" (mouseout)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn.png'"
+       <img alt="conversion button"  [src]="conversionButtonUri" (mouseout)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn.png'"
           (mouseover)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn_hover.png'"  class="CONVERSIONbtn2" style="margin-top: 2vh">
      </a>
     </div>
@@ -51,55 +46,51 @@
     <p class="LearnEnglish" style="margin-bottom: 0px">{{'learnEnglish' | translate | uppercase}}</p>
     <p class="Fold3_SecondRow">
     <span class="MovieWord">{{'favorite' | translate | uppercase}}</span>
-    <img src="./assets/homepage/disney_logo_vector.png"
+    <img alt="storytime logo" src="./assets/homepage/disney_logo_vector.png"
 
      class="DisneyLogoVector">
      <span class="MovieWord">{{'movieWord' | translate | uppercase}}</span>
      </p>
-     <a class="LearnMoreBtnCont"><img src="./assets/homepage/learn_more_btn.png"
-
-     class="LearnMoreBtn"></a>
+     <a class="LearnMoreBtnCont">{{'learnMore' | translate}}</a>
 
       <div style="display:flex">
      <a id="movie-leftArrow" style="float:left;margin-left: 80px;margin-top: 230px;margin-right: auto;" (click)="incrementIndex()">
-       <img class="arrow" src="./assets/homepage/left_arrow.png"
+       <img alt="arrow image" class="arrow" src="./assets/homepage/left_arrow.png"
            [src]="imgSrcLeft"  (mouseover)="imgSrcLeft = 'assets/homepage/Arrow_Hover_Left.png'"
               (mouseout)="imgSrcLeft = 'assets/homepage/left_arrow.png'" >
         </a>
      <div (window:resize)="onResize($event)" class="movie-section" [@.disabled]="isDisabled">
         <div (swipeleft)="incrementIndex()" (swiperight)="decrementIndex()" class="franchiseItemHolder" >
-          <img class="franchisesItem"  *ngFor="let franchise of franchises; index as i" [src]="imageBaseUri +  activeLanguage + mobilePrefix + '/'+ franchises[i].name" [@move]="{value: viewIndex, params: {moveOffset: moveOffset, moveOffsetAnim: moveOffsetAnim }}">
+          <img alt="carousel item" class="franchisesItem"  *ngFor="let franchise of franchises; index as i" [src]="imageBaseUri +  activeLanguage + mobilePrefix + '/'+ franchises[i].name" [@move]="{value: viewIndex, params: {moveOffset: moveOffset, moveOffsetAnim: moveOffsetAnim }}">
 
         </div>
         <div class="franchisesItemDotsHolder">
-      <img class="franchisesItemDots" *ngFor="let franchise of franchises" src="./assets/homepage/Mobile/dot_2.png">
+      <img alt="buttom dots" class="franchisesItemDots" *ngFor="let franchise of franchises" src="./assets/homepage/Mobile/dot_2.png">
       </div>
      </div>
      <a id="movie-rightArrow" style="float:right;margin-top: 230px;margin-right: 60px;margin-left: auto;" (click)="decrementIndex()">
-       <img class="arrow" src="./assets/homepage/right_arrow.png"
+       <img alt="arrow image" class="arrow" src="./assets/homepage/right_arrow.png"
          [src]="imgSrcRight"  (mouseover)="imgSrcRight = 'assets/homepage/Arrow_Hover_Right.png'"
               (mouseout)="imgSrcRight = 'assets/homepage/right_arrow.png'" >
         </a>
         </div>
         <a class="CONVERSIONbtnContFold3" (click)="openDialog()">
-          <img  [src]="conversionButtonUri" (mouseout)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn.png'"
+          <img alt="conversion"  [src]="conversionButtonUri" (mouseout)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn.png'"
              (mouseover)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn_hover.png'"
-         class="CONVERSIONbtn2" style="margin-top: -1%;margin-left: 30px;">
+         class="CONVERSIONbtn2" style="margin-left: 30px;">
         </a>
   </div>
 
   <div class="Fold4">
-    <img  class="tabletMockup" >
+    <img   class="tabletMockup" >
      <p class="playingLearning">{{'playing' | translate | uppercase}}</p>
      <p class="With">{{'with' | translate | uppercase}}</p>
-     <img src="./assets/homepage/kanto_disney_logo.png"
+     <img alt="storytime logo" src="./assets/homepage/kanto_disney_logo.png"
 
       class="KantoDisneyLogoF4" >
-      <a class="LearnMoreBtnCont"><img src="./assets/homepage/learn_more_btn.png"
-
-      class="LearnMoreBtnContF4"></a>
+      <a class="LearnMoreBtnCont LearnMoreBtnContF4">{{'learnMore' | translate}}</a>
       <a class="CONVERSIONbtnF4" (click)="openDialog()">
-        <img  [src]="conversionButtonUri" (mouseout)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn.png'"
+        <img alt="conversion button"  [src]="conversionButtonUri" (mouseout)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn.png'"
            (mouseover)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn_hover.png'"
 
        class="CONVERSIONbtn2" style="margin-top: 2.5%;">
@@ -112,7 +103,7 @@
     <p class="expanding">{{'expanding' | translate }}</p>
     <p class="leading">{{'leading' | translate }}</p>
     <p class="conversionContatiner3" style="margin-top: 20px;cursor:pointer"><a class="CONVERSIONbtnCont3" (click)="openDialog()">
-      <img  [src]="conversionButtonUri" (mouseout)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn.png'"
+      <img alt="conversion button"  [src]="conversionButtonUri" (mouseout)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn.png'"
          (mouseover)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn_hover.png'">
     </a>
     </p>
@@ -120,18 +111,18 @@
     <div class="Fold5Right">
       <div style="display:flex;">
      <a id="product-arrowLeft" style="float:left;margin-top: 300px;margin-left: 70px;" (click)="incrementIndex2()">
-       <img class="arrow" src="./assets/homepage/left_arrow.png"
+       <img alt="arrow image" class="arrow" src="./assets/homepage/left_arrow.png"
            [src]="imgSrcLeft"  (mouseover)="imgSrcLeft = 'assets/homepage/Arrow_Hover_Left.png'"
               (mouseout)="imgSrcLeft = 'assets/homepage/left_arrow.png'" >
         </a>
      <div class="movie-section" [@.disabled]="isDisabled">
         <div class="productItemHolder" >
-          <img class="productItem" *ngFor="let product of products; index as i" [src]="products[i].name" [@move2]="{value: viewIndex2, params: {moveOffset2: moveOffset2, moveOffsetAnim2: moveOffsetAnim2 }}">
+          <img alt="product carousel item" class="productItem" *ngFor="let product of products; index as i" [src]="products[i].name" [@move2]="{value: viewIndex2, params: {moveOffset2: moveOffset2, moveOffsetAnim2: moveOffsetAnim2 }}">
         </div>
 
      </div>
      <a  id="product-arrowRight" style="float:right;margin-top: 300px;margin-right: 80px" (click)="decrementIndex2()">
-       <img class="arrow" src="./assets/homepage/right_arrow.png"
+       <img alt="arrow image" class="arrow" src="./assets/homepage/right_arrow.png"
          [src]="imgSrcRight"  (mouseover)="imgSrcRight = 'assets/homepage/Arrow_Hover_Right.png'"
               (mouseout)="imgSrcRight = 'assets/homepage/right_arrow.png'" >
         </a>
