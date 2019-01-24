@@ -1,6 +1,6 @@
 <div class="sub-menu" >
-  <p>{{'chooseMovies' | translate}}</p>
-  <a style="float:left;margin-left: 62px;margin-top: 10px" (click)="incrementIndex()">
+  <p class="chooseMovie">{{'chooseMovies' | translate}}</p>
+  <a class="arrowContainer" style="float:left;margin-left: 62px;margin-top: 10px" (click)="incrementIndex()">
     <img class="arrow" src="assets/menu/arrow_left.png"
        srcset="assets/menu/arrow_left@2x.png 2x,
                assets/menu/arrow_left@3x.png 3x" [src]="imgSrcLeft"  (mouseover)="imgSrcLeft = 'assets/menu/arrow_left_on_hover.png'"
@@ -13,7 +13,7 @@
 ></app-movie-item>
 
         </div>
-       <a style="float:right;margin-right: 62px;margin-top: 10px">
+       <a class="arrowContainer" style="float:right;margin-right: 62px;margin-top: 10px">
          <img class="arrow" src="assets/menu/arrow_right.png"
      srcset="assets/menu/arrow_right@2x.png 2x,
              assets/menu/arrow_right@3x.png 3x"

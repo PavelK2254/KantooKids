@@ -11,8 +11,8 @@ export class YoutubePopupComponent implements OnInit {
 
   player: YT.Player;
   id: string = 'qDuKsiwS5xw';
-  width = window.screen.width * 0.9;
-  height = window.screen.height * 0.5;
+  width = window.screen.width / 1.4 ;
+  height = window.screen.height / 1.2;
 
   constructor(public dialog: MatDialog) { }
 

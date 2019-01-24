@@ -4,8 +4,7 @@
   background: black;
   margin: 0 auto;
   height: 100vh;
-  top: -4vh;
-height: 96vh;
+background-image: url(/assets/contactus/bg_pic.jpg);
 }
 
 .backgroundImg{
@@ -70,6 +69,7 @@ line-height: normal;
 letter-spacing: normal;
 text-align: center;
 color: #ffffff;
+margin: 0 auto;
 
 
 }

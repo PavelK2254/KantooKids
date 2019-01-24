@@ -56,6 +56,8 @@ export class MoviePageComponent implements OnInit {
           this.currentMovieId = +this.route.snapshot.paramMap.get('id')
         this.loadMovieContent(this.currentMovieId,this.activeLanguage);
       });
+
+      document.getElementsByClassName('chooseMovie')[1].style.display = "block";
   }
 
   loadMovieContent(id,lang):void {

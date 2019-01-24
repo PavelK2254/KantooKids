@@ -141,7 +141,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     this.movieFetcher.getFranchises().subscribe(
       franchises => this.franchises = franchises);
     console.log('franchises: ', this.franchises);
-    //this.startProductListRotation();
+    this.startProductListRotation();
   }
 
   ngOnInit() {

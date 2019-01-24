@@ -5,7 +5,8 @@
    class="Cancel-PopUp-icon"></a>
 <youtube-player
 [videoId]="id"
-
+[width] = "width"
+[height] = "height"
 (ready)="savePlayer($event)"
 (change)="onStateChange($event)"
 ></youtube-player>
