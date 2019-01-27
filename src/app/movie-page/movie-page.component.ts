@@ -5,6 +5,9 @@ import { Movie } from '../movie';
 import { MovieFetcherService } from "../movie-fetcher.service";
 import { DeviceDetectorService } from 'ngx-device-detector';
 import { TranslateService,LangChangeEvent } from '@ngx-translate/core';
+import { PromoPopupComponent } from '../promo-popup/promo-popup.component'
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+import { YoutubePopupComponent } from '../youtube-popup/youtube-popup.component'
 
 @Component({
   selector: 'app-movie-page',
@@ -30,16 +33,20 @@ export class MoviePageComponent implements OnInit {
   fold3Title:string;
   fold3Text:string;
   activeLanguage = "en";
-
+  conversionButtonUri: string;
+  imageBaseUri = "./assets/homepage/";
+  mobilePrefix = "";
   fold2Carousel: string[] = ["fold3_carousel_pic1","fold3_carousel_pic2","fold3_carousel_pic3","fold3_carousel_pic4"];
   fold3Carousel: string[] = ["fold4_carousel_pic1","fold4_carousel_pic2","fold4_carousel_pic3","fold4_carousel_pic4"];
 
 
-  constructor( private route: ActivatedRoute,private translateLang:TranslateService,private router: Router,private movieFetcher : MovieFetcherService,private deviceService: DeviceDetectorService) {
+  constructor(public dialog: MatDialog, private route: ActivatedRoute,private translateLang:TranslateService,private router: Router,private movieFetcher : MovieFetcherService,private deviceService: DeviceDetectorService) {
     if(this.deviceService.isMobile()){
       console.log("movie mobile: " + this.deviceService.isMobile())
       this.dynamicAssetPath += "Mobile/"
+      this.mobilePrefix = "Mobile/";
     }
+    this.conversionButtonUri = this.imageBaseUri + this.activeLanguage + '/' + this.mobilePrefix +'/conversion_btn.png';
     if( localStorage.getItem("lang") != undefined)this.activeLanguage = localStorage.getItem("lang");
     translateLang.onLangChange.subscribe((event: LangChangeEvent) => {
       console.log("laguage:" + event.lang);
@@ -57,8 +64,28 @@ export class MoviePageComponent implements OnInit {
         this.loadMovieContent(this.currentMovieId,this.activeLanguage);
       });
 
-      document.getElementsByClassName('chooseMovie')[1].style.display = "block";
+      (<HTMLElement>document.getElementsByClassName('chooseMovie')[1]).style.display = "block";
   }
+
+  openDialog(): void {
+      const dialogRef = this.dialog.open(PromoPopupComponent, {
+        width: 'fit-content',
+        height: 'fit-content'
+
+      });
+    }
+
+    openPlayer(): void {
+      const dialogRef = this.dialog.open(YoutubePopupComponent, {
+        width: 'fit-content',
+        height: 'fit-content'
+
+      });
+    }
+
+    public closeDialog() {
+      this.dialog.closeAll();
+    }
 
   loadMovieContent(id,lang):void {
     if(id != undefined){

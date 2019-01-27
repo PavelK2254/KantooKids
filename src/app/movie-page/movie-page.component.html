@@ -1,10 +1,22 @@
 <div class="contaner">
-  <div class="videoContaner">
-    <youtube-player
+  <div class="videoContaner" [style.background-image]="'url('+dynamicAssetPath + movieName + '/Fold1_Movie.jpg)'">
+  <!--  <youtube-player
          [videoId]="youtubeID"
          [width] = "width"
          [height] = "height"
-       ></youtube-player>
+       ></youtube-player>-->
+       <a class="playBtnCont" (click)="openPlayer()">
+         <img [src]="imageBaseUri + '/play_btn.png'"  class="playBtn" alt="play button">
+       </a>
+    <div class="leftTextSection">
+      <p>{{'with' | translate | uppercase}}</p>
+      <img class="kantooImage" alt="kantoo disney">
+      <p>{{'learningIsfun' | translate | uppercase}}</p>
+      <a class="CONVERSIONbtnCont" (click)="openDialog()">
+        <img alt="conversion button" [src]="conversionButtonUri" (mouseout)="conversionButtonUri = this.imageBaseUri + this.activeLanguage +'/'+ this.mobilePrefix +'/conversion_btn.png'"
+           (mouseover)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + '/' + this.mobilePrefix +'/conversion_btn_hover.png'" class="CONVERSIONbtn">
+      </a>
+    </div>
   </div>
   <app-sub-menu ></app-sub-menu>
 <img class="pageBackgroundItem pageBackground" [src]="dynamicAssetPath + movieName + '/BG_asset.png'">
@@ -12,12 +24,12 @@
 <img class="pageBackgroundItem pageBackground3" [src]="dynamicAssetPath + movieName + '/BG_asset.png'">
 <img class="pageBackgroundItem pageBackground4" [src]="dynamicAssetPath + movieName + '/BG_asset.png'">
 <img class="pageBackgroundItem pageBackground5" [src]="dynamicAssetPath + movieName + '/BG_asset.png'">
-  <div class="Fold1"  >
+  <div class="Fold1"  id="fold1">
   <h1 class="title">{{fold1Title | uppercase}}</h1>
   <img class="mainimage" [src]="dynamicAssetPath + movieName + '/logo.png'">
   <img class="mainimageBottom" [src]="dynamicAssetPath + movieName + '/logo_bottom.png'" (error)="imageErrorHandler($event)">
   </div>
-  <div class="Fold2" >
+  <div class="Fold2" id="fold2">
     <app-movie-page-carousel [franchises]="fold2Carousel" [dynamicAssetPath]="dynamicAssetPath" [franchiseName]="movieName" [foldName]="'Fold2'"></app-movie-page-carousel>
     <div class="textSection">
       <h1 class="title"><span>{{fold2Title | uppercase}}<img class="logoImg" (error)="imageErrorHandler($event)" [src]="dynamicAssetPath + movieName + '/' + movieName + '_logo.png'"/>{{fold2TitleFriends | uppercase}}</span></h1>
@@ -25,7 +37,7 @@
       <p class="contentText">{{fold2text}}</p>
     </div>
   </div>
-<div class="Fold3" >
+<div class="Fold3" id="fold3">
   <div class="textSection">
     <h1 class="title">{{fold3Title | uppercase}}</h1>
     <p class="contentText">{{fold3Text}}</p>

@@ -480,7 +480,7 @@ padding: 0px;
     padding: 0 5vw;
 }
 
-.CONVERSIONbtnHolder{
+.CONVERSIONbtnHolder,.CONVERSIONbtn{
   display: none;
 }
 
