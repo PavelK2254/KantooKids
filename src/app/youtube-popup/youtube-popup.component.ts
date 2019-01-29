@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MAT_DIALOG_DATA} from '@angular/material';
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-youtube-popup',
@@ -10,11 +10,14 @@ import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 export class YoutubePopupComponent implements OnInit {
 
   player: YT.Player;
-  id: string = 'qDuKsiwS5xw';
+  id: string = '5Q6esf_N-0s';
   width = window.screen.width / 1.4 ;
   height = window.screen.height / 1.2;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,) {
+
+
+   }
 
 
 

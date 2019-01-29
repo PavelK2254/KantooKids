@@ -14,6 +14,7 @@ a{
     text-align: left;
     color: #0f206c;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .Fold1BackgroundImg {
@@ -164,7 +165,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   pointer-events: all;
 }
 
-.franchisesItem:first-child{
+.franchiseItemHolder a:first-child{
       margin-left: 60vw;
 }
 
@@ -818,8 +819,8 @@ grid-row-gap: 2vh;
     display: none;
   }
 
-  .franchisesItem:first-child {
-    margin-left: 120vw;
+  .franchiseItemHolder a:first-child {
+    margin-left: 108vw;
       height: 63vw;
   }
 

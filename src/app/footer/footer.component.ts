@@ -29,4 +29,13 @@ aboutExt = "/about.html"
   ngOnInit() {
   }
 
+  hrefSocial(source){
+    if(source == "linkedin"){
+      window.location.href = "https://www.linkedin.com/company/la-mark-vision-ltd./about/";
+    }else if(source == "facebook"){
+      window.location.href = "https://www.facebook.com/StorytimeDisney/"
+    }else if(source == "twitter"){
+      window.location.href = "https://twitter.com/DisneyKantoo"
+    }
+  }
 }

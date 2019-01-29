@@ -80,8 +80,8 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   moveOffsetAnim2 = 'translateX( ' + this.translate + 'px)';
   viewIndex = 0;
   viewIndexArr: number[] = [];
-  maxOffsetIndex: number = -6;
-  minOffsetIndex: number = 5;
+  maxOffsetIndex: number = -3;
+  minOffsetIndex: number = 2;
   maxOffsetIndex2: number = -2;
   minOffsetIndex2: number = 1;
   offsetModifier = 1158;
@@ -128,8 +128,8 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   openPlayer(): void {
     const dialogRef = this.dialog.open(YoutubePopupComponent, {
       width: 'fit-content',
-      height: 'fit-content'
-
+      height: 'fit-content',
+      id: '5Q6esf_N-0s'
     });
   }
 
