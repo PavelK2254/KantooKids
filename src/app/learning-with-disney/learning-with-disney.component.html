@@ -14,7 +14,7 @@
       <div class="textHolder">
         <img class="bottomLogo" [src]="'./assets/learnDisney/' + assetCollection[i].logo + '.png'" (error)="imageErrorHandler($event)">
         <p>{{assetCollection[i].text}}</p>
-        <a [routerLink]="'/' + assetCollection[i].id">{{'learnMore' | translate}}</a>
+        <a [routerLink]="'/learning-with-disney/' + assetCollection[i].id">{{'learnMore' | translate}}</a>
       </div>
     </div>
   </div>

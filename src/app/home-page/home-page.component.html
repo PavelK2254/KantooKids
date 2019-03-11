@@ -61,7 +61,7 @@
         </a>
      <div (window:resize)="onResize($event)" class="movie-section" [@.disabled]="isDisabled">
         <div (swipeleft)="incrementIndex()" (swiperight)="decrementIndex()" class="franchiseItemHolder" >
-          <a  *ngFor="let franchise of franchises; index as i" [routerLink]="franchises[i].id"><img alt="carousel item" class="franchisesItem"   [src]="imageBaseUri +  activeLanguage + mobilePrefix + '/'+ franchises[i].name" [@move]="{value: viewIndex, params: {moveOffset: moveOffset, moveOffsetAnim: moveOffsetAnim }}"></a>
+          <a  *ngFor="let franchise of franchises; index as i " [@move]="{value: viewIndex, params: {moveOffset: moveOffset, moveOffsetAnim: moveOffsetAnim }}" [routerLink]="'/' + franchises[i].id"><img [id]="'carouselItem' + i" alt="carousel item" class="franchisesItem"   [src]="imageBaseUri +  activeLanguage + mobilePrefix + '/'+ franchises[i].name" ></a>
 
         </div>
         <div class="franchisesItemDotsHolder">
@@ -117,7 +117,8 @@
         </a>
      <div class="movie-section" [@.disabled]="isDisabled">
         <div class="productItemHolder" >
-          <img alt="product carousel item" class="productItem" *ngFor="let product of products; index as i" [src]="products[i].name" [@move2]="{value: viewIndex2, params: {moveOffset2: moveOffset2, moveOffsetAnim2: moveOffsetAnim2 }}">
+          <!--<img alt="product carousel item" class="productItem" *ngFor="let product of products; index as i" [src]="products[i].name" [@move2]="{value: viewIndex2, params: {moveOffset2: moveOffset2, moveOffsetAnim2: moveOffsetAnim2 }}">-->
+          <img alt="product carousel item" class="productItem" [src]="productsSource">
         </div>
 
      </div>

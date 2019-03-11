@@ -92,6 +92,8 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   mobileDivideValue = 1.20;
   activeLanguage = "en";
   conversionButtonUri;
+  productsSource:string;
+  productSourceCounter = 0;
 
 
 
@@ -146,16 +148,21 @@ export class HomePageComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
 
-    if (window.innerWidth < 769) {
+    if (window.innerWidth <= 769) {
       this.offsetModifier = window.innerWidth * 1.09;
       this.offsetModifier2 = window.innerWidth * 0.9;
       this.mobilePrefix = "/Mobile/"
+
+    }else if(window.innerWidth <= 1024){
+    this.offsetModifier = window.innerWidth / 1.333;
+
     }else{
       this.mobilePrefix = ""
     }
     this.conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn.png';
     this.getFranchises();
     this.getProducts();
+
   }
 
   onResize(event) {
@@ -164,6 +171,11 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       this.offsetModifier = window.innerWidth * 1.09;
       this.offsetModifier2 = event.target.innerWidth * 0.9;
       this.mobilePrefix = "/Mobile/"
+      
+    }else if(window.innerWidth <= 1024){
+    this.offsetModifier = window.innerWidth / 1.333;
+
+
     } else {
       this.offsetModifier = 1158;
       this.offsetModifier2 = 607;
@@ -182,14 +194,15 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+
+
     for (var i = 0; i < document.getElementsByClassName('franchisesItem').length; i++) {
       this.viewIndexArr.push(this.maxOffsetIndex + i);
     }
     this.updateDotMenu(this.viewIndexArr.indexOf(this.viewIndex));
-
-
-
   }
+
+
 
   resetCarousel(x: number) {
     if (x == 0) {
@@ -264,14 +277,13 @@ export class HomePageComponent implements OnInit, AfterViewInit {
           document.getElementById('product-arrowLeft').style.visibility = "hidden"
 
       }
-      //    document.getElementById('product-arrowRight').style.visibility = "visible"
+
       this.isDisabled = false;
     }
     this.viewIndex2 -= 1;
-    this.translate2 = this.offsetModifier2;
-    this.translate2 = this.translate2 * this.viewIndex2;
-    this.moveOffset2 = 'translateX( ' + this.translate2 + 'px)';
-    this.moveOffsetAnim2 = 'translateX( ' + (this.translate2 + this.offsetModifier2) + 'px)';
+    this.productSourceCounter --;
+    if(this.productSourceCounter < 0)this.productSourceCounter *=  -1;
+    this.productsSource = this.products[this.productSourceCounter].name;
   }
   decrementIndex2() {
 
@@ -287,20 +299,19 @@ export class HomePageComponent implements OnInit, AfterViewInit {
 
 
       }
-      //  document.getElementById('product-arrowLeft').style.visibility = "visible"
+
       this.isDisabled = false;
     }
     this.viewIndex2 += 1;
-    this.translate2 = this.offsetModifier2;
-    this.translate2 = this.translate2 * this.viewIndex2;
-    this.moveOffset2 = 'translateX( ' + this.translate2 + 'px)';
-
-    this.moveOffsetAnim2 = 'translateX( ' + (this.translate2 - this.offsetModifier2) + 'px)';
+    this.productSourceCounter ++;
+    if(this.productSourceCounter < 0)this.productSourceCounter *=  -1;
+    this.productsSource = this.products[this.productSourceCounter].name;
   }
 
   getProducts() {
     this.movieFetcher.getProducts().subscribe(
       products => this.products = products);
+      this.productsSource = this.products[this.productSourceCounter].name;
     console.log('products: ', this.products);
   }
 

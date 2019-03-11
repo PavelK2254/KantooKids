@@ -16,7 +16,9 @@ const routes: Routes = [
   { path: 'learning-with-disney', component: LearningWithDisneyComponent },
   { path: 'kantoo-blog', component: TestFrameComponent },
   { path: 'contact', component: ContactusComponent },
-  { path: ':id', component: MoviePageComponent },
+  { path: 'learning-with-disney/:id', component: MoviePageComponent },
+  { path: ':id', redirectTo: 'learning-with-disney/:id' },
+  { path: 'learning-with-disney/learning-with-disney/:id', redirectTo: 'learning-with-disney/:id' },
   { path: '', component: HomePageComponent },
   { path: '**', component: PageNotFoundComponent }
 

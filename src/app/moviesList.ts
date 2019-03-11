@@ -95,7 +95,7 @@ export const MOVIES: Movie[] = [
       eng: 'An Inspiring English Education!'
     },
     fold3Text: {
-      eng: 'With Kantoo Disney you can easily learn English with Frozen. Your children’s favorite movie transforms seamlessly into an inspiring English class with our lovely host that tells the children an engaging story while teaching them words and phrases in English. Learning English with Frozen has never been more fun!'
+      eng: 'With the "Storytime" app you can easily learn English with Frozen. Your children’s favorite movie transforms seamlessly into an inspiring English class with our lovely host that tells the children an engaging story while teaching them words and phrases in English. Learning English with Frozen has never been more fun!'
     }
 
   },
@@ -144,7 +144,7 @@ export const MOVIES: Movie[] = [
       eng: 'An intuitive English Adventure!'
     },
     fold3Text: {
-      eng: 'Let your kids relive their favorite Disney story as they learn English with Moana! With Kantoo Disney your kids will immerse in their favorite tale, accompanied by fun vocabulary games and quizzes. Set your kids on an intuitive English adventure as they Learn English with Moana!'
+      eng: 'Let your kids relive their favorite Disney story as they learn English with Moana! With the "Storytime" app your kids will be immersed in their favorite tale, accompanied by fun vocabulary games and quizzes. Set your kids on an intuitive English adventure as they Learn English with Moana!'
     }
   },
 
@@ -192,7 +192,7 @@ export const MOVIES: Movie[] = [
       eng: 'An ever-growing English vocabulary!'
     },
     fold3Text: {
-      eng: 'With Kantoo Disney our friendly host will guide your kids through the story while teaching them English, making English learning with Toy Story 3 a fun and engaging activity! Enhance your kids’ English learning with Toy Story 3 by watching it several times so they can catch every word and add it to their ever-growing vocabulary. With interactive games in each video, your kids will advance the story using the English they have learned! English learning with Toy Story 3 is fun and compelling education!'
+      eng: 'In the "Storytime" our friendly host will guide your kids through the story while teaching them English, making English learning with Toy Story 3 a fun and engaging activity! Enhance your kids’ English learning with Toy Story 3 by watching it several times so they can catch every word and add it to their ever-growing vocabulary. With interactive games in each video, your kids will advance the story using the English they have learned! English learning with Toy Story 3 is fun and compelling education!'
     }
   },
 
@@ -341,7 +341,7 @@ export const MOVIES_PT: Movie[] = [
     eng: 'UM ENSINO DE INGLÊS INSPIRADOR!'
   },
   fold3Text: {
-    eng: 'Com o Storytime você pode aprender inglês com Frozen. O filme favorito dos pequenos se transforma em uma aula de inglês inspiradora com a presença de nossa simpática apresentadora que conta a história de forma envolvente ao mesmo tempo em que ensina palavras e frases em inglês. Aprender inglês com Frozen nunca foi tão divertido!'
+    eng: 'Com o "Storytime" você pode aprender inglês com Frozen. O filme favorito dos pequenos se transforma em uma aula de inglês inspiradora com a presença de nossa simpática apresentadora que conta a história de forma envolvente ao mesmo tempo em que ensina palavras e frases em inglês. Aprender inglês com Frozen nunca foi tão divertido!'
   }
 
 },
@@ -390,7 +390,7 @@ export const MOVIES_PT: Movie[] = [
     eng: 'UMA AVENTURA INTUITIVA PELA LÍNGUA INGLESA!'
   },
   fold3Text: {
-    eng: 'Permita que seus filhos relembrem suas histórias preferidas da Disney enquanto aprendem inglês com a Moana! Com o Storytime seus filhos mergulham em seus contos favoritos, junto com jogos de vocabulário e quizzes divertidos. Envie seus filhos para uma aventura intuitiva para que eles aprendam inglês com a Moana!'
+    eng: 'Permita que seus filhos relembrem suas histórias preferidas da Disney enquanto aprendem inglês com a Moana! Com o "Storytime" seus filhos mergulham em seus contos favoritos, junto com jogos de vocabulário e quizzes divertidos. Envie seus filhos para uma aventura intuitiva para que eles aprendam inglês com a Moana!'
   }
 },
 
@@ -438,7 +438,7 @@ export const MOVIES_PT: Movie[] = [
     eng: 'UM VOCABULÁRIO EM INGLÊS QUE NÃO PARA DE CRESCER!'
   },
   fold3Text: {
-    eng: 'No Storytime nossa simpática apresentadora guiará as crianças pela história, ao mesmo tempo em que ensina inglês, tornando o aprendizado da língua inglesa com Toy Story 3 - uma atividade divertida e envolvente. Reforce o aprendizado de inglês do seus filhos com Toy Story 3 permitindo que eles assistam aos filmes diversas vezes, para que possam aprender todas as palavras e adicioná-las ao seu vocabulário em expansão. Com os jogos interativos de cada filme, seus filhos irão progedir ao longo da história, utilizando o inglês que aprenderam! Aprender inglês com Toy Story 3 é divertido e empolgante.'
+    eng: 'No "Storytime" nossa simpática apresentadora guiará as crianças pela história, ao mesmo tempo em que ensina inglês, tornando o aprendizado da língua inglesa com Toy Story 3 - uma atividade divertida e envolvente. Reforce o aprendizado de inglês do seus filhos com Toy Story 3 permitindo que eles assistam aos filmes diversas vezes, para que possam aprender todas as palavras e adicioná-las ao seu vocabulário em expansão. Com os jogos interativos de cada filme, seus filhos irão progedir ao longo da história, utilizando o inglês que aprenderam! Aprender inglês com Toy Story 3 é divertido e empolgante.'
   }
 },
 

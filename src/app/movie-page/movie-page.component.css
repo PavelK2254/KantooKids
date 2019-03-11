@@ -191,7 +191,7 @@ padding-top: 10vh;
   z-index: 1;
   position: relative;
   display: flex;
-  padding: 0 18vw;
+  padding: 0 16vw;
   background-size: contain;
   background-color: transperent;
 }
@@ -245,7 +245,41 @@ padding-top: 10vh;
   width: 100vw;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
+  .kantooImage{
+    display: block;
+    width: 30vw;
+  }
+
+
+
+  .Fold2{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    z-index: 1;
+    position: relative;
+        padding-left: 5vw;
+    background-color: transperent;
+    background-size: contain;
+  }
+
+  .textSection{
+    padding: 0;
+    padding-left: 2vw;
+    padding-top: 3vh;
+    width: auto;
+  }
+
+  .Fold3{
+        padding-left: 5vw;
+  }
+
+
+
+}
+
+@media only screen and (max-width: 768px) {
 
   .Fold1 {
     height: fit-content;

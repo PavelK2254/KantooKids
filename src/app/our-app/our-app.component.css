@@ -138,7 +138,7 @@ margin-left: 10%;
 .f2mobilemockup{
   width: 42vw;
   height: auto;
-
+  object-fit: contain;
 }
 
 .activeText{
@@ -338,6 +338,46 @@ margin-top: 0px;
   z-index: -1;
   left: 0px;
   top: -1.5vw;
+}
+
+/*----------------------------------------------LAPTOP--------------------------------------------------*/
+
+@media only screen and (max-width: 1024px) {
+
+  .Fold1{
+        height: 67vh;
+  }
+
+  .Fold2{
+        max-height: 52.6vh;
+  }
+
+  .Fold2TextContainer{
+        padding-top: 0%;
+        margin-left: 22%;
+  }
+
+  .Fold3{
+    height: 55vh;
+  }
+
+  .Fold4{
+    height: 70vh;
+  }
+
+  .Fold5{
+    height: 70vh;
+  }
+
+  .Fold6{
+    height: 70vh;
+  }
+
+  .Fold7{
+    height: 70vh;
+  }
+
+
 }
 
 /*----------------------------------------------MOBILE--------------------------------------------------*/

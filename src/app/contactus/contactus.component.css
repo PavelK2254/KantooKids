@@ -147,6 +147,27 @@ input[type=submit]{
    width: _the_image_width;
 }
 
+/*----------------------------------------------LAPTOP--------------------------------------------------*/
+
+@media only screen and (max-width: 1024px) {
+  .contactUsContainerInnerInput{
+    top: 350px;
+left: 27.5vw;
+position: absolute;
+width: 500px;
+height: 350px;
+-o-object-fit: contain;
+object-fit: contain;
+  }
+
+  .sideImg{
+    position: absolute;
+z-index: 1;
+bottom: 0px;
+right: 30px;
+  }
+}
+
 /*----------------------------------------------MOBILE--------------------------------------------------*/
 @media only screen and (max-width: 600px) {
   .contactUsContainer{

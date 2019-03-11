@@ -35,7 +35,7 @@
           </mat-expansion-panel-header>
 
           <p class="movieTitl" ><a routerLink="/learning-with-disney" style="text-decoration:none;font-weight: 800;-webkit-text-fill-color: #333333;">All Movies</a></p>
-          <p *ngFor="let movie of movies; index as i" class="movieTitl" style="-webkit-text-fill-color: #333333;"><a routerLinkActive="menuActiveOurApp menuActive" routerLink="/{{movie.id}}">{{capitalize(movie.name)}}</a></p>
+          <p *ngFor="let movie of movies; index as i" class="movieTitl" style="-webkit-text-fill-color: #333333;"><a routerLinkActive="menuActiveOurApp menuActive" routerLink="/learning-with-disney/{{movie.id}}">{{capitalize(movie.name)}}</a></p>
 
         </mat-expansion-panel>
 

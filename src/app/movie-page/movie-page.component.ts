@@ -19,8 +19,8 @@ export class MoviePageComponent implements OnInit {
   width = window.screen.width;
   height = window.screen.height * 0.8;
   youtubeID = "syrhiTl6FPg";
-  assetPath = "./assets/moviePages/";
-  dynamicAssetPath = "./assets/moviePages/";
+  assetPath = "../assets/moviePages/";
+  dynamicAssetPath = "../assets/moviePages/";
   movie: Movie;
   currentMovieId:number;
   movieName: string;
@@ -34,14 +34,14 @@ export class MoviePageComponent implements OnInit {
   fold3Text:string;
   activeLanguage = "en";
   conversionButtonUri: string;
-  imageBaseUri = "./assets/homepage/";
+  imageBaseUri = "../assets/homepage/";
   mobilePrefix = "";
   fold2Carousel: string[] = ["fold3_carousel_pic1","fold3_carousel_pic2","fold3_carousel_pic3","fold3_carousel_pic4"];
   fold3Carousel: string[] = ["fold4_carousel_pic1","fold4_carousel_pic2","fold4_carousel_pic3","fold4_carousel_pic4"];
 
 
   constructor(public dialog: MatDialog, private route: ActivatedRoute,private translateLang:TranslateService,private router: Router,private movieFetcher : MovieFetcherService,private deviceService: DeviceDetectorService) {
-    if(this.deviceService.isMobile()){
+      if (window.innerWidth <= 769) {
       console.log("movie mobile: " + this.deviceService.isMobile())
       this.dynamicAssetPath += "Mobile/"
       this.mobilePrefix = "Mobile/";
