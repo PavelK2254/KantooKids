@@ -17,13 +17,18 @@ background-image: url(/assets/contactus/bg_pic.jpg);
   content: url(/assets/contactus/bg_pic.jpg);
 }
 
+.sendBtnContact input {
+  display: block;
+    margin: 0 auto;
+}
+
 .contactUsContainerInnerTitle{
       top: 215px;
       position: relative;
 }
 
 .contactUsContainerInnerInput{
-  top: 400px;
+  top: 35vh;
   left: 37.5vw;
   position: absolute;
   width: 500px;
@@ -94,6 +99,7 @@ position: absolute;
 bottom: 10px;
 margin: 0 auto;
 right: 0px;
+left: 0px;
 cursor: pointer;
 }
 

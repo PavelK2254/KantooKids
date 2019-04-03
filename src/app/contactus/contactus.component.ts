@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-//declare var grecaptcha: any;
+declare var grecaptcha: any;
 declare global {
     interface Window { onSubmitMe: any; }
     interface Window { executeCaptcha: any; }
@@ -24,7 +24,7 @@ export class ContactusComponent implements OnInit {
 
 
 
-/*  executeCaptcha():void{
+  executeCaptcha():void{
     let inputList = document.getElementsByClassName('ContactUs');
     //for(let input of inputList){
       for(var i = 0; i < inputList.length; i++){
@@ -35,7 +35,7 @@ export class ContactusComponent implements OnInit {
     }
     grecaptcha.execute();
 
-  }*/
+  }
 
   ngOnInit() {
     console.log("contactus init");

@@ -6,6 +6,7 @@
   object-fit: contain;
   overflow: hidden;
   justify-content: start;
+  max-width: 753px;
   z-index: -5;
   margin: 0 auto;
 }

@@ -17,6 +17,11 @@ a{
     cursor: pointer;
 }
 
+.franchisesItem{
+  width: 37.8vw;
+  height: auto;
+}
+
 .Fold1BackgroundImg {
   position: absolute;
   left: auto;
@@ -37,7 +42,7 @@ youtube-player {
 }
 
 .fold1LeftOveray{
-    width: 20vw;
+    width: fit-content;
     height: auto;
     position: absolute;
     margin: 17vh;
@@ -72,7 +77,7 @@ margin-top: 0;
 
 .leading {
   width: 500px;
-  height: 185px;
+  height: fit-content;
   font-size: 19.3px;
   font-weight: normal;
   font-style: normal;
@@ -128,6 +133,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   object-fit: contain;
   position: relative;
   text-align: center;
+  padding-bottom: 8vh;
   margin: 0 auto;
 }
 
@@ -166,7 +172,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 }
 
 .franchiseItemHolder a:first-child{
-      margin-left: 60vw;
+      margin-left: 37.8vw;
 }
 
 .KantoDisneyLogo {
@@ -176,6 +182,8 @@ add 180px to padding top and bottom to make the folder same size as Fold1
       object-fit: contain;
       margin-top: 13.5%;
       left: 4.2vw;
+      margin-left: auto;
+margin-right: auto;
 }
 
 .KantoDisneyLogoF4 {
@@ -191,7 +199,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 .CONVERSIONbtnF4 {
   cursor: pointer;
   position: absolute;
-  right: 295px;
+  right: 16vw;
   top: 780px;
 }
 
@@ -260,7 +268,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   letter-spacing: normal;
   text-align: left;
   color: #0f206c;
-  margin-top: 15%;
+  margin-top: 8%;
 }
 
 .KantoDisneyLogo2 {
@@ -308,6 +316,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
       text-align: left;
       color: #0f206c;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .CONVERSIONbtn2 {
@@ -350,7 +359,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 }
 
 .movie-section {
-  width: 1158px;
+  width: 37.8vw;
 }
 
 
@@ -421,7 +430,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 }
 
 .With {
-  width: 96px;
+  width: fit-content;
   height: 26px;
   -o-object-fit: contain;
   object-fit: contain;
@@ -435,7 +444,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   color: #0f206c;
   position: absolute;
   top: 520px;
-  right: 415.797px;
+  right: 20vw;
   pointer-events: none;
 }
 
@@ -545,11 +554,11 @@ margin: 8vh auto;
   }
 
   .franchiseItemHolder a:first-child{
-        margin-left: 74vw;
+        margin-left: 70vw;
   }
 
   .franchisesItem {
-        width: 75vw;
+        width: 70vw;
   }
 
 
@@ -674,7 +683,7 @@ grid-row-gap: 2vh;
   }
 
   .CONVERSIONbtnCont {
-    bottom: 3vh;
+    bottom: 22vh;
     width: 80vw;
     left: 0;
     right: 0;

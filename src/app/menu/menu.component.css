@@ -2,7 +2,7 @@
   width: 3vw;
       height: auto;
   object-fit: contain;
-  margin: 10px 0px 8px 62px;
+  margin: 0px 0px 8px 62px;
   transition: transform .2s; /* Animation */
 }
 

@@ -84,7 +84,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   minOffsetIndex: number = 2;
   maxOffsetIndex2: number = -2;
   minOffsetIndex2: number = 1;
-  offsetModifier = 1158;
+  offsetModifier = 725;
   offsetModifier2 = 607;
   viewIndex2 = 0;
   reachedEnd = false;
@@ -171,7 +171,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       this.offsetModifier = window.innerWidth * 1.09;
       this.offsetModifier2 = event.target.innerWidth * 0.9;
       this.mobilePrefix = "/Mobile/"
-      
+
     }else if(window.innerWidth <= 1024){
     this.offsetModifier = window.innerWidth / 1.333;
 

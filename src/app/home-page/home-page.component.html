@@ -44,7 +44,7 @@
 
   <div class="Fold3">
     <p class="LearnEnglish" style="margin-bottom: 0px">{{'learnEnglish' | translate | uppercase}}</p>
-    <p class="Fold3_SecondRow">
+    <p class="Fold3_SecondRow" style="margin-bottom: 3vh;">
     <span class="MovieWord">{{'favorite' | translate | uppercase}}</span>
     <img alt="storytime logo" src="../assets/homepage/disney_logo.png"
 
@@ -53,7 +53,7 @@
      </p>
      <a class="LearnMoreBtnCont" routerLink="/learning-with-disney">{{'learnMore' | translate}}</a>
 
-      <div style="display:flex">
+      <div style="display:flex;margin-top: 3vh;">
      <a id="movie-leftArrow" style="float:left;margin-left: 80px;margin-top: 230px;margin-right: auto;" (click)="incrementIndex()">
        <img alt="arrow image" class="arrow" src="../assets/homepage/left_arrow.png"
            [src]="imgSrcLeft"  (mouseover)="imgSrcLeft = 'assets/homepage/Arrow_Hover_Left.png'"
