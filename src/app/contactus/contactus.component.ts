@@ -40,7 +40,7 @@ export class ContactusComponent implements OnInit {
   ngOnInit() {
     console.log("contactus init");
     window.onSubmitMe = this.onSubmitMe;
-  //  window.executeCaptcha = this.executeCaptcha;
+    window.executeCaptcha = this.executeCaptcha;
   }
 
 
