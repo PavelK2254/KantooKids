@@ -146,15 +146,20 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     this.startProductListRotation();
   }
 
-  ngOnInit() {
+  setOffsetModifier():void {
+    console.log("setOffsetModifier");
+    if(this.mobilePrefix == "")
+    this.offsetModifier = (<HTMLImageElement>document.getElementsByClassName("franchisesItem")[0]).width;
+  }
 
+  ngOnInit() {
     if (window.innerWidth <= 769) {
       this.offsetModifier = window.innerWidth * 1.09;
       this.offsetModifier2 = window.innerWidth * 0.9;
       this.mobilePrefix = "/Mobile/"
 
     }else if(window.innerWidth <= 1024){
-    this.offsetModifier = window.innerWidth / 1.333;
+  //  this.offsetModifier = window.innerWidth / 1.333;
 
     }else{
       this.mobilePrefix = ""

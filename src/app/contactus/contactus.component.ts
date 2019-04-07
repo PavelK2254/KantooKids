@@ -3,7 +3,9 @@ declare var grecaptcha: any;
 declare global {
     interface Window { onSubmitMe: any; }
     interface Window { executeCaptcha: any; }
-}
+};
+
+
 
 @Component({
   selector: 'app-contactus',
@@ -14,7 +16,9 @@ export class ContactusComponent implements OnInit {
 
   GetInTouch: "Get in Touch";
 
-  constructor() { }
+  constructor() {
+
+   }
 
   onSubmitMe(token):void {
     alert('Ready to submit to server');
@@ -25,6 +29,7 @@ export class ContactusComponent implements OnInit {
 
 
   executeCaptcha():void{
+    console.log("captach clicked");
     let inputList = document.getElementsByClassName('ContactUs');
     //for(let input of inputList){
       for(var i = 0; i < inputList.length; i++){
