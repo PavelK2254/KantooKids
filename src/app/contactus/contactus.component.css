@@ -4,6 +4,7 @@
   background: black;
   margin: 0 auto;
   height: 100vh;
+  background-size: cover;
 background-image: url(/assets/contactus/bg_pic.jpg);
 }
 
@@ -29,7 +30,7 @@ background-image: url(/assets/contactus/bg_pic.jpg);
 
 .contactUsContainerInnerInput{
   top: 35vh;
-  left: 37.5vw;
+  left: 37.5%;
   position: absolute;
   width: 500px;
   height: 350px;

@@ -199,7 +199,7 @@ margin-right: auto;
 .CONVERSIONbtnF4 {
   cursor: pointer;
   position: absolute;
-  right: 16vw;
+  right: 16.5%;
   top: 780px;
 }
 
@@ -244,7 +244,7 @@ margin-right: auto;
   position: absolute;
   margin: 0 auto;
   left: 0;
-  right: 30vw;
+  right: 30%;
   top: 200px;
 }
 
@@ -444,7 +444,7 @@ margin-right: auto;
   color: #0f206c;
   position: absolute;
   top: 520px;
-  right: 198px;
+  right: 20.5%;
   pointer-events: none;
 }
 
