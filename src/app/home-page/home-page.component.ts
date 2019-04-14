@@ -182,7 +182,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
 
 
     } else {
-      this.offsetModifier = 1158;
+      this.offsetModifier = (<HTMLImageElement>document.getElementsByClassName("franchisesItem")[0]).width;
       this.offsetModifier2 = 607;
       this.mobilePrefix = ""
     }
