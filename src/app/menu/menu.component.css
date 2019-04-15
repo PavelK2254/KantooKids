@@ -57,7 +57,7 @@
   width: -moz-fit-content;
   /* width: fit-content; */
   -o-object-fit: contain;
-  max-width: 280px;
+
   object-fit: contain;
   background-image: linear-gradient(to top, #5a2b95, #1b236e), linear-gradient(to bottom, #ffffff, #ffffff);
   font-size: 0.8vw;
@@ -276,6 +276,7 @@ height: auto;
 
 mat-toolbar-row {
   min-height: 64px;
+  height: 10vh;
   display: flex;
   box-sizing: border-box;
   padding: 0 16px;

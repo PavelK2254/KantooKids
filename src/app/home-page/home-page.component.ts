@@ -115,13 +115,15 @@ export class HomePageComponent implements OnInit, AfterViewInit {
 
       });
     }
+
+
+
     public closeDialog() {
       this.dialog.closeAll();
     }
 
   startProductListRotation(): void {
     setInterval(() => {
-
       this.reachedEnd ? this.decrementIndex2() : this.incrementIndex2()
     }, 3000);
   }
@@ -187,7 +189,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       this.mobilePrefix = ""
     }
 
-    this.getFranchises();
+  //  this.getFranchises();
     this.getProducts();
   }
 

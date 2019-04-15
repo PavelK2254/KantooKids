@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 declare var grecaptcha: any;
 declare global {
     interface Window { onSubmitMe: any; }
@@ -16,9 +17,11 @@ export class ContactusComponent implements OnInit {
 
   GetInTouch: "Get in Touch";
 
-  constructor() {
+  constructor(public dialog: MatDialog) {
 
    }
+
+
 
   onSubmitMe(token):void {
     alert('Ready to submit to server');
@@ -38,7 +41,9 @@ export class ContactusComponent implements OnInit {
       return;
       }
     }
-    grecaptcha.execute();
+    grecaptcha.execute('6LdNO54UAAAAAKvUgjEfp6BcegqZGDEyyFkaE2ct', {action: 'homepage'}).then(function(token) {
+        window.onSubmitMe(token);
+     });
 
   }
 

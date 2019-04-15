@@ -8,7 +8,7 @@
     <div class="fold1LeftOveray">
     <img src="../assets/homepage/kanto_disney_logo.png" alt="storytime logo"
      class="KantoDisneyLogo">
-     <label class="AddEnglishToTheirStory">{{'addEnglishText' | translate | uppercase}}</label>
+     <h1 class="AddEnglishToTheirStory">{{'addEnglishText' | translate | uppercase}}</h1>
      <a class="CONVERSIONbtnCont" (click)="openDialog()">
        <img alt="conversion button" [src]="conversionButtonUri" (mouseout)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn.png'"
           (mouseover)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn_hover.png'" class="CONVERSIONbtn">
@@ -86,6 +86,7 @@
   <div class="Fold4">
     <img   class="tabletMockup" >
      <p class="playingLearning">{{'playing' | translate | uppercase}}</p>
+     <p class="playingLearning bottomLearning" style="padding:0px">{{'learning' | translate | uppercase}}</p>
      <p class="With">{{'with' | translate | uppercase}}</p>
      <img alt="storytime logo" src="../assets/homepage/kanto_disney_logo.png"
 

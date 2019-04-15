@@ -128,7 +128,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 }
 
 .Fold3 {
-  max-width: 1903px;
+  max-width: 80vw;
   height: 90vh;
   object-fit: contain;
   position: relative;
@@ -429,6 +429,10 @@ margin-right: auto;
   pointer-events: none;
 }
 
+.bottomLearning{
+  top: 370px;
+}
+
 .With {
   width: fit-content;
   height: 26px;
@@ -451,7 +455,7 @@ margin-right: auto;
 .LearnMoreBtnContF4 {
   cursor: pointer;
   position: absolute;
-  right: 390px;
+  right: 399px;
   top: 740px;
 }
 
@@ -520,7 +524,7 @@ margin-right: auto;
 /*----------------------------------------------LAPTOP--------------------------------------------------*/
 @media only screen and (max-width: 1024px) {
   .Fold1{
-    height: 80vh;
+    height: 70vh;
   }
 
   .Fold2{
@@ -639,6 +643,7 @@ top: 430px;
 /*----------------------------------------------MOBILE--------------------------------------------------*/
 @media only screen and (max-width: 769px) {
   .Fold1 {
+    height: 90vh;
     box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17);
   }
 
@@ -647,73 +652,74 @@ top: 430px;
     left: auto;
     top: -2vh;
     width: 100%;
-    height: 110%;
+    height: auto;
     content: url(/assets/homepage/Mobile/fold_1.png);
   }
 
   .playBtnCont {
     cursor: pointer;
-    margin-left: auto;
-    width: 20vw;
-    margin-right: auto;
-    top: 30%;
-    right: 0;
-    height: auto;
-    left: 0;
-    position: absolute;
-    pointer-events: all;
+      margin-left: auto;
+      width: max-content;
+      margin-right: auto;
+      top: 0;
+      right: 0;
+      margin-top: 40vh;
+      height: auto;
+      left: 0;
+      position: absolute;
+      pointer-events: all;
   }
 
   .fold1LeftOveray{
-    width: 20vw;
-height: auto;
-position: absolute;
- margin: 0;
-bottom: 1vh;
-display: grid;
-grid-row-gap: 2vh;
+    width: 100vw;
+  height: 30%;
+  position: absolute;
+  margin: 0;
+  top: 70%;
+  text-align: center;
+  display: block;
+
   }
 
   .playBtn {
-    width: 20vw;
-    height: auto;
-    -o-object-fit: contain;
-    object-fit: contain;
-    opacity: 0.9;
+    width: 80%;
+      height: auto;
+      -o-object-fit: contain;
+      object-fit: contain;
+      opacity: 0.9;
+      margin: 0 auto;
+      display: block;
   }
 
   .CONVERSIONbtnCont {
-    bottom: 22vh;
-    width: 80vw;
-    left: 0;
-    right: 0;
-    z-index: 6;
-    margin-left: auto;
-    margin-right: auto;
-    pointer-events: all;
-    text-align: center;
-    cursor: pointer;
-    position: fixed;
-  /*  content: url(/assets/homepage/Mobile/conversion_btn.png)*/
+  width: 100vw;
+  left: 0;
+  right: 0;
+  z-index: 6;
+  margin-left: auto;
+  margin-right: auto;
+  pointer-events: all;
+  text-align: center;
+  cursor: pointer;
+  position: initial;
   }
 
   .AddEnglishToTheirStory {
     object-fit: contain;
-    font-size: 5vw;
-    font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: -1.2px;
-    text-align: center;
-    color: #0f206c;
-    position: absolute;
-    bottom: 9vh;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100vw;
+      font-size: 5vw;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: -1.2px;
+      text-align: center;
+      color: #0f206c;
+      bottom: 9vh;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100vw;
   }
 
   .CONVERSIONbtn {
@@ -723,16 +729,12 @@ grid-row-gap: 2vh;
 
   .KantoDisneyLogo {
     width: 40vw;
-  height: auto;
-  -o-object-fit: contain;
-  object-fit: contain;
-  position: absolute;
-  left: 0;
-  bottom: 13vh;
-  display: block;
-  right: 0;
-  margin-left: 30vw;
-  margin-right: 30vw;
+        height: auto;
+        -o-object-fit: contain;
+        object-fit: contain;
+        display: block;
+        right: 0;
+        margin: 0 auto;
   }
 
   .Fold2 {
@@ -762,21 +764,20 @@ grid-row-gap: 2vh;
   }
 
   .WelcomeTo {
-    height: 27px;
-    width: 100vw;
-    -o-object-fit: contain;
-    object-fit: contain;
-    font-size: 6vw;
-    font-weight: 800;
-    font-style: normal;
-    padding-top: 4vh;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    position: relative;
-    color: #0f206c;
-    margin: 0px;
+    height: auto;
+      width: 100vw;
+      -o-object-fit: contain;
+      object-fit: contain;
+      font-size: 6vw;
+      font-weight: 800;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      position: relative;
+      color: #0f206c;
+      margin: 0px;
   }
 
   .KantoDisneyLogo2 {
@@ -921,7 +922,7 @@ grid-row-gap: 2vh;
 
   .franchiseItemHolder {
     max-width: 90vw;
-    height: 40vh;
+    height: auto;
     display: flex;
     -o-object-fit: contain;
     object-fit: contain;
@@ -984,46 +985,47 @@ grid-row-gap: 2vh;
 
   .playingLearning {
     width: auto;
-  -o-object-fit: contain;
-  object-fit: contain;
-  height: auto;
-  font-size: 11vw;
-  font-weight: 800;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 7vh;
-  letter-spacing: initial;
-  text-align: center;
-  color: #0f206c;
-  top: 0;
-  position: relative;
-  left: 0;
-  margin: 0 auto;
-  right: 0;
-  padding-top: 5vh;
-  pointer-events: none;
+      -o-object-fit: contain;
+      object-fit: contain;
+          height: 10vh;
+          font-size: 10vw;
+      font-weight: 800;
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: initial;
+      text-align: center;
+      color: #0f206c;
+      top: 0;
+      position: relative;
+      left: 0;
+      margin: 0 auto;
+      right: 0;
+      padding-top: 3vh;
+      pointer-events: none;
   }
+
+
 
   .With {
     width: 100vw;
-    height: 26px;
-    -o-object-fit: contain;
-    object-fit: contain;
-    font-size: 1.5em;
-    font-weight: 800;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    margin-top: 0.5vh;
-    text-align: center;
-    color: #0f206c;
-    right: 0;
-    position: relative;
-    left: 0;
-    top: 0;
-    pointer-events: none;
-    margin-bottom: 15px;
+      height: 26px;
+      -o-object-fit: contain;
+      object-fit: contain;
+      font-size: 2em;
+      font-weight: 800;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      margin-top: 0.5vh;
+      text-align: center;
+      color: #0f206c;
+      right: 0;
+      position: relative;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+      margin-bottom: 15px;
   }
 
   .KantoDisneyLogoF4 {
@@ -1070,6 +1072,7 @@ grid-row-gap: 2vh;
     display: block;
     padding-bottom: 5%;
     height: auto;
+    text-decoration: underline;
     top: 0;
     width: 100vw;
   }
@@ -1191,7 +1194,9 @@ color: #0f206c;
   }
 
   .productItem {
-    height: 52.7vh;
+    width: 100vw;
+      height: auto;
+      margin-top: auto;
   }
 
 

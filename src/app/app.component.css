@@ -7,7 +7,7 @@ app-mobile-menu{
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 769px) {
   app-menu{
     display: none;
   }
