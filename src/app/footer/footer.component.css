@@ -125,10 +125,10 @@ a:visited {
 
 
 /*----------------------------------------------MOBILE--------------------------------------------------*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 769px) {
 .Footer-BG{
   width: 100vw;
-  height: 60vh;
+  height: fit-content;
   -o-object-fit: contain;
   object-fit: contain;
   background-color: #000000;
@@ -190,5 +190,12 @@ margin-top: 3vh;
 
   .LaMark2018Disney2018DisneyPixar {
     width: auto;
+    height: fit-content;
   }
+
+  .captcha{
+    padding-bottom: 3%
+  }
+
+
 }

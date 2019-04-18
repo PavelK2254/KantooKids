@@ -321,9 +321,15 @@ margin: 0 auto;
 left: 0px;
 width: 100vw;
 right: 0px;
+bottom: 10%;
 cursor: pointer;
 text-align: center;
   }
+
+  .sendBtnContact input {
+        width: 30%;
+  }
+
   .sideImg{
     display: none;
   }
