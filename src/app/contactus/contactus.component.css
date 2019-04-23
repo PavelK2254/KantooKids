@@ -1,4 +1,4 @@
-.contactUsContainer{
+.contactUsContainer {
   position: relative;
   max-width: 1903px;
   max-height: 1000px;
@@ -6,10 +6,10 @@
   margin: 0 auto;
   height: 100vh;
   background-size: cover;
-background-image: url(/assets/contactus/bg_pic.jpg);
+  background-image: url(/assets/contactus/bg_pic.jpg);
 }
 
-.backgroundImg{
+.backgroundImg {
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -21,15 +21,15 @@ background-image: url(/assets/contactus/bg_pic.jpg);
 
 .sendBtnContact input {
   display: block;
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
-.contactUsContainerInnerTitle{
-      top: 215px;
-      position: relative;
+.contactUsContainerInnerTitle {
+  top: 215px;
+  position: relative;
 }
 
-.contactUsContainerInnerInput{
+.contactUsContainerInnerInput {
   top: 35%;
   left: 37.5%;
   position: absolute;
@@ -39,7 +39,7 @@ background-image: url(/assets/contactus/bg_pic.jpg);
   object-fit: contain;
 }
 
-.contactUsContainerInnerInputName{
+.contactUsContainerInnerInputName {
   display: flex;
   position: relative;
 }
@@ -66,19 +66,17 @@ background-image: url(/assets/contactus/bg_pic.jpg);
 
 .GetInTouch {
   height: 27px;
--o-object-fit: contain;
-object-fit: contain;
-font-size: 35.8px;
-font-weight: 800;
-font-style: normal;
-font-stretch: normal;
-line-height: normal;
-letter-spacing: normal;
-text-align: center;
-color: #ffffff;
-margin: 0 auto;
-
-
+  -o-object-fit: contain;
+  object-fit: contain;
+  font-size: 35.8px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 auto;
 }
 
 .NeedHelpline {
@@ -95,14 +93,14 @@ margin: 0 auto;
   color: #ffffff;
 }
 
-.sendBtnContact{
+.sendBtnContact {
   z-index: 1;
-position: absolute;
-bottom: 10px;
-margin: 0 auto;
-right: 0px;
-left: 0px;
-cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  margin: 0 auto;
+  right: 0px;
+  left: 0px;
+  cursor: pointer;
 }
 
 .form-group {
@@ -125,100 +123,101 @@ cursor: pointer;
   letter-spacing: normal;
 }
 
-.form-control:focus + .form-control-placeholder {
+.form-control:focus+.form-control-placeholder {
   font-size: 75%;
   color: #ffffff;
   transform: translate3d(0, -105%, 0);
   opacity: 1;
 }
 
-.form-control:focus + .form-control-placeholder,
-.form-control:valid + .form-control-placeholder {
+.form-control:focus+.form-control-placeholder,
+.form-control:valid+.form-control-placeholder {
   font-size: 75%;
   color: #ffffff;
   transform: translate3d(0, -100%, 0);
   opacity: 1;
 }
 
-.sideImg{
+.sideImg {
   position: absolute;
-z-index: 1;
-bottom: 100px;
-right: 100px;
-display: none;
+  z-index: 1;
+  bottom: 100px;
+  right: 100px;
+  display: none;
 }
 
-input[type=submit]{
+input[type=submit] {
   background: url(/assets/contactus/send_btn.png);
-   border: 0;
-   display: block;
-   height: _the_image_height;
-   width: _the_image_width;
+  border: 0;
+  display: block;
+  height: _the_image_height;
+  width: _the_image_width;
 }
 
 /*----------------------------------------------LAPTOP--------------------------------------------------*/
-
 @media only screen and (max-width: 1024px) {
-  .contactUsContainerInnerInput{
+  .contactUsContainerInnerInput {
     top: 350px;
-left: 27.5vw;
-position: absolute;
-width: 500px;
-height: 350px;
--o-object-fit: contain;
-object-fit: contain;
+    left: 27.5vw;
+    position: absolute;
+    width: 500px;
+    height: 350px;
+    -o-object-fit: contain;
+    object-fit: contain;
   }
 
-  .sideImg{
+  .sideImg {
     position: absolute;
-z-index: 1;
-bottom: 0px;
-right: 30px;
-display: none;
+    z-index: 1;
+    bottom: 0px;
+    right: 30px;
+    display: none;
   }
 }
 
+
+
+
 /*----------------------------------------------MOBILE--------------------------------------------------*/
 @media only screen and (max-width: 769px) {
-  .contactUsContainer{
+  .contactUsContainer {
     position: relative;
     max-width: 100vw;
-    background-image:  url(/assets/contactus/Mobile/bg_pic.png);;
+    background-image: url(/assets/contactus/Mobile/bg_pic.png);
+    ;
     margin: 0 auto;
     height: fit-content;
   }
 
-  .backgroundImg{
+  .backgroundImg {
     content: url(/assets/contactus/Mobile/bg_pic.png);
   }
 
-  .contactUsContainerInnerTitle{
+  .contactUsContainerInnerTitle {
     position: relative;
     top: 0;
     left: 0;
-
   }
 
-  .GetInTouch{
+  .GetInTouch {
     /* height: 27px; */
--o-object-fit: contain;
-object-fit: contain;
-font-size: 35.8px;
-font-weight: 800;
-font-style: normal;
-font-stretch: normal;
-line-height: normal;
-letter-spacing: normal;
-text-align: center;
-color: #ffffff;
-padding-top: 35px;
-margin-top: 0px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    font-size: 35.8px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 35px;
+    margin-top: 0px;
     height: auto;
   }
 
-
-.NeedHelpline{
-  height: 25px;
+  .NeedHelpline {
+    height: 25px;
     -o-object-fit: contain;
     object-fit: contain;
     font-size: 25.1px;
@@ -232,18 +231,27 @@ margin-top: 0px;
     margin-top: 0px;
   }
 
-  .contactUsContainerInnerInput{
+  .contactUsContainerInnerInput {
     top: 0;
-      left: 0;
-      position: relative;
-      width: auto;
-      height: 50vh;
-      -o-object-fit: contain;
-      object-fit: contain;
-      padding: 5%;
+    left: 0;
+    position: relative;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: fit-content;
+    -o-object-fit: contain;
+    object-fit: contain;
+    margin: 5%;
   }
 
-  .ContactUsNameText{
+  .contactUsContainerInnerInputName {
+    display: flex;
+    position: relative;
+    height: 50vh;
+  }
+
+  .ContactUsNameText {
     width: 85vw;
     height: 30px;
     -o-object-fit: contain;
@@ -268,70 +276,73 @@ margin-top: 0px;
     margin: 0 auto;
   }
 
-  .ContactUsNameText #name{
+  .ContactUsNameText #name {
     top: -24px;
   }
 
-  .form-control-placeholder{
+  .form-control-placeholder {
     position: absolute;
-width: 213px;
-padding: 15px 0 0 20px;
-transition: all 200ms;
-opacity: 0.5;
-font-size: 14.3px;
-font-weight: bold;
-color: white;
-top: -24px;
-opacity: 1;
-z-index: 5;
-font-style: normal;
-font-stretch: normal;
-line-height: normal;
-letter-spacing: normal;
+    width: 213px;
+    padding: 15px 0 0 20px;
+    transition: all 200ms;
+    opacity: 0.5;
+    font-size: 14.3px;
+    font-weight: bold;
+    color: white;
+    top: -24px;
+    opacity: 1;
+    z-index: 5;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
   }
 
-  #email{
+  #email {
     left: 0 !important;
     top: 6.5vh !important;
   }
 
-  #email + label{
+  #email+label {
     left: 0px !important;
     top: 6.5vh !important;
   }
 
-  #message{
+  #message {
     top: 17vh !important;
     width: 85vw !important;
     height: 20vh !important;
   }
 
-  #message + .form-control-placeholder{
+  #message+.form-control-placeholder {
     top: 17vh !important;
   }
 
-  .g-recaptcha{
+  .g-recaptcha {
     visibility: hidden;
   }
 
-  .sendBtnContact{
-    z-index: 1;
-position: absolute;
-margin: 0 auto;
-left: 0px;
-width: 100vw;
-right: 0px;
-bottom: 10%;
-cursor: pointer;
-text-align: center;
+  .sendBtnContact {
+    position: initial;
+    margin: 0 auto;
+    left: 0px;
+    width: auto;
+    right: 0px;
+    bottom: 0;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .form-group{
+    position: relative;
+    margin: 5vh auto;
   }
 
   .sendBtnContact input {
-        width: 30%;
+    width: 50vw;
   }
 
-  .sideImg{
+  .sideImg {
     display: none;
   }
-
 }

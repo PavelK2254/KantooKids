@@ -402,7 +402,7 @@ margin-top: 0px;
 }
 
 .Fold1TabletImg{
-  width: 90vw;
+  width: 80vw;
 height: auto;
 -o-object-fit: contain;
 object-fit: contain;
@@ -414,7 +414,7 @@ padding-bottom: 5vh;
 .Fold1TextsContainer{
   margin-left: 0px;
 width: 100vw;
-margin-top: 5vh;
+margin-top: 10vh;
 padding: 0px;
 }
 

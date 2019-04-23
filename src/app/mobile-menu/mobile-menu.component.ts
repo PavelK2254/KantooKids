@@ -35,6 +35,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class MobileMenuComponent implements OnInit {
 
   isMenuOpen = false;
+  isLearningExpanded = false;
   lastScrollYPosition = 0;
    @ViewChild(MatAccordion) accordion: MatAccordion;
    movies: Movie[];
@@ -98,6 +99,7 @@ export class MobileMenuComponent implements OnInit {
     this.isMenuOpen = !this.isMenuOpen;
     this.isMenuOpen? this.menuAlpha = 1 : this.menuAlpha = 0.9;
     document.getElementById("nav-icon3").classList.toggle("open");
+    document.getElementById('mobileMenuContent').scrollTo(0, 0);
     this.accordion.closeAll();
   }
 
@@ -117,6 +119,18 @@ closeMenu(){
   this.menuAlpha = 0.9;
   this.accordion.closeAll();
 
+}
+
+matOpened(){
+  console.log('Learning opened');
+  this.isLearningExpanded = true;
+  document.getElementById('mobileMenuContent').style.overflowY = "scroll";
+}
+
+matClosed(){
+  console.log('Learning closed');
+  this.isLearningExpanded = false;
+  document.getElementById('mobileMenuContent').style.overflowY = "hidden";
 }
 
 }

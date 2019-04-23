@@ -109,6 +109,7 @@ width: 100%;
   width: 10%;
       margin: 10px;
       float: left;
+      z-index: 5;
 }
 
 mat-accordion{
@@ -117,7 +118,7 @@ mat-accordion{
   top: 11.5vh;
   z-index: 10;
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: hidden;
   right: 0px;
   background-image: url(/assets/menu/mobile/big_bg.png);
   -webkit-background-size: cover;

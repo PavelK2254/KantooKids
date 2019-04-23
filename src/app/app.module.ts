@@ -37,6 +37,14 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {  TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+import { HAMMER_GESTURE_CONFIG, HammerGestureConfig} from '@angular/platform-browser';
+
+export class MyHammerConfig extends HammerGestureConfig {
+  overrides = <any> {
+    'pinch': {enable: false},
+    'rotate': {enable: false}
+  }
+}
 
 
 @NgModule({
@@ -86,7 +94,12 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     })
   ],
   entryComponents: [PromoPopupComponent,YoutubePopupComponent],
-  providers: [],
+  providers: [
+    {
+      provide: HAMMER_GESTURE_CONFIG,
+      useClass: MyHammerConfig
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

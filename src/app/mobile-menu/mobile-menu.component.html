@@ -13,7 +13,7 @@
        <a routerLink="" class="Kantoo-IconBtn">
        <img src="assets\menu\mobile\kantoo-icon.png"
           class="Kantoo-Icon"></a></div>
-          <mat-accordion [multi]="true" [@toggleMenu]="isMenuOpen? 'menuOpen' : 'menuClosed'">
+          <mat-accordion id="mobileMenuContent" [multi]="true" [@toggleMenu]="isMenuOpen? 'menuOpen' : 'menuClosed'">
         <mat-expansion-panel [disabled]="true" style="    background-color: #efefef;">
           <mat-expansion-panel-header style="height:auto;background: #efefef;">
             <mat-panel-title >
@@ -26,7 +26,7 @@
 
         </mat-expansion-panel>
 
-        <mat-expansion-panel style="    background-color: #efefef;">
+        <mat-expansion-panel style="background-color: #efefef;" (closed)="matClosed()" (opened)="matOpened()">
           <mat-expansion-panel-header>
             <mat-panel-title>
               <p class="menuText" style="margin-top: 5%;text-decoration:none; "><a routerLink="/learning-with-disney" routerLinkActive="menuActiveLearning menuActive" >{{'learning' | translate | uppercase}}</a></p>

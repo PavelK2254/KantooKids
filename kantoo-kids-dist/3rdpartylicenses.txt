@@ -229,9 +229,6 @@ Apache-2.0
  
 
 
-ngx-device-detector
-MIT
-
 tslib
 Apache-2.0
 Apache License
@@ -317,6 +314,9 @@ THE SOFTWARE.
 
 
 @angular/common
+MIT
+
+ngx-device-detector
 MIT
 
 @ngx-translate/http-loader

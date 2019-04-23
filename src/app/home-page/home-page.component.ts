@@ -225,7 +225,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
 
 
   incrementIndex() {
-
+    console.trace();
     if (this.viewIndex <= this.maxOffsetIndex) {
       this.isDisabled = true;
       return;
@@ -314,6 +314,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     if(this.productSourceCounter < 0)this.productSourceCounter *=  -1;
     this.productsSource = this.products[this.productSourceCounter].name;
   }
+
 
   getProducts() {
     this.movieFetcher.getProducts().subscribe(

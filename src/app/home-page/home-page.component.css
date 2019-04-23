@@ -1201,3 +1201,10 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     height: 633px;
   }
 }
+
+/*---------------------------------------------Mobile XS -----------------------------------------------*/
+@media only screen and (min-height: 500px) {
+.fold1LeftOveray{
+      bottom: 10px;
+}
+}
