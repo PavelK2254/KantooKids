@@ -665,7 +665,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     height: auto;
     position: absolute;
     margin: 0;
-    bottom: 2%;
+    bottom: 11.5vh;
     text-align: center;
     display: block;
   }
@@ -716,7 +716,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
   .CONVERSIONbtn {
     object-fit: contain;
-    width: 40vh;
+    width: 90vw;
   }
 
   .KantoDisneyLogo {
@@ -876,7 +876,6 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     text-align: center;
     color: #0f206c;
     margin-top: 0;
-    padding-bottom: 6vh;
     padding-top: 10vh;
   }
 
@@ -1205,6 +1204,6 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 /*---------------------------------------------Mobile XS -----------------------------------------------*/
 @media only screen and (min-height: 500px) {
 .fold1LeftOveray{
-      bottom: 10px;
+      bottom: 11.5vh;
 }
 }

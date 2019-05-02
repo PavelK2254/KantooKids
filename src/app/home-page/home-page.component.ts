@@ -173,7 +173,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   }
 
   onResize(event) {
-    this.resetCarousel(0);
+    //this.resetCarousel(0);
     if (event.target.innerWidth < 769) {
       this.offsetModifier = window.innerWidth * 1.09;
       this.offsetModifier2 = event.target.innerWidth * 0.9;

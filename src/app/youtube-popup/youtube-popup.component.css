@@ -1,6 +1,6 @@
 .Cancel-PopUp-icon {
-  width: 30px;
-  height: 30px;
+  max-width: 4vh;
+  height: auto;
   object-fit: contain;
 }
 

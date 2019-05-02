@@ -11,8 +11,10 @@ export class YoutubePopupComponent implements OnInit {
 
   player: YT.Player;
   id: string = '5Q6esf_N-0s';
-  width = window.screen.width;
-  height = window.screen.height / 1.2;
+  width = window.screen.width * 0.7;
+  height = window.screen.height * 0.7;
+  isMobile = false;
+
 
   constructor(public dialog: MatDialog,) {
 
@@ -26,7 +28,11 @@ export class YoutubePopupComponent implements OnInit {
   }
 
   ngOnInit() {
-  //  this.runPlayer();
+    if (window.innerWidth <= 769) {
+      this.isMobile = true;
+      this.width = window.screen.width * 0.9;
+      this.height = window.screen.height / 2;
+    }
   }
 
   runPlayer(){
