@@ -49,7 +49,5 @@ border-style: solid;
     background: whitesmoke
   }
 
-  .cdk-overlay-pane{
-    max-width: 100vw !important;
-  }
+  
   }

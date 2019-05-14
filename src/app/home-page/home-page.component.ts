@@ -133,6 +133,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     const dialogRef = this.dialog.open(YoutubePopupComponent, {
       width: 'fit-content',
       height: 'fit-content',
+      maxWidth: '90vw',
       id: '5Q6esf_N-0s'
     });
   }

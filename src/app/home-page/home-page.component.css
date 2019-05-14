@@ -333,7 +333,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 }
 
 .LearnEnglish {
-  height: 27px;
+
   object-fit: contain;
   font-size: 35.8px;
   font-weight: 800;
@@ -787,7 +787,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     height: 55px;
     -o-object-fit: contain;
     object-fit: contain;
-    font-size: 1em;
+    font-size: 4vw;
     font-weight: 600;
     font-style: normal;
     font-stretch: normal;
@@ -864,7 +864,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   }
 
   .LearnEnglish {
-    height: 27px;
+
     -o-object-fit: contain;
     object-fit: contain;
     font-size: 6vw;
@@ -872,6 +872,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
+    overflow: hidden;
     letter-spacing: normal;
     text-align: center;
     color: #0f206c;
@@ -953,8 +954,8 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   }
 
   .franchisesItemDots {
-    width: 10px;
-    height: 10px;
+    width: 3.5vw;
+    height: 2vh;
   }
 
   .CONVERSIONbtnContFold3 {

@@ -20,6 +20,7 @@ export class MenuComponent implements OnInit,AfterViewInit {
   }
 
   ngAfterViewInit(){
+  document.getElementById('mobileMenuContent').style.top = (<HTMLElement>document.getElementsByClassName('mMainMenu')[0]).offsetHeight + "px";
     if(localStorage.getItem("lang") != undefined){
       var els = document.getElementsByClassName('lang');
       Array.prototype.forEach.call(els, function(el) {
