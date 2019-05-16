@@ -36,8 +36,9 @@ export class AppComponent {
         (<any>window).ga('set', 'page', "/" + this.movieService.getMovieNameById(event.urlAfterRedirects));
         console.log("sent " + this.movieService.getMovieNameById(event.urlAfterRedirects));
         (<any>window).ga('send', 'pageview');
-        window.scrollTo(0, 0)
+
       }
+      window.scrollTo(0, 0)
     });
 
 
