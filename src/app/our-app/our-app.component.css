@@ -198,7 +198,10 @@ margin-left: 10%;
 }
 
 .Fold7 .Fold3Texts{
-  padding-top: 20%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  margin: 0;
 }
 
 .OurDisney {
@@ -225,22 +228,24 @@ margin-left: 10%;
 
 .fold4BackgroundImage{
   content: url(/assets/ourApp/fold4.png);
-      width: 100vw;
-      height: auto;
-      -o-object-fit: contain;
-      object-fit: contain;
-      position: absolute;
-      z-index: -1;
-      left: 0px;
-      top: -1.7vw;
+  width: 100vw;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  position: static;
+  z-index: -1;
+  left: 0px;
+  top: 0;
 }
 
 
 
 .fold4TextSection{
   margin-left: 18%;
-    padding-top: 5%;
-    width: 21vw;
+  padding-top: 5%;
+  top: 0;
+  width: 21vw;
+  position: absolute;
 }
 
 
@@ -319,7 +324,7 @@ margin-top: 0px;
 }
 
 .Fold7{
-  height: 100vh;
+  height: fit-content;
   position: relative;
   -o-object-fit: contain;
   margin: auto;
@@ -334,10 +339,14 @@ margin-top: 0px;
   height: auto;
   -o-object-fit: contain;
   object-fit: contain;
-  position: absolute;
+  position: static;
   z-index: -1;
   left: 0px;
-  top: -1.5vw;
+
+}
+
+.CONVERSIONbtnHolderMobile{
+  display: none;
 }
 
 /*----------------------------------------------LAPTOP--------------------------------------------------*/
@@ -414,7 +423,7 @@ padding-bottom: 5vh;
 .Fold1TextsContainer{
   margin-left: 0px;
 width: 100vw;
-margin-top: 11.5vh;
+margin-top: 5vh;
 padding: 0px;
 }
 
@@ -685,7 +694,7 @@ padding: 0 3vw;
 }
 
 .Fold6{
-  height: 84.2vh;
+  height: fit-content;
   margin-top: 2vh;
   box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17);
       background: transparent;
@@ -699,10 +708,14 @@ padding: 0 3vw;
 
 .fold6BackgroundImage{
   content: url(/assets/ourApp/Mobile/fold6.png);
+  position: initial;
+  top: 0;
 }
 
 .fold6TextSection{
   margin: 0px;
+  position: absolute;
+  top: 0;
     width: 100vw;
     padding: 0px;
         background: transparent;
@@ -713,7 +726,7 @@ padding: 0 3vw;
 }
 
 .Fold7{
-    height: 85vh;
+    height: fit-content;
     position: relative;
     -o-object-fit: contain;
     margin: auto;
@@ -729,7 +742,7 @@ padding: 0 3vw;
     height: auto;
     -o-object-fit: contain;
     object-fit: contain;
-    position: absolute;
+    position: initial;
     z-index: -1;
     left: 0px;
     top: 0px;
@@ -739,6 +752,8 @@ padding: 0 3vw;
     width: 100vw;
     margin-left: 0px;
     padding-top: 4vh;
+    top: 0;
+    position: absolute;
     background: transparent;
 
 }
@@ -774,6 +789,15 @@ padding: 0 3vw;
       padding: 0 2vw;
       margin-left: auto;
       margin-right: auto;
+}
+
+.CONVERSIONbtnHolderMobile{
+  display: block;
+  margin-top: 2vh;
+    position: absolute;
+    width: 100vw;
+    margin: 0 auto;
+    bottom: 0;
 }
 
 

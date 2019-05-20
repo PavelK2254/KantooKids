@@ -23,8 +23,6 @@ export class AppComponent {
     }else{
         translate.setDefaultLang('en');
     }
-
-
   }
 
 

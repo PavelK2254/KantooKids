@@ -9,10 +9,15 @@
        <p class="disneyText">{{'kntooDisneyText' | translate}}</p>
        <p class="CONVERSIONbtnHolder" style="margin-top: 2vh">
        <a class="CONVERSIONbtn" (click)="openDialog()">
-         <img  [src]="imageBaseUri + activeLanguage + '/conversion_btn.png'"
-
-        class="CONVERSIONbtn">
+         <img  [src]="imageBaseUri + activeLanguage + '/conversion_btn.png'" class="CONVERSIONbtn">
        </a>
+       </p>
+
+       <p class="CONVERSIONbtnHolderMobile" style="margin-top: 2vh">
+       <a class="CONVERSIONbtnMobile" (click)="openDialog()" style="width:inherit">
+         <img  [src]="imageBaseUri + activeLanguage + '/Mobile/conversion_btn.png'" style="width:inherit" class="CONVERSIONbtnMobile">
+       </a>
+       </p>
       </div>
   </div>
   <div class="Fold2">

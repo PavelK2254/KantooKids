@@ -7,6 +7,7 @@ body {
    font-family: 'OpenSans',  sans-serif;
    overflow-x: hidden;
 overflow-y: initial;
+min-height: 100vh
 
  }
 *:focus {
@@ -49,5 +50,5 @@ border-style: solid;
     background: whitesmoke
   }
 
-  
+
   }
