@@ -1,19 +1,19 @@
 <div class="container">
   <div class="Fold1">
-      <img class="Fold1TabletImg" src="../assets/ourApp/p1tablet.png" alt="tablet">
       <div class="Fold1TextsContainer">
           <p class="introducing">{{'introducing' | translate | uppercase}}</p>
           <img src="../assets/homepage/kanto_disney_logo.png"
 
        class="KantoDisneyLogo2">
        <p class="disneyText">{{'kntooDisneyText' | translate}}</p>
+       <img class="Fold1TabletImg" src="../assets/ourApp/p1tablet.png" alt="tablet">
        <p class="CONVERSIONbtnHolder" style="margin-top: 2vh">
        <a class="CONVERSIONbtn" (click)="openDialog()">
          <img  [src]="imageBaseUri + activeLanguage + '/conversion_btn.png'" class="CONVERSIONbtn">
        </a>
        </p>
 
-       <p class="CONVERSIONbtnHolderMobile" style="margin-top: 2vh">
+       <p class="CONVERSIONbtnHolderMobile">
        <a class="CONVERSIONbtnMobile" (click)="openDialog()" style="width:inherit">
          <img  [src]="imageBaseUri + activeLanguage + '/Mobile/conversion_btn.png'" style="width:inherit" class="CONVERSIONbtnMobile">
        </a>

@@ -247,32 +247,32 @@ input[type=submit] {
   .contactUsContainerInnerInputName {
     display: flex;
     position: relative;
-    height: 50vh;
+    height: auto;
   }
 
   .ContactUsNameText {
     width: 85vw;
-    height: 30px;
-    -o-object-fit: contain;
-    object-fit: contain;
-    border-radius: 17px;
-    background-color: #ffffff;
-    font-size: 14.3px;
-    font-weight: bold;
-    font-style: normal;
-    opacity: 0.5;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    position: absolute;
-    padding: 7px;
-    left: 0;
-    right: 0;
-    top: 6.5vh;
-    border: 0px;
-    resize: unset;
-    margin: 0 auto;
+        height: 30px;
+        -o-object-fit: contain;
+        object-fit: contain;
+        border-radius: 17px;
+        background-color: #ffffff;
+        font-size: 14.3px;
+        font-weight: bold;
+        font-style: normal;
+        opacity: 0.5;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        position: static;
+        padding: 7px;
+        left: 0;
+        right: 0;
+        top: 6.5vh;
+        border: 0px;
+        resize: unset;
+        margin: 0 auto;
   }
 
   .ContactUsNameText #name {
@@ -281,20 +281,21 @@ input[type=submit] {
 
   .form-control-placeholder {
     position: absolute;
-    width: 213px;
-    padding: 15px 0 0 20px;
-    transition: all 200ms;
-    opacity: 0.5;
-    font-size: 14.3px;
-    font-weight: bold;
-    color: white;
-    top: -24px;
-    opacity: 1;
-    z-index: 1;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
+      width: 213px;
+      padding: 15px 0 0 20px;
+      transition: all 200ms;
+      opacity: 0.5;
+      font-size: 14.3px;
+      font-weight: bold;
+      color: white;
+      left: 0;
+      top: 0vh !important;
+      opacity: 1;
+      z-index: 1;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
   }
 
   #email {
@@ -304,7 +305,7 @@ input[type=submit] {
 
   #email+label {
     left: 0px !important;
-    top: 6.5vh !important;
+    top: 0vh !important;
   }
 
   #message {
@@ -314,7 +315,7 @@ input[type=submit] {
   }
 
   #message+.form-control-placeholder {
-    top: 17vh !important;
+    top: 0vh !important;
   }
 
   .g-recaptcha {
@@ -333,9 +334,9 @@ input[type=submit] {
   }
 
   .form-group{
-    position: absolute;
+    position: relative;
     margin: 5vh auto;
-    bottom: 40vh;
+
   }
 
   .sendBtnContact input {

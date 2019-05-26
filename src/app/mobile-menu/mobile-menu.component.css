@@ -154,6 +154,10 @@ mat-expansion-panel{
 /*  -webkit-text-fill-color: #1b236e; */
 }
 
+.menuActiveBold{
+  font-weight: bold;
+}
+
 .menuActiveOurApp::after{
   content: '';
   display: block;

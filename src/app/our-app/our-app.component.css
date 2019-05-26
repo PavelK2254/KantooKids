@@ -398,15 +398,13 @@ margin-top: 0px;
 
 
   .Fold1{
-    height: 100vh;
-    position: relative;
-    -o-object-fit: contain;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    object-fit: contain;
-    flex-direction: column-reverse;
-    width: 100vw;
+    height: fit-content;
+      position: relative;
+      -o-object-fit: contain;
+      margin: auto;
+      display: block;
+      object-fit: contain;
+      width: 100vw;
     box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17);
 }
 
@@ -417,14 +415,14 @@ height: auto;
 object-fit: contain;
 padding-top: 5%;
 margin: 0 auto;
+display: block;
 padding-bottom: 5vh;
 }
 
 .Fold1TextsContainer{
   margin-left: 0px;
 width: 100vw;
-margin-top: 5vh;
-padding: 0px;
+margin-top: 11vh;
 }
 
 .introducing{
@@ -438,7 +436,7 @@ padding: 0px;
   text-align: left;
   text-align: center;
   color: #0f206c;
-  margin: 0 auto;
+  margin: 2vh auto;
   width: 80vw !important;
 }
 
@@ -698,6 +696,7 @@ padding: 0 3vw;
   margin-top: 2vh;
   box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17);
       background: transparent;
+          display: grid;
 
 }
 
@@ -732,6 +731,7 @@ padding: 0 3vw;
     margin: auto;
     margin-top: 2vh;
     object-fit: contain;
+    display: grid;
     max-width: 100vw;
     background: transparent;
 }
@@ -793,11 +793,9 @@ padding: 0 3vw;
 
 .CONVERSIONbtnHolderMobile{
   display: block;
-  margin-top: 2vh;
-    position: absolute;
+    position: inherit;
     width: 100vw;
     margin: 0 auto;
-    bottom: 0;
 }
 
 
