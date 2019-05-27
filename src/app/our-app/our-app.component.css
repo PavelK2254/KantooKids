@@ -36,6 +36,15 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   padding-top: 5%;
 }
 
+
+#desktopFold1Tablet{
+  display: block;
+}
+
+#mobileFold1Tablet{
+  display: none;
+}
+
 .introducing {
   object-fit: contain;
       font-size: 1.5vw;
@@ -423,6 +432,14 @@ padding-bottom: 5vh;
   margin-left: 0px;
 width: 100vw;
 margin-top: 11vh;
+}
+
+#desktopFold1Tablet{
+  display: none;
+}
+
+#mobileFold1Tablet{
+  display: block;
 }
 
 .introducing{

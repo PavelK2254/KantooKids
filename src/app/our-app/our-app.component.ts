@@ -11,17 +11,33 @@ import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 })
 export class OurAppComponent implements OnInit {
 
-  activeLanguage = "en"
-  imageBaseUri = "./assets/homepage/";
+  activeLanguage = ""
+  imageBaseUri = "./assets/ourApp/";
+  homeImageBaseUri = "./assets/homepage/";
+  mobilePrefix = "/Mobile"
   constructor(private translateLang:TranslateService,public dialog: MatDialog) {
     translateLang.onLangChange.subscribe((event: LangChangeEvent) => {
       console.log("laguage:" + event.lang);
+      if(event.lang == "en"){
+        this.activeLanguage = "";
+      }else{
       this.activeLanguage = event.lang;
+      }
+
+
     });
    }
 
   ngOnInit() {
-    if( localStorage.getItem("lang") != undefined)this.activeLanguage = localStorage.getItem("lang");
+    if( localStorage.getItem("lang") != undefined)
+    {
+      if(localStorage.getItem("lang") == "en"){
+      this.activeLanguage = "";
+      }else{
+        this.activeLanguage = localStorage.getItem("lang")
+      }
+
+    }
   }
 
   openDialog(): void {

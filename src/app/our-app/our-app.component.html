@@ -1,21 +1,20 @@
 <div class="container">
   <div class="Fold1">
+    <img id="desktopFold1Tablet" class="Fold1TabletImg" [src]="imageBaseUri + activeLanguage + mobilePrefix + '/p1tablet.png'"  alt="tablet">
       <div class="Fold1TextsContainer">
           <p class="introducing">{{'introducing' | translate | uppercase}}</p>
-          <img src="../assets/homepage/kanto_disney_logo.png"
-
-       class="KantoDisneyLogo2">
+          <img src="../assets/homepage/kanto_disney_logo.png" class="KantoDisneyLogo2">
        <p class="disneyText">{{'kntooDisneyText' | translate}}</p>
-       <img class="Fold1TabletImg" src="../assets/ourApp/p1tablet.png" alt="tablet">
+       <img id="mobileFold1Tablet" class="Fold1TabletImg" [src]="imageBaseUri + activeLanguage + mobilePrefix + '/p1tablet.png'"  alt="tablet">
        <p class="CONVERSIONbtnHolder" style="margin-top: 2vh">
        <a class="CONVERSIONbtn" (click)="openDialog()">
-         <img  [src]="imageBaseUri + activeLanguage + '/conversion_btn.png'" class="CONVERSIONbtn">
+         <img  [src]="homeImageBaseUri + activeLanguage + '/conversion_btn.png'" class="CONVERSIONbtn">
        </a>
        </p>
 
        <p class="CONVERSIONbtnHolderMobile">
        <a class="CONVERSIONbtnMobile" (click)="openDialog()" style="width:inherit">
-         <img  [src]="imageBaseUri + activeLanguage + '/Mobile/conversion_btn.png'" style="width:inherit" class="CONVERSIONbtnMobile">
+         <img  [src]="homeImageBaseUri + activeLanguage + '/Mobile/conversion_btn.png'" style="width:inherit" class="CONVERSIONbtnMobile">
        </a>
        </p>
       </div>
@@ -27,7 +26,7 @@
       <p class="ourCambridge">{{'ourCambridge' | translate}}</p>
       <p class="CONVERSIONbtnHolder" style="margin-top: 2vh">
       <a class="CONVERSIONbtn" (click)="openDialog()">
-        <img  [src]="imageBaseUri + activeLanguage + '/conversion_btn.png'"
+        <img  [src]="homeImageBaseUri + activeLanguage + '/conversion_btn.png'"
 
        class="CONVERSIONbtn">
       </a>
@@ -43,7 +42,7 @@
       <p class="OurDisney">{{'disneyMovies' | translate}}</p>
       <p style="margin-left: 10%;" class="CONVERSIONbtnHolder">
       <a class="CONVERSIONbtn" (click)="openDialog()">
-        <img  [src]="imageBaseUri + activeLanguage + '/conversion_btn.png'"
+        <img  [src]="homeImageBaseUri + activeLanguage + '/conversion_btn.png'"
 
        class="CONVERSIONbtn">
       </a>
@@ -57,7 +56,7 @@
       <p class="safeLearningTitle">{{'safeLearningTitle' | translate | uppercase}}</p>
       <p class="safeLearningText">{{'safeLearningText' | translate}}</p>
       <a class="CONVERSIONbtn" (click)="openDialog()">
-        <img  [src]="imageBaseUri + activeLanguage + '/conversion_btn.png'"
+        <img  [src]="homeImageBaseUri + activeLanguage + '/conversion_btn.png'"
 
        class="CONVERSIONbtn">
       </a>
@@ -71,7 +70,7 @@
           <p class="introducing" style="width:400px">{{'learnEnglish' | translate | uppercase}}</p>
            <p class="disneyText">{{'meetOur' | translate}}</p>
            <a class="CONVERSIONbtn" (click)="openDialog()">
-             <img  [src]="imageBaseUri + activeLanguage + '/conversion_btn.png'"
+             <img  [src]="homeImageBaseUri + activeLanguage + '/conversion_btn.png'"
 
             class="CONVERSIONbtn">
            </a>
@@ -85,7 +84,7 @@
   <p class="safeLearningText">{{'kantooWayText' | translate}}</p>
   <p class="safeLearningText">{{'kantooWayText2' | translate}}</p>
   <a class="CONVERSIONbtn" (click)="openDialog()">
-    <img  [src]="imageBaseUri + activeLanguage + '/conversion_btn.png'"
+    <img  [src]="homeImageBaseUri + activeLanguage + '/conversion_btn.png'"
 
    class="CONVERSIONbtn">
   </a>
@@ -98,7 +97,7 @@
       <p class="OurDisney">{{'worldChanging' | translate}}</p>
       <p style="margin-left: 10%;" class="CONVERSIONbtnHolder">
       <a class="CONVERSIONbtn" (click)="openDialog()">
-        <img  [src]="imageBaseUri + activeLanguage + '/conversion_btn.png'"
+        <img  [src]="homeImageBaseUri + activeLanguage + '/conversion_btn.png'"
 
        class="CONVERSIONbtn">
       </a>

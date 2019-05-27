@@ -1161,7 +1161,8 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
   .productItemHolder {
     width: 100vw;
-    display: flex;
+    display: block;
+    height: fit-content;
     -o-object-fit: contain;
     object-fit: contain;
     justify-content: center;
@@ -1185,6 +1186,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   .productItem {
     width: 100vw;
     height: auto;
+    display: block;
     margin-top: auto;
   }
 }

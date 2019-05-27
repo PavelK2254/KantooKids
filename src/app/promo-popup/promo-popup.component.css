@@ -69,18 +69,18 @@ body{
 
 @media only screen and (max-width: 600px) {
   .PopUpBox{
-    width: 90vw;
-    height: auto;
-    margin: 0 auto;
-    -o-object-fit: contain;
-    object-fit: contain;
-    border-radius: 40px;
-    box-shadow: 0px 5px 3.6px 0.4px rgba(0, 0, 0, 0.28);
-    background-color: #ffffff;
+    width: 80vw;
+      height: auto;
+      margin: 0 auto;
+      -o-object-fit: contain;
+      object-fit: contain;
+      border-radius: 40px;
+      box-shadow: 0 5px 3.6px 0.4px rgba(0,0,0,.28);
+      background-color: #fff;
   }
 
   .PopUp-Box{
-      width: 90vw;
+      width: 100%;
   }
 
   .promoPopup{
@@ -89,19 +89,36 @@ body{
 
   .buttonContainer{
     display: flex;
-justify-content: center;
+      width: 100%;
+      justify-content: center;
   }
 
   .buttonContainer a {
     margin-left: 0 !important;
   }
 
+  .apple{
+    height: auto !important;
+        width: 40%;
+        margin-left: 25%;
+        padding-top: 0px !important;
+        cursor: pointer;
+  }
+
   .apple .Buy-Buttons {
-        height: 45px !important;
+        height: 100% !important;
+        width: 100%;
+  }
+
+  .google{
+    cursor: pointer;
+    width: 50%;
+    height: auto;
   }
 
   .google .Buy-Buttons{
-        height: 64px;
+    width: 100%;
+height: 100%;
   }
 
   .closeBtn{
