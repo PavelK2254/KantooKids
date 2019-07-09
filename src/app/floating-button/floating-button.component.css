@@ -1,0 +1,7 @@
+.conversionButtonBottom{
+  position: fixed;
+bottom: 3vh;
+left: 3vh;
+z-index: 999;
+cursor: pointer;
+}

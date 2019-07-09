@@ -198,6 +198,7 @@ margin-left: 10%;
       cursor: pointer;
       -o-object-fit: contain;
       object-fit: contain;
+      display: none;
 }
 
 .Fold3Texts{
@@ -813,6 +814,7 @@ padding: 0 3vw;
     position: inherit;
     width: 100vw;
     margin: 0 auto;
+    display: none;
 }
 
 

@@ -98,7 +98,7 @@ export class LearningWithDisneyComponent implements OnInit {
           fold2ImageLeft: "cars_left_character",
           fold2ImageRight: "cars_right_character",
           learnMoreUrl: "Learn more"
-        },
+        }/*,
         {
           id: 5,
           name: "zoo",
@@ -124,7 +124,7 @@ export class LearningWithDisneyComponent implements OnInit {
           fold2ImageLeft: "dory_left_character",
           fold2ImageRight: "dory_right_character",
           learnMoreUrl: "Learn more"
-        },
+        },*/
       /*  {
           name: "coco",
           background: "coco_bg_pattern",

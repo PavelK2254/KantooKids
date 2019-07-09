@@ -1,14 +1,19 @@
 <div class="container">
+  <app-floating-button></app-floating-button>
   <div class="Fold1">
-    <img id="desktopFold1Tablet" class="Fold1TabletImg" [src]="imageBaseUri + activeLanguage + mobilePrefix + '/p1tablet_test.png'"  alt="tablet">
+    <!--<img id="desktopFold1Tablet" class="Fold1TabletImg" [src]="imageBaseUri + activeLanguage + mobilePrefix + '/p1tablet_test.png'"  alt="tablet">-->
+    <video id="mobileFold1Tablet" class="Fold1TabletImg" [src]="imageBaseUri + activeLanguage + mobilePrefix + '/placeholder_video_Tablet_mockup.mp4'" loop autoplay poster="posterimage.jpg">
+
+    </video>
       <div class="Fold1TextsContainer">
           <p class="introducing">{{'introducing' | translate | uppercase}}</p>
           <img src="../assets/homepage/kanto_disney_logo.png" class="KantoDisneyLogo2">
        <p class="disneyText">{{'kntooDisneyText' | translate}}</p>
        <img id="mobileFold1Tablet" class="Fold1TabletImg" [src]="imageBaseUri + activeLanguage + mobilePrefix + '/p1tablet_test.png'"  alt="tablet">
+
        <p class="CONVERSIONbtnHolder" style="margin-top: 2vh">
-       <a class="CONVERSIONbtn" (click)="openDialog()">
-         <img  [src]="homeImageBaseUri + activeLanguage + '/conversion_btn.png'" class="CONVERSIONbtn">
+       <a [style.opacity]="topConversionOpacityValue" class="CONVERSIONbtn" (click)="openDialog()" style="display:block">
+         <img style="display:block"  [src]="homeImageBaseUri + activeLanguage + '/conversion_btn.png'" class="CONVERSIONbtn">
        </a>
        </p>
 

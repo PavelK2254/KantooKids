@@ -36,6 +36,7 @@ export class MoviePageComponent implements OnInit {
   conversionButtonUri: string;
   imageBaseUri = "../assets/homepage/";
   mobilePrefix = "";
+  isMobile = false;
   fold2Carousel: string[] = ["fold3_carousel_pic1","fold3_carousel_pic2","fold3_carousel_pic3","fold3_carousel_pic4"];
   fold3Carousel: string[] = ["fold4_carousel_pic1","fold4_carousel_pic2","fold4_carousel_pic3","fold4_carousel_pic4"];
 
@@ -45,6 +46,7 @@ export class MoviePageComponent implements OnInit {
       console.log("movie mobile: " + this.deviceService.isMobile())
       this.dynamicAssetPath += "Mobile/"
       this.mobilePrefix = "Mobile/";
+      this.isMobile = true;
     }
     this.conversionButtonUri = this.imageBaseUri + this.activeLanguage + '/' + this.mobilePrefix +'/conversion_btn.png';
     if( localStorage.getItem("lang") != undefined)this.activeLanguage = localStorage.getItem("lang");

@@ -28,7 +28,7 @@ export const FRANCHISES: Movie[] = [
 
   {
     id: 0,
-    name: 'P3_Mockup_Cars.png',
+    name: 'P3_Mockup_Frozen.png',
     fold1Title: {
       eng: ''
     },
@@ -100,7 +100,7 @@ export const FRANCHISES: Movie[] = [
 
   {
     id: 2,
-    name: 'P3_Mockup_Frozen.png',
+    name: 'P3_Mockup_Cars.png',
     fold1Title: {
       eng: ''
     },

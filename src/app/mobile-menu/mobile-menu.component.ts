@@ -103,10 +103,10 @@ export class MobileMenuComponent implements OnInit {
     this.isMenuOpen = !this.isMenuOpen;
     if(this.isMenuOpen){
       document.body.style.overflowY = "hidden"
-      document.body.style.position = "fixed"
+    //  document.body.style.position = "fixed"
     }else{
       document.body.style.overflowY = "initial"
-      document.body.style.position = "relative"
+  //    document.body.style.position = "relative"
     }
     this.isMenuOpen? this.menuAlpha = 1 : this.menuAlpha = 0.9;
     document.getElementById("nav-icon3").classList.toggle("open");
@@ -144,7 +144,7 @@ matOpened(){
 matClosed(){
   console.log('Learning closed');
   this.isLearningExpanded = false;
-  
+
 
 }
 

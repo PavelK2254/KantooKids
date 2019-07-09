@@ -38,6 +38,7 @@ import {  TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { HAMMER_GESTURE_CONFIG, HammerGestureConfig} from '@angular/platform-browser';
+import { FloatingButtonComponent } from './floating-button/floating-button.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any> {
@@ -64,7 +65,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     OurAppComponent,
     LearningWithDisneyComponent,
     MoviePageComponent,
-    MoviePageCarouselComponent
+    MoviePageCarouselComponent,
+    FloatingButtonComponent
   ],
   imports: [
     NgbModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,HostBinding, HostListener } from '@angular/core';
 import { TranslateService,LangChangeEvent } from '@ngx-translate/core';
 import { PromoPopupComponent } from '../promo-popup/promo-popup.component'
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
@@ -15,6 +15,9 @@ export class OurAppComponent implements OnInit {
   imageBaseUri = "./assets/ourApp/";
   homeImageBaseUri = "./assets/homepage/";
   mobilePrefix = "/Mobile"
+  bottomConversionOpacityValue = 0;
+  topConversionOpacityValue = 1;
+
   constructor(private translateLang:TranslateService,public dialog: MatDialog) {
     translateLang.onLangChange.subscribe((event: LangChangeEvent) => {
       console.log("laguage:" + event.lang);
@@ -38,6 +41,17 @@ export class OurAppComponent implements OnInit {
       }
 
     }
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  public onWindowScroll(event: Event): void {
+    if (window.scrollY <= 1000) {
+      var computedValue = window.scrollY / 1000;
+      this.topConversionOpacityValue = 1 - computedValue;
+    }else if(window.scrollY > 1000){
+      this.topConversionOpacityValue = 0;
+    }
+
   }
 
   openDialog(): void {

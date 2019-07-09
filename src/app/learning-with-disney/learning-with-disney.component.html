@@ -1,4 +1,5 @@
 <div class="container">
+  <app-floating-button></app-floating-button>
   <ng-container *ngFor="let asset of assetCollection; index as i">
   <div [id]="assetCollection[i].name" [class]="i%2 == 0? 'Fold1': 'Fold2'" [style.background-image]="'url('+dynamicAssetPath + assetCollection[i].background + '.png)'">
     <div class="foldLeft">

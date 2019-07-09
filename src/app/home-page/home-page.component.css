@@ -324,12 +324,14 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   margin-top: 0;
   object-fit: contain;
   /*  width: 20vw;*/
+  display: none;
 }
 
 .CONVERSIONbtnCont2 {
   top: 430px;
   left: 180px;
   cursor: pointer;
+
 }
 
 .LearnEnglish {
@@ -498,6 +500,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   cursor: pointer;
   /* margin-top: 20%; */
   margin: 0 auto;
+  display: none;
 }
 
 .BGStrip {
@@ -515,6 +518,8 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 #product-arrowRight {
   display: none;
 }
+
+
 
 /*----------------------------------------------LAPTOP--------------------------------------------------*/
 @media only screen and (max-width: 1024px) {
@@ -628,6 +633,10 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     height: 60vh;
     margin-top: 21.5vh;
   }
+}
+
+.CONVERSIONbtnCont3{
+  display: none;
 }
 
 /*----------------------------------------------MOBILE--------------------------------------------------*/
@@ -1120,6 +1129,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
   .CONVERSIONbtnCont3 {
     visibility: hidden;
+
   }
 
   .expanding {

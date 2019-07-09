@@ -1,5 +1,5 @@
 <div class="container">
-
+  <app-floating-button></app-floating-button>
   <div class="Fold1">
     <img [style.z-index]="fold1BackgroundZIndexActual" [style.content]="'url('+imageBaseUri  + mobilePrefix + '/fold_1.png)'" class="Fold1BackgroundImg" alt="kids with a tablet">
 
@@ -10,7 +10,7 @@
     <img src="../assets/homepage/kanto_disney_logo.png" alt="storytime logo"
      class="KantoDisneyLogo">
      <h1 class="AddEnglishToTheirStory">{{'addEnglishText' | translate | uppercase}}</h1>
-     <a class="CONVERSIONbtnCont" (click)="openDialog()">
+     <a [style.opacity]="topConversionOpacityValue" class="CONVERSIONbtnCont" (click)="openDialog()">
        <img alt="conversion button" [src]="conversionButtonUri" (mouseout)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn.png'"
           (mouseover)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn_hover.png'" class="CONVERSIONbtn">
      </a>
