@@ -1,12 +1,12 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Movie } from '../movie';
 import { MovieFetcherService } from "../movie-fetcher.service";
-import { HostBinding } from '@angular/core';
+import { HostBinding, HostListener } from '@angular/core';
 import { YoutubePopupComponent } from '../youtube-popup/youtube-popup.component'
 import { PromoPopupComponent } from '../promo-popup/promo-popup.component'
-import {  trigger, state, style, animate, transition } from '@angular/animations';
-import { TranslateService,LangChangeEvent } from '@ngx-translate/core';
-import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+import { trigger, state, style, animate, transition } from '@angular/animations';
+import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 
 
@@ -14,6 +14,7 @@ import {MatDialog, MatDialogRef} from '@angular/material/dialog';
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css'],
+  host: { '(window:scroll)': 'onWindowScroll($event)' },
   animations: [
     trigger('move', [
       state('0', style({ transform: 'translateX(0px)' })),
@@ -72,6 +73,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   products: Movie[];
   translate: number = 0;
   translate2: number = 100;
+
   @HostBinding('@.disabled')
   public isDisabled = false;
   moveOffset = 'translateX( ' + this.translate + 'px)';
@@ -92,30 +94,40 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   mobileDivideValue = 1.20;
   activeLanguage = "en";
   conversionButtonUri;
-  productsSource:string;
+  productsSource: string;
   productSourceCounter = 0;
   carouselMaxScrollValue = 0;
+  bottomConversionOpacityValue = 0;
+  topConversionOpacityValue = 1;
 
-
-  constructor(private movieFetcher: MovieFetcherService, public dialog: MatDialog,private translateLang:TranslateService) {
+  constructor(private movieFetcher: MovieFetcherService, public dialog: MatDialog, private translateLang: TranslateService) {
     this.imgSrcLeft = "assets/homepage/left_arrow.png";
     this.imgSrcRight = "assets/homepage/right_arrow.png";
-    if( localStorage.getItem("lang") != undefined)this.activeLanguage = localStorage.getItem("lang");
+    if (localStorage.getItem("lang") != undefined) this.activeLanguage = localStorage.getItem("lang");
     translateLang.onLangChange.subscribe((event: LangChangeEvent) => {
-      console.log("laguage:" + event.lang);
+      console.log("language:" + event.lang);
       this.activeLanguage = event.lang;
-      this.conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn.png';
+      this.conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix + '/conversion_btn.png';
     });
   }
 
+  @HostListener('window:scroll', ['$event'])
+  public onWindowScroll(event: Event): void {
+    if (window.scrollY <= 1000) {
+      var computedValue = window.scrollY / 1000;
+      this.bottomConversionOpacityValue = computedValue;
+      this.topConversionOpacityValue = 1 - computedValue;
+    }
+  }
+
   openDialog(): void {
-    if(this.mobilePrefix.length > 1){
-      if(this.getMobileOperatingSystem() == "Android"){
+    if (this.mobilePrefix.length > 1) {
+      if (this.getMobileOperatingSystem() == "Android") {
         location.href = "https://go.onelink.me/app/d29e2f84"
-      }else if(this.getMobileOperatingSystem() == "iOS"){
+      } else if (this.getMobileOperatingSystem() == "iOS") {
         location.href = "https://itunes.apple.com/us/app/storytime-learn-english/id1359805410?l=iw&ls=1&mt=8"
       }
-    }else{
+    } else {
       const dialogRef = this.dialog.open(PromoPopupComponent, {
         width: 'fit-content',
         height: 'fit-content'
@@ -123,69 +135,64 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       });
     }
 
-    }
+  }
 
-    getMobileOperatingSystem() {
-  var userAgent = navigator.userAgent || navigator.vendor ;
+  getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor;
 
-      // Windows Phone must come first because its UA also contains "Android"
+    // Windows Phone must come first because its UA also contains "Android"
     if (/windows phone/i.test(userAgent)) {
-        return "Windows Phone";
+      return "Windows Phone";
     }
 
     if (/android/i.test(userAgent)) {
-        return "Android";
+      return "Android";
     }
 
     // iOS detection from: http://stackoverflow.com/a/9039885/177710
     if (/iPad|iPhone|iPod/.test(userAgent)) {
-        return "iOS";
+      return "iOS";
     }
 
     return "unknown";
-}
+  }
 
 
-    onCarouselScroll(event):void{
-      console.log(event.target.scrollLeft);
-      console.log("max " + this.carouselMaxScrollValue);
-      const divides:Number[] = [];
-      const indexAmouth = document.getElementsByClassName('franchisesItemCont').length;
-      const divideValue = Math.floor(this.carouselMaxScrollValue / indexAmouth);
-      this.carouselMaxScrollValue =  document.getElementsByClassName('franchiseItemHolder')[0].scrollWidth - document.getElementsByClassName('franchiseItemHolder')[0].clientWidth
-      divides.push(0)
-      for(var i = 1; i < indexAmouth; i++){
-        divides.push(divideValue * i)
+  onCarouselScroll(event): void {
+    console.log(event.target.scrollLeft);
+    console.log("max " + this.carouselMaxScrollValue);
+    const divides: Number[] = [];
+    const indexAmouth = document.getElementsByClassName('franchisesItemCont').length;
+    const divideValue = Math.floor(this.carouselMaxScrollValue / indexAmouth);
+    this.carouselMaxScrollValue = document.getElementsByClassName('franchiseItemHolder')[0].scrollWidth - document.getElementsByClassName('franchiseItemHolder')[0].clientWidth
+    divides.push(0)
+    for (var i = 1; i < indexAmouth; i++) {
+      divides.push(divideValue * i)
+    }
+    console.log('divides ' + divides);
+
+    this.updateDotMenu(indexAmouth - this.getItemIndex(divides, event.target.scrollLeft))
+  }
+
+  getItemIndex(array, target): number {
+    console.log("target " + target);
+    for (let it of array) {
+      let index = array.indexOf(it);
+      if (target > it && target < array[index + 1]) {
+        return index + 1;
+      } else if (target < it && target > array[index - 1]) {
+        return index;
+      } else if (target <= 0) {
+        return 0;
       }
-      console.log('divides ' + divides);
-
-      this.updateDotMenu(indexAmouth - this.getItemIndex(divides,event.target.scrollLeft))
     }
-
-    getItemIndex(array,target):number{
-      console.log("target " + target);
-      for (let it of array) {
-        let index = array.indexOf(it);
-
-            if(target > it && target < array[index +1]){
-              return index +1;
-            }else if (target < it && target > array[index - 1]){
-              return index;
-            }else if(target <= 0){
-              return 0;
-            }
+  }
 
 
 
-      }
-
-    }
-
-
-
-    public closeDialog() {
-      this.dialog.closeAll();
-    }
+  public closeDialog() {
+    this.dialog.closeAll();
+  }
 
   startProductListRotation(): void {
     setInterval(() => {
@@ -210,14 +217,13 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   getFranchises(): void {
     this.movieFetcher.getFranchises().subscribe(
       franchises => this.franchises = franchises);
-    console.log('franchises: ', this.franchises);
     this.startProductListRotation();
   }
 
-  setOffsetModifier():void {
+  setOffsetModifier(): void {
     console.log("setOffsetModifier");
-    if(this.mobilePrefix == "")
-    this.offsetModifier = (<HTMLImageElement>document.getElementsByClassName("franchisesItem")[0]).width;
+    if (this.mobilePrefix == "")
+      this.offsetModifier = (<HTMLImageElement>document.getElementsByClassName("franchisesItem")[0]).width;
   }
 
   ngOnInit() {
@@ -226,16 +232,16 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       this.offsetModifier2 = window.innerWidth * 0.9;
       this.mobilePrefix = "/Mobile/"
 
-    }else if(window.innerWidth <= 1024){
-  //  this.offsetModifier = window.innerWidth / 1.333;
-  this.maxOffsetIndex = -3;
-  this.minOffsetIndex = 2;
-    }else{
+    } else if (window.innerWidth <= 1024) {
+      //  this.offsetModifier = window.innerWidth / 1.333;
+      this.maxOffsetIndex = -3;
+      this.minOffsetIndex = 2;
+    } else {
       this.mobilePrefix = ""
       this.maxOffsetIndex = -3;
       this.minOffsetIndex = 2;
     }
-    this.conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn.png';
+    this.conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix + '/conversion_btn.png';
     this.getFranchises();
     this.getProducts();
 
@@ -248,8 +254,8 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       this.offsetModifier2 = event.target.innerWidth * 0.9;
       this.mobilePrefix = "/Mobile/"
 
-    }else if(window.innerWidth <= 1024){
-    this.offsetModifier = window.innerWidth / 1.333;
+    } else if (window.innerWidth <= 1024) {
+      this.offsetModifier = window.innerWidth / 1.333;
 
 
     } else {
@@ -258,7 +264,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       this.mobilePrefix = ""
     }
 
-  //  this.getFranchises();
+    //  this.getFranchises();
     this.getProducts();
   }
 
@@ -268,17 +274,17 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     }
     var dotsLength = document.getElementsByClassName('franchisesItemDots').length;
     console.log("dots length: " + dotsLength + " currentIndex: " + changeIndex + " Result " + (dotsLength - changeIndex));
-    if(changeIndex == undefined ){
+    if (changeIndex == undefined) {
       changeIndex = dotsLength;
-    }else if (Number.isNaN(changeIndex)){
+    } else if (Number.isNaN(changeIndex)) {
       changeIndex = 0;
     }
-    if(changeIndex < 0){
+    if (changeIndex < 0) {
       changeIndex = 0;
-    }else if(changeIndex >= dotsLength){
-      changeIndex = dotsLength -1;
+    } else if (changeIndex >= dotsLength) {
+      changeIndex = dotsLength - 1;
     }
-    (<HTMLImageElement>document.getElementsByClassName('franchisesItemDots')[(dotsLength - changeIndex) -1 ]).src = './assets/homepage/Mobile/dot_1.png';
+    (<HTMLImageElement>document.getElementsByClassName('franchisesItemDots')[(dotsLength - changeIndex) - 1]).src = './assets/homepage/Mobile/dot_1.png';
   }
 
   ngAfterViewInit() {
@@ -287,7 +293,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     for (var i = 0; i < document.getElementsByClassName('franchisesItem').length; i++) {
       this.viewIndexArr.push(this.maxOffsetIndex + i);
     }
-    this.updateDotMenu(this.viewIndexArr.length -1);
+    this.updateDotMenu(this.viewIndexArr.length - 1);
   }
 
 
@@ -306,9 +312,8 @@ export class HomePageComponent implements OnInit, AfterViewInit {
 
 
   incrementIndex() {
-    console.trace();
     if (this.viewIndex <= this.maxOffsetIndex) {
-    //  this.isDisabled = true;
+      //  this.isDisabled = true;
       //return;
     } else {
       this.isDisabled = false;
@@ -329,10 +334,11 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     this.moveOffsetAnim = 'translateX( ' + (this.translate + this.offsetModifier) + 'px)';
     this.updateDotMenu(this.viewIndexArr.indexOf(this.viewIndex))
   }
+
   decrementIndex() {
 
     if (this.viewIndex >= this.minOffsetIndex) {
-    //  this.isDisabled = true;
+      //  this.isDisabled = true;
       //return;
     } else {
       this.isDisabled = false;
@@ -369,8 +375,8 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       this.isDisabled = false;
     }
     this.viewIndex2 -= 1;
-    this.productSourceCounter --;
-    if(this.productSourceCounter < 0)this.productSourceCounter *=  -1;
+    this.productSourceCounter--;
+    if (this.productSourceCounter < 0) this.productSourceCounter *= -1;
     this.productsSource = this.products[this.productSourceCounter].name;
   }
   decrementIndex2() {
@@ -391,8 +397,8 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       this.isDisabled = false;
     }
     this.viewIndex2 += 1;
-    this.productSourceCounter ++;
-    if(this.productSourceCounter < 0)this.productSourceCounter *=  -1;
+    this.productSourceCounter++;
+    if (this.productSourceCounter < 0) this.productSourceCounter *= -1;
     this.productsSource = this.products[this.productSourceCounter].name;
   }
 
@@ -400,7 +406,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   getProducts() {
     this.movieFetcher.getProducts().subscribe(
       products => this.products = products);
-      this.productsSource = this.products[this.productSourceCounter].name;
+    this.productsSource = this.products[this.productSourceCounter].name;
     console.log('products: ', this.products);
 
 
