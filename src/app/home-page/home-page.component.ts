@@ -70,7 +70,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   screenHeight = window.screen.height;
   franchises: Movie[];
   products: Movie[];
-  translate: number = 100;
+  translate: number = 0;
   translate2: number = 100;
   @HostBinding('@.disabled')
   public isDisabled = false;
@@ -80,8 +80,8 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   moveOffsetAnim2 = 'translateX( ' + this.translate + 'px)';
   viewIndex = 0;
   viewIndexArr: number[] = [];
-  maxOffsetIndex: number = -3;
-  minOffsetIndex: number = 2;
+  maxOffsetIndex: number = 0;
+  minOffsetIndex: number = 3;
   maxOffsetIndex2: number = -2;
   minOffsetIndex2: number = 1;
   offsetModifier = 725;
@@ -94,7 +94,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   conversionButtonUri;
   productsSource:string;
   productSourceCounter = 0;
-
+  carouselMaxScrollValue = 0;
 
 
   constructor(private movieFetcher: MovieFetcherService, public dialog: MatDialog,private translateLang:TranslateService) {
@@ -109,11 +109,76 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   }
 
   openDialog(): void {
+    if(this.mobilePrefix.length > 1){
+      if(this.getMobileOperatingSystem() == "Android"){
+        location.href = "https://go.onelink.me/app/d29e2f84"
+      }else if(this.getMobileOperatingSystem() == "iOS"){
+        location.href = "https://itunes.apple.com/us/app/storytime-learn-english/id1359805410?l=iw&ls=1&mt=8"
+      }
+    }else{
       const dialogRef = this.dialog.open(PromoPopupComponent, {
         width: 'fit-content',
         height: 'fit-content'
 
       });
+    }
+
+    }
+
+    getMobileOperatingSystem() {
+  var userAgent = navigator.userAgent || navigator.vendor ;
+
+      // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent)) {
+        return "iOS";
+    }
+
+    return "unknown";
+}
+
+
+    onCarouselScroll(event):void{
+      console.log(event.target.scrollLeft);
+      console.log("max " + this.carouselMaxScrollValue);
+      const divides:Number[] = [];
+      const indexAmouth = document.getElementsByClassName('franchisesItemCont').length;
+      const divideValue = Math.floor(this.carouselMaxScrollValue / indexAmouth);
+      this.carouselMaxScrollValue =  document.getElementsByClassName('franchiseItemHolder')[0].scrollWidth - document.getElementsByClassName('franchiseItemHolder')[0].clientWidth
+      divides.push(0)
+      for(var i = 1; i < indexAmouth; i++){
+        divides.push(divideValue * i)
+      }
+      console.log('divides ' + divides);
+
+      this.updateDotMenu(indexAmouth - this.getItemIndex(divides,event.target.scrollLeft))
+    }
+
+    getItemIndex(array,target):number{
+      console.log("target " + target);
+      for (let it of array) {
+        let index = array.indexOf(it);
+
+            if(target > it && target < array[index +1]){
+              return index +1;
+            }else if (target < it && target > array[index - 1]){
+              return index;
+            }else if(target <= 0){
+              return 0;
+            }
+
+
+
+      }
+
     }
 
 
@@ -163,9 +228,12 @@ export class HomePageComponent implements OnInit, AfterViewInit {
 
     }else if(window.innerWidth <= 1024){
   //  this.offsetModifier = window.innerWidth / 1.333;
-
+  this.maxOffsetIndex = -3;
+  this.minOffsetIndex = 2;
     }else{
       this.mobilePrefix = ""
+      this.maxOffsetIndex = -3;
+      this.minOffsetIndex = 2;
     }
     this.conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn.png';
     this.getFranchises();
@@ -198,7 +266,19 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     for (var i = 0; i < document.getElementsByClassName('franchisesItem').length; i++) {
       (<HTMLImageElement>document.getElementsByClassName('franchisesItemDots')[i]).src = './assets/homepage/Mobile/dot_2.png';
     }
-    (<HTMLImageElement>document.getElementsByClassName('franchisesItemDots')[changeIndex]).src = './assets/homepage/Mobile/dot_1.png';
+    var dotsLength = document.getElementsByClassName('franchisesItemDots').length;
+    console.log("dots length: " + dotsLength + " currentIndex: " + changeIndex + " Result " + (dotsLength - changeIndex));
+    if(changeIndex == undefined ){
+      changeIndex = dotsLength;
+    }else if (Number.isNaN(changeIndex)){
+      changeIndex = 0;
+    }
+    if(changeIndex < 0){
+      changeIndex = 0;
+    }else if(changeIndex >= dotsLength){
+      changeIndex = dotsLength -1;
+    }
+    (<HTMLImageElement>document.getElementsByClassName('franchisesItemDots')[(dotsLength - changeIndex) -1 ]).src = './assets/homepage/Mobile/dot_1.png';
   }
 
   ngAfterViewInit() {
@@ -207,7 +287,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     for (var i = 0; i < document.getElementsByClassName('franchisesItem').length; i++) {
       this.viewIndexArr.push(this.maxOffsetIndex + i);
     }
-    this.updateDotMenu(this.viewIndexArr.indexOf(this.viewIndex));
+    this.updateDotMenu(this.viewIndexArr.length -1);
   }
 
 
@@ -228,8 +308,8 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   incrementIndex() {
     console.trace();
     if (this.viewIndex <= this.maxOffsetIndex) {
-      this.isDisabled = true;
-      return;
+    //  this.isDisabled = true;
+      //return;
     } else {
       this.isDisabled = false;
       if (this.viewIndex == (this.maxOffsetIndex + 1)) {
@@ -252,8 +332,8 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   decrementIndex() {
 
     if (this.viewIndex >= this.minOffsetIndex) {
-      this.isDisabled = true;
-      return;
+    //  this.isDisabled = true;
+      //return;
     } else {
       this.isDisabled = false;
       if (this.viewIndex == (this.minOffsetIndex - 1)) {
@@ -322,6 +402,8 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       products => this.products = products);
       this.productsSource = this.products[this.productSourceCounter].name;
     console.log('products: ', this.products);
+
+
   }
 
 }

@@ -85,6 +85,10 @@ export class MobileMenuComponent implements OnInit {
     localStorage.setItem("lang",language);
   }
 
+  openLegacy(){
+    window.open('http://www.kantoo.com/en/')
+  }
+
   scroll = (): void => {
     //if(!this.isMenuOpen)
   //  this.menuAlpha = 0.9 - window.pageYOffset / 250;
@@ -97,6 +101,13 @@ export class MobileMenuComponent implements OnInit {
 
   toggleMenu(){
     this.isMenuOpen = !this.isMenuOpen;
+    if(this.isMenuOpen){
+      document.body.style.overflowY = "hidden"
+      document.body.style.position = "fixed"
+    }else{
+      document.body.style.overflowY = "initial"
+      document.body.style.position = "relative"
+    }
     this.isMenuOpen? this.menuAlpha = 1 : this.menuAlpha = 0.9;
     document.getElementById("nav-icon3").classList.toggle("open");
     document.getElementById('mobileMenuContent').scrollTo(0, 0);
@@ -115,6 +126,8 @@ export class MobileMenuComponent implements OnInit {
 
 closeMenu(){
   this.isMenuOpen = false;
+  document.body.style.overflowY = "scroll"
+  document.body.style.position = "relative"
   document.getElementById("nav-icon3").classList.remove('open');
   this.menuAlpha = 0.9;
   this.accordion.closeAll();
@@ -124,13 +137,15 @@ closeMenu(){
 matOpened(){
   console.log('Learning opened');
   this.isLearningExpanded = true;
-  document.getElementById('mobileMenuContent').style.overflowY = "scroll";
+
+
 }
 
 matClosed(){
   console.log('Learning closed');
   this.isLearningExpanded = false;
-  document.getElementById('mobileMenuContent').style.overflowY = "hidden";
+  
+
 }
 
 }

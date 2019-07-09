@@ -919,15 +919,16 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     display: flex;
     -o-object-fit: contain;
     object-fit: contain;
-    overflow: hidden;
-    justify-content: center;
+    overflow-y:  hidden;
+    overflow-x: scroll;
+    justify-content: start;
     z-index: -5;
     margin: 0 auto;
   }
 
   .franchisesItem {
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
     height: 63vw;
     width: auto;
   }
@@ -941,7 +942,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   }
 
   .franchiseItemHolder a:first-child {
-    margin-left: 108vw;
+    margin-left: 0;
     height: 63vw;
   }
 
@@ -954,7 +955,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
   .franchisesItemDots {
     width: 3.5vw;
-    height: 2vh;
+    height: auto;
   }
 
   .CONVERSIONbtnContFold3 {
@@ -1189,6 +1190,8 @@ add 180px to padding top and bottom to make the folder same size as Fold1
     display: block;
     margin-top: auto;
   }
+
+  .franchiseItemHolder::-webkit-scrollbar {width: 0 !important}
 }
 
 @-moz-document url-prefix() {

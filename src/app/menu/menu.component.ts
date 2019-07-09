@@ -19,6 +19,10 @@ export class MenuComponent implements OnInit,AfterViewInit {
 
   }
 
+  openLegacy(){
+    window.open('http://www.kantoo.com/en/')
+  }
+
   ngAfterViewInit(){
   document.getElementById('mobileMenuContent').style.top = (<HTMLElement>document.getElementsByClassName('mMainMenu')[0]).offsetHeight + "px";
     if(localStorage.getItem("lang") != undefined){
