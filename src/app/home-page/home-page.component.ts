@@ -97,6 +97,8 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   productsSource: string;
   productSourceCounter = 0;
   carouselMaxScrollValue = 0;
+  bottomConversionOpacityValue = 0;
+  topConversionOpacityValue = 1;
 
   topConversionOpacityValue = 1;
 
@@ -308,6 +310,12 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   }
 
 
+
+    for (var i = 0; i < document.getElementsByClassName('franchisesItem').length; i++) {
+      this.viewIndexArr.push(this.maxOffsetIndex + i);
+    }
+    this.updateDotMenu(this.viewIndexArr.length - 1);
+  }
 
 
 

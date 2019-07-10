@@ -519,7 +519,12 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   display: none;
 }
 
-
+.conversionButtonBottom{
+  position: fixed;
+bottom: 3vh;
+left: 3vh;
+z-index: 999;
+}
 
 /*----------------------------------------------LAPTOP--------------------------------------------------*/
 @media only screen and (max-width: 1024px) {
