@@ -143,7 +143,12 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 }
 
 .franchisesItemDotsHolder {
-  display: none;
+  display: flex;
+}
+
+.franchisesItemDots{
+  margin: 0 auto;
+  cursor: pointer;
 }
 
 .DisneyLogoVector {
@@ -171,9 +176,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   pointer-events: all;
 }
 
-.franchiseItemHolder a:first-child {
-  margin-left: 37.8vw;
-}
+
 
 .KantoDisneyLogo {
   width: 26vw;
@@ -363,6 +366,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
 .movie-section {
   width: 37.8vw;
+  margin: 0 auto;
 }
 
 .franchiseItemHolder {
@@ -372,8 +376,9 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   -o-object-fit: contain;
   object-fit: contain;
   overflow: hidden;
-  justify-content: center;
+  justify-content: start;
   z-index: -5;
+  scroll-behavior: smooth;
   margin: 0 auto;
 }
 

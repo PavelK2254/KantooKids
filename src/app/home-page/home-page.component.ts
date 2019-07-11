@@ -100,7 +100,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   bottomConversionOpacityValue = 0;
   topConversionOpacityValue = 1;
 
-  topConversionOpacityValue = 1;
+
 
   constructor(private movieFetcher: MovieFetcherService, public dialog: MatDialog, private translateLang: TranslateService) {
     this.imgSrcLeft = "assets/homepage/left_arrow.png";
@@ -184,8 +184,10 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       divides.push(divideValue * i)
     }
     console.log('divides ' + divides);
-
+    if(this.mobilePrefix.length > 0){
     this.updateDotMenu(indexAmouth - this.getItemIndex(divides, event.target.scrollLeft))
+    }
+
   }
 
 
@@ -309,16 +311,6 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     (<HTMLImageElement>document.getElementsByClassName('franchisesItemDots')[(dotsLength - changeIndex) - 1]).src = './assets/homepage/Mobile/dot_1.png';
   }
 
-
-
-    for (var i = 0; i < document.getElementsByClassName('franchisesItem').length; i++) {
-      this.viewIndexArr.push(this.maxOffsetIndex + i);
-    }
-    this.updateDotMenu(this.viewIndexArr.length - 1);
-  }
-
-
-
   resetCarousel(x: number) {
     if (x == 0) {
       this.moveOffset = 'translateX( 0px)';
@@ -431,6 +423,14 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     console.log('products: ', this.products);
 
 
+  }
+
+  dotsClicked(itemNum){
+    const baseItemWidth = (<HTMLImageElement>document.getElementsByClassName('franchisesItem')[0]).width;
+    const itemsAmouth = document.getElementsByClassName('franchisesItem').length
+    document.getElementsByClassName('franchiseItemHolder')[0].scrollLeft = baseItemWidth * itemNum
+    this.updateDotMenu(itemsAmouth - itemNum -1);
+    console.log("force scroll " + itemNum + " scroll size " + baseItemWidth * itemNum);
   }
 
 }

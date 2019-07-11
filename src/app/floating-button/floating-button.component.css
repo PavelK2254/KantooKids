@@ -2,6 +2,6 @@
   position: fixed;
 bottom: 3vh;
 left: 3vh;
-z-index: 999;
+z-index: 7;
 cursor: pointer;
 }

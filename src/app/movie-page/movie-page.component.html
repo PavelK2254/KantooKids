@@ -13,10 +13,10 @@
       <p>{{'with' | translate | uppercase}}</p>
       <img class="kantooImage" alt="kantoo disney">
       <p>{{'learningIsfun' | translate | uppercase}}</p>
-      <a class="CONVERSIONbtnCont" (click)="openDialog()">
+      <!--<a class="CONVERSIONbtnCont" (click)="openDialog()">
         <img alt="conversion button" [src]="conversionButtonUri" (mouseout)="conversionButtonUri = this.imageBaseUri + this.activeLanguage +'/'+ this.mobilePrefix +'/conversion_btn.png'"
            (mouseover)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + '/' + this.mobilePrefix +'/conversion_btn_hover.png'" class="CONVERSIONbtn">
-      </a>
+      </a>-->
     </div>
   </div>
   <app-sub-menu *ngIf="isMobile" ></app-sub-menu>

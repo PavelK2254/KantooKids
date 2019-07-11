@@ -10,6 +10,8 @@
     background-color: #efefef;
 }
 
+.movie-section::-webkit-scrollbar {width: 0 !important}
+
 .sub-menu p {
   width: auto;
       max-height: 12px;
@@ -95,7 +97,7 @@ background-color: #efefef;
     width: auto;
     min-height: fit-content;
     float: left;
-    overflow: hidden;
+    overflow-x: auto;
     display: flex;
     margin-top: 0;
     flex-wrap: nowrap;

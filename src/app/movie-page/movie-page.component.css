@@ -236,7 +236,7 @@ padding-top: 10vh;
 
 .Fold4 {
   margin-top: 10vh;
-  height: 62vh;
+
   z-index: 0;
   position: relative;
   background-color: transperent;
@@ -244,7 +244,7 @@ padding-top: 10vh;
 
 .Fold4 img {
   width: 100vw;
-  height: 100%;
+  
 }
 
 @media only screen and (max-width: 1024px) {
