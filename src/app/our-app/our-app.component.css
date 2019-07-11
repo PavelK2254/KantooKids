@@ -34,11 +34,33 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   -o-object-fit: contain;
   object-fit: contain;
   padding-top: 5%;
+  background-image: url(/assets/ourApp//Mobile/p1tablet_test.png);
+  display: block;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Fold1TabletImg:first-child{
+  width: 36.9vw;
+height: fit-content;
+-o-object-fit: contain;
+object-fit: contain;
+margin-top: 7%;
+padding: 4%;
+background-image: url(/assets/ourApp/Mobile/p1tablet_test.png);
+display: block;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
 }
 
 
 #desktopFold1Tablet{
   display: block;
+  width: 31.9vw;
+-o-object-fit: contain;
+margin: auto;
 }
 
 #mobileFold1Tablet{
@@ -359,6 +381,14 @@ margin-top: 0px;
   display: none;
 }
 
+.fold5Image{
+  width: 31.9vw;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  padding-top: 5%;
+}
+
 /*----------------------------------------------LAPTOP--------------------------------------------------*/
 
 @media only screen and (max-width: 1024px) {
@@ -419,14 +449,19 @@ margin-top: 0px;
 }
 
 .Fold1TabletImg{
-  width: 80vw;
-height: auto;
--o-object-fit: contain;
-object-fit: contain;
-padding-top: 5%;
-margin: 0 auto;
-display: block;
-padding-bottom: 5vh;
+  height: auto;
+  width: fit-content;
+  -o-object-fit: contain;
+  object-fit: contain;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-image: url(/assets/ourApp//Mobile/p1tablet_test.png);
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 5vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .Fold1TextsContainer{
@@ -441,6 +476,12 @@ margin-top: 11vh;
 
 #mobileFold1Tablet{
   display: block;
+  width: 80vw;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  margin: 5vh;
+
 }
 
 .introducing{
@@ -817,6 +858,15 @@ padding: 0 3vw;
     display: none;
 }
 
-
+.fold5Image{
+  width: 80vw;
+height: auto;
+-o-object-fit: contain;
+object-fit: contain;
+padding-top: 5%;
+margin: 0 auto;
+display: block;
+padding-bottom: 5vh;
+}
 
 }

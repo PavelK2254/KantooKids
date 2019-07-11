@@ -1,15 +1,22 @@
 <div class="container">
   <app-floating-button></app-floating-button>
   <div class="Fold1">
-    <img id="desktopFold1Tablet" class="Fold1TabletImg" [src]="imageBaseUri + activeLanguage + mobilePrefix + '/p1tablet_test.png'"  alt="tablet">
-  <!--  <video id="mobileFold1Tablet" class="Fold1TabletImg" [src]="imageBaseUri + activeLanguage + mobilePrefix + '/placeholder_video_Tablet_mockup.mp4'" loop autoplay poster="posterimage.jpg">
+  <!--  <img id="desktopFold1Tablet" class="Fold1TabletImg" [src]="imageBaseUri + activeLanguage + mobilePrefix + '/p1tablet_test.png'"  alt="tablet">-->
+  <div *ngIf="isMobile == false" class="Fold1TabletImg">
+    <video autoplay id="desktopFold1Tablet"  [src]="imageBaseUri + activeLanguage + mobilePrefix + '/placeholder_video_Tablet_mockup.mp4'" loop autoplay>
 
-    </video>-->
+    </video>
+  </div>
       <div class="Fold1TextsContainer">
           <p class="introducing">{{'introducing' | translate | uppercase}}</p>
           <img src="../assets/homepage/kanto_disney_logo.png" class="KantoDisneyLogo2">
        <p class="disneyText">{{'kntooDisneyText' | translate}}</p>
-       <img id="mobileFold1Tablet" class="Fold1TabletImg" [src]="imageBaseUri + activeLanguage + mobilePrefix + '/p1tablet_test.png'"  alt="tablet">
+       <!--<img id="mobileFold1Tablet" class="Fold1TabletImg" [src]="imageBaseUri + activeLanguage + mobilePrefix + '/p1tablet_test.png'"  alt="tablet">-->
+       <div *ngIf="isMobile"  class="Fold1TabletImg">
+         <video autoplay controls id="mobileFold1Tablet"  [src]="imageBaseUri + activeLanguage + mobilePrefix + '/placeholder_video_Tablet_mockup.mp4'" loop autoplay [poster]="imageBaseUri + activeLanguage + mobilePrefix + '/p1tablet_test.png'">
+
+         </video>
+       </div>
 
        <p class="CONVERSIONbtnHolder" style="margin-top: 2vh">
        <a [style.opacity]="topConversionOpacityValue" class="CONVERSIONbtn" (click)="openDialog()" style="display:block">
@@ -70,7 +77,7 @@
   </div>
 
   <div class="Fold5">
-      <img class="Fold1TabletImg" src="../assets/ourApp/f5mockup.png" alt="tablet">
+      <img class="fold5Image" src="../assets/ourApp/f5mockup.png" alt="tablet">
       <div class="Fold1TextsContainer">
           <p class="introducing" style="width:400px">{{'learnEnglish' | translate | uppercase}}</p>
            <p class="disneyText">{{'meetOur' | translate}}</p>

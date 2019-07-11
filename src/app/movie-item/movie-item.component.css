@@ -7,11 +7,11 @@
 }
 
 .movieImage:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 .activeMovie {
-  transform: scale(1.1) !important;
+  transform: scale(1.15) !important;
 }
 
 .movieText {
@@ -40,5 +40,12 @@
   height: 80%;
   }
 
+  .movieImage:hover {
+    transform: scale(1.2);
+  }
+
+  .activeMovie {
+    transform: scale(1.2) !important;
+  }
 
 }

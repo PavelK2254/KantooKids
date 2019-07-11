@@ -17,6 +17,7 @@ export class OurAppComponent implements OnInit {
   mobilePrefix = "/Mobile"
   bottomConversionOpacityValue = 0;
   topConversionOpacityValue = 1;
+  isMobile = false;
 
   constructor(private translateLang:TranslateService,public dialog: MatDialog) {
     translateLang.onLangChange.subscribe((event: LangChangeEvent) => {
@@ -29,6 +30,8 @@ export class OurAppComponent implements OnInit {
 
 
     });
+
+
    }
 
   ngOnInit() {
@@ -40,6 +43,11 @@ export class OurAppComponent implements OnInit {
         this.activeLanguage = localStorage.getItem("lang")
       }
 
+    }
+
+    if (window.innerWidth <= 769) {
+      this.mobilePrefix = "/Mobile/"
+      this.isMobile = true;
     }
   }
 
