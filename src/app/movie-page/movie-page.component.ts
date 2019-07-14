@@ -24,7 +24,7 @@ export class MoviePageComponent implements OnInit {
   movie: Movie;
   currentMovieId:number;
   movieName: string;
-
+  videoPath = "https://kantoo-kids.s3-eu-west-1.amazonaws.com/assets/moviePages/"
   fold1Title: string;
   fold2Title: string;
   fold2TitleFriends: string;
@@ -66,7 +66,9 @@ export class MoviePageComponent implements OnInit {
         this.loadMovieContent(this.currentMovieId,this.activeLanguage);
       });
 
+      if((<HTMLElement>document.getElementsByClassName('chooseMovie')[1]) != undefined){
       (<HTMLElement>document.getElementsByClassName('chooseMovie')[1]).style.display = "block";
+    }
   }
 
   openDialog(): void {

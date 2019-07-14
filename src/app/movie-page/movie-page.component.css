@@ -11,7 +11,24 @@ div {
   padding-top: 10vh;
 }
 
-.pageBackground{
+.tabletVideoHolder{
+  width: 40vw;
+  margin: 0 auto;
+  height: 60vh;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  display: block;
+  padding: 0px;
+}
+
+#tabletVideo {
+  width: 33.5vw;
+margin: auto;
+padding-top: 2.6vh;
+display: block;
+}
+
+.pageBackground {
   width: auto;
   height: auto;
   position: absolute;
@@ -20,46 +37,45 @@ div {
   z-index: 1;
 }
 
-.CONVERSIONbtn{
+.CONVERSIONbtn {
   margin-left: 5vw;
 }
 
 .leftTextSection {
-      padding: 5vw;
+  padding: 5vw;
 }
 
 .playBtnCont {
   position: absolute;
-left: 0;
-right: 0;
-top: 0;
-height: fit-content;
-width: fit-content;
-bottom: 0;
-margin: auto;
-cursor: pointer;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: fit-content;
+  width: fit-content;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
 }
 
 .leftTextSection p {
   width: auto;
- height: auto;
- object-fit: contain;
- font-size: 2em;
- font-weight: normal;
- font-style: normal;
- font-stretch: normal;
- line-height: normal;
- letter-spacing: normal;
- text-align: left;
- color: #ffffff;
+  height: auto;
+  object-fit: contain;
+  font-size: 2em;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
 }
 
-.kantooImage{
+.kantooImage {
   content: url(/assets/homepage/kanto_disney_logo_negative.png);
 }
 
-
-.pageBackground2{
+.pageBackground2 {
   width: 15vw;
   height: auto;
   position: absolute;
@@ -68,25 +84,25 @@ cursor: pointer;
   z-index: 1;
 }
 
-.pageBackground3{
+.pageBackground3 {
   width: 15vw;
-    height: auto;
-    position: absolute;
-      top: 165vh;
-    left: 5vw;
-    z-index: 1;
+  height: auto;
+  position: absolute;
+  top: 165vh;
+  left: 5vw;
+  z-index: 1;
 }
 
-.pageBackground4{
+.pageBackground4 {
   width: auto;
-      height: auto;
-      position: absolute;
-      top: 225vh;
-      right: 5vw;
-      z-index: 1;
+  height: auto;
+  position: absolute;
+  top: 225vh;
+  right: 5vw;
+  z-index: 1;
 }
 
-.pageBackground5{
+.pageBackground5 {
   width: 9vw;
   height: auto;
   position: absolute;
@@ -97,11 +113,11 @@ cursor: pointer;
 
 .videoContaner {
   width: 100vw;
-height: 80vh;
-z-index: 4;
-position: relative;
-background-size: cover;
-padding-top: 10vh;
+  height: 80vh;
+  z-index: 4;
+  position: relative;
+  background-size: cover;
+  padding-top: 10vh;
 }
 
 .textSection {
@@ -120,6 +136,10 @@ padding-top: 10vh;
 .Fold1 .mainimage {
   margin: 0 auto;
   display: block;
+}
+
+.mainimage video {
+  width: 100%;
 }
 
 .Fold1 h1 {
@@ -228,7 +248,6 @@ padding-top: 10vh;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
-
   letter-spacing: normal;
   text-align: left;
   color: #0f206c;
@@ -236,7 +255,6 @@ padding-top: 10vh;
 
 .Fold4 {
   margin-top: 10vh;
-
   z-index: 0;
   position: relative;
   background-color: transperent;
@@ -244,58 +262,51 @@ padding-top: 10vh;
 
 .Fold4 img {
   width: 100vw;
-  
 }
 
 @media only screen and (max-width: 1024px) {
-  .kantooImage{
+  .kantooImage {
     display: block;
     width: 30vw;
   }
 
-
-
-  .Fold2{
+  .Fold2 {
     width: 100vw;
     height: auto;
     display: flex;
     z-index: 1;
     position: relative;
-        padding-left: 5vw;
+    padding-left: 5vw;
     background-color: transperent;
     background-size: contain;
   }
 
-  .textSection{
+  .textSection {
     padding: 0;
     padding-left: 2vw;
     padding-top: 3vh;
     width: auto;
   }
 
-  .Fold3{
-        padding-left: 5vw;
+  .Fold3 {
+    padding-left: 5vw;
   }
-
-
-
 }
 
 @media only screen and (max-width: 768px) {
-
   .Fold1 {
     height: fit-content;
     box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17);
   }
 
-  .CONVERSIONbtn{
-     margin-left: 0;
-width: 90vw;
-object-fit: contain;
-position: fixed;
+  .CONVERSIONbtn {
+    margin-left: 0;
+    width: 90vw;
+    object-fit: contain;
+    position: fixed;
   }
 
-  .leftTextSection{
+  .leftTextSection {
     padding: 5vw;
     bottom: 5vh;
     position: absolute;
@@ -303,21 +314,38 @@ position: fixed;
 
   .leftTextSection p {
     width: auto;
-      height: auto;
-      -o-object-fit: contain;
-      object-fit: contain;
-      font-size: 1.5em;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-      margin: 2vh auto;
-      line-height: normal;
-      letter-spacing: normal;
-      text-align: left;
-      color: #ffffff;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    font-size: 1.5em;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    margin: 2vh auto;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
   }
 
-  .kantooImage{
+  .tabletVideoHolder{
+    width: 90vw;
+margin: 0 auto;
+height: 60vh;
+background-size: contain !important;
+background-repeat: no-repeat !important;
+display: block;
+padding: 0px;
+  }
+
+  #tabletVideo{
+    width: 75.5vw;
+margin: auto;
+padding-top: 1.6vh;
+display: block;
+  }
+
+  .kantooImage {
     width: 40vw;
     height: auto;
     -o-object-fit: contain;
@@ -327,11 +355,9 @@ position: fixed;
     bottom: 13vh;
     display: block;
     right: 0;
-     margin-left: 0;
+    margin-left: 0;
     margin-right: 30vw;
   }
-
-
 
   .Fold1 .title {
     font-size: 5vw;
@@ -421,8 +447,6 @@ position: fixed;
     color: #0f206c;
     margin: 0;
   }
-
-
 
   .Fold3 .contentText {
     width: auto;

@@ -99,7 +99,8 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   carouselMaxScrollValue = 0;
   bottomConversionOpacityValue = 0;
   topConversionOpacityValue = 1;
-
+  videoBaseUrl = "https://kantoo-kids.s3-eu-west-1.amazonaws.com/assets/homepage/";
+  isVideoPlaying = false;
 
 
   constructor(private movieFetcher: MovieFetcherService, public dialog: MatDialog, private translateLang: TranslateService) {
@@ -132,6 +133,33 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     }
 
     this.updateDotMenu(this.viewIndexArr.length - 1);
+    this.initVideoPLayerEvents();
+  }
+
+  initVideoPLayerEvents(){
+    var videoElement =  (<HTMLVideoElement>document.getElementById('promoVideo'))
+    if(this.mobilePrefix.length > 1){
+
+    }
+
+
+
+    videoElement.onplaying = () => {
+      this.isVideoPlaying = true;
+      document.getElementById('fold1LeftOveray').style.display = "none";
+      document.getElementById('playBtnCont').style.display = "none";
+      videoElement.controls = true;
+      if(this.mobilePrefix.length > 1){
+        videoElement.webkitEnterFullScreen();
+      }
+
+    }
+    videoElement.onpause = () => {
+      this.isVideoPlaying = false;
+      //videoElement.controls = true;
+      document.getElementById('fold1LeftOveray').style.display = "grid";
+    //  document.getElementById('playBtnCont').style.display = "block";
+    }
   }
 
   openDialog(): void {
@@ -220,12 +248,18 @@ export class HomePageComponent implements OnInit, AfterViewInit {
 
 
   openPlayer(): void {
-    const dialogRef = this.dialog.open(YoutubePopupComponent, {
+    /*const dialogRef = this.dialog.open(YoutubePopupComponent, {
       width: 'fit-content',
       height: 'fit-content',
       maxWidth: '90vw',
       id: '5Q6esf_N-0s'
-    });
+    });*/
+    var videoElement =  (<HTMLVideoElement>document.getElementById('promoVideo'))
+    if(this.isVideoPlaying){
+      videoElement.pause();
+    }else{
+      videoElement.play();
+    }
   }
 
 

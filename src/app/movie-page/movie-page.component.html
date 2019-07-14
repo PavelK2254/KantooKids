@@ -27,7 +27,16 @@
 <img class="pageBackgroundItem pageBackground5" [src]="dynamicAssetPath + movieName + '/BG_asset.png'">
   <div class="Fold1"  id="fold1">
   <h1 class="title">{{fold1Title | uppercase}}</h1>
-  <img class="mainimage" [src]="dynamicAssetPath + movieName + '/logo.png'">
+  <!--<img class="mainimage" [src]="dynamicAssetPath + movieName + '/logo.png'">-->
+
+    <div class="tabletVideoHolder" [ngStyle]="{'background': 'url('+dynamicAssetPath+ movieName + '/logo.png'+ ')'}">
+      <video id="tabletVideo" [src]="videoPath + 'placeholder_video_Tablet_mockup.mp4'" autoplay >
+
+      </video>
+    </div>
+
+
+
   <img class="mainimageBottom" [src]="dynamicAssetPath + movieName + '/logo_bottom.png'" (error)="imageErrorHandler($event)">
   </div>
   <div class="Fold2" id="fold2">

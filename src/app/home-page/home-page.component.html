@@ -1,12 +1,14 @@
 <div class="container">
   <app-floating-button></app-floating-button>
   <div class="Fold1">
-    <img [style.z-index]="fold1BackgroundZIndexActual" [style.content]="'url('+imageBaseUri  + mobilePrefix + '/fold_1.png)'" class="Fold1BackgroundImg" alt="kids with a tablet">
+    <!--<img [style.z-index]="fold1BackgroundZIndexActual" [style.content]="'url('+imageBaseUri  + mobilePrefix + '/fold_1.png)'" class="Fold1BackgroundImg" alt="kids with a tablet">-->
+    <video loop id="promoVideo" [poster]="imageBaseUri  + mobilePrefix + '/fold_1.png'" class="Fold1BackgroundImg" [src]="videoBaseUrl + activeLanguage + '/promo.mp4'">
 
-    <a class="playBtnCont" (click)="openPlayer()">
+    </video>
+    <a id="playBtnCont" class="playBtnCont" (click)="openPlayer()">
       <img [src]="imageBaseUri + '/play_btn.png'"  class="playBtn" alt="play button">
     </a>
-    <div class="fold1LeftOveray">
+    <div id="fold1LeftOveray" class="fold1LeftOveray">
     <img src="../assets/homepage/kanto_disney_logo.png" alt="storytime logo"
      class="KantoDisneyLogo">
      <h1 class="AddEnglishToTheirStory">{{'addEnglishText' | translate | uppercase}}</h1>
