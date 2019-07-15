@@ -24,7 +24,7 @@ export class LearningWithDisneyComponent implements OnInit {
   dynamicAssetPath = "./assets/learnDisney/";
   assetCollection = [];
   activeLanguage = "en";
-
+  baseVideoUrl = "https://kantoo-kids.s3-eu-west-1.amazonaws.com/assets/learnDisney/pt/Videos/";
   learnMore = "Learn more"
 
   constructor(private deviceService: DeviceDetectorService, private translate: TranslateService) {
@@ -57,6 +57,7 @@ export class LearningWithDisneyComponent implements OnInit {
           fold2ImageLeft: "",
           fold2ImageRight: "",
           learnMoreUrl: "Learn more",
+          videoUrl: "PT_Frozen_1.mp4"
 
 
         },
@@ -71,7 +72,8 @@ export class LearningWithDisneyComponent implements OnInit {
           fold1ImageRight: "",
           fold2ImageLeft: "toy_left_character",
           fold2ImageRight: "toy_right_character",
-          learnMoreUrl: "Learn more"
+          learnMoreUrl: "Learn more",
+          videoUrl: "PT_TS3_1.mp4"
         },
         {
           id: 3,
@@ -84,7 +86,8 @@ export class LearningWithDisneyComponent implements OnInit {
           fold1ImageRight: "moana_characters",
           fold2ImageLeft: "moana_left_character",
           fold2ImageRight: "moana_right_character",
-          learnMoreUrl: "Learn more"
+          learnMoreUrl: "Learn more",
+          videoUrl: "PT_Moana_1.mp4"
         },
         {
           id: 0,
@@ -97,7 +100,8 @@ export class LearningWithDisneyComponent implements OnInit {
           fold1ImageRight: "cars_characters",
           fold2ImageLeft: "cars_left_character",
           fold2ImageRight: "cars_right_character",
-          learnMoreUrl: "Learn more"
+          learnMoreUrl: "Learn more",
+          videoUrl: "PT_Cars_1.mp4"
         }/*,
         {
           id: 5,
@@ -168,6 +172,12 @@ export class LearningWithDisneyComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  toggleVideo(event){
+    var idNum = event.target.id.charAt(event.target.id.length-1)
+    event.target.style.display = "none";
+    document.getElementById('video'+idNum).style.display = "block";
   }
 
   imageErrorHandler(event) {

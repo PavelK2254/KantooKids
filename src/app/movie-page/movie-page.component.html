@@ -7,16 +7,16 @@
          [height] = "height"
        ></youtube-player>-->
        <a class="playBtnCont" (click)="openPlayer()">
-         <img [src]="imageBaseUri + '/play_btn.png'"  class="playBtn" alt="play button">
+         <!--<img [src]="imageBaseUri + '/play_btn.png'"  class="playBtn" alt="play button">-->
        </a>
     <div class="leftTextSection">
       <p>{{'with' | translate | uppercase}}</p>
       <img class="kantooImage" alt="kantoo disney">
       <p>{{'learningIsfun' | translate | uppercase}}</p>
-      <!--<a class="CONVERSIONbtnCont" (click)="openDialog()">
+      <a *ngIf="isMobile == false"  class="CONVERSIONbtnCont" (click)="openDialog()">
         <img alt="conversion button" [src]="conversionButtonUri" (mouseout)="conversionButtonUri = this.imageBaseUri + this.activeLanguage +'/'+ this.mobilePrefix +'/conversion_btn.png'"
            (mouseover)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + '/' + this.mobilePrefix +'/conversion_btn_hover.png'" class="CONVERSIONbtn">
-      </a>-->
+      </a>
     </div>
   </div>
   <app-sub-menu *ngIf="isMobile" ></app-sub-menu>

@@ -69,6 +69,12 @@ a {
   margin-top: 15vh;
 }
 
+.Fold1 .foldLeft video {
+  margin-left: 10vw;
+  margin-top: 15vh;
+  display: none;
+}
+
 .Fold1 .foldLeftImage {
   width: 38vw;
 }
@@ -286,7 +292,7 @@ box-shadow: 0px 5px 5.8px 0.2px rgba(0, 0, 0, 0.17)
 }
 
 .learningSubmenu {
-  
+
 }
 
 
