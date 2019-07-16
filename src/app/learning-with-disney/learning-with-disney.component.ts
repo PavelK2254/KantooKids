@@ -165,8 +165,6 @@ export class LearningWithDisneyComponent implements OnInit {
           fold2ImageRight: "lion_king_right_character",
           learnMoreUrl: "Learn more"
         }*/
-
-
       ];
     })
   }
@@ -178,6 +176,7 @@ export class LearningWithDisneyComponent implements OnInit {
     var idNum = event.target.id.charAt(event.target.id.length-1)
     event.target.style.display = "none";
     document.getElementById('video'+idNum).style.display = "block";
+    (<HTMLVideoElement>document.getElementById('video'+idNum)).play();
   }
 
   imageErrorHandler(event) {

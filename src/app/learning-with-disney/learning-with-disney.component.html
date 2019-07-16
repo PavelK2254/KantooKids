@@ -7,7 +7,7 @@
       <img class="overlayImageLeft1" [src]= "assetPath + assetCollection[i].fold1ImageLeft + '.png'" (error)="imageErrorHandler($event)">
       <img class="overlayImageRight1" [src]= "assetPath + assetCollection[i].fold1ImageRight + '.png'" (error)="imageErrorHandler($event)">
       <a [id]="'toggler' + i" (click)="toggleVideo($event)"><img [id]="'toggler' + i" class="foldLeftImage" [src]="dynamicAssetPath + assetCollection[i].mainImage + '.png'"></a>
-      <video [id]="'video'+i" [src]="baseVideoUrl + assetCollection[i].videoUrl" class="foldLeftImage" autoplay controls>
+      <video [id]="'video'+i" [src]="baseVideoUrl + assetCollection[i].videoUrl" class="foldLeftImage" controls style="display:none">
 
       </video>
       <img class="overlayImageLeft2" [src]= "assetPath + assetCollection[i].fold2ImageLeft + '.png'" (error)="imageErrorHandler($event)">
