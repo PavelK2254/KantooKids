@@ -158,6 +158,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       this.isVideoPlaying = false;
       //videoElement.controls = true;
       document.getElementById('fold1LeftOveray').style.display = "grid";
+      videoElement.load()
     //  document.getElementById('playBtnCont').style.display = "block";
     }
   }

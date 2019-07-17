@@ -24,7 +24,7 @@ div {
 #tabletVideo {
   width: 33.5vw;
 margin: auto;
-padding-top: 2.6vh;
+padding-top: 3vh;
 display: block;
 }
 
@@ -330,18 +330,18 @@ display: block;
 
   .tabletVideoHolder{
     width: 90vw;
-margin: 0 auto;
-height: 60vh;
-background-size: contain !important;
-background-repeat: no-repeat !important;
-display: block;
-padding: 0px;
+  margin: 0 auto;
+  height: fit-content;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  display: block;
+  padding-bottom: 5vh;
   }
 
   #tabletVideo{
     width: 75.5vw;
 margin: auto;
-padding-top: 1.6vh;
+padding-top: 2vh;
 display: block;
   }
 
@@ -370,6 +370,7 @@ display: block;
 
   .mainimageBottom {
     margin: 5vh auto;
+    display: none;
   }
 
   .Fold2 {
