@@ -41,4 +41,10 @@
   </a>
 </form>
 <img class="sideImg" src="./assets/contactus/cowboy.png" >
+<div class="confirmationMessage">
+  <div class="charBackgroundLayer">
+    <img *ngIf="isFailed == false"  class="char" src="./assets/contactus/character.png" alt="character">
+    <img *ngIf="isFailed"  class="charFail" src="./assets/contactus/character-fail.png" alt="characterFail">
+  </div>
+</div>
 </div>

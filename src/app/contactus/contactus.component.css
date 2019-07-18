@@ -175,7 +175,48 @@ input[type=submit] {
   }
 }
 
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
 
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.confirmationMessage{
+  background: white;
+  display: none;
+  width: 24vw;
+  height: 37vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+  border-radius: 20px;
+  z-index: 10;
+  object-fit: contain;
+}
+
+.charBackgroundLayer{
+  width: 40%;
+    /* height: 40%; */
+    margin: 4vh auto;
+    padding: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(/assets/contactus/character-bg.jpg);
+}
+
+.charBackgroundLayer img{
+  display: block;
+  margin: 0 auto;
+}
 
 
 /*----------------------------------------------MOBILE--------------------------------------------------*/
@@ -345,5 +386,22 @@ input[type=submit] {
 
   .sideImg {
     display: none;
+  }
+
+  .card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+  .confirmationMessage{
+    width: 90vw;
+    height: 50vh;
   }
 }
