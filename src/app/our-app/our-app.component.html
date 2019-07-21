@@ -3,7 +3,7 @@
   <div class="Fold1">
   <!--  <img id="desktopFold1Tablet" class="Fold1TabletImg" [src]="imageBaseUri + activeLanguage + mobilePrefix + '/p1tablet_test.png'"  alt="tablet">-->
   <div *ngIf="isMobile == false" class="Fold1TabletImg">
-    <video autoplay id="desktopFold1Tablet"  [src]="imageBaseUri + activeLanguage + mobilePrefix + '/placeholder_video_Tablet_mockup.mp4'" loop autoplay>
+    <video autoplay id="desktopFold1Tablet"  [src]="imageBaseUri + activeLanguage + mobilePrefix + '/placeholder_video_Tablet_mockup.mp4'" loop >
 
     </video>
   </div>
@@ -13,7 +13,7 @@
        <p class="disneyText">{{'kntooDisneyText' | translate}}</p>
        <!--<img id="mobileFold1Tablet" class="Fold1TabletImg" [src]="imageBaseUri + activeLanguage + mobilePrefix + '/p1tablet_test.png'"  alt="tablet">-->
        <div *ngIf="isMobile"  class="Fold1TabletImg">
-         <video autoplay controls id="mobileFold1Tablet"  [src]="imageBaseUri + activeLanguage + mobilePrefix + '/placeholder_video_Tablet_mockup.mp4'" loop autoplay [poster]="imageBaseUri + activeLanguage + mobilePrefix + '/p1tablet_test.png'">
+         <video autoplay controls id="mobileFold1Tablet"  [src]="imageBaseUri + activeLanguage + mobilePrefix + '/placeholder_video_Tablet_mockup.mp4'" loop  [poster]="imageBaseUri + activeLanguage + mobilePrefix + '/p1tablet_test.png'">
 
          </video>
        </div>

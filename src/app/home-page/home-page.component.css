@@ -664,6 +664,8 @@ z-index: 999;
     position: absolute;
     left: auto;
     width: 100%;
+    background-position-y: top;
+    object-fit: fill;
     height: 100vh;
     content: url(/assets/homepage/Mobile/fold_1.png);
   }

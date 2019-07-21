@@ -461,7 +461,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   }
 
   dotsClicked(itemNum){
-    const baseItemWidth = (<HTMLImageElement>document.getElementsByClassName('franchisesItem')[0]).width;
+    const baseItemWidth = (<HTMLImageElement>document.getElementsByClassName('franchisesItemCont')[0]).offsetWidth;
     const itemsAmouth = document.getElementsByClassName('franchisesItem').length
     document.getElementsByClassName('franchiseItemHolder')[0].scrollLeft = baseItemWidth * itemNum
     this.updateDotMenu(itemsAmouth - itemNum -1);

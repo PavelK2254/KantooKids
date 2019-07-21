@@ -190,7 +190,7 @@ input[type=submit] {
   background: white;
   display: none;
   width: 24vw;
-  height: 37vh;
+  height: fit-content;
   position: absolute;
   left: 0;
   top: 0;
@@ -213,9 +213,52 @@ input[type=submit] {
     background-image: url(/assets/contactus/character-bg.jpg);
 }
 
+.charBackgroundLayer.fail{
+  background-image: url(/assets/contactus/character-bg-fail.jpg);
+}
+
 .charBackgroundLayer img{
   display: block;
   margin: 0 auto;
+}
+
+.confirmationMessage .closeButton{
+  width: fit-content;
+    height: fit-content;
+    float: right;
+    top: 0;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+.confirmationMessage .title{
+ object-fit: contain;
+ font-size: 25px;
+ font-weight: bold;
+ font-style: normal;
+ font-stretch: normal;
+ line-height: normal;
+ letter-spacing: normal;
+ text-align: center;
+ color: #0f206c;
+}
+
+.confirmationMessage .textContent{
+  object-fit: contain;
+   font-weight: 600;
+   font-style: normal;
+   font-stretch: normal;
+   line-height: normal;
+   letter-spacing: normal;
+   text-align: center;
+   color: #0f206c;
+}
+
+.tryAgainContainer{
+  width: fit-content;
+    height: auto;
+    margin: 0 auto;
+    display: block;
 }
 
 
@@ -402,6 +445,6 @@ input[type=submit] {
 
   .confirmationMessage{
     width: 90vw;
-    height: 50vh;
+    height: fit-content;
   }
 }

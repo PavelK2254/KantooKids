@@ -99,7 +99,7 @@ display: block;
   position: absolute;
   top: 225vh;
   right: 5vw;
-  z-index: 1;
+  z-index: -1;
 }
 
 .pageBackground5 {
