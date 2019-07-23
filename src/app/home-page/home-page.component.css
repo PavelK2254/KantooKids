@@ -665,9 +665,9 @@ z-index: 999;
     left: auto;
     width: 100%;
     background-position-y: top;
-    object-fit: fill;
+    object-fit: contain;
     height: 100vh;
-    content: url(/assets/homepage/Mobile/fold_1.png);
+  /*  content: url(/assets/homepage/Mobile/fold_1.png);*/
   }
 
   .playBtnCont {

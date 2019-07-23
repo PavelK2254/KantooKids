@@ -27,6 +27,8 @@ export class LearningWithDisneyComponent implements OnInit {
   baseVideoUrl = "https://kantoo-kids.s3-eu-west-1.amazonaws.com/assets/learnDisney/pt/Videos/";
   baseVideoUrlTestCDN = "https://besttv233.cdn.it.best-tv.com/assets/learnDisney/pt/Videos/";
   learnMore = "Learn more"
+  isVideoPlaying = false;
+  mobilePrefix = "";
 
   constructor(private deviceService: DeviceDetectorService, private translate: TranslateService) {
     if (this.deviceService.isMobile()) {
@@ -171,6 +173,12 @@ export class LearningWithDisneyComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    if (window.innerWidth <= 769) {
+      this.mobilePrefix = "/Mobile/"
+    }
+
+    this.initVideoPLayerEvents();
   }
 
   toggleVideo(event){
@@ -178,6 +186,17 @@ export class LearningWithDisneyComponent implements OnInit {
     event.target.style.display = "none";
     document.getElementById('video'+idNum).style.display = "block";
     (<HTMLVideoElement>document.getElementById('video'+idNum)).play();
+  }
+
+  initVideoPLayerEvents(){
+    var videoElements =  (document.querySelectorAll('video'))
+    for(var i = 0; i < videoElements.length -1; i++){
+      videoElements[i].onpause = () => {
+        this.isVideoPlaying = false;
+        videoElements[i].load();
+        videoElements[i].style.display = "none";
+      }
+    }
   }
 
   imageErrorHandler(event) {

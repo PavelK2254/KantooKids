@@ -484,6 +484,7 @@ margin-top: 11vh;
   height: auto;
   -o-object-fit: contain;
   object-fit: contain;
+  background: transparent url(/assets/transperent.png) 50% 50% / cover no-repeat;
   margin: 5vh;
 
 }

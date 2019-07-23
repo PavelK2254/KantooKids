@@ -141,9 +141,6 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     if(this.mobilePrefix.length > 1){
 
     }
-
-
-
     videoElement.onplaying = () => {
       this.isVideoPlaying = true;
       document.getElementById('fold1LeftOveray').style.display = "none";
@@ -161,6 +158,14 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       videoElement.load()
     //  document.getElementById('playBtnCont').style.display = "block";
     }
+
+    document.addEventListener('fullscreenchange',function(){
+      if(!document.fullscreen)videoElement.load();
+    })
+
+    document.addEventListener('webkitfullscreenchange',function(){
+      if(!document.fullscreen)videoElement.load();
+    })
   }
 
   openDialog(): void {
