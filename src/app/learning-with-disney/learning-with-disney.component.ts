@@ -25,6 +25,7 @@ export class LearningWithDisneyComponent implements OnInit {
   assetCollection = [];
   activeLanguage = "en";
   baseVideoUrl = "https://kantoo-kids.s3-eu-west-1.amazonaws.com/assets/learnDisney/pt/Videos/";
+  baseVideoUrlTestCDN = "https://besttv233.cdn.it.best-tv.com/assets/learnDisney/pt/Videos/";
   learnMore = "Learn more"
 
   constructor(private deviceService: DeviceDetectorService, private translate: TranslateService) {
