@@ -125,7 +125,7 @@ margin: 5%;
 mat-accordion{
   position: fixed;
   width: 100%;
-  top: 11.5vh;
+  top: 10vh !important;
   z-index: 10;
   height: 100vh;
   overflow-y: hidden;

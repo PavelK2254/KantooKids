@@ -34,10 +34,12 @@ export class ContactusComponent implements OnInit {
   }
 
   public postContactMessage(name: String, email: String, message: String, token: String, component: ContactusComponent): void {
-    window.contactUsService.postContactUsData(name, email, message, token)
-      .subscribe(
-        res => this.deliverResult(res, component)
-      )
+    if(component != undefined){
+      window.contactUsService.postContactUsData(name, email, message, token)
+        .subscribe(
+          res => this.deliverResult(res, component)
+        )
+    }
   }
 
   deliverResult(res, component: ContactusComponent) {
@@ -56,6 +58,9 @@ export class ContactusComponent implements OnInit {
 
     formElement.style.visibility = "hidden";
     confirmationPopup.style.display = "block";
+    (<HTMLInputElement>document.getElementById('name')).value = "";
+    (<HTMLInputElement>document.getElementById('email')).value = "";
+    (<HTMLTextAreaElement>document.getElementById('message')).value = "";
   }
 
   onSubmitMe(name: String, email: String, message: String, token: String, component: ContactusComponent): void {

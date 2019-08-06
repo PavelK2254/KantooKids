@@ -101,7 +101,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   topConversionOpacityValue = 1;
   videoBaseUrl = "https://kantoo-kids.s3-eu-west-1.amazonaws.com/assets/homepage/";
   isVideoPlaying = false;
-
+  isScrolling;
 
   constructor(private movieFetcher: MovieFetcherService, public dialog: MatDialog, private translateLang: TranslateService) {
     this.imgSrcLeft = "assets/homepage/left_arrow.png";
@@ -119,7 +119,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     if (window.scrollY <= 1000) {
       var computedValue = window.scrollY / 1000;
       this.topConversionOpacityValue = 1 - computedValue;
-    }else if(window.scrollY > 1000){
+    } else if (window.scrollY > 1000) {
       this.topConversionOpacityValue = 0;
     }
 
@@ -136,9 +136,9 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     this.initVideoPLayerEvents();
   }
 
-  initVideoPLayerEvents(){
-    var videoElement =  (<HTMLVideoElement>document.getElementById('promoVideo'))
-    if(this.mobilePrefix.length > 1){
+  initVideoPLayerEvents() {
+    var videoElement = (<HTMLVideoElement>document.getElementById('promoVideo'))
+    if (this.mobilePrefix.length > 1) {
 
     }
     videoElement.onplaying = () => {
@@ -146,7 +146,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       document.getElementById('fold1LeftOveray').style.display = "none";
       document.getElementById('playBtnCont').style.display = "none";
       videoElement.controls = true;
-      if(this.mobilePrefix.length > 1){
+      if (this.mobilePrefix.length > 1) {
         videoElement.webkitEnterFullScreen();
       }
 
@@ -156,15 +156,15 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       //videoElement.controls = true;
       document.getElementById('fold1LeftOveray').style.display = "grid";
       videoElement.load()
-    //  document.getElementById('playBtnCont').style.display = "block";
+      //  document.getElementById('playBtnCont').style.display = "block";
     }
 
-    document.addEventListener('fullscreenchange',function(){
-      if(!document.fullscreen)videoElement.load();
+    document.addEventListener('fullscreenchange', function() {
+      if (!document.fullscreen) videoElement.load();
     })
 
-    document.addEventListener('webkitfullscreenchange',function(){
-      if(!document.fullscreen)videoElement.load();
+    document.addEventListener('webkitfullscreenchange', function() {
+      if (!document.fullscreen) videoElement.load();
     })
   }
 
@@ -209,7 +209,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   onCarouselScroll(event): void {
     console.log(event.target.scrollLeft);
     console.log("max " + this.carouselMaxScrollValue);
-    const divides: Number[] = [];
+    const divides: any[] = [];
     const indexAmouth = document.getElementsByClassName('franchisesItemCont').length;
     const divideValue = Math.floor(this.carouselMaxScrollValue / indexAmouth);
     this.carouselMaxScrollValue = document.getElementsByClassName('franchiseItemHolder')[0].scrollWidth - document.getElementsByClassName('franchiseItemHolder')[0].clientWidth
@@ -218,10 +218,29 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       divides.push(divideValue * i)
     }
     console.log('divides ' + divides);
-    if(this.mobilePrefix.length > 0){
-    this.updateDotMenu(indexAmouth - this.getItemIndex(divides, event.target.scrollLeft))
-    }
+  /*  if (this.mobilePrefix.length > 0) {
+      this.updateDotMenu(indexAmouth - this.getItemIndex(divides, event.target.scrollLeft))
+      window.clearTimeout(this.isScrolling);
+      this.isScrolling = setTimeout(function() {
+        console.log('End of scrolling ' + event.target.scrollLeft);
+        console.log('devides' + divides);
+        var currentScroll: any = event.target.scrollLeft;
+        var closest;
+        var imageSizeOffset = document.getElementsByClassName('franchiseItemHolder')[0].clientWidth;
 
+        for (var x = 0; x < divides.length - 1; x++) {
+          if(currentScroll == divides[x] || currentScroll == divides[x] - imageSizeOffset){return;}
+        }
+
+        for (var x = 0; x < divides.length - 1; x++) {
+          if(currentScroll < divides[x]){
+            closest = divides[x];
+            event.target.scrollLeft = closest - imageSizeOffset;
+            break;
+          }
+        }
+      }, 66);
+    }*/
   }
 
 
@@ -260,10 +279,10 @@ export class HomePageComponent implements OnInit, AfterViewInit {
       maxWidth: '90vw',
       id: '5Q6esf_N-0s'
     });*/
-    var videoElement =  (<HTMLVideoElement>document.getElementById('promoVideo'))
-    if(this.isVideoPlaying){
+    var videoElement = (<HTMLVideoElement>document.getElementById('promoVideo'))
+    if (this.isVideoPlaying) {
       videoElement.pause();
-    }else{
+    } else {
       videoElement.play();
     }
   }
@@ -465,11 +484,11 @@ export class HomePageComponent implements OnInit, AfterViewInit {
 
   }
 
-  dotsClicked(itemNum){
+  dotsClicked(itemNum) {
     const baseItemWidth = (<HTMLImageElement>document.getElementsByClassName('franchisesItemCont')[0]).offsetWidth;
     const itemsAmouth = document.getElementsByClassName('franchisesItem').length
     document.getElementsByClassName('franchiseItemHolder')[0].scrollLeft = baseItemWidth * itemNum
-    this.updateDotMenu(itemsAmouth - itemNum -1);
+    this.updateDotMenu(itemsAmouth - itemNum - 1);
     console.log("force scroll " + itemNum + " scroll size " + baseItemWidth * itemNum);
   }
 

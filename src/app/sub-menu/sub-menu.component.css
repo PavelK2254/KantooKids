@@ -40,14 +40,18 @@
 }
 
 .movie-section{
-  width: 40vw;
-      min-height: 120px;
-      float: left;
-      overflow: hidden;
-      display: flex;
-      margin-top: 0;
-      flex-wrap: nowrap;
-      justify-content: space-around;
+  min-width: 50vw;
+  min-height: 120px;
+  width: fit-content;
+  float: left;
+  overflow: hidden;
+  display: -webkit-box;
+  display: flex;
+  margin-top: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 }
 
 app-movie-item{

@@ -46,13 +46,13 @@ export class MenuComponent implements OnInit,AfterViewInit {
     }
   }
 
-  switchLanguage(language: string,event) {
+  switchLanguage(language: string,element) {
     this.translate.use(language);
     var els = document.getElementsByClassName('lang')
     Array.prototype.forEach.call(els, function(el) {
     el.classList.remove("pressedLangButton");
 });
-    event.target.classList.add("pressedLangButton");
+    element.classList.add("pressedLangButton");
     localStorage.setItem("lang",language)
   }
 

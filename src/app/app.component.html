@@ -1,4 +1,4 @@
-<app-menu ></app-menu>
-<app-mobile-menu ></app-mobile-menu>
+<app-menu *ngIf="isViewMobile == false"></app-menu>
+<app-mobile-menu *ngIf="isViewMobile" ></app-mobile-menu>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

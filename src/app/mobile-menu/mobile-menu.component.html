@@ -69,11 +69,11 @@
 
           </mat-expansion-panel-header>
 
-          <a class="menuTextLang menuTextLangPressed"  (click)="switchLanguage('en',$event)">EN</a>
+          <a class="menuTextLang menuTextLangPressed"  (click)="switchLanguage('en',$event.target)">EN</a>
           <a class="menuTextLang" style="margin-left: 10px; pointer-events: none">|</a>
-          <a class="menuTextLang" style="margin-left: 10px" (click)="switchLanguage('pt',$event)">PT</a>
+          <a class="menuTextLang" style="margin-left: 10px" (click)="switchLanguage('pt',$event.target)">PT</a>
           <a class="menuTextLang" style="margin-left: 10px; pointer-events: none">|</a>
-          <a class="menuTextLang" style="margin-left: 10px;" (click)="switchLanguage('es',$event)">ES</a>
+          <a class="menuTextLang" style="margin-left: 10px;" (click)="switchLanguage('es',$event.target)">ES</a>
 
 
         </mat-expansion-panel>

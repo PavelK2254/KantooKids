@@ -945,7 +945,7 @@ z-index: 999;
     -o-object-fit: contain;
     object-fit: contain;
     overflow-y:  hidden;
-    overflow-x: scroll;
+    /*overflow-x: scroll;*/
     justify-content: start;
     z-index: -5;
     margin: 0 auto;

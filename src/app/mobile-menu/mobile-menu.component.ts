@@ -75,13 +75,13 @@ export class MobileMenuComponent implements OnInit {
     this.getMovies();
   }
 
-  switchLanguage(language: string,event) {
+  switchLanguage(language: string,element) {
     this.translate.use(language);
     var els = document.getElementsByClassName('menuTextLang')
     Array.prototype.forEach.call(els, function(el) {
     el.classList.remove("menuTextLangPressed");
 });
-    event.target.classList.add("menuTextLangPressed");
+    element.classList.add("menuTextLangPressed");
     localStorage.setItem("lang",language);
   }
 
@@ -102,6 +102,20 @@ export class MobileMenuComponent implements OnInit {
   toggleMenu(){
     this.isMenuOpen = !this.isMenuOpen;
     if(this.isMenuOpen){
+      switch(localStorage.getItem('lang')){
+        case "pt": {
+          this.switchLanguage(localStorage.getItem("lang"),document.getElementsByClassName("menuTextLang")[2]);
+          break;
+        }
+        case "es": {
+          this.switchLanguage(localStorage.getItem("lang"),document.getElementsByClassName("menuTextLang")[4]);
+          break;
+        }
+        default: {
+          this.switchLanguage(localStorage.getItem("lang"),document.getElementsByClassName("menuTextLang")[0]);
+        }
+      }
+
       document.body.style.overflowY = "hidden"
       document.body.style.position = "fixed"
     }else{

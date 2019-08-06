@@ -173,13 +173,16 @@ export class LearningWithDisneyComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    console.log('init learning');
     if (window.innerWidth <= 769) {
       this.mobilePrefix = "/Mobile/"
     }
 
-    this.initVideoPLayerEvents();
+
+
   }
+
+
 
   toggleVideo(event){
     var idNum = event.target.id.charAt(event.target.id.length-1)
@@ -188,15 +191,17 @@ export class LearningWithDisneyComponent implements OnInit {
     (<HTMLVideoElement>document.getElementById('video'+idNum)).play();
   }
 
-  initVideoPLayerEvents(){
-    var videoElements =  (document.querySelectorAll('video'))
-    for(var i = 0; i < videoElements.length -1; i++){
-      videoElements[i].onpause = () => {
-        this.isVideoPlaying = false;
-        videoElements[i].load();
-        videoElements[i].style.display = "none";
-      }
-    }
+
+
+  pauseVideo(event){
+    var element = event.target;
+    var id = element.id.slice(-1)
+  //  element.load();
+  if(!element.seeking){
+    element.style.display = "none";
+    (<HTMLImageElement>document.querySelector('img#toggler'+id)).style.display = "block";
+  }
+
   }
 
   imageErrorHandler(event) {
