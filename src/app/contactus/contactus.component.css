@@ -25,18 +25,23 @@
 }
 
 .contactUsContainerInnerTitle {
-  top: 215px;
-  position: relative;
+  padding-top: 20vh;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: -webkit-center;
 }
 
 .contactUsContainerInnerInput {
   top: 35%;
-  left: 37.5%;
-  position: absolute;
-  width: 500px;
-  height: 350px;
-  -o-object-fit: contain;
-  object-fit: contain;
+      left: 0;
+      right: 0;
+      position: absolute;
+      width: 25vw;
+      height: 350px;
+      display: block;
+      margin: 0 auto;
+      -o-object-fit: contain;
+      object-fit: contain;
 }
 
 .contactUsContainerInnerInputName {
@@ -45,7 +50,7 @@
 }
 
 .ContactUsNameText {
-  width: 213px;
+  width: 11vw;
   height: auto;
   -o-object-fit: contain;
   object-fit: contain;
@@ -66,24 +71,24 @@
 
 .GetInTouch {
   height: 27px;
-  -o-object-fit: contain;
-  object-fit: contain;
-  font-size: 35.8px;
-  font-weight: 800;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #ffffff;
-  margin: 0 auto;
+      -o-object-fit: contain;
+      object-fit: contain;
+      font-size: 2vw;
+      font-weight: 800;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #ffffff;
+      margin: 0 auto;
 }
 
 .NeedHelpline {
-  /*width: 313px;*/
   height: 25px;
+  -o-object-fit: contain;
   object-fit: contain;
-  font-size: 25.1px;
+  font-size: 1.5vw;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -155,15 +160,16 @@ input[type=submit] {
 }
 
 /*----------------------------------------------LAPTOP--------------------------------------------------*/
-@media only screen and (max-width: 1024px) {
+/*@media only screen and (max-width: 1024px) {
   .contactUsContainerInnerInput {
     top: 350px;
-    left: 27.5vw;
-    position: absolute;
-    width: 500px;
-    height: 350px;
-    -o-object-fit: contain;
-    object-fit: contain;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 500px;
+  height: 350px;
+  -o-object-fit: contain;
+  object-fit: contain;
   }
 
   .sideImg {
@@ -173,7 +179,7 @@ input[type=submit] {
     right: 30px;
     display: none;
   }
-}
+}*/
 
 .card {
   /* Add shadows to create the "card" effect */

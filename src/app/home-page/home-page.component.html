@@ -87,14 +87,18 @@
   </div>
 
   <div class="Fold4">
-    <img   class="tabletMockup" >
-     <p class="playingLearning" style="padding-bottom: 0px">{{'playing' | translate | uppercase}}</p>
-     <p class="playingLearning bottomLearning" style="padding:0px">{{'learningFold3' | translate | uppercase}}</p>
-     <p class="With">{{'with' | translate | uppercase}}</p>
-     <img alt="storytime logo" src="../assets/homepage/kanto_disney_logo.png"
+  <!--  <img   class="tabletMockup" >-->
+    <div class="playingContainer">
+      <p class="playingLearning" style="padding-bottom: 0px">{{'playing' | translate | uppercase}}</p>
+      <p class="playingLearning bottomLearning" style="padding:0px">{{'learningFold3' | translate | uppercase}}</p>
+      <p class="With">{{'with' | translate | uppercase}}</p>
+      <img alt="storytime logo" src="../assets/homepage/kanto_disney_logo.png"
 
-      class="KantoDisneyLogoF4" >
-      <a class="LearnMoreBtnCont LearnMoreBtnContF4">{{'learnMore' | translate}}</a>
+       class="KantoDisneyLogoF4" >
+       <a class="LearnMoreBtnCont LearnMoreBtnContF4">{{'learnMore' | translate}}</a>
+    </div>
+
+
       <a class="CONVERSIONbtnF4" (click)="openDialog()">
         <img alt="conversion button"  [src]="conversionButtonUri" (mouseout)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn.png'"
            (mouseover)="conversionButtonUri = this.imageBaseUri + this.activeLanguage + this.mobilePrefix +'/conversion_btn_hover.png'"

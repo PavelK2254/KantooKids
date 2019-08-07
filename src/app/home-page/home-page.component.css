@@ -23,7 +23,6 @@ a {
 }
 
 .Fold1BackgroundImg {
-  position: absolute;
   left: auto;
   top: 0px;
   width: 100%;
@@ -47,7 +46,7 @@ youtube-player {
   width: fit-content;
   height: auto;
   position: absolute;
-  margin: 17vh;
+  margin: 10%;
   display: grid;
   grid-row-gap: 2vh;
 }
@@ -173,7 +172,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
 .playBtnCont {
   z-index: 1;
-  margin-top: 25%;
+  top: 50%;
   left: 50%;
   cursor: pointer;
   position: absolute;
@@ -198,10 +197,10 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   height: 99px;
   -o-object-fit: contain;
   object-fit: contain;
-  position: absolute;
-  top: 630px;
-  right: 240px;
+  display: block;
+  margin: 2vh auto;
 }
+
 
 .CONVERSIONbtnF4 {
   cursor: pointer;
@@ -406,7 +405,10 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 .Fold4 {
   position: relative;
   max-width: 1903px;
+  height: 100vh;
   margin: 0 auto;
+  background-image: url(/assets/homepage/holding_tablet.png);
+  background-size: cover;
 }
 
 .tabletMockup {
@@ -418,22 +420,26 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   content: url(/assets/homepage/holding_tablet.png);
 }
 
+.playingContainer{
+  text-align: center;
+width: fit-content;
+margin-left: auto;
+margin-right: 11vw;
+padding-top: 25vh;
+}
+
 .playingLearning {
-  width: 472px;
-  height: 152px;
+
   -o-object-fit: contain;
   object-fit: contain;
-  font-size: 75.8px;
+  font-size: 4vw;
   font-weight: 800;
   font-style: normal;
   font-stretch: normal;
-  line-height: 90px;
+  line-height: 5vh;
   letter-spacing: normal;
-  text-align: left;
+  text-align: center;
   color: #0f206c;
-  position: absolute;
-  top: 280px;
-  right: 195px;
   pointer-events: none;
 }
 
@@ -442,8 +448,9 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 }
 
 .With {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
-  height: 26px;
   -o-object-fit: contain;
   object-fit: contain;
   font-size: 35.8px;
@@ -454,15 +461,12 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   letter-spacing: normal;
   text-align: center;
   color: #0f206c;
-  position: absolute;
-  top: 520px;
-  right: 20.5%;
+  margin: 0 auto;
   pointer-events: none;
 }
 
 .LearnMoreBtnContF4 {
   cursor: pointer;
-  position: absolute;
   right: 399px;
   top: 740px;
 }
@@ -478,7 +482,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   width: fit-content;
   height: auto;
   float: left;
-  padding-left: 350px;
+  padding-left: 20vw;
   padding-top: 70px;
 }
 
@@ -535,10 +539,12 @@ left: 3vh;
 z-index: 999;
 }
 
+
+
 /*----------------------------------------------LAPTOP--------------------------------------------------*/
 @media only screen and (max-width: 1024px) {
   .Fold1 {
-    height: 70vh;
+/*    height: 70vh;*/
   }
 
   .Fold2 {
@@ -1000,6 +1006,10 @@ z-index: 999;
     top: 0;
     left: 0;
     content: url(/assets/homepage/Mobile/holding_tablet.png);
+  }
+
+  .playingContainer{
+    padding-top: 5vh;
   }
 
   .playingLearning {
