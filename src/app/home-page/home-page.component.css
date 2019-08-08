@@ -43,16 +43,21 @@ youtube-player {
 }
 
 .fold1LeftOveray {
-  width: fit-content;
-  height: auto;
-  position: absolute;
-  margin: 10%;
-  display: grid;
-  grid-row-gap: 2vh;
+  width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      height: auto;
+      top: 0px;
+      position: absolute;
+      margin-top: 20vh;
+      margin-left: 10vh;
+      display: grid;
+      grid-row-gap: 2vh;
 }
 
 .Fold1 {
   height: 100%;
+  min-height: 580px;
   position: relative;
   -o-object-fit: contain;
   object-fit: contain;
@@ -96,6 +101,7 @@ youtube-player {
 .Fold2 {
   /* max-width: 1903px; */
   height: 938px;
+  min-height: 580px;
   position: relative;
   -o-object-fit: contain;
   margin: auto;
@@ -123,6 +129,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   height: 581px;
   padding-right: 3%;
   padding-bottom: 2%;
+  padding-left: 4vw;
   padding-top: 16%;
   grid-auto-rows: -webkit-max-content;
   grid-auto-rows: max-content;
@@ -131,6 +138,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 .Fold3 {
   max-width: 80vw;
   height: 90vh;
+  min-height: fit-content;
   object-fit: contain;
   position: relative;
   text-align: center;
@@ -182,7 +190,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
 
 .KantoDisneyLogo {
-  width: 26vw;
+  width: 40vh;
   height: auto;
   -o-object-fit: contain;
   object-fit: contain;
@@ -229,6 +237,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   object-fit: contain;
   /*content: url(/assets/homepage/conversion_btn.png);*/
   /*width: 20vw;*/
+  width: 30vh;
 }
 
 .CONVERSIONbtn:hover, .CONVERSIONbtn2:hover {
@@ -369,7 +378,14 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 
 .movie-section {
   width: 37.8vw;
-  margin: 0 auto;
+      margin: 0 auto;
+      position: absolute;
+      bottom: 0;
+      right: 10vw;
+}
+
+.Fold3 .movie-section{
+  position: initial;
 }
 
 .franchiseItemHolder {
@@ -406,6 +422,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
   position: relative;
   max-width: 1903px;
   height: 100vh;
+  min-height: 580px;
   margin: 0 auto;
   background-image: url(/assets/homepage/holding_tablet.png);
   background-size: cover;
@@ -472,8 +489,8 @@ padding-top: 25vh;
 }
 
 .Fold5 {
-  height: 656px;
   margin: 0 auto;
+  min-height: 580px;
   max-width: 1903px;
   position: relative;
 }
@@ -611,7 +628,7 @@ z-index: 999;
   }
 
   .Fold5 {
-    height: 586px;
+    /*height: 586px;*/
   }
 
   .Fold5Left {
@@ -621,19 +638,21 @@ z-index: 999;
   .Fold5Right {
     width: auto;
     height: auto;
-    float: right;
     bottom: 0;
-    position: relative;
+    right: 0;
+    position: absolute;
   }
 
   .movie-section {
     width: fit-content;
     bottom: 0;
-    height: 100%;
+    height: auto;
+    left: -59vw;
+    right: 0;
   }
 
   .productItemHolder {
-    width: 40vw;
+/*    width: 30vw;
     height: -moz-fit-content;
     display: flex;
     -o-object-fit: contain;
@@ -645,13 +664,13 @@ z-index: 999;
     height: 81.5vh;
     right: 0px;
     left: 0;
-    margin-top: 0;
+    margin-top: 0;*/
   }
 
   .productItem {
-    width: 40vw;
+    /*width: 40vw;
     height: 60vh;
-    margin-top: 21.5vh;
+    margin-top: 21.5vh;*/
   }
 }
 
@@ -692,12 +711,13 @@ z-index: 999;
 
   .fold1LeftOveray {
     width: 100vw;
-    height: auto;
-    position: absolute;
-    margin: 0;
-    bottom: 11.5vh;
-    text-align: center;
-    display: block;
+  height: fit-content;
+  position: absolute;
+  top: auto;
+  margin: 0;
+  bottom: 11.5vh;
+  text-align: center;
+  display: block;
   }
 
   .playBtn {
@@ -942,6 +962,7 @@ z-index: 999;
 
   .movie-section {
     width: 100vw;
+    position: initial;
   }
 
   .franchiseItemHolder {
@@ -1221,10 +1242,11 @@ z-index: 999;
   }
 
   .productItem {
-    width: 100vw;
     height: auto;
-    display: block;
-    margin-top: auto;
+      display: block;
+      margin-top: auto;
+      margin-left: auto;
+      margin-right: auto;
   }
 
   .franchiseItemHolder::-webkit-scrollbar {width: 0 !important}
@@ -1245,6 +1267,6 @@ z-index: 999;
 /*---------------------------------------------Mobile XS -----------------------------------------------*/
 @media only screen and (min-height: 500px) {
 .fold1LeftOveray{
-      bottom: 11.5vh;
+      /*bottom: 11.5vh;*/
 }
 }

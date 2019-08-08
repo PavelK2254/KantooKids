@@ -128,7 +128,7 @@
      <div class="movie-section" [@.disabled]="isDisabled">
         <div class="productItemHolder" >
           <!--<img alt="product carousel item" class="productItem" *ngFor="let product of products; index as i" [src]="products[i].name" [@move2]="{value: viewIndex2, params: {moveOffset2: moveOffset2, moveOffsetAnim2: moveOffsetAnim2 }}">-->
-          <img alt="product carousel item" class="productItem" [src]="productsSource">
+          <img alt="product carousel item" class="productItem" [src]="productsSource" style="max-width: 500px;width: 40vw;">
         </div>
 
      </div>

@@ -22,6 +22,8 @@
 .sendBtnContact input {
   display: block;
   margin: 0 auto;
+  width: 40vh;
+  max-width: 181px;
 }
 
 .contactUsContainerInnerTitle {
@@ -35,7 +37,6 @@
   top: 35%;
       left: 0;
       right: 0;
-      position: absolute;
       width: 25vw;
       height: 350px;
       display: block;
@@ -47,6 +48,7 @@
 .contactUsContainerInnerInputName {
   display: flex;
   position: relative;
+  height: 40vh;
 }
 
 .ContactUsNameText {
@@ -100,11 +102,7 @@
 
 .sendBtnContact {
   z-index: 1;
-  position: absolute;
-  bottom: 10px;
   margin: 0 auto;
-  right: 0px;
-  left: 0px;
   cursor: pointer;
 }
 
@@ -120,7 +118,7 @@
   padding: 12px 0 0 13px;
   transition: all 200ms;
   opacity: 0.5;
-  font-size: 14.3px;
+  font-size: 0.8vw;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
