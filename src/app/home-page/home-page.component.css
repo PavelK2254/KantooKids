@@ -138,7 +138,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 .Fold3 {
   max-width: 80vw;
   height: 90vh;
-  min-height: fit-content;
+  min-height: 800px;
   object-fit: contain;
   position: relative;
   text-align: center;

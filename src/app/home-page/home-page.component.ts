@@ -2,7 +2,6 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Movie } from '../movie';
 import { MovieFetcherService } from "../movie-fetcher.service";
 import { HostBinding, HostListener } from '@angular/core';
-import { YoutubePopupComponent } from '../youtube-popup/youtube-popup.component'
 import { PromoPopupComponent } from '../promo-popup/promo-popup.component'
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';

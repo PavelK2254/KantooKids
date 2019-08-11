@@ -35,7 +35,7 @@ export class ContactusComponent implements OnInit {
 
   public postContactMessage(name: String, email: String, message: String, token: String, component: ContactusComponent): void {
     if(component != undefined){
-      window.contactUsService.postContactUsData(name, email, message, token)
+      window.contactUsService.postContactUsData(name, email, message, token,localStorage.getItem('lang'))
         .subscribe(
           res => this.deliverResult(res, component)
         )

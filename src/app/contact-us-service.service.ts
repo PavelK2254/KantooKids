@@ -23,12 +23,13 @@ export class ContactUsServiceService {
 
   }
 
-  postContactUsData(name:String,email:String,message:String,token:String):Observable<any>{
+  postContactUsData(name:String,email:String,message:String,token:String,language:String):Observable<any>{
     var requestBody = {};
     requestBody['email'] = email;
     requestBody['name'] = name;
     requestBody['message'] = message;
     requestBody['token'] = token;
+    requestBody['lang'] = language;
     return this.http.post(this.configUrl,requestBody,httpOptions)
 
   }
