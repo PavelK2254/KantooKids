@@ -284,6 +284,7 @@ input[type=submit] {
     position: relative;
     top: 0;
     left: 0;
+    padding-top: 1vh;
   }
 
   .GetInTouch {
@@ -307,7 +308,7 @@ input[type=submit] {
     height: 25px;
     -o-object-fit: contain;
     object-fit: contain;
-    font-size: 25.1px;
+    font-size: 23.1px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
