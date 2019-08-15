@@ -124,6 +124,10 @@ a:visited {
  margin-top: 46px;
 }
 
+#followUs{
+  padding-left: 20px;
+}
+
 
 /*----------------------------------------------MOBILE--------------------------------------------------*/
 @media only screen and (max-width: 769px) {
@@ -150,6 +154,10 @@ line-height: normal;
 letter-spacing: 1px;
 text-align: center;
 color: #ffffff;
+  }
+
+  #followUs{
+    padding-left: 0;
   }
 
   .mat-toolbar-row{

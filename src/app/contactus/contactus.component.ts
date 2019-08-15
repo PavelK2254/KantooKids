@@ -35,7 +35,13 @@ export class ContactusComponent implements OnInit {
 
   public postContactMessage(name: String, email: String, message: String, token: String, component: ContactusComponent): void {
     if(component != undefined){
-      window.contactUsService.postContactUsData(name, email, message, token,localStorage.getItem('lang'))
+      var currentLanguage:String;
+      if(localStorage.getItem('lang') != undefined && localStorage.getItem('lang') != null) {
+        currentLanguage = localStorage.getItem('lang');
+      }else{
+        currentLanguage = "en";
+      }
+      window.contactUsService.postContactUsData(name, email, message, token,currentLanguage)
         .subscribe(
           res => this.deliverResult(res, component)
         )

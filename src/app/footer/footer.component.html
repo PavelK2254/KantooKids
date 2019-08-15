@@ -1,5 +1,5 @@
 <mat-toolbar class="Footer-BG">
-  <mat-toolbar-row style="justify-content: center;">
+  <mat-toolbar-row style="justify-content: center;justify-content: space-evenly;">
     <a class="Tearms-conditionsHolder" [attr.href]="dstBaseUrl + languageMod + termsExt">
       <span class="Terms-conditions"> {{'terms' | translate | uppercase}}</span>
       </a>
@@ -12,7 +12,7 @@
         <span class="Terms-conditions"> {{'privacy' | translate | uppercase}}</span>
         </a>
         <label class="limiter"> |</label>
-        <a class="Privacy-conditionsHolder">
+        <a id="followUs" class="Privacy-conditionsHolder">
           <span style="margin-top: 3px;float:left;width: 120px" class="Terms-conditions"> {{'follow' | translate | uppercase}}</span>
           <span>
             <a class="imageHolder" (click)="hrefSocial('linkedin')">
