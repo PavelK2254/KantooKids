@@ -57,5 +57,12 @@
   "terms": "terms & conditions",
   "faq": "faq",
   "privacy": "privacy policy",
-  "follow": "Síguenos"
+  "follow": "Síguenos",
+
+  "title": "GRACIAS!",
+  "textContent": "Su mensaje ha sido enviada con éxito.",
+  "WeWillBeInTouch": "Nos contactaremos pronto.",
+  "titleFail": "Uh Oh,",
+  "textContentFail": "Parece que algo salió mal.",
+  "tryAgain": "Por favor intenta nuevamente."
 }

@@ -18,6 +18,9 @@ export class AppComponent {
 
   constructor(private movieService: MovieFetcherService, private deviceService: DeviceDetectorService, private loc: Location, private router: Router, private translate: TranslateService) {
     this.epicFunction();
+    if((localStorage.getItem("lang") == null)){
+      localStorage.setItem("lang","en");
+    }
     if (localStorage.getItem("lang") != undefined) {
       translate.setDefaultLang(localStorage.getItem("lang"));
     } else {
