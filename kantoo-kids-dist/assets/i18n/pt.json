@@ -57,5 +57,12 @@
   "terms": "terms & conditions",
   "faq": "faq",
   "privacy": "privacy policy",
-  "follow": "Siga-nos"
+  "follow": "Siga-nos",
+
+  "title": "Obrigado!",
+  "textContent": "Seu e-mail foi enviado com sucesso.",
+  "WeWillBeInTouch": "Entraremos em contato em breve.",
+  "titleFail": "Ops,",
+  "textContentFail": "Parece que algo deu errado." ,
+  "tryAgain": "Por favor, tente novamente"
 }

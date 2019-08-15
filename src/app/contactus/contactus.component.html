@@ -45,16 +45,16 @@
     <div *ngIf="!isFailed" class="charBackgroundLayer">
       <img class="char" src="./assets/contactus/character.png" alt="character">
     </div>
-    <h1 *ngIf="!isFailed" class="title">Thanks,</h1>
-    <p *ngIf="!isFailed" class="textContent">Your email had been sent successfully.<br>We will be in touch soon.</p>
+    <h1 *ngIf="!isFailed" class="title">{{'title' | translate}}</h1>
+    <p *ngIf="!isFailed" class="textContent">{{'textContent' | translate}}<br>{{'WeWillBeInTouch' | translate}}</p>
     <div *ngIf="isFailed" class="charBackgroundLayer fail">
       <img class="charFail" src="./assets/contactus/character-fail.png" alt="characterFail">
     </div>
     <!--<div *ngIf="isFailed" class="charBackgroundLayer fail">
       <img class="charFail" src="./assets/contactus/character-fail.png" alt="characterFail">
     </div>-->
-    <h1 *ngIf="isFailed" class="title">Uh oh,</h1>
-    <p *ngIf="isFailed" class="textContent">Something weird happened. <br> Please try again</p>
+    <h1 *ngIf="isFailed" class="title">{{'titleFail' | translate}}</h1>
+    <p *ngIf="isFailed" class="textContent">{{'textContentFail' | translate}}<br>{{'tryAgain' | translate}}/p>
     <a *ngIf="isFailed" class="tryAgainContainer"><img class="tryAgainButton" src="./assets/contactus/try-again-button.jpg" alt="tryAgainButton" (click)="executeCaptcha()"></a>
   </div>
 </div>

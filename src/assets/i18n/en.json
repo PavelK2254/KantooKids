@@ -58,5 +58,13 @@
   "terms": "terms & conditions",
   "faq": "faq",
   "privacy": "privacy policy",
-  "follow": "follow us"
+  "follow": "follow us",
+
+  "title": "Thanks",
+  "textContent": "Your email had been sent successfully.",
+  "WeWillBeInTouch": "We will be in touch soon.",
+  "titleFail": "Uh Oh,",
+  "textContentFail": "Something weird happened.",
+  "tryAgain": "Please try again"
+
 }
