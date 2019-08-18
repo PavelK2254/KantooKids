@@ -13,7 +13,7 @@
        <p class="disneyText">{{'kntooDisneyText' | translate}}</p>
        <!--<img id="mobileFold1Tablet" class="Fold1TabletImg" [src]="imageBaseUri + activeLanguage + mobilePrefix + '/p1tablet_test.png'"  alt="tablet">-->
        <div *ngIf="isMobile"  class="Fold1TabletImg">
-         <video autoplay controls id="mobileFold1Tablet" poster="./assets/transperent.png"  [src]="imageBaseUri + activeLanguage + mobilePrefix + '/placeholder_video_Tablet_mockup.mp4'" loop>
+         <video autoplay controls id="mobileFold1Tablet" poster="./assets/transperent.png"  [src]="imageBaseUri + activeLanguage + mobilePrefix + '/placeholder_video_Tablet_mockup.mp4'" loop (error)="imageErrorHandler($event)">
 
          </video>
        </div>

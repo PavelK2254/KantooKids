@@ -20,11 +20,11 @@
 <a class="menuItem" routerLink="/contact" routerLinkActive="menuActiveContact menuActive">{{'contact' | translate | uppercase}}</a>
 
 <div class="language-section">
-<a class="lang pressedLangButton"   (click)="switchLanguage('en',$event.target)" >EN</a>
+<a id="langEn" class="lang pressedLangButton"   (click)="switchLanguage('en',$event.target)" >EN</a>
 <a class="lang" style="margin-left: 17px; pointer-events: none">|</a>
-<a class="lang" style="margin-left: 17px" (click)="switchLanguage('pt',$event.target)">PT</a>
+<a id="langPt" class="lang" style="margin-left: 17px" (click)="switchLanguage('pt',$event.target)">PT</a>
 <a class="lang" style="margin-left: 17px; pointer-events: none">|</a>
-<a class="lang" style="margin-left: 17px" (click)="switchLanguage('es',$event.target)">ES</a>
+<a id="langEs" class="lang" style="margin-left: 17px" (click)="switchLanguage('es',$event.target)">ES</a>
 </div>
 </mat-toolbar-row>
 </mat-toolbar>

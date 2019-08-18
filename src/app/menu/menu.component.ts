@@ -1,4 +1,4 @@
-import { Component, OnInit,AfterViewInit } from '@angular/core';
+import { Component, OnInit,AfterViewInit,AfterViewChecked } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -6,7 +6,7 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
-export class MenuComponent implements OnInit,AfterViewInit {
+export class MenuComponent implements OnInit,AfterViewInit,AfterViewChecked {
 
   showMenu: boolean = false;
 
@@ -23,8 +23,7 @@ export class MenuComponent implements OnInit,AfterViewInit {
     window.open('http://www.kantoo.com/en/')
   }
 
-  ngAfterViewInit(){
-  document.getElementById('mobileMenuContent').style.top = (<HTMLElement>document.getElementsByClassName('mMainMenu')[0]).offsetHeight + "px";
+  ngAfterViewChecked(){
     if(localStorage.getItem("lang") != undefined){
       var els = document.getElementsByClassName('lang');
       Array.prototype.forEach.call(els, function(el) {
@@ -44,6 +43,11 @@ export class MenuComponent implements OnInit,AfterViewInit {
         }
       }
     }
+  }
+
+  ngAfterViewInit(){
+  document.getElementById('mobileMenuContent').style.top = (<HTMLElement>document.getElementsByClassName('mMainMenu')[0]).offsetHeight + "px";
+
   }
 
   switchLanguage(language: string,element) {

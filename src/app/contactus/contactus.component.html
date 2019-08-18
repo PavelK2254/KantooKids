@@ -36,7 +36,7 @@
     </div>
 
     <a class="sendBtnContact" (click)="executeCaptcha()">
-      <input type="image" src="./assets/contactus/send_btn.png">
+      <input type="image" [src]="assetPath + 'send_btn_' + currentLanguage + '.png'">
     </a>
   </form>
   <img class="sideImg" src="./assets/contactus/cowboy.png">

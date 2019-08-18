@@ -51,6 +51,10 @@ export class OurAppComponent implements OnInit {
     }
   }
 
+  imageErrorHandler(event) {
+    event.currentTarget.style.display = "none";
+  }
+
   @HostListener('window:scroll', ['$event'])
   public onWindowScroll(event: Event): void {
     if (window.scrollY <= 1000) {

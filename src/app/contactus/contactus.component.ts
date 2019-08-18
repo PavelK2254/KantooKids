@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { HttpHeaders, HttpClientModule } from '@angular/common/http';
 import { ContactUsServiceService } from '../contact-us-service.service'
+import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
 declare var grecaptcha: any;
 
@@ -28,20 +29,31 @@ export class ContactusComponent implements OnInit {
   grecaptcha: any;
   isHidden = "none";
   self: any;
-  constructor(public dialog: MatDialog, public contactUsService: ContactUsServiceService) {
+  assetPath = "./assets/contactus/";
+  currentLanguage:String;
+
+  constructor(public dialog: MatDialog, public contactUsService: ContactUsServiceService, private translateLang: TranslateService) {
     window.contactUsService = this.contactUsService;
+    if(localStorage.getItem('lang') != null){
+      this.currentLanguage = localStorage.getItem('lang');
+    }else{
+      this.currentLanguage = "en";
+    }
     this.self = this;
+    translateLang.onLangChange.subscribe((event: LangChangeEvent) => {
+      this.currentLanguage = event.lang;
+    });
   }
 
   public postContactMessage(name: String, email: String, message: String, token: String, component: ContactusComponent): void {
     if(component != undefined){
-      var currentLanguage:String;
+
       if(localStorage.getItem('lang') != undefined && localStorage.getItem('lang') != null) {
-        currentLanguage = localStorage.getItem('lang');
+        this.currentLanguage = localStorage.getItem('lang');
       }else{
-        currentLanguage = "en";
+        this.currentLanguage = "en";
       }
-      window.contactUsService.postContactUsData(name, email, message, token,currentLanguage)
+      window.contactUsService.postContactUsData(name, email, message, token,this.currentLanguage)
         .subscribe(
           res => this.deliverResult(res, component)
         )

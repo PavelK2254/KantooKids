@@ -449,6 +449,9 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     this.productSourceCounter--;
     if (this.productSourceCounter < 0) this.productSourceCounter *= -1;
     this.productsSource = this.products[this.productSourceCounter].name;
+    var tempArray = this.productsSource.split("/");
+    tempArray.splice(3,0,this.activeLanguage);
+    this.productsSource = tempArray.join("/");
   }
   decrementIndex2() {
 
@@ -471,6 +474,9 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     this.productSourceCounter++;
     if (this.productSourceCounter < 0) this.productSourceCounter *= -1;
     this.productsSource = this.products[this.productSourceCounter].name;
+    var tempArray = this.productsSource.split("/");
+    tempArray.splice(3,0,this.activeLanguage);
+    this.productsSource = tempArray.join("/");
   }
 
 
@@ -478,6 +484,9 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     this.movieFetcher.getProducts().subscribe(
       products => this.products = products);
     this.productsSource = this.products[this.productSourceCounter].name;
+    var tempArray = this.productsSource.split("/");
+    tempArray.splice(3,0,this.activeLanguage);
+    this.productsSource = tempArray.join("/");
     console.log('products: ', this.products);
 
 

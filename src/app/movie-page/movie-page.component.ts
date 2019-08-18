@@ -48,11 +48,12 @@ export class MoviePageComponent implements OnInit {
       this.mobilePrefix = "Mobile/";
       this.isMobile = true;
     }
-    this.conversionButtonUri = this.imageBaseUri + this.activeLanguage + '/' + this.mobilePrefix +'/conversion_btn.png';
     if( localStorage.getItem("lang") != undefined)this.activeLanguage = localStorage.getItem("lang");
+    this.conversionButtonUri = this.imageBaseUri + this.activeLanguage + '/' + this.mobilePrefix +'/conversion_btn.png';
     translateLang.onLangChange.subscribe((event: LangChangeEvent) => {
       console.log("laguage:" + event.lang);
       this.activeLanguage = event.lang;
+      this.conversionButtonUri = this.imageBaseUri + this.activeLanguage + '/' + this.mobilePrefix +'/conversion_btn.png';
     this.loadMovieContent(this.currentMovieId,this.activeLanguage);
     });
    }
