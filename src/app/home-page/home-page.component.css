@@ -158,7 +158,7 @@ add 180px to padding top and bottom to make the folder same size as Fold1
 }
 
 .franchisesItemDots{
-  margin: 0 2vw;
+  margin: 0 1vw;
   cursor: pointer;
 }
 
@@ -725,7 +725,7 @@ z-index: 999;
   height: -moz-fit-content;
   height: fit-content;
   position: absolute;
-  top: 20vh;
+  top: 60vh;
   margin: 0;
   bottom: auto;
   text-align: center;

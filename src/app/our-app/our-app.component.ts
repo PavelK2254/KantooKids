@@ -14,7 +14,7 @@ export class OurAppComponent implements OnInit {
   activeLanguage = ""
   imageBaseUri = "./assets/ourApp/";
   homeImageBaseUri = "./assets/homepage/";
-  mobilePrefix = "/Mobile"
+  mobilePrefix = ""
   bottomConversionOpacityValue = 0;
   topConversionOpacityValue = 1;
   isMobile = false;

@@ -11,7 +11,7 @@ div {
   padding-top: 10vh;
 }
 
-.tabletVideoHolder{
+.tabletVideoHolder {
   width: 40vw;
   margin: 0 auto;
   height: 60vh;
@@ -22,11 +22,12 @@ div {
 }
 
 #tabletVideo {
+  display: block;
   width: 33.5vw;
-  height: 85%;
-margin: auto;
-padding-top: 3vh;
-display: block;
+  padding-left: 0.5vw;
+  padding-top: 1.5vw;
+  -o-object-fit: contain;
+  margin: auto;
 }
 
 .pageBackground {
@@ -329,21 +330,21 @@ display: block;
     color: #ffffff;
   }
 
-  .tabletVideoHolder{
+  .tabletVideoHolder {
     width: 90vw;
-  margin: 0 auto;
-  height: fit-content;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  display: block;
-  padding-bottom: 5vh;
+    margin: 0 auto;
+    height: fit-content;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    display: block;
+    padding-bottom: 5vh;
   }
 
-  #tabletVideo{
+  #tabletVideo {
     width: 75.5vw;
-margin: auto;
-padding-top: 2vh;
-display: block;
+    margin: auto;
+    padding-top: 2vh;
+    display: block;
   }
 
   .kantooImage {

@@ -47,7 +47,7 @@
  <img src="../assets/ourApp/f2mobilemockup.png" alt="f2mobilemockup" class="f2mobilemockup">
   </div>
   <div class="Fold3">
-    <img class="fold3BackgroundImage">
+    <img class="fold3BackgroundImage" [style.content]="'url('+imageBaseUri  + activeLanguage + mobilePrefix + '/f3KidMockup.png)'">
     <div class="Fold3Texts">
 
       <p class="Fastandeasy">{{'fastNeasy' | translate | uppercase}}</p>

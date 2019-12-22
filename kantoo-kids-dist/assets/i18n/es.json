@@ -6,9 +6,9 @@
   "contact": "Contacto",
 
   "addEnglishText": "!Que comience la magia del inglés!",
-  "welcomeToText" : "¡BIENVENIDO A KANTOO DISNEY!",
+  "welcomeToText" : "¡BIENVENIDO A",
   "ultimate" : "La experiencia más moderna de aprendizaje de inglés que a los niños les encanta.",
-  "learnEnglish" : "¡APRENDE INGLÉS CON TU PELÍCULA DE",
+  "learnEnglish" : "¡APRENDE INGLÉS CON TU PELÍCULA DE DISNEY",
   "movieWord" : " FAVORITA!",
   "playing" : "JUGAR = ",
   "learningFold3": "APRENDER",
@@ -20,7 +20,7 @@
   "chooseMovies": "Escoge tu película favorita:",
 
   "introducing" : "PRESENTANDO",
-  "kntooDisneyText" : "Kantoo Disney ofrece una experiencia completa de aprendizaje de inglés para niños. Pueden estar al comienzo del aprendizaje o ser más avanzados. Los niños eligen sus películas preferidas y aprenden inglés al mismo tiempo que se divierten con las historias que más les gusta.",
+  "kntooDisneyText" : "Storytime ofrece una experiencia completa de aprendizaje de inglés para niños. Pueden estar al comienzo del aprendizaje o ser más avanzados. Los niños eligen sus películas preferidas y aprenden inglés al mismo tiempo que se divierten con las historias que más les gusta.",
   "active" : "ACTIVO E INTUITIVO",
   "weTeach" : "Nosotros enseñamos inglés a través del contexto de las adoradas películas de Disney. Cada película se divide en partes que contienen juegos interactivos, creando un aprendizaje de inglés activo e intuitivo.",
   "ourCambridge" : "Nuestro equipo pedagógico de Cambridge ha desarrollado un eficaz programa de enseñanza para niños, que utiliza palabras y frases en inglés que son útiles y adecuadas para el público infantil.",
@@ -29,11 +29,11 @@
   "learnEnglishApp" : "¡APRENDE INGLÉS DE FORMA PERSONAL!",
   "meetOur" : "Conoce a nuestra adorable presentadora mientras ella guía a tus hijos por las aventuras de cada película al mismo tiempo que les enseña inglés. La profesora particular de tus hijos les ayudará a practicar el inglés que ya han aprendido, además de inspirarlos a adoptar una parte activa en la historia y en el proceso de aprendizaje de inglés.",
   "futureReady" : "LA EXPERIENCIA DE APRENDIZAJE DEL FUTURO",
-  "worldChanging" : "El mundo está en constante cambio y nos rodeamos de incertidumbres con respecto a los empleos del futuro. No hay duda que para alcanzar el éxito en el siglo XXI, es necesario aprender a comunicarse en inglés. Kantoo Disney une las habilidades del siglo XXI con una avanzada tecnología, gamificación y personalización en nuestras plataformas con el objetivo de estimular la absorción del idioma.",
+  "worldChanging" : "El mundo está en constante cambio y nos rodeamos de incertidumbres con respecto a los empleos del futuro. No hay duda que para alcanzar el éxito en el siglo XXI, es necesario aprender a comunicarse en inglés. Storytime une las habilidades del siglo XXI con una avanzada tecnología, gamificación y personalización en nuestras plataformas con el objetivo de estimular la absorción del idioma.",
   "safeLearningTitle" : "AMBIENTE DE APRENDIZAJE SEGURO",
-  "safeLearningText" : "Kantoo Disney es un ambiente de aprendizaje seguro para tu hijo. Nosotros tomamos todas las medidas para garantizar su seguridad y privacidad. No hay propagandas, pop-ups o solicitudes. ¡Nunca!",
+  "safeLearningText" : "Storytime es un ambiente de aprendizaje seguro para tu hijo. Nosotros tomamos todas las medidas para garantizar su seguridad y privacidad. No hay propagandas, pop-ups o solicitudes. ¡Nunca!",
   "kantooWayTitle" : "¡LA MANERA KANTOO DE APRENDER Y JUGAR!",
-  "kantooWayText" : "Practica tu inglés con el Desafío Supremo, con preguntas desarrolladas específicamente para desafiar las habilidades de los niños al aprender nuevas palabras y frases. Kantoo Disney ofrece juegos divertidos y educativos que optimizan las habilidades en inglés de tu hijo y transforman el momento de estudio en un momento divertido.",
+  "kantooWayText" : "Practica tu inglés con el Desafío Supremo, con preguntas desarrolladas específicamente para desafiar las habilidades de los niños al aprender nuevas palabras y frases. Storytime ofrece juegos divertidos y educativos que optimizan las habilidades en inglés de tu hijo y transforman el momento de estudio en un momento divertido.",
   "kantooWayText2" : "Ahora la enseñanza de pronunciación de palabras y frases en inglés va más allá de la clase. Nosotros utilizamos una avanzada tecnología de reconocimiento de voz, nunca antes utilizada en la enseñanza infantil, para que de esta forma podamos reforzar las habilidades de pronunciación del inglés.",
 
   "fold1Text" : "Patina por las maravillas del invierno con Anna y Elsa en este cuento mágico sobre amor y hermandad.",
@@ -54,9 +54,9 @@
   "emailAdress": "Dirección de correo electrónico",
   "yourMsg": "Mensaje",
 
-  "terms": "terms & conditions",
-  "faq": "faq",
-  "privacy": "privacy policy",
+  "terms": "Términos y Condiciones",
+  "faq": "FAQ",
+  "privacy": "Política de Privacidad",
   "follow": "Síguenos",
 
   "title": "GRACIAS!",

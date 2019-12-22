@@ -620,7 +620,7 @@ export const MOVIES_ES: Movie[] = [
     eng: '¡UNA AVENTURA INTUITIVA EN INGLÉS!'
   },
   fold3Text: {
-    eng: '¡Permite que tus hijos recuerden su historia preferida de Disney mientras aprenden inglés con Moana! Con Kantoo Disney, tus hijos se sumergirán en su cuento favorito, acompañados de divertidos juegos de vocabulario y cuestionarios. ¡Envía a tus hijos a una aventura intuitiva para que aprendan inglés con Moana!'
+    eng: '¡Permite que tus hijos recuerden su historia preferida de Disney mientras aprenden inglés con Moana! Con Storytime, tus hijos se sumergirán en su cuento favorito, acompañados de divertidos juegos de vocabulario y cuestionarios. ¡Envía a tus hijos a una aventura intuitiva para que aprendan inglés con Moana!'
   }
 },
 
@@ -668,7 +668,7 @@ export const MOVIES_ES: Movie[] = [
     eng: '¡UN VOCABULARIO EN INGLÉS QUE NO PARA DE CRECER!'
   },
   fold3Text: {
-    eng: 'En la aplicación ""Storytime"" nuestra simpática presentadora guiará a los niños por la historia al mismo tiempo les enseñará inglés, haciendo con que el aprendizaje con Toy Story 3 sea una actividad divertida y atractiva. Refuerza el aprendizaje de inglés de tu hijo con Toy Story 3 permitiendo que vean las películas una y otra vez para que puedan aprender todas las palabras y añadirlas a su vocabulario en expansión. ¡Con los juegos interactivos de cada película, tus hijos van a formar parte de la historia utilizando el inglés que aprendieron! Aprender inglés con Toy Story 3 es divertido y emocionante.'
+    eng: 'En la aplicación \"Storytime\" nuestra simpática presentadora guiará a los niños por la historia al mismo tiempo les enseñará inglés, haciendo con que el aprendizaje con Toy Story 3 sea una actividad divertida y atractiva. Refuerza el aprendizaje de inglés de tu hijo con Toy Story 3 permitiendo que vean las películas una y otra vez para que puedan aprender todas las palabras y añadirlas a su vocabulario en expansión. ¡Con los juegos interactivos de cada película, tus hijos van a formar parte de la historia utilizando el inglés que aprendieron! Aprender inglés con Toy Story 3 es divertido y emocionante.'
   }
 },
 
